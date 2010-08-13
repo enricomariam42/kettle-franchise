@@ -5,4 +5,4 @@ PDI .kjb template for a data warehouse project
 
 
 = Details =
-http://www.kjube.be/images/pic149.png
+<img src="http://www.kjube.be/images/pic149.png" width="70%">
