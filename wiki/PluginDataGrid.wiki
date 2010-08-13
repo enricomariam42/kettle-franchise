@@ -1,0 +1,10 @@
+#summary kettle plug-in - data grid
+
+= Introduction =
+The data grid is a component we developed for PDI version 3.2. In the meantime it has been contributed to the official PDI release (as of version 4.0). 
+
+The below documentation only applies to the version 3.2.
+
+
+= Details =
+To be added
