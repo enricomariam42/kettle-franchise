@@ -1,0 +1,8 @@
+#summary PDI .kjb template for a data warehouse project
+
+= Introduction =
+PDI .kjb template for a data warehouse project
+
+
+= Details =
+http://www.kjube.be/images/pic149.png
