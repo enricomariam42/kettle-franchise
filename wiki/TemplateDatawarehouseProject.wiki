@@ -5,4 +5,16 @@ PDI .kjb template for a data warehouse project
 
 
 = Details =
+The following is a template for a data warehouse project.
+
 <img src="http://www.kjube.be/images/pic149.png" width="70%">
+
+It contains the following steps:
+ * pre - pre processing (get files through FTP, disable access to DWH, etc)
+ * stg - load staging tables 
+ * ods - load operational data store
+ * dwh - load multi-dimensional data warehouse
+ * pst - post processing 
+
+= Download =
+Add details
