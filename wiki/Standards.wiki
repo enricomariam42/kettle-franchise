@@ -10,12 +10,43 @@ This includes the following elements:
 = Directory structure =
 KFF proposes the following directory structure (all directory names lower case):
 
-Root directory: /kff
+Root directory and subdirectories
 
-Sub-directories:
 {{{
+* /kff               --> kff root
 * /kff/projects      --> contains your ETL code
 * /kff/reusable      --> contains re-usable pieces of ETL code
 * /kff/software      --> contains different versions of (PDI) software
 * /kff/documentation --> contains kff documentation
+}}}
+
+== Structure of project directory ==
+The following standard applies to the project directory.
+
+*Each data integration project should be included in a separate sub-folder*
+Standard set-up expects a folder per customer and sub-folders per project.
+
+{{{
+* /kff/projects/customer_name/project_name/
+}}}
+
+Example
+{{{
+* /kff/projects/coca-cola/production_datamart/
+* /kff/projects/coca-cola/purchasing_datamart/
+* /kff/projects/pepsi/datawarehouse/
+* /kff/projects/nike/customer_data_quality/
+* /kff/projects/nike/retail_finance_eai/
+}}}
+
+*Each project directory has the following sub-directories:*
+
+{{{
+* /kff/pr.. /cfg      --> contains configuration files as kettle.properties, etc ..
+* /kff/pr.. /code     --> contains your .ktr, .kjb and other code
+* /kff/pr.. /data/in  --> incoming data files
+* /kff/pr.. /data/out --> outgoing data files
+* /kff/pr.. /ddl      --> SQL scripts and DDL
+* /kff/pr.. /dmp      --> database dump files
+* /kff/pr.. /tmp      --> temporary files
 }}}
