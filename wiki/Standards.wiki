@@ -20,7 +20,7 @@ Root directory and subdirectories
 * /kff/documentation --> contains kff documentation
 }}}
 
-== Structure of project directory ==
+== Project directory ==
 The following standard applies to the project directory.
 
 *Each data integration project should be included in a separate sub-folder*<br>
@@ -49,4 +49,15 @@ Example
 * /kff/pr.. /ddl      --> SQL scripts and DDL
 * /kff/pr.. /dmp      --> database dump files
 * /kff/pr.. /tmp      --> temporary files
+}}}
+
+== Reusable directory ==
+The "reusable" directory contains pieces of reusable PDI coding. 
+
+Examples:
+{{{
+* /kff/reusable/cookbook        --> Roland Boumans cookbook
+* /kff/reusable/kff-logging     --> kff logging framework
+* /kff/reusable/kff-archiver    --> kff etl-code archiver
+* /kff/reusable/norman-mailer   --> kff mass mailer application
 }}}
