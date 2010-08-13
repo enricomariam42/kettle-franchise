@@ -23,7 +23,7 @@ Root directory and subdirectories
 == Structure of project directory ==
 The following standard applies to the project directory.
 
-*Each data integration project should be included in a separate sub-folder*
+*Each data integration project should be included in a separate sub-folder*<br>
 Standard set-up expects a folder per customer and sub-folders per project.
 
 {{{
