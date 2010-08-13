@@ -2,29 +2,29 @@ package be.kjube.util;
 
 public class Kjube {
 
-	public static final String DEFAULT_CUSTOMER_PARAMETER = "KJUBE_CUSTOMER";
-	public static final String DEFAULT_APPLICATION_PARAMETER = "KJUBE_APPLICATION";
-	public static final String DEFAULT_LIFECYCLE_PARAMETER = "KJUBE_LIFECYCLE";
+	public static final String DEFAULT_CUSTOMER_PARAMETER = "KFF_CUSTOMER";
+	public static final String DEFAULT_APPLICATION_PARAMETER = "KFF_APPLICATION";
+	public static final String DEFAULT_LIFECYCLE_PARAMETER = "KFF_LIFECYCLE";
 	
-	public static final String DEFAULT_CONFIG_FILE_PATH = "/kjube/projects/${KJUBE_CUSTOMER}/${KJUBE_APPLICATION}/config/configuration_${KJUBE_LIFECYCLE}.properties";
+	public static final String DEFAULT_CONFIG_FILE_PATH = "/kff/projects/${KFF_CUSTOMER}/${KFF_APPLICATION}/config/configuration_${KFF_LIFECYCLE}.properties";
 	
-	public static final String DEFAULT_BATCH_ID_CONNECTION = "${KJUBE_BATCH_ID_CONNECTION}";
-	public static final String DEFAULT_BATCH_ID_SCHEMA = "${KJUBE_BATCH_ID_SCHEMA}";
-	public static final String DEFAULT_BATCH_ID_TABLE  = "${KJUBE_BATCH_ID_TABLE}";
+	public static final String DEFAULT_BATCH_ID_CONNECTION = "${KFF_BATCH_ID_CONNECTION}";
+	public static final String DEFAULT_BATCH_ID_SCHEMA = "${KFF_BATCH_ID_SCHEMA}";
+	public static final String DEFAULT_BATCH_ID_TABLE  = "${KFF_BATCH_ID_TABLE}";
 
-	public static final String DEFAULT_BATCH_LOGGING_CONNECTION = "${KJUBE_BATCH_LOGGING_CONNECTION}";
-	public static final String DEFAULT_BATCH_LOGGING_SCHEMA = "${KJUBE_BATCH_LOGGING_SCHEMA}";
-	public static final String DEFAULT_BATCH_LOGGING_TABLE  = "${KJUBE_BATCH_LOGGING_TABLE}";
+	public static final String DEFAULT_BATCH_LOGGING_CONNECTION = "${KFF_BATCH_LOGGING_CONNECTION}";
+	public static final String DEFAULT_BATCH_LOGGING_SCHEMA = "${KFF_BATCH_LOGGING_SCHEMA}";
+	public static final String DEFAULT_BATCH_LOGGING_TABLE  = "${KFF_BATCH_LOGGING_TABLE}";
 
-	public static final String DEFAULT_REJECTS_SCHEMA = "${KJUBE_REJECTS_SCHEMA}";
-	public static final String DEFAULT_REJECTS_TABLE  = "${KJUBE_REJECTS_TABLE}";
+	public static final String DEFAULT_REJECTS_SCHEMA = "${KFF_REJECTS_SCHEMA}";
+	public static final String DEFAULT_REJECTS_TABLE  = "${KFF_REJECTS_TABLE}";
 
-	public static final String DEFAULT_BATCH_ID_VARIABLE_NAME = "${KJUBE_BATCH_ID}";
+	public static final String DEFAULT_BATCH_ID_VARIABLE_NAME = "${KFF_BATCH_ID}";
 
-	public static final String DEFAULT_ERROR_COUNT_VARIABLE_NAME = "${KJUBE_ERROR_COUNT_FIELD}";
-	public static final String DEFAULT_ERROR_DESCRIPTIONS_VARIABLE_NAME = "${KJUBE_ERROR_DESCRIPTIONS_FIELD}";
-	public static final String DEFAULT_ERROR_FIELDS_VARIABLE_NAME = "${KJUBE_ERROR_FIELDS_FIELD}";
-	public static final String DEFAULT_ERROR_CODES_VARIABLE_NAME = "${KJUBE_ERROR_CODES_FIELD}";
+	public static final String DEFAULT_ERROR_COUNT_VARIABLE_NAME = "${KFF_ERROR_COUNT_FIELD}";
+	public static final String DEFAULT_ERROR_DESCRIPTIONS_VARIABLE_NAME = "${KFF_ERROR_DESCRIPTIONS_FIELD}";
+	public static final String DEFAULT_ERROR_FIELDS_VARIABLE_NAME = "${KFF_ERROR_FIELDS_FIELD}";
+	public static final String DEFAULT_ERROR_CODES_VARIABLE_NAME = "${KFF_ERROR_CODES_FIELD}";
 	
 	
 	/**
