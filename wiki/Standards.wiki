@@ -1,11 +1,21 @@
 #summary Standard set-up
 
 = Standard & set-up conventions =
-
 This page describes the set-up and the standards that KFF proposes in order to enable rapid deployment of multiple kettle solutions.
 
 This includes the following elements:
- - directory structure
- - variables
+ * directory structure
+ * variables
 
 = Directory structure =
+KFF proposes the following directory structure (all directory names lower case):
+
+Root directory: /kff
+
+Sub-directories:
+{{{
+* /kff/projects      --> contains your ETL code
+* /kff/reusable      --> contains re-usable pieces of ETL code
+* /kff/software      --> contains different versions of (PDI) software
+* /kff/documentation --> contains kff documentation
+}}}
