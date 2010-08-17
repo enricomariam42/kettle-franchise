@@ -13,5 +13,11 @@ In order to use KFF, you require the following softwares and plugins:
  * You can get the latest stable version of kettle on [http://sourceforge.net/projects/pentaho/ sourceforge].
  * Nightly builds of kettle are available [ftp://download.pentaho.org/ here] for the more courageous amongst you. 
 
+Please unzip PDI in the directory:
+{{{
+/kff/software/pdi/<version>/
+}}}
+as described in the [StandardsDirectory standard directory guideliness].
+
 
 = kettle-cookbook =
