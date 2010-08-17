@@ -1,4 +1,4 @@
-#summary Standard set-up
+#summary kff directory structure
 
 = Standard directory structure =
 KFF proposes the following directory structure (all directory names lower case):
