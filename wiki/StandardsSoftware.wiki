@@ -1,4 +1,5 @@
 #summary Software recommendations for KFF
+#labels Phase-Deploy
 
 = Introduction =
 In order to use KFF, you require the following softwares and plugins:
