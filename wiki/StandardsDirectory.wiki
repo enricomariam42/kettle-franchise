@@ -1,4 +1,5 @@
 #summary kff directory structure
+#labels Phase-Deploy
 
 = Standard directory structure =
 KFF proposes the following directory structure (all directory names lower case):
