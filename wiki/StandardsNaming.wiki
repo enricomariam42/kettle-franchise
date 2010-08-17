@@ -1,3 +1,4 @@
 #summary kettle standard naming conventions.
+#labels Phase-Deploy
 
 = To be documented =
