@@ -1,4 +1,5 @@
 #summary PDI .kjb template for a data warehouse project
+#labels Phase-Deploy
 
 = Introduction =
 PDI .kjb template for a data warehouse project
