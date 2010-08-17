@@ -4,73 +4,7 @@
 This page describes the set-up and the standards that KFF proposes in order to enable rapid deployment of multiple kettle solutions.
 
 This includes the following elements:
- * directory structure
- * variables
-
-= Directory structure =
-KFF proposes the following directory structure (all directory names lower case):
-
-Root directory and subdirectories
-
-{{{
-* /kff               --> kff root
-* /kff/projects      --> contains your ETL code
-* /kff/reusable      --> contains re-usable pieces of ETL code
-* /kff/software      --> contains different versions of (PDI) software
-* /kff/documentation --> contains kff documentation
-}}}
-
-== Project directory ==
-The following standard applies to the project directory.
-
-*Each data integration project should be included in a separate sub-folder*<br>
-Standard set-up expects a folder per customer and sub-folders per project.
-
-{{{
-* /kff/projects/customer_name/project_name/
-}}}
-
-Example
-{{{
-* /kff/projects/coca-cola/production_datamart/
-* /kff/projects/coca-cola/purchasing_datamart/
-* /kff/projects/pepsi/datawarehouse/
-* /kff/projects/nike/customer_data_quality/
-* /kff/projects/nike/retail_finance_eai/
-}}}
-
-*Each project directory has the following sub-directories:*
-
-{{{
-* /kff/pr.. /cfg      --> contains configuration files as kettle.properties, etc ..
-* /kff/pr.. /code     --> contains your .ktr, .kjb and other code
-* /kff/pr.. /data/in  --> incoming data files
-* /kff/pr.. /data/out --> outgoing data files
-* /kff/pr.. /ddl      --> SQL scripts and DDL
-* /kff/pr.. /dmp      --> database dump files
-* /kff/pr.. /tmp      --> temporary files
-}}}
-
-== Reusable directory ==
-The "reusable" directory contains pieces of reusable PDI coding. 
-
-Examples:
-{{{
-* /kff/reusable/cookbook        --> Roland Boumans cookbook
-* /kff/reusable/kff-logging     --> kff logging framework
-* /kff/reusable/kff-archiver    --> kff etl-code archiver
-* /kff/reusable/norman-mailer   --> kff mass mailer application
-}}}
-
-== Software ==
-The software directory should include all the software you need for your project(s).
-
-Example:
-{{{
-* /kff/software/jre/            --> Different versions of JRE you might use
-* /kff/software/pdi/3.2.3       --> PDI version 3.2.3
-* /kff/software/pdi/4.0.0       --> PDI version 4.0.0
-}}}
-
-* We would recommend that you include a working version of your java run time environment in your software directory. The only dependency kettle has is the java run time, therefore if you have a stable JRE, it is worth deploying together with your solution.
-* We also recommend that you store different versions of PDI you are using, one next to the other. This will facilitate upgrade scenarios, where you might be using an older version of PDI in production while you are using the most recent version.
+ * pdi and jre software
+ * kff directory structure
+ * naming conventions
+ * kff variables
