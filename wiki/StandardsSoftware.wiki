@@ -4,8 +4,6 @@
 In order to use KFF, you require the following softwares and plugins:
  * java run time environment
  * kettle (aka Pentaho data integration)
- * kettle-cookbook
- * ... 
 
 = Java run time environment =
 
