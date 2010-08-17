@@ -4,7 +4,7 @@
 This page describes the set-up and the standards that KFF proposes in order to enable rapid deployment of multiple kettle solutions.
 
 This includes the following elements:
- * pdi and jre software
+ * [StandardsDirectory  pdi and jre software]
  * kff directory structure
  * naming conventions
  * kff variables
