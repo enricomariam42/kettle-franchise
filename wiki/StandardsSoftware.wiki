@@ -15,6 +15,3 @@ Please unzip PDI in the directory:
 /kff/software/pdi/<version>/
 }}}
 as described in the [StandardsDirectory standard directory guideliness].
-
-
-= kettle-cookbook =
