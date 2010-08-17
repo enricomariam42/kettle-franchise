@@ -10,8 +10,7 @@ In order to use KFF, you require the following softwares and plugins:
 = Java run time environment =
 
 = kettle =
- * You can get the latest stable version of kettle on [http://sourceforge.net/projects/pentaho/ sourceforge].
- * Nightly builds of kettle are available [ftp://download.pentaho.org/ here] for the more courageous amongst you. 
+You can get the latest stable version(s) of kettle on [http://sourceforge.net/projects/pentaho/ sourceforge], while nightly builds of kettle are available [ftp://download.pentaho.org/ here] for the more courageous amongst you. 
 
 Please unzip PDI in the directory:
 {{{
