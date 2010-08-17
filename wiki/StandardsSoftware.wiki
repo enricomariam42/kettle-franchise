@@ -1,13 +1,17 @@
-#summary One-sentence summary of this page.
+#summary Software recommendations for KFF
 
 = Introduction =
+In order to use KFF, you require the following softwares and plugins:
+ * java run time environment
+ * kettle (aka Pentaho data integration)
+ * kettle-cookbook
+ * ... 
 
-Add your content here.
+= Java run time environment =
+
+= kettle =
+ * You can get the latest stable version of kettle on [http://sourceforge.net/projects/pentaho/ sourceforge].
+ * Nightly builds of kettle are available [ftp://download.pentaho.org/ here] for the more courageous amongst you. 
 
 
-= Details =
-
-Add your content here.  Format your content with:
-  * Text in *bold* or _italic_
-  * Headings, paragraphs, and lists
-  * Automatic links to other wiki pages
+= kettle-cookbook =
