@@ -1,4 +1,5 @@
 #summary Standard set-up
+#labels Phase-Deploy
 
 = Standard & set-up conventions =
 This page describes the set-up and the standards that KFF proposes in order to enable rapid deployment of multiple kettle solutions.
