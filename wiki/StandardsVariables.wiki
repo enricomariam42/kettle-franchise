@@ -1,4 +1,13 @@
 #summary kff variables.
 #labels Phase-Deploy
 
-= To be documented =
+= Introduction =
+The following variables are used in kettle.properties in KFF.
+
+= Generic KFF environment variables =
+
+= Logging framework variables =
+
+= Connection variables =
+
+= Mailing variables =
