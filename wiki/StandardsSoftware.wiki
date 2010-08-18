@@ -7,8 +7,15 @@ In order to use KFF, you require the following softwares and plugins:
  * kettle (aka Pentaho data integration)
 
 = Java run time environment =
+We recommend that you place a stable version of JRE in your FF directory structure. It is usefull to deploy the same JRE to all the machines you are deploying your projects on. 
 
-= kettle =
+Please install JRE in the directory:
+{{{
+/kff/software/jre/<version>/
+}}}
+as described in the [StandardsDirectory standard directory guideliness].
+
+= Kettle - PDI =
 You can get the latest stable version(s) of kettle on [http://sourceforge.net/projects/pentaho/ sourceforge], while nightly builds of kettle are available [ftp://download.pentaho.org/ here] for the more courageous amongst you. KFF works with kettle 3.2.0 and above.
 
 Please unzip PDI in the directory:
