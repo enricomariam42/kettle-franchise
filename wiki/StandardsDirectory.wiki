@@ -66,5 +66,5 @@ Example:
 * /kff/software/pdi/4.0.0       --> PDI version 4.0.0
 }}}
 
-* We would recommend that you include a working version of your java run time environment in your software directory. The only dependency kettle has is the java run time, therefore if you have a stable JRE, it is worth deploying together with your solution.
-* We also recommend that you store different versions of PDI you are using, one next to the other. This will facilitate upgrade scenarios, where you might be using an older version of PDI in production while you are using the most recent version.
+ * We recommend that you include a stable version of your java run time environment in your software directory. The only dependency kettle has is the java run time, therefore if you have a stable JRE, it is worth deploying together with your solution.
+ * We also recommend that you store different versions of PDI you are using, one next to the other. This will facilitate upgrade scenarios, where you might be using an older version of PDI in production while you are using the most recent version.
