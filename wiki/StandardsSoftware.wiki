@@ -1,4 +1,4 @@
-#summary Software recommendations for KFF
+#summary Software recommendations and pre-requisites for KFF
 #labels Phase-Deploy
 
 = Introduction =
