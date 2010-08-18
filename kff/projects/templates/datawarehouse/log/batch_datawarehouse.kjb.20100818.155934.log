@@ -1,0 +1,1950 @@
+2010/08/18 15:59:34 - Kitchen - Logging is at level : Detailed logging
+2010/08/18 15:59:34 - Kitchen - Start of run.
+2010/08/18 15:59:34 - org.pentaho.di.core.util.ResolverUtil@737371 - Scanning for classes in [file:/kff/software/pdi/3.2.3/lib/kettle-engine.jar] matching criteria: [Lorg.pentaho.di.core.util.ResolverUtil$Test;@1a001ff
+2010/08/18 15:59:35 - org.pentaho.di.core.util.ResolverUtil@737371 - Scanning for classes in [file:/kff/software/pdi/3.2.3/libext/kff-plugins.jar] matching criteria: [Lorg.pentaho.di.core.util.ResolverUtil$Test;@1a001ff
+2010/08/18 15:59:35 - org.pentaho.di.core.util.ResolverUtil@737371 - Could not examine class \'be/kjube/plugins/configurator/KjubeConfiguratorDialog$1.class\' due to a java.lang.NoClassDefFoundError with message: org/eclipse/swt/events/ModifyListener
+2010/08/18 15:59:35 - org.pentaho.di.core.util.ResolverUtil@737371 - Could not examine class \'be/kjube/plugins/configurator/KjubeConfiguratorDialog$2.class\' due to a java.lang.NoClassDefFoundError with message: org/eclipse/swt/widgets/Listener
+2010/08/18 15:59:35 - org.pentaho.di.core.util.ResolverUtil@737371 - Could not examine class \'be/kjube/plugins/configurator/KjubeConfiguratorDialog$3.class\' due to a java.lang.NoClassDefFoundError with message: org/eclipse/swt/widgets/Listener
+2010/08/18 15:59:35 - org.pentaho.di.core.util.ResolverUtil@737371 - Could not examine class \'be/kjube/plugins/configurator/KjubeConfiguratorDialog$4.class\' due to a java.lang.NoClassDefFoundError with message: org/eclipse/swt/widgets/Listener
+2010/08/18 15:59:35 - org.pentaho.di.core.util.ResolverUtil@737371 - Could not examine class \'be/kjube/plugins/configurator/KjubeConfiguratorDialog$5.class\' due to a java.lang.NoClassDefFoundError with message: org/eclipse/swt/events/SelectionAdapter
+2010/08/18 15:59:35 - org.pentaho.di.core.util.ResolverUtil@737371 - Could not examine class \'be/kjube/plugins/configurator/KjubeConfiguratorDialog$6.class\' due to a java.lang.NoClassDefFoundError with message: org/eclipse/swt/events/ShellAdapter
+2010/08/18 15:59:35 - org.pentaho.di.core.util.ResolverUtil@737371 - Could not examine class \'be/kjube/plugins/configurator/KjubeConfiguratorDialog.class\' due to a java.lang.NoClassDefFoundError with message: org/pentaho/di/ui/job/entry/JobEntryDialog
+2010/08/18 15:59:35 - org.pentaho.di.core.util.ResolverUtil@737371 - Could not examine class \'be/kjube/plugins/datagrid/DataGridDialog$1.class\' due to a java.lang.NoClassDefFoundError with message: org/eclipse/swt/events/ModifyListener
+2010/08/18 15:59:35 - org.pentaho.di.core.util.ResolverUtil@737371 - Could not examine class \'be/kjube/plugins/datagrid/DataGridDialog$2.class\' due to a java.lang.NoClassDefFoundError with message: org/eclipse/swt/widgets/Listener
+2010/08/18 15:59:35 - org.pentaho.di.core.util.ResolverUtil@737371 - Could not examine class \'be/kjube/plugins/datagrid/DataGridDialog$3.class\' due to a java.lang.NoClassDefFoundError with message: org/eclipse/swt/widgets/Listener
+2010/08/18 15:59:35 - org.pentaho.di.core.util.ResolverUtil@737371 - Could not examine class \'be/kjube/plugins/datagrid/DataGridDialog$4.class\' due to a java.lang.NoClassDefFoundError with message: org/eclipse/swt/events/SelectionAdapter
+2010/08/18 15:59:35 - org.pentaho.di.core.util.ResolverUtil@737371 - Could not examine class \'be/kjube/plugins/datagrid/DataGridDialog$5.class\' due to a java.lang.NoClassDefFoundError with message: org/eclipse/swt/events/ShellAdapter
+2010/08/18 15:59:35 - org.pentaho.di.core.util.ResolverUtil@737371 - Could not examine class \'be/kjube/plugins/datagrid/DataGridDialog$6.class\' due to a java.lang.NoClassDefFoundError with message: org/eclipse/swt/widgets/Listener
+2010/08/18 15:59:35 - org.pentaho.di.core.util.ResolverUtil@737371 - Could not examine class \'be/kjube/plugins/datagrid/DataGridDialog$7.class\' due to a java.lang.NoClassDefFoundError with message: org/eclipse/swt/events/SelectionAdapter
+2010/08/18 15:59:35 - org.pentaho.di.core.util.ResolverUtil@737371 - Could not examine class \'be/kjube/plugins/datagrid/DataGridDialog.class\' due to a java.lang.NoClassDefFoundError with message: org/pentaho/di/ui/trans/step/BaseStepDialog
+2010/08/18 15:59:36 - StepLoader - Looking for plugins in directory: plugins/steps
+2010/08/18 15:59:36 - org.pentaho.di.core.util.ResolverUtil@1cc0a7f - Scanning for classes in [file:/kff/software/pdi/3.2.3/lib/kettle-engine.jar] matching criteria: [Lorg.pentaho.di.core.util.ResolverUtil$Test;@c52200
+2010/08/18 15:59:36 - org.pentaho.di.core.util.ResolverUtil@1cc0a7f - Scanning for classes in [file:/kff/software/pdi/3.2.3/libext/kff-plugins.jar] matching criteria: [Lorg.pentaho.di.core.util.ResolverUtil$Test;@c52200
+2010/08/18 15:59:36 - org.pentaho.di.core.util.ResolverUtil@1cc0a7f - Could not examine class \'be/kjube/plugins/configurator/KjubeConfiguratorDialog$1.class\' due to a java.lang.NoClassDefFoundError with message: org/eclipse/swt/events/ModifyListener
+2010/08/18 15:59:36 - org.pentaho.di.core.util.ResolverUtil@1cc0a7f - Could not examine class \'be/kjube/plugins/configurator/KjubeConfiguratorDialog$2.class\' due to a java.lang.NoClassDefFoundError with message: org/eclipse/swt/widgets/Listener
+2010/08/18 15:59:36 - org.pentaho.di.core.util.ResolverUtil@1cc0a7f - Could not examine class \'be/kjube/plugins/configurator/KjubeConfiguratorDialog$3.class\' due to a java.lang.NoClassDefFoundError with message: org/eclipse/swt/widgets/Listener
+2010/08/18 15:59:36 - org.pentaho.di.core.util.ResolverUtil@1cc0a7f - Could not examine class \'be/kjube/plugins/configurator/KjubeConfiguratorDialog$4.class\' due to a java.lang.NoClassDefFoundError with message: org/eclipse/swt/widgets/Listener
+2010/08/18 15:59:36 - org.pentaho.di.core.util.ResolverUtil@1cc0a7f - Could not examine class \'be/kjube/plugins/configurator/KjubeConfiguratorDialog$5.class\' due to a java.lang.NoClassDefFoundError with message: org/eclipse/swt/events/SelectionAdapter
+2010/08/18 15:59:36 - org.pentaho.di.core.util.ResolverUtil@1cc0a7f - Could not examine class \'be/kjube/plugins/configurator/KjubeConfiguratorDialog$6.class\' due to a java.lang.NoClassDefFoundError with message: org/eclipse/swt/events/ShellAdapter
+2010/08/18 15:59:36 - org.pentaho.di.core.util.ResolverUtil@1cc0a7f - Could not examine class \'be/kjube/plugins/configurator/KjubeConfiguratorDialog.class\' due to a java.lang.NoClassDefFoundError with message: org/pentaho/di/ui/job/entry/JobEntryDialog
+2010/08/18 15:59:36 - org.pentaho.di.core.util.ResolverUtil@1cc0a7f - Could not examine class \'be/kjube/plugins/datagrid/DataGridDialog$1.class\' due to a java.lang.NoClassDefFoundError with message: org/eclipse/swt/events/ModifyListener
+2010/08/18 15:59:36 - org.pentaho.di.core.util.ResolverUtil@1cc0a7f - Could not examine class \'be/kjube/plugins/datagrid/DataGridDialog$2.class\' due to a java.lang.NoClassDefFoundError with message: org/eclipse/swt/widgets/Listener
+2010/08/18 15:59:36 - org.pentaho.di.core.util.ResolverUtil@1cc0a7f - Could not examine class \'be/kjube/plugins/datagrid/DataGridDialog$3.class\' due to a java.lang.NoClassDefFoundError with message: org/eclipse/swt/widgets/Listener
+2010/08/18 15:59:36 - org.pentaho.di.core.util.ResolverUtil@1cc0a7f - Could not examine class \'be/kjube/plugins/datagrid/DataGridDialog$4.class\' due to a java.lang.NoClassDefFoundError with message: org/eclipse/swt/events/SelectionAdapter
+2010/08/18 15:59:36 - org.pentaho.di.core.util.ResolverUtil@1cc0a7f - Could not examine class \'be/kjube/plugins/datagrid/DataGridDialog$5.class\' due to a java.lang.NoClassDefFoundError with message: org/eclipse/swt/events/ShellAdapter
+2010/08/18 15:59:36 - org.pentaho.di.core.util.ResolverUtil@1cc0a7f - Could not examine class \'be/kjube/plugins/datagrid/DataGridDialog$6.class\' due to a java.lang.NoClassDefFoundError with message: org/eclipse/swt/widgets/Listener
+2010/08/18 15:59:36 - org.pentaho.di.core.util.ResolverUtil@1cc0a7f - Could not examine class \'be/kjube/plugins/datagrid/DataGridDialog$7.class\' due to a java.lang.NoClassDefFoundError with message: org/eclipse/swt/events/SelectionAdapter
+2010/08/18 15:59:36 - org.pentaho.di.core.util.ResolverUtil@1cc0a7f - Could not examine class \'be/kjube/plugins/datagrid/DataGridDialog.class\' due to a java.lang.NoClassDefFoundError with message: org/pentaho/di/ui/trans/step/BaseStepDialog
+2010/08/18 15:59:36 - i18n - org.pentaho.di.core.exception.KettleException: 
+2010/08/18 15:59:36 - i18n - Message not found in the preferred and failover locale: key=[kJube.Plugins.KjubeConfigurator.Name], package=be.kjube.plugins.configurator
+2010/08/18 15:59:36 - i18n - 
+2010/08/18 15:59:36 - i18n - 	at org.pentaho.di.i18n.LAFMessageHandler.calculateString(LAFMessageHandler.java:124)
+2010/08/18 15:59:36 - i18n - 	at org.pentaho.di.i18n.GlobalMessages.getString(GlobalMessages.java:444)
+2010/08/18 15:59:36 - i18n - 	at org.pentaho.di.i18n.BaseMessages.getString(BaseMessages.java:66)
+2010/08/18 15:59:36 - i18n - 	at org.pentaho.di.core.config.AnnotatedJobConfigManager.load(AnnotatedJobConfigManager.java:85)
+2010/08/18 15:59:36 - i18n - 	at org.pentaho.di.core.config.BasicConfigManager.loadAs(BasicConfigManager.java:46)
+2010/08/18 15:59:36 - i18n - 	at org.pentaho.di.job.JobEntryLoader.readNatives(JobEntryLoader.java:112)
+2010/08/18 15:59:36 - i18n - 	at org.pentaho.di.job.JobEntryLoader.init(JobEntryLoader.java:101)
+2010/08/18 15:59:36 - i18n - 	at org.pentaho.di.kitchen.Kitchen.main(Kitchen.java:167)
+2010/08/18 15:59:36 - i18n - org.pentaho.di.core.exception.KettleException: 
+2010/08/18 15:59:36 - i18n - Message not found in the preferred and failover locale: key=[kJube.Plugins.KjubeConfigurator.Description], package=be.kjube.plugins.configurator
+2010/08/18 15:59:36 - i18n - 
+2010/08/18 15:59:36 - i18n - 	at org.pentaho.di.i18n.LAFMessageHandler.calculateString(LAFMessageHandler.java:124)
+2010/08/18 15:59:36 - i18n - 	at org.pentaho.di.i18n.GlobalMessages.getString(GlobalMessages.java:444)
+2010/08/18 15:59:36 - i18n - 	at org.pentaho.di.i18n.BaseMessages.getString(BaseMessages.java:66)
+2010/08/18 15:59:36 - i18n - 	at org.pentaho.di.core.config.AnnotatedJobConfigManager.load(AnnotatedJobConfigManager.java:94)
+2010/08/18 15:59:36 - i18n - 	at org.pentaho.di.core.config.BasicConfigManager.loadAs(BasicConfigManager.java:46)
+2010/08/18 15:59:36 - i18n - 	at org.pentaho.di.job.JobEntryLoader.readNatives(JobEntryLoader.java:112)
+2010/08/18 15:59:36 - i18n - 	at org.pentaho.di.job.JobEntryLoader.init(JobEntryLoader.java:101)
+2010/08/18 15:59:36 - i18n - 	at org.pentaho.di.kitchen.Kitchen.main(Kitchen.java:167)
+2010/08/18 15:59:36 - SharedObjects - Reading the shared objects file [file:///home/matt/.kettle/shared.xml]
+2010/08/18 15:59:36 - Thread[batch_launcher (batch_launcher (Thread-3)),5,main] - exec(0, 0, START.0)
+2010/08/18 15:59:36 - batch_launcher - Starting entry [Parameters]
+2010/08/18 15:59:36 - Thread[batch_launcher (batch_launcher (Thread-3)),5,main] - exec(1, 0, Parameters.0)
+2010/08/18 15:59:36 - Parameters - Set variable [DWH_STG_DATABASE_TYPE] to value [MySQL] in the parent job.
+2010/08/18 15:59:36 - Parameters - Set variable [DWH_DWH_HOSTNAME] to value [localhost] in the parent job.
+2010/08/18 15:59:36 - Parameters - Set variable [DWH_STG_DATABASE] to value [dwh_DEV] in the parent job.
+2010/08/18 15:59:36 - Parameters - Set variable [MAIL_DESTINATION_CC] to value [] in the parent job.
+2010/08/18 15:59:36 - Parameters - Set variable [DWH_LOG_DATABASE] to value [dwh_DEV] in the parent job.
+2010/08/18 15:59:36 - Parameters - Set variable [MAIL_DESTINATION_BCC] to value [] in the parent job.
+2010/08/18 15:59:36 - Parameters - Set variable [KFF_LOGGING_STEP_TABLE_HIST] to value [KFF_LOG_STEP_HIST] in the parent job.
+2010/08/18 15:59:36 - Parameters - Set variable [KETTLE_PLUGIN_PACKAGES] to value [be.kjube] in the parent job.
+2010/08/18 15:59:36 - Parameters - Set variable [MAIL_SMTP_SERVER] to value [] in the parent job.
+2010/08/18 15:59:36 - Parameters - Set variable [MAIL_CONTACT_PERSON] to value [] in the parent job.
+2010/08/18 15:59:36 - Parameters - Set variable [MAIL_SENDER_ADDRESS] to value [data.integration@kjube.be] in the parent job.
+2010/08/18 15:59:36 - Parameters - Set variable [DWH_ODS_PASSWORD] to value [kff] in the parent job.
+2010/08/18 15:59:36 - Parameters - Set variable [DWH_ODS_USERNAME] to value [dwh_DEV] in the parent job.
+2010/08/18 15:59:36 - Parameters - Set variable [DWH_ODS_PORT] to value [3306] in the parent job.
+2010/08/18 15:59:36 - Parameters - Set variable [KFF_LOGGING_BATCH_TABLE] to value [KFF_LOG_BATCH] in the parent job.
+2010/08/18 15:59:36 - Parameters - Set variable [MAIL_DESTINATION_ADDRESS] to value [kff@kjube.be] in the parent job.
+2010/08/18 15:59:36 - Parameters - Set variable [DWH_DWH_PASSWORD] to value [kff] in the parent job.
+2010/08/18 15:59:36 - Parameters - Set variable [KFF_LIFECYCLE] to value [DEV] in the parent job.
+2010/08/18 15:59:36 - Parameters - Set variable [DWH_DWH_USERNAME] to value [dwh_DEV] in the parent job.
+2010/08/18 15:59:36 - Parameters - Set variable [CARTE_HOSTNAME] to value [localhost] in the parent job.
+2010/08/18 15:59:36 - Parameters - Set variable [KFF_LOGGING_TRNSF_TABLE] to value [KFF_LOG_TRNSF] in the parent job.
+2010/08/18 15:59:36 - Parameters - Set variable [CARTE_PROXY_PORT] to value [] in the parent job.
+2010/08/18 15:59:36 - Parameters - Set variable [DWH_ODS_DATABASE] to value [dwh_DEV] in the parent job.
+2010/08/18 15:59:36 - Parameters - Set variable [KFF_CUSTOMER] to value [templates] in the parent job.
+2010/08/18 15:59:36 - Parameters - Set variable [MAIL_CONTACT_PHONE] to value [] in the parent job.
+2010/08/18 15:59:36 - Parameters - Set variable [DWH_STG_PORT] to value [3306] in the parent job.
+2010/08/18 15:59:36 - Parameters - Set variable [KFF_LOGGING_JOB_TABLE_HIST] to value [KFF_LOG_JOB_HIST] in the parent job.
+2010/08/18 15:59:36 - Parameters - Set variable [KFF_LOGGING_REJECT_TABLE_HIST] to value [KFF_LOG_REJECT_HIST] in the parent job.
+2010/08/18 15:59:36 - Parameters - Set variable [KFF_LOGGING_STEP_TABLE] to value [KFF_LOG_STEP] in the parent job.
+2010/08/18 15:59:36 - Parameters - Set variable [MAIL_REPLY_TO] to value [kff@kjube.be] in the parent job.
+2010/08/18 15:59:36 - Parameters - Set variable [DWH_DWH_DATABASE] to value [dwh_DEV] in the parent job.
+2010/08/18 15:59:36 - Parameters - Set variable [CARTE_NON_PROXY] to value [] in the parent job.
+2010/08/18 15:59:36 - Parameters - Set variable [DWH_STG_HOSTNAME] to value [localhost] in the parent job.
+2010/08/18 15:59:36 - Parameters - Set variable [KFF_APPLICATION] to value [datawarehouse] in the parent job.
+2010/08/18 15:59:36 - Parameters - Set variable [DWH_LOG_HOSTNAME] to value [localhost] in the parent job.
+2010/08/18 15:59:36 - Parameters - Set variable [DWH_DWH_DATABASE_TYPE] to value [MySQL] in the parent job.
+2010/08/18 15:59:36 - Parameters - Set variable [MAIL_SENDER_NAME] to value [kff franchising factory] in the parent job.
+2010/08/18 15:59:36 - Parameters - Set variable [DWH_LOG_DATABASE_TYPE] to value [MySQL] in the parent job.
+2010/08/18 15:59:36 - Parameters - Set variable [KFF_BASE_DIR] to value [/kff] in the parent job.
+2010/08/18 15:59:36 - Parameters - Set variable [CARTE_USER] to value [cluster] in the parent job.
+2010/08/18 15:59:36 - Parameters - Set variable [MAIL_SMTP_USER] to value [] in the parent job.
+2010/08/18 15:59:36 - Parameters - Set variable [KFF_LOGGING_TRNSF_TABLE_HIST] to value [KFF_LOG_TRNSF_HIST] in the parent job.
+2010/08/18 15:59:36 - Parameters - Set variable [DWH_DWH_PORT] to value [3306] in the parent job.
+2010/08/18 15:59:36 - Parameters - Set variable [CARTE_PROXY_HOST] to value [] in the parent job.
+2010/08/18 15:59:36 - Parameters - Set variable [DWH_ODS_DATABASE_TYPE] to value [MySQL] in the parent job.
+2010/08/18 15:59:36 - Parameters - Set variable [KFF_LOGGING_CONNECTION] to value [DWH_LOG] in the parent job.
+2010/08/18 15:59:36 - Parameters - Set variable [KFF_LOGGING_JOB_TABLE] to value [KFF_LOG_JOB] in the parent job.
+2010/08/18 15:59:36 - Parameters - Set variable [MAIL_SMTP_PWD] to value [] in the parent job.
+2010/08/18 15:59:36 - Parameters - Set variable [CARTE_PORT] to value [8181] in the parent job.
+2010/08/18 15:59:36 - Parameters - Set variable [MAIL_SMTP_PORT] to value [] in the parent job.
+2010/08/18 15:59:36 - Parameters - Set variable [DWH_LOG_PORT] to value [3306] in the parent job.
+2010/08/18 15:59:36 - Parameters - Set variable [KFF_LOGGING_SCHEMA] to value [] in the parent job.
+2010/08/18 15:59:36 - Parameters - Set variable [DWH_STG_PASSWORD] to value [kff] in the parent job.
+2010/08/18 15:59:36 - Parameters - Set variable [CARTE_PWD] to value [Encrypted 2be98afc86aa7f2e4cb1aa265cd86aac8] in the parent job.
+2010/08/18 15:59:36 - Parameters - Set variable [DWH_LOG_PASSWORD] to value [kff] in the parent job.
+2010/08/18 15:59:36 - Parameters - Set variable [DWH_STG_USERNAME] to value [dwh_DEV] in the parent job.
+2010/08/18 15:59:36 - Parameters - Set variable [DWH_ODS_HOSTNAME] to value [localhost] in the parent job.
+2010/08/18 15:59:36 - Parameters - Set variable [KFF_LOGGING_REJECT_TABLE] to value [KFF_LOG_REJECT] in the parent job.
+2010/08/18 15:59:36 - Parameters - Set variable [DWH_LOG_USERNAME] to value [dwh_DEV] in the parent job.
+2010/08/18 15:59:36 - batch_launcher - Starting entry [kff_logging_init]
+2010/08/18 15:59:36 - batch_launcher - Launched job entry [kff_logging_init] in parallel.
+2010/08/18 15:59:36 - Thread[batch_launcher (batch_launcher (Thread-3)),5,main] - exec(2, 0, kff_logging_init.0)
+2010/08/18 15:59:36 - kff_logging_init - Loading job from XML file : [/kff/reusable/kff-logging/kff_logging_init.kjb]
+2010/08/18 15:59:36 - SharedObjects - Reading the shared objects file [file:///home/matt/.kettle/shared.xml]
+2010/08/18 15:59:36 - kff_logging_init - Starting job, loaded from XML file : [/kff/reusable/kff-logging/kff_logging_init.kjb]
+2010/08/18 15:59:36 - Thread[kff_logging_tables (kff_logging_tables (Thread-5)),5,main] - exec(3, 0, START.0)
+2010/08/18 15:59:36 - kff_logging_tables - Starting entry [DWH_LOG database = MySQL]
+2010/08/18 15:59:36 - Thread[kff_logging_tables (kff_logging_tables (Thread-5)),5,main] - exec(4, 0, DWH_LOG database = MySQL.0)
+2010/08/18 15:59:36 - DWH_LOG database = MySQL - Value to evaluate is MySQL
+2010/08/18 15:59:36 - kff_logging_tables - Starting entry [kff_logging_tables_mysql]
+2010/08/18 15:59:36 - Thread[kff_logging_tables (kff_logging_tables (Thread-5)),5,main] - exec(5, 0, kff_logging_tables_mysql.0)
+2010/08/18 15:59:36 - kff_logging_tables_mysql - Loading job from XML file : [/kff/reusable/kff-logging/kff_logging_tables_mysql.kjb]
+2010/08/18 15:59:36 - SharedObjects - Reading the shared objects file [file:///home/matt/.kettle/shared.xml]
+2010/08/18 15:59:37 - kff_logging_tables_mysql - Starting job, loaded from XML file : [/kff/reusable/kff-logging/kff_logging_tables_mysql.kjb]
+2010/08/18 15:59:37 - Thread[kjube_etl_log_tables_mysql (kjube_etl_log_tables_mysql (Thread-7)),5,main] - exec(6, 0, START.0)
+2010/08/18 15:59:37 - kjube_etl_log_tables_mysql - Starting entry [Check ${KFF_LOGGING_BATCH_TABLE}]
+2010/08/18 15:59:37 - Thread[kjube_etl_log_tables_mysql (kjube_etl_log_tables_mysql (Thread-7)),5,main] - exec(7, 0, Check ${KFF_LOGGING_BATCH_TABLE}.0)
+2010/08/18 15:59:37 - DWH_LOG - New database connection defined
+2010/08/18 15:59:37 - DWH_LOG - Connected to database.
+2010/08/18 15:59:37 - Check ${KFF_LOGGING_BATCH_TABLE} - Table [KFF_LOG_BATCH] does not exists!
+2010/08/18 15:59:37 - DWH_LOG - Connection to database closed!
+2010/08/18 15:59:37 - kjube_etl_log_tables_mysql - Starting entry [Create ${KFF_LOGGING_BATCH_TABLE}]
+2010/08/18 15:59:37 - Thread[kjube_etl_log_tables_mysql (kjube_etl_log_tables_mysql (Thread-7)),5,main] - exec(8, 0, Create ${KFF_LOGGING_BATCH_TABLE}.0)
+2010/08/18 15:59:37 - DWH_LOG - New database connection defined
+2010/08/18 15:59:37 - DWH_LOG - Connected to database.
+2010/08/18 15:59:37 - DWH_LOG - launch DDL statement: 
+2010/08/18 15:59:37 - DWH_LOG - CREATE TABLE KFF_LOG_BATCH
+2010/08/18 15:59:37 - DWH_LOG - (
+2010/08/18 15:59:37 - DWH_LOG -   ID_JOB INT
+2010/08/18 15:59:37 - DWH_LOG - , JOBNAME VARCHAR(255)
+2010/08/18 15:59:37 - DWH_LOG - , STATUS VARCHAR(15)
+2010/08/18 15:59:37 - DWH_LOG - , LINES_READ BIGINT
+2010/08/18 15:59:37 - DWH_LOG - , LINES_WRITTEN BIGINT
+2010/08/18 15:59:37 - DWH_LOG - , LINES_UPDATED BIGINT
+2010/08/18 15:59:37 - DWH_LOG - , LINES_INPUT BIGINT
+2010/08/18 15:59:37 - DWH_LOG - , LINES_OUTPUT BIGINT
+2010/08/18 15:59:37 - DWH_LOG - , ERRORS BIGINT
+2010/08/18 15:59:37 - DWH_LOG - , STARTDATE DATETIME
+2010/08/18 15:59:37 - DWH_LOG - , ENDDATE DATETIME
+2010/08/18 15:59:37 - DWH_LOG - , LOGDATE DATETIME
+2010/08/18 15:59:37 - DWH_LOG - , DEPDATE DATETIME
+2010/08/18 15:59:37 - DWH_LOG - , REPLAYDATE DATETIME
+2010/08/18 15:59:37 - DWH_LOG - , LOG_FIELD MEDIUMTEXT
+2010/08/18 15:59:37 - DWH_LOG - )
+2010/08/18 15:59:37 - DBCache - Loading database cache from file: [/home/matt/.kettle/db.cache]
+2010/08/18 15:59:37 - DBCache - We read 93 cached rows from the database cache!
+2010/08/18 15:59:37 - DWH_LOG - launch DDL statement: 
+2010/08/18 15:59:37 - DWH_LOG - CREATE INDEX KFF_LOG_BATCH_UIX
+2010/08/18 15:59:37 - DWH_LOG - ON KFF_LOG_BATCH (ID_JOB, JOBNAME)
+2010/08/18 15:59:37 - DWH_LOG - 2 statements executed
+2010/08/18 15:59:37 - DWH_LOG - Connection to database closed!
+2010/08/18 15:59:37 - kjube_etl_log_tables_mysql - Starting entry [Check ${KFF_LOGGING_TRNSF_TABLE}]
+2010/08/18 15:59:37 - Thread[kjube_etl_log_tables_mysql (kjube_etl_log_tables_mysql (Thread-7)),5,main] - exec(9, 0, Check ${KFF_LOGGING_TRNSF_TABLE}.0)
+2010/08/18 15:59:37 - DWH_LOG - New database connection defined
+2010/08/18 15:59:37 - DWH_LOG - Connected to database.
+2010/08/18 15:59:37 - Check ${KFF_LOGGING_TRNSF_TABLE} - Table [KFF_LOG_TRNSF] does not exists!
+2010/08/18 15:59:37 - DWH_LOG - Connection to database closed!
+2010/08/18 15:59:37 - kjube_etl_log_tables_mysql - Starting entry [Create ${KFF_LOGGING_TRNSF_TABLE}]
+2010/08/18 15:59:37 - Thread[kjube_etl_log_tables_mysql (kjube_etl_log_tables_mysql (Thread-7)),5,main] - exec(10, 0, Create ${KFF_LOGGING_TRNSF_TABLE}.0)
+2010/08/18 15:59:37 - DWH_LOG - New database connection defined
+2010/08/18 15:59:37 - DWH_LOG - Connected to database.
+2010/08/18 15:59:37 - DWH_LOG - launch DDL statement: 
+2010/08/18 15:59:37 - DWH_LOG - CREATE TABLE KFF_LOG_TRNSF
+2010/08/18 15:59:37 - DWH_LOG - (
+2010/08/18 15:59:37 - DWH_LOG -   ID_BATCH INT
+2010/08/18 15:59:37 - DWH_LOG - , TRANSNAME VARCHAR(255)
+2010/08/18 15:59:37 - DWH_LOG - , STATUS VARCHAR(15)
+2010/08/18 15:59:37 - DWH_LOG - , LINES_READ BIGINT
+2010/08/18 15:59:37 - DWH_LOG - , LINES_WRITTEN BIGINT
+2010/08/18 15:59:37 - DWH_LOG - , LINES_UPDATED BIGINT
+2010/08/18 15:59:37 - DWH_LOG - , LINES_INPUT BIGINT
+2010/08/18 15:59:37 - DWH_LOG - , LINES_OUTPUT BIGINT
+2010/08/18 15:59:37 - DWH_LOG - , ERRORS BIGINT
+2010/08/18 15:59:37 - DWH_LOG - , STARTDATE DATETIME
+2010/08/18 15:59:37 - DWH_LOG - , ENDDATE DATETIME
+2010/08/18 15:59:37 - DWH_LOG - , LOGDATE DATETIME
+2010/08/18 15:59:37 - DWH_LOG - , DEPDATE DATETIME
+2010/08/18 15:59:37 - DWH_LOG - , REPLAYDATE DATETIME
+2010/08/18 15:59:37 - DWH_LOG - , LOG_FIELD MEDIUMTEXT
+2010/08/18 15:59:37 - DWH_LOG - )
+2010/08/18 15:59:37 - DWH_LOG - launch DDL statement: 
+2010/08/18 15:59:37 - DWH_LOG - CREATE INDEX KFF_LOG_TRNSF_UIX
+2010/08/18 15:59:37 - DWH_LOG - on KFF_LOG_TRNSF (TRANSNAME)
+2010/08/18 15:59:37 - DWH_LOG - 2 statements executed
+2010/08/18 15:59:37 - DWH_LOG - Connection to database closed!
+2010/08/18 15:59:37 - kjube_etl_log_tables_mysql - Starting entry [Check ${KFF_LOGGING_STEP_TABLE}]
+2010/08/18 15:59:37 - Thread[kjube_etl_log_tables_mysql (kjube_etl_log_tables_mysql (Thread-7)),5,main] - exec(11, 0, Check ${KFF_LOGGING_STEP_TABLE}.0)
+2010/08/18 15:59:37 - DWH_LOG - New database connection defined
+2010/08/18 15:59:37 - DWH_LOG - Connected to database.
+2010/08/18 15:59:37 - Check ${KFF_LOGGING_STEP_TABLE} - Table [KFF_LOG_STEP] does not exists!
+2010/08/18 15:59:37 - DWH_LOG - Connection to database closed!
+2010/08/18 15:59:37 - kjube_etl_log_tables_mysql - Starting entry [Create ${KFF_LOGGING_STEP_TABLE}]
+2010/08/18 15:59:37 - Thread[kjube_etl_log_tables_mysql (kjube_etl_log_tables_mysql (Thread-7)),5,main] - exec(12, 0, Create ${KFF_LOGGING_STEP_TABLE}.0)
+2010/08/18 15:59:37 - DWH_LOG - New database connection defined
+2010/08/18 15:59:37 - DWH_LOG - Connected to database.
+2010/08/18 15:59:37 - DWH_LOG - launch DDL statement: 
+2010/08/18 15:59:37 - DWH_LOG - CREATE TABLE KFF_LOG_STEP
+2010/08/18 15:59:37 - DWH_LOG - (
+2010/08/18 15:59:37 - DWH_LOG -   ID_BATCH INT
+2010/08/18 15:59:37 - DWH_LOG - , SEQ_NR INT
+2010/08/18 15:59:37 - DWH_LOG - , LOGDATE DATETIME
+2010/08/18 15:59:37 - DWH_LOG - , TRANSNAME VARCHAR(255)
+2010/08/18 15:59:37 - DWH_LOG - , STEPNAME VARCHAR(255)
+2010/08/18 15:59:37 - DWH_LOG - , STEP_COPY INT
+2010/08/18 15:59:37 - DWH_LOG - , LINES_READ BIGINT
+2010/08/18 15:59:37 - DWH_LOG - , LINES_WRITTEN BIGINT
+2010/08/18 15:59:37 - DWH_LOG - , LINES_UPDATED BIGINT
+2010/08/18 15:59:37 - DWH_LOG - , LINES_INPUT BIGINT
+2010/08/18 15:59:37 - DWH_LOG - , LINES_OUTPUT BIGINT
+2010/08/18 15:59:37 - DWH_LOG - , LINES_REJECTED BIGINT
+2010/08/18 15:59:37 - DWH_LOG - , ERRORS BIGINT
+2010/08/18 15:59:37 - DWH_LOG - , INPUT_BUFFER_ROWS BIGINT
+2010/08/18 15:59:37 - DWH_LOG - , OUTPUT_BUFFER_ROWS BIGINT
+2010/08/18 15:59:37 - DWH_LOG - )
+2010/08/18 15:59:37 - DWH_LOG - launch DDL statement: 
+2010/08/18 15:59:37 - DWH_LOG - CREATE INDEX KFF_LOG_STEP_UIX
+2010/08/18 15:59:37 - DWH_LOG - on KFF_LOG_STEP (STEPNAME)
+2010/08/18 15:59:37 - DWH_LOG - 2 statements executed
+2010/08/18 15:59:37 - DWH_LOG - Connection to database closed!
+2010/08/18 15:59:37 - kjube_etl_log_tables_mysql - Starting entry [Check ${KFF_LOGGING_JOB_TABLE}]
+2010/08/18 15:59:37 - Thread[kjube_etl_log_tables_mysql (kjube_etl_log_tables_mysql (Thread-7)),5,main] - exec(13, 0, Check ${KFF_LOGGING_JOB_TABLE}.0)
+2010/08/18 15:59:37 - DWH_LOG - New database connection defined
+2010/08/18 15:59:37 - DWH_LOG - Connected to database.
+2010/08/18 15:59:37 - Check ${KFF_LOGGING_JOB_TABLE} - Table [KFF_LOG_JOB] does not exists!
+2010/08/18 15:59:37 - DWH_LOG - Connection to database closed!
+2010/08/18 15:59:37 - kjube_etl_log_tables_mysql - Starting entry [Create ${KFF_LOGGING_JOB_TABLE}]
+2010/08/18 15:59:37 - Thread[kjube_etl_log_tables_mysql (kjube_etl_log_tables_mysql (Thread-7)),5,main] - exec(14, 0, Create ${KFF_LOGGING_JOB_TABLE}.0)
+2010/08/18 15:59:37 - DWH_LOG - New database connection defined
+2010/08/18 15:59:37 - DWH_LOG - Connected to database.
+2010/08/18 15:59:37 - DWH_LOG - launch DDL statement: 
+2010/08/18 15:59:37 - DWH_LOG - CREATE TABLE KFF_LOG_JOB
+2010/08/18 15:59:37 - DWH_LOG - (
+2010/08/18 15:59:37 - DWH_LOG -   ID_JOB INT
+2010/08/18 15:59:37 - DWH_LOG - , JOBNAME VARCHAR(255)
+2010/08/18 15:59:37 - DWH_LOG - , STATUS VARCHAR(15)
+2010/08/18 15:59:37 - DWH_LOG - , LINES_READ BIGINT
+2010/08/18 15:59:37 - DWH_LOG - , LINES_WRITTEN BIGINT
+2010/08/18 15:59:37 - DWH_LOG - , LINES_UPDATED BIGINT
+2010/08/18 15:59:37 - DWH_LOG - , LINES_INPUT BIGINT
+2010/08/18 15:59:37 - DWH_LOG - , LINES_OUTPUT BIGINT
+2010/08/18 15:59:37 - DWH_LOG - , ERRORS BIGINT
+2010/08/18 15:59:37 - DWH_LOG - , STARTDATE DATETIME
+2010/08/18 15:59:37 - DWH_LOG - , ENDDATE DATETIME
+2010/08/18 15:59:37 - DWH_LOG - , LOGDATE DATETIME
+2010/08/18 15:59:37 - DWH_LOG - , DEPDATE DATETIME
+2010/08/18 15:59:37 - DWH_LOG - , REPLAYDATE DATETIME
+2010/08/18 15:59:37 - DWH_LOG - , LOG_FIELD MEDIUMTEXT
+2010/08/18 15:59:37 - DWH_LOG - )
+2010/08/18 15:59:37 - DWH_LOG - launch DDL statement: 
+2010/08/18 15:59:37 - DWH_LOG - CREATE INDEX KFF_LOG_JOB_UIX
+2010/08/18 15:59:37 - DWH_LOG - on KFF_LOG_JOB (JOBNAME)
+2010/08/18 15:59:37 - DWH_LOG - 2 statements executed
+2010/08/18 15:59:37 - DWH_LOG - Connection to database closed!
+2010/08/18 15:59:37 - kjube_etl_log_tables_mysql - Starting entry [Check ${KFF_LOGGING_REJECT_TABLE}]
+2010/08/18 15:59:37 - Thread[kjube_etl_log_tables_mysql (kjube_etl_log_tables_mysql (Thread-7)),5,main] - exec(15, 0, Check ${KFF_LOGGING_REJECT_TABLE}.0)
+2010/08/18 15:59:37 - DWH_LOG - New database connection defined
+2010/08/18 15:59:37 - DWH_LOG - Connected to database.
+2010/08/18 15:59:37 - Check ${KFF_LOGGING_REJECT_TABLE} - Table [KFF_LOG_REJECT] does not exists!
+2010/08/18 15:59:37 - DWH_LOG - Connection to database closed!
+2010/08/18 15:59:37 - kjube_etl_log_tables_mysql - Starting entry [Create ${KFF_LOGGING_REJECT_TABLE}]
+2010/08/18 15:59:37 - Thread[kjube_etl_log_tables_mysql (kjube_etl_log_tables_mysql (Thread-7)),5,main] - exec(16, 0, Create ${KFF_LOGGING_REJECT_TABLE}.0)
+2010/08/18 15:59:37 - DWH_LOG - New database connection defined
+2010/08/18 15:59:37 - DWH_LOG - Connected to database.
+2010/08/18 15:59:37 - DWH_LOG - launch DDL statement: 
+2010/08/18 15:59:37 - DWH_LOG - CREATE TABLE KFF_LOG_REJECT
+2010/08/18 15:59:37 - DWH_LOG - (
+2010/08/18 15:59:37 - DWH_LOG -   id VARCHAR(2000)
+2010/08/18 15:59:37 - DWH_LOG - , value VARCHAR(4000)
+2010/08/18 15:59:37 - DWH_LOG - , batch_id INT
+2010/08/18 15:59:37 - DWH_LOG - , transname VARCHAR(255)
+2010/08/18 15:59:37 - DWH_LOG - , jobname VARCHAR(255)
+2010/08/18 15:59:37 - DWH_LOG - , stepname VARCHAR(255)
+2010/08/18 15:59:37 - DWH_LOG - , error_count BIGINT
+2010/08/18 15:59:37 - DWH_LOG - , error_descriptions VARCHAR(4000)
+2010/08/18 15:59:37 - DWH_LOG - , error_fields VARCHAR(255)
+2010/08/18 15:59:37 - DWH_LOG - , error_codes VARCHAR(255)
+2010/08/18 15:59:37 - DWH_LOG - , logdate DATETIME
+2010/08/18 15:59:37 - DWH_LOG - )
+2010/08/18 15:59:37 - DWH_LOG - launch DDL statement: 
+2010/08/18 15:59:37 - DWH_LOG - CREATE INDEX KFF_LOG_REJECT_UIX
+2010/08/18 15:59:37 - DWH_LOG - on KFF_LOG_REJECT (TRANSNAME, JOBNAME)
+2010/08/18 15:59:37 - DWH_LOG - 2 statements executed
+2010/08/18 15:59:37 - DWH_LOG - Connection to database closed!
+2010/08/18 15:59:37 - kjube_etl_log_tables_mysql - Starting entry [Check ${KFF_LOGGING_JOB_TABLE_HIST}]
+2010/08/18 15:59:37 - Thread[kjube_etl_log_tables_mysql (kjube_etl_log_tables_mysql (Thread-7)),5,main] - exec(17, 0, Check ${KFF_LOGGING_JOB_TABLE_HIST}.0)
+2010/08/18 15:59:37 - DWH_LOG - New database connection defined
+2010/08/18 15:59:37 - DWH_LOG - Connected to database.
+2010/08/18 15:59:37 - Check ${KFF_LOGGING_JOB_TABLE_HIST} - Table [KFF_LOG_JOB_HIST] does not exists!
+2010/08/18 15:59:37 - DWH_LOG - Connection to database closed!
+2010/08/18 15:59:37 - kjube_etl_log_tables_mysql - Starting entry [Create ${KFF_LOGGING_JOB_TABLE_HIST}]
+2010/08/18 15:59:37 - Thread[kjube_etl_log_tables_mysql (kjube_etl_log_tables_mysql (Thread-7)),5,main] - exec(18, 0, Create ${KFF_LOGGING_JOB_TABLE_HIST}.0)
+2010/08/18 15:59:37 - DWH_LOG - New database connection defined
+2010/08/18 15:59:37 - DWH_LOG - Connected to database.
+2010/08/18 15:59:37 - DWH_LOG - launch DDL statement: 
+2010/08/18 15:59:37 - DWH_LOG - CREATE TABLE KFF_LOG_JOB_HIST
+2010/08/18 15:59:37 - DWH_LOG - ( KJUBE_BATCH_ID INT
+2010/08/18 15:59:37 - DWH_LOG - , ID_JOB INT
+2010/08/18 15:59:37 - DWH_LOG - , JOBNAME VARCHAR(255)
+2010/08/18 15:59:37 - DWH_LOG - , STATUS VARCHAR(15)
+2010/08/18 15:59:37 - DWH_LOG - , LINES_READ BIGINT
+2010/08/18 15:59:37 - DWH_LOG - , LINES_WRITTEN BIGINT
+2010/08/18 15:59:37 - DWH_LOG - , LINES_UPDATED BIGINT
+2010/08/18 15:59:37 - DWH_LOG - , LINES_INPUT BIGINT
+2010/08/18 15:59:37 - DWH_LOG - , LINES_OUTPUT BIGINT
+2010/08/18 15:59:37 - DWH_LOG - , ERRORS BIGINT
+2010/08/18 15:59:37 - DWH_LOG - , STARTDATE DATETIME
+2010/08/18 15:59:37 - DWH_LOG - , ENDDATE DATETIME
+2010/08/18 15:59:37 - DWH_LOG - , LOGDATE DATETIME
+2010/08/18 15:59:37 - DWH_LOG - , DEPDATE DATETIME
+2010/08/18 15:59:37 - DWH_LOG - , REPLAYDATE DATETIME
+2010/08/18 15:59:37 - DWH_LOG - , LOG_FIELD MEDIUMTEXT
+2010/08/18 15:59:37 - DWH_LOG - )
+2010/08/18 15:59:37 - DWH_LOG - launch DDL statement: 
+2010/08/18 15:59:37 - DWH_LOG - CREATE INDEX KFF_LOG_JOB_HIST_UIX
+2010/08/18 15:59:37 - DWH_LOG - on KFF_LOG_JOB_HIST (KJUBE_BATCH_ID, JOBNAME)
+2010/08/18 15:59:37 - DWH_LOG - 2 statements executed
+2010/08/18 15:59:37 - DWH_LOG - Connection to database closed!
+2010/08/18 15:59:37 - kjube_etl_log_tables_mysql - Starting entry [Check ${KFF_LOGGING_TRNSF_TABLE_HIST}]
+2010/08/18 15:59:37 - Thread[kjube_etl_log_tables_mysql (kjube_etl_log_tables_mysql (Thread-7)),5,main] - exec(19, 0, Check ${KFF_LOGGING_TRNSF_TABLE_HIST}.0)
+2010/08/18 15:59:37 - DWH_LOG - New database connection defined
+2010/08/18 15:59:37 - DWH_LOG - Connected to database.
+2010/08/18 15:59:37 - Check ${KFF_LOGGING_TRNSF_TABLE_HIST} - Table [KFF_LOG_TRNSF_HIST] does not exists!
+2010/08/18 15:59:37 - DWH_LOG - Connection to database closed!
+2010/08/18 15:59:37 - kjube_etl_log_tables_mysql - Starting entry [Create ${KFF_LOGGING_TRNSF_TABLE_HIST}]
+2010/08/18 15:59:37 - Thread[kjube_etl_log_tables_mysql (kjube_etl_log_tables_mysql (Thread-7)),5,main] - exec(20, 0, Create ${KFF_LOGGING_TRNSF_TABLE_HIST}.0)
+2010/08/18 15:59:37 - DWH_LOG - New database connection defined
+2010/08/18 15:59:37 - DWH_LOG - Connected to database.
+2010/08/18 15:59:37 - DWH_LOG - launch DDL statement: 
+2010/08/18 15:59:37 - DWH_LOG - CREATE TABLE KFF_LOG_TRNSF_HIST
+2010/08/18 15:59:37 - DWH_LOG - ( KJUBE_BATCH_ID INT
+2010/08/18 15:59:37 - DWH_LOG - , ID_BATCH INT
+2010/08/18 15:59:37 - DWH_LOG - , TRANSNAME VARCHAR(255)
+2010/08/18 15:59:37 - DWH_LOG - , STATUS VARCHAR(15)
+2010/08/18 15:59:37 - DWH_LOG - , LINES_READ BIGINT
+2010/08/18 15:59:37 - DWH_LOG - , LINES_WRITTEN BIGINT
+2010/08/18 15:59:37 - DWH_LOG - , LINES_UPDATED BIGINT
+2010/08/18 15:59:37 - DWH_LOG - , LINES_INPUT BIGINT
+2010/08/18 15:59:37 - DWH_LOG - , LINES_OUTPUT BIGINT
+2010/08/18 15:59:37 - DWH_LOG - , ERRORS BIGINT
+2010/08/18 15:59:37 - DWH_LOG - , STARTDATE DATETIME
+2010/08/18 15:59:37 - DWH_LOG - , ENDDATE DATETIME
+2010/08/18 15:59:37 - DWH_LOG - , LOGDATE DATETIME
+2010/08/18 15:59:37 - DWH_LOG - , DEPDATE DATETIME
+2010/08/18 15:59:37 - DWH_LOG - , REPLAYDATE DATETIME
+2010/08/18 15:59:37 - DWH_LOG - , LOG_FIELD MEDIUMTEXT
+2010/08/18 15:59:37 - DWH_LOG - )
+2010/08/18 15:59:37 - DWH_LOG - launch DDL statement: 
+2010/08/18 15:59:37 - DWH_LOG - CREATE INDEX KFF_LOG_TRNSF_HIST_UIX
+2010/08/18 15:59:37 - DWH_LOG - on KFF_LOG_TRNSF_HIST (KJUBE_BATCH_ID, TRANSNAME)
+2010/08/18 15:59:37 - DWH_LOG - 2 statements executed
+2010/08/18 15:59:37 - DWH_LOG - Connection to database closed!
+2010/08/18 15:59:37 - kjube_etl_log_tables_mysql - Starting entry [Check ${KFF_LOGGING_STEP_TABLE_HIST}]
+2010/08/18 15:59:37 - Thread[kjube_etl_log_tables_mysql (kjube_etl_log_tables_mysql (Thread-7)),5,main] - exec(21, 0, Check ${KFF_LOGGING_STEP_TABLE_HIST}.0)
+2010/08/18 15:59:37 - DWH_LOG - New database connection defined
+2010/08/18 15:59:38 - DWH_LOG - Connected to database.
+2010/08/18 15:59:38 - Check ${KFF_LOGGING_STEP_TABLE_HIST} - Table [KFF_LOG_STEP_HIST] does not exists!
+2010/08/18 15:59:38 - DWH_LOG - Connection to database closed!
+2010/08/18 15:59:38 - kjube_etl_log_tables_mysql - Starting entry [Create ${KFF_LOGGING_STEP_TABLE}_HIST]
+2010/08/18 15:59:38 - Thread[kjube_etl_log_tables_mysql (kjube_etl_log_tables_mysql (Thread-7)),5,main] - exec(22, 0, Create ${KFF_LOGGING_STEP_TABLE}_HIST.0)
+2010/08/18 15:59:38 - DWH_LOG - New database connection defined
+2010/08/18 15:59:38 - DWH_LOG - Connected to database.
+2010/08/18 15:59:38 - DWH_LOG - launch DDL statement: 
+2010/08/18 15:59:38 - DWH_LOG - CREATE TABLE KFF_LOG_STEP_HIST
+2010/08/18 15:59:38 - DWH_LOG - (
+2010/08/18 15:59:38 - DWH_LOG -   KJUBE_BATCH_ID INT
+2010/08/18 15:59:38 - DWH_LOG - , ID_BATCH INT
+2010/08/18 15:59:38 - DWH_LOG - , SEQ_NR INT
+2010/08/18 15:59:38 - DWH_LOG - , LOGDATE DATETIME
+2010/08/18 15:59:38 - DWH_LOG - , TRANSNAME VARCHAR(255)
+2010/08/18 15:59:38 - DWH_LOG - , STEPNAME VARCHAR(255)
+2010/08/18 15:59:38 - DWH_LOG - , STEP_COPY INT
+2010/08/18 15:59:38 - DWH_LOG - , LINES_READ BIGINT
+2010/08/18 15:59:38 - DWH_LOG - , LINES_WRITTEN BIGINT
+2010/08/18 15:59:38 - DWH_LOG - , LINES_UPDATED BIGINT
+2010/08/18 15:59:38 - DWH_LOG - , LINES_INPUT BIGINT
+2010/08/18 15:59:38 - DWH_LOG - , LINES_OUTPUT BIGINT
+2010/08/18 15:59:38 - DWH_LOG - , LINES_REJECTED BIGINT
+2010/08/18 15:59:38 - DWH_LOG - , ERRORS BIGINT
+2010/08/18 15:59:38 - DWH_LOG - , INPUT_BUFFER_ROWS BIGINT
+2010/08/18 15:59:38 - DWH_LOG - , OUTPUT_BUFFER_ROWS BIGINT
+2010/08/18 15:59:38 - DWH_LOG - )
+2010/08/18 15:59:38 - DWH_LOG - launch DDL statement: 
+2010/08/18 15:59:38 - DWH_LOG - CREATE INDEX KFF_LOG_STEP_HIST_UIX
+2010/08/18 15:59:38 - DWH_LOG - on KFF_LOG_STEP_HIST (KJUBE_BATCH_ID,STEPNAME)
+2010/08/18 15:59:38 - DWH_LOG - 2 statements executed
+2010/08/18 15:59:38 - DWH_LOG - Connection to database closed!
+2010/08/18 15:59:38 - kjube_etl_log_tables_mysql - Starting entry [Check ${KFF_LOGGING_REJECT_TABLE_HIST}]
+2010/08/18 15:59:38 - Thread[kjube_etl_log_tables_mysql (kjube_etl_log_tables_mysql (Thread-7)),5,main] - exec(23, 0, Check ${KFF_LOGGING_REJECT_TABLE_HIST}.0)
+2010/08/18 15:59:38 - DWH_LOG - New database connection defined
+2010/08/18 15:59:38 - DWH_LOG - Connected to database.
+2010/08/18 15:59:38 - Check ${KFF_LOGGING_REJECT_TABLE_HIST} - Table [KFF_LOG_REJECT_HIST] does not exists!
+2010/08/18 15:59:38 - DWH_LOG - Connection to database closed!
+2010/08/18 15:59:38 - kjube_etl_log_tables_mysql - Starting entry [Create ${KFF_LOGGING_REJECT_TABLE_HIST}]
+2010/08/18 15:59:38 - Thread[kjube_etl_log_tables_mysql (kjube_etl_log_tables_mysql (Thread-7)),5,main] - exec(24, 0, Create ${KFF_LOGGING_REJECT_TABLE_HIST}.0)
+2010/08/18 15:59:38 - DWH_LOG - New database connection defined
+2010/08/18 15:59:38 - DWH_LOG - Connected to database.
+2010/08/18 15:59:38 - DWH_LOG - launch DDL statement: 
+2010/08/18 15:59:38 - DWH_LOG - CREATE TABLE KFF_LOG_REJECT_HIST
+2010/08/18 15:59:38 - DWH_LOG - (
+2010/08/18 15:59:38 - DWH_LOG -   KJUBE_BATCH_ID INT
+2010/08/18 15:59:38 - DWH_LOG - , ID VARCHAR(2000)
+2010/08/18 15:59:38 - DWH_LOG - , value VARCHAR(4000)
+2010/08/18 15:59:38 - DWH_LOG - , batch_id INT
+2010/08/18 15:59:38 - DWH_LOG - , transname VARCHAR(255)
+2010/08/18 15:59:38 - DWH_LOG - , jobname VARCHAR(255)
+2010/08/18 15:59:38 - DWH_LOG - , stepname VARCHAR(255)
+2010/08/18 15:59:38 - DWH_LOG - , error_count BIGINT
+2010/08/18 15:59:38 - DWH_LOG - , error_descriptions  VARCHAR(4000)
+2010/08/18 15:59:38 - DWH_LOG - , error_fields VARCHAR(255)
+2010/08/18 15:59:38 - DWH_LOG - , error_codes VARCHAR(255)
+2010/08/18 15:59:38 - DWH_LOG - , logdate DATETIME
+2010/08/18 15:59:38 - DWH_LOG - )
+2010/08/18 15:59:38 - DWH_LOG - launch DDL statement: 
+2010/08/18 15:59:38 - DWH_LOG - CREATE INDEX KFF_LOG_REJECT_HIST_UIX
+2010/08/18 15:59:38 - DWH_LOG - on KFF_LOG_REJECT_HIST (KJUBE_BATCH_ID, TRANSNAME, JOBNAME)
+2010/08/18 15:59:38 - DWH_LOG - 2 statements executed
+2010/08/18 15:59:38 - DWH_LOG - Connection to database closed!
+2010/08/18 15:59:38 - kjube_etl_log_tables_mysql - Finished job entry [Create ${KFF_LOGGING_REJECT_TABLE_HIST}] (result=[true])
+2010/08/18 15:59:38 - kjube_etl_log_tables_mysql - Finished job entry [Check ${KFF_LOGGING_REJECT_TABLE_HIST}] (result=[true])
+2010/08/18 15:59:38 - kjube_etl_log_tables_mysql - Finished job entry [Create ${KFF_LOGGING_STEP_TABLE}_HIST] (result=[true])
+2010/08/18 15:59:38 - kjube_etl_log_tables_mysql - Finished job entry [Check ${KFF_LOGGING_STEP_TABLE_HIST}] (result=[true])
+2010/08/18 15:59:38 - kjube_etl_log_tables_mysql - Finished job entry [Create ${KFF_LOGGING_TRNSF_TABLE_HIST}] (result=[true])
+2010/08/18 15:59:38 - kjube_etl_log_tables_mysql - Finished job entry [Check ${KFF_LOGGING_TRNSF_TABLE_HIST}] (result=[true])
+2010/08/18 15:59:38 - kjube_etl_log_tables_mysql - Finished job entry [Create ${KFF_LOGGING_JOB_TABLE_HIST}] (result=[true])
+2010/08/18 15:59:38 - kjube_etl_log_tables_mysql - Finished job entry [Check ${KFF_LOGGING_JOB_TABLE_HIST}] (result=[true])
+2010/08/18 15:59:38 - kjube_etl_log_tables_mysql - Finished job entry [Create ${KFF_LOGGING_REJECT_TABLE}] (result=[true])
+2010/08/18 15:59:38 - kjube_etl_log_tables_mysql - Finished job entry [Check ${KFF_LOGGING_REJECT_TABLE}] (result=[true])
+2010/08/18 15:59:38 - kjube_etl_log_tables_mysql - Finished job entry [Create ${KFF_LOGGING_JOB_TABLE}] (result=[true])
+2010/08/18 15:59:38 - kjube_etl_log_tables_mysql - Finished job entry [Check ${KFF_LOGGING_JOB_TABLE}] (result=[true])
+2010/08/18 15:59:38 - kjube_etl_log_tables_mysql - Finished job entry [Create ${KFF_LOGGING_STEP_TABLE}] (result=[true])
+2010/08/18 15:59:38 - kjube_etl_log_tables_mysql - Finished job entry [Check ${KFF_LOGGING_STEP_TABLE}] (result=[true])
+2010/08/18 15:59:38 - kjube_etl_log_tables_mysql - Finished job entry [Create ${KFF_LOGGING_TRNSF_TABLE}] (result=[true])
+2010/08/18 15:59:38 - kjube_etl_log_tables_mysql - Finished job entry [Check ${KFF_LOGGING_TRNSF_TABLE}] (result=[true])
+2010/08/18 15:59:38 - kjube_etl_log_tables_mysql - Finished job entry [Create ${KFF_LOGGING_BATCH_TABLE}] (result=[true])
+2010/08/18 15:59:38 - kjube_etl_log_tables_mysql - Finished job entry [Check ${KFF_LOGGING_BATCH_TABLE}] (result=[true])
+2010/08/18 15:59:38 - kff_logging_tables - Starting entry [kff_logging_inject]
+2010/08/18 15:59:38 - Thread[kff_logging_tables (kff_logging_tables (Thread-5)),5,main] - exec(6, 0, kff_logging_inject.0)
+2010/08/18 15:59:38 - kff_logging_inject - Loading job from XML file : [file:///kff/reusable/kff-logging/kff_logging_inject.kjb]
+2010/08/18 15:59:38 - SharedObjects - Reading the shared objects file [file:///home/matt/.kettle/shared.xml]
+2010/08/18 15:59:38 - kff_logging_inject - Starting job, loaded from XML file : [file:///kff/reusable/kff-logging/kff_logging_inject.kjb]
+2010/08/18 15:59:38 - Thread[kff_logging_inject (kff_logging_inject (Thread-9)),5,main] - exec(7, 0, START.0)
+2010/08/18 15:59:38 - kff_logging_inject - Starting entry [Add kjb to result]
+2010/08/18 15:59:38 - Thread[kff_logging_inject (kff_logging_inject (Thread-9)),5,main] - exec(8, 0, Add kjb to result.0)
+2010/08/18 15:59:38 - Add kjb to result - [0] file(s) were found in the result filenames...
+2010/08/18 15:59:38 - Add kjb to result - Result filenames list was cleared!. [0] file(s) were deleted from the result filenames.
+2010/08/18 15:59:38 - Add kjb to result - Processing argument [${KFF_BASE_DIR}/projects/${KFF_CUSTOMER}/${KFF_APPLICATION}/code].. wildcard [.*\.kjb] ?
+2010/08/18 15:59:38 - Add kjb to result - Adding file [file:///kff/projects/templates/datawarehouse/code/dwh/batch_dwh_dimensions.kjb] to result filenames
+2010/08/18 15:59:38 - Add kjb to result - Adding file [file:///kff/projects/templates/datawarehouse/code/dwh/batch_dwh_aggregates.kjb] to result filenames
+2010/08/18 15:59:38 - Add kjb to result - Adding file [file:///kff/projects/templates/datawarehouse/code/dwh/batch_dwh_facts.kjb] to result filenames
+2010/08/18 15:59:38 - Add kjb to result - Adding file [file:///kff/projects/templates/datawarehouse/code/dwh/batch_dwh.kjb] to result filenames
+2010/08/18 15:59:38 - Add kjb to result - Adding file [file:///kff/projects/templates/datawarehouse/code/ods/batch_ods.kjb] to result filenames
+2010/08/18 15:59:38 - Add kjb to result - Adding file [file:///kff/projects/templates/datawarehouse/code/batch_launcher.kjb] to result filenames
+2010/08/18 15:59:38 - Add kjb to result - Adding file [file:///kff/projects/templates/datawarehouse/code/pre/batch_pre.kjb] to result filenames
+2010/08/18 15:59:38 - Add kjb to result - Adding file [file:///kff/projects/templates/datawarehouse/code/batch_datawarehouse.kjb] to result filenames
+2010/08/18 15:59:38 - Add kjb to result - Adding file [file:///kff/projects/templates/datawarehouse/code/stg/batch_stg.kjb] to result filenames
+2010/08/18 15:59:38 - Add kjb to result - Adding file [file:///kff/projects/templates/datawarehouse/code/pst/batch_post.kjb] to result filenames
+2010/08/18 15:59:38 - kff_logging_inject - Starting entry [kff_logging_inject_jobs]
+2010/08/18 15:59:38 - Thread[kff_logging_inject (kff_logging_inject (Thread-9)),5,main] - exec(9, 0, kff_logging_inject_jobs.0)
+2010/08/18 15:59:38 - kff_logging_inject_jobs - Opening filename : [file:///kff/reusable/kff-logging/kff_logging_inject_jobs.ktr]
+2010/08/18 15:59:38 - kff_logging_inject_jobs - Opening transformation: [file:///kff/reusable/kff-logging/kff_logging_inject_jobs.ktr]
+2010/08/18 15:59:38 - kff_logging_inject_jobs - Loading transformation from XML file [file:///kff/reusable/kff-logging/kff_logging_inject_jobs.ktr]
+2010/08/18 15:59:38 - SharedObjects - Reading the shared objects file [file:///home/matt/.kettle/shared.xml]
+2010/08/18 15:59:38 - kff_logging_inject_jobs - Starting transformation...(file=${Internal.Job.Filename.Directory}/kff_logging_inject_jobs.ktr, name=kff_logging_inject_jobs, repinfo=Transformation)
+2010/08/18 15:59:38 - kff_logging_inject_jobs - Transformation is pre-loaded.
+2010/08/18 15:59:38 - kff_logging_inject_jobs - Dispatching started for transformation [kff_logging_inject_jobs]
+2010/08/18 15:59:38 - kff_logging_inject_jobs - Nr of arguments detected:0 
+2010/08/18 15:59:38 - kff_logging_inject_jobs - This is not a replay transformation
+2010/08/18 15:59:38 - kff_logging_inject_jobs - I found 4 different steps to launch.
+2010/08/18 15:59:38 - kff_logging_inject_jobs - Allocating rowsets...
+2010/08/18 15:59:38 - kff_logging_inject_jobs -  Allocating rowsets for step 0 --> LOG_CONNECTION
+2010/08/18 15:59:38 - kff_logging_inject_jobs -   prevcopies = 1, nextcopies=1
+2010/08/18 15:59:38 - kff_logging_inject_jobs - Transformation allocated new rowset [LOG_CONNECTION.0 - inject logging into job.0]
+2010/08/18 15:59:38 - kff_logging_inject_jobs -  Allocated 1 rowsets for step 0 --> LOG_CONNECTION  
+2010/08/18 15:59:38 - kff_logging_inject_jobs -  Allocating rowsets for step 1 --> inject logging into job
+2010/08/18 15:59:38 - kff_logging_inject_jobs -  Allocated 1 rowsets for step 1 --> inject logging into job  
+2010/08/18 15:59:38 - kff_logging_inject_jobs -  Allocating rowsets for step 2 --> Files from result
+2010/08/18 15:59:38 - kff_logging_inject_jobs -   prevcopies = 1, nextcopies=1
+2010/08/18 15:59:38 - kff_logging_inject_jobs - Transformation allocated new rowset [Files from result.0 - Get KFF_LOGGING_JOB_TABLE.0]
+2010/08/18 15:59:38 - kff_logging_inject_jobs -  Allocated 2 rowsets for step 2 --> Files from result  
+2010/08/18 15:59:38 - kff_logging_inject_jobs -  Allocating rowsets for step 3 --> Get KFF_LOGGING_JOB_TABLE
+2010/08/18 15:59:38 - kff_logging_inject_jobs -   prevcopies = 1, nextcopies=1
+2010/08/18 15:59:38 - kff_logging_inject_jobs - Transformation allocated new rowset [Get KFF_LOGGING_JOB_TABLE.0 - LOG_CONNECTION.0]
+2010/08/18 15:59:38 - kff_logging_inject_jobs -  Allocated 3 rowsets for step 3 --> Get KFF_LOGGING_JOB_TABLE  
+2010/08/18 15:59:38 - kff_logging_inject_jobs - Allocating Steps & StepData...
+2010/08/18 15:59:38 - kff_logging_inject_jobs -  Transformation is about to allocate step [LOG_CONNECTION] of type [Constant]
+2010/08/18 15:59:38 - LOG_CONNECTION.0 - distribution activated
+2010/08/18 15:59:38 - LOG_CONNECTION.0 - Starting allocation of buffers & new threads...
+2010/08/18 15:59:38 - LOG_CONNECTION.0 - Step info: nrinput=1 nroutput=1
+2010/08/18 15:59:38 - LOG_CONNECTION.0 - Got previous step from [LOG_CONNECTION] #0 --> Get KFF_LOGGING_JOB_TABLE
+2010/08/18 15:59:38 - LOG_CONNECTION.0 - input rel is 1:1
+2010/08/18 15:59:38 - LOG_CONNECTION.0 - Found input rowset [Get KFF_LOGGING_JOB_TABLE.0 - LOG_CONNECTION.0]
+2010/08/18 15:59:38 - LOG_CONNECTION.0 - output rel. is  1:1
+2010/08/18 15:59:38 - LOG_CONNECTION.0 - Found output rowset [LOG_CONNECTION.0 - inject logging into job.0]
+2010/08/18 15:59:38 - LOG_CONNECTION.0 - Finished dispatching
+2010/08/18 15:59:38 - kff_logging_inject_jobs -  Transformation has allocated a new step: [LOG_CONNECTION].0
+2010/08/18 15:59:38 - kff_logging_inject_jobs -  Transformation is about to allocate step [inject logging into job] of type [ScriptValueMod]
+2010/08/18 15:59:38 - inject logging into job.0 - distribution activated
+2010/08/18 15:59:38 - inject logging into job.0 - Starting allocation of buffers & new threads...
+2010/08/18 15:59:38 - inject logging into job.0 - Step info: nrinput=1 nroutput=0
+2010/08/18 15:59:38 - inject logging into job.0 - Got previous step from [inject logging into job] #0 --> LOG_CONNECTION
+2010/08/18 15:59:38 - inject logging into job.0 - input rel is 1:1
+2010/08/18 15:59:38 - inject logging into job.0 - Found input rowset [LOG_CONNECTION.0 - inject logging into job.0]
+2010/08/18 15:59:38 - inject logging into job.0 - Finished dispatching
+2010/08/18 15:59:38 - kff_logging_inject_jobs -  Transformation has allocated a new step: [inject logging into job].0
+2010/08/18 15:59:38 - kff_logging_inject_jobs -  Transformation is about to allocate step [Files from result] of type [FilesFromResult]
+2010/08/18 15:59:38 - Files from result.0 - Starting allocation of buffers & new threads...
+2010/08/18 15:59:38 - Files from result.0 - Step info: nrinput=0 nroutput=1
+2010/08/18 15:59:38 - Files from result.0 - output rel. is  1:1
+2010/08/18 15:59:38 - Files from result.0 - Found output rowset [Files from result.0 - Get KFF_LOGGING_JOB_TABLE.0]
+2010/08/18 15:59:38 - Files from result.0 - Finished dispatching
+2010/08/18 15:59:38 - kff_logging_inject_jobs -  Transformation has allocated a new step: [Files from result].0
+2010/08/18 15:59:38 - kff_logging_inject_jobs -  Transformation is about to allocate step [Get KFF_LOGGING_JOB_TABLE] of type [GetVariable]
+2010/08/18 15:59:38 - Get KFF_LOGGING_JOB_TABLE.0 - distribution activated
+2010/08/18 15:59:38 - Get KFF_LOGGING_JOB_TABLE.0 - Starting allocation of buffers & new threads...
+2010/08/18 15:59:38 - Get KFF_LOGGING_JOB_TABLE.0 - Step info: nrinput=1 nroutput=1
+2010/08/18 15:59:38 - Get KFF_LOGGING_JOB_TABLE.0 - Got previous step from [Get KFF_LOGGING_JOB_TABLE] #0 --> Files from result
+2010/08/18 15:59:38 - Get KFF_LOGGING_JOB_TABLE.0 - input rel is 1:1
+2010/08/18 15:59:38 - Get KFF_LOGGING_JOB_TABLE.0 - Found input rowset [Files from result.0 - Get KFF_LOGGING_JOB_TABLE.0]
+2010/08/18 15:59:38 - Get KFF_LOGGING_JOB_TABLE.0 - output rel. is  1:1
+2010/08/18 15:59:38 - Get KFF_LOGGING_JOB_TABLE.0 - Found output rowset [Get KFF_LOGGING_JOB_TABLE.0 - LOG_CONNECTION.0]
+2010/08/18 15:59:38 - Get KFF_LOGGING_JOB_TABLE.0 - Finished dispatching
+2010/08/18 15:59:38 - kff_logging_inject_jobs -  Transformation has allocated a new step: [Get KFF_LOGGING_JOB_TABLE].0
+2010/08/18 15:59:38 - kff_logging_inject_jobs - This transformation can be replayed with replay date: 2010/08/18 15:59:38
+2010/08/18 15:59:38 - kff_logging_inject_jobs - Initialising 4 steps...
+2010/08/18 15:59:38 - LOG_CONNECTION.0 - Running on slave server #0/1.
+2010/08/18 15:59:38 - inject logging into job.0 - Running on slave server #0/1.
+2010/08/18 15:59:38 - Files from result.0 - Running on slave server #0/1.
+2010/08/18 15:59:38 - Get KFF_LOGGING_JOB_TABLE.0 - Running on slave server #0/1.
+2010/08/18 15:59:38 - kff_logging_inject_jobs - Step [LOG_CONNECTION.0] initialized flawlessly.
+2010/08/18 15:59:38 - kff_logging_inject_jobs - Step [inject logging into job.0] initialized flawlessly.
+2010/08/18 15:59:38 - kff_logging_inject_jobs - Step [Files from result.0] initialized flawlessly.
+2010/08/18 15:59:38 - kff_logging_inject_jobs - Step [Get KFF_LOGGING_JOB_TABLE.0] initialized flawlessly.
+2010/08/18 15:59:38 - LOG_CONNECTION.0 - Starting to run...
+2010/08/18 15:59:38 - inject logging into job.0 - Starting to run...
+2010/08/18 15:59:38 - Get KFF_LOGGING_JOB_TABLE.0 - Starting to run...
+2010/08/18 15:59:38 - kff_logging_inject_jobs - Transformation has allocated 4 threads and 3 rowsets.
+2010/08/18 15:59:38 - Files from result.0 - Starting to run...
+2010/08/18 15:59:38 - Files from result.0 - Finished processing (I=0, O=0, R=10, W=10, U=0, E=0)
+2010/08/18 15:59:38 - Get KFF_LOGGING_JOB_TABLE.0 - field [JOB_LOG_TABLE] has value [KFF_LOG_JOB]
+2010/08/18 15:59:38 - inject logging into job.0 - Value #2 -  [path] is used in the script.
+2010/08/18 15:59:38 - inject logging into job.0 - Value #14 -  [JOB_LOG_TABLE] is used in the script.
+2010/08/18 15:59:38 - inject logging into job.0 - Value #15 -  [LOG_CONNECTION] is used in the script.
+2010/08/18 15:59:38 - inject logging into job.0 - This script is using 3 values from the input stream(s)
+2010/08/18 15:59:38 - Get KFF_LOGGING_JOB_TABLE.0 - Finished processing (I=0, O=0, R=10, W=10, U=0, E=0)
+2010/08/18 15:59:38 - LOG_CONNECTION.0 - Finished processing (I=0, O=0, R=10, W=10, U=0, E=0)
+2010/08/18 15:59:38 - inject logging into job.0 - No starting Script found!
+2010/08/18 15:59:38 - SharedObjects - Reading the shared objects file [file:///home/matt/.kettle/shared.xml]
+2010/08/18 15:59:38 - inject logging into job.0 - ERROR (version 3.2.3, build 11234 from 2009-11-21 22.40.48 by matt) : Unexpected error : 
+2010/08/18 15:59:38 - inject logging into job.0 - ERROR (version 3.2.3, build 11234 from 2009-11-21 22.40.48 by matt) : org.pentaho.di.core.exception.KettleValueException: 
+2010/08/18 15:59:38 - inject logging into job.0 - ERROR (version 3.2.3, build 11234 from 2009-11-21 22.40.48 by matt) : Javascript error: 
+2010/08/18 15:59:38 - inject logging into job.0 - ERROR (version 3.2.3, build 11234 from 2009-11-21 22.40.48 by matt) : Wrapped java.io.FileNotFoundException: file:/kff/projects/templates/datawarehouse/code/dwh/batch_dwh.kjb.new (No such file or directory) (script#10)
+2010/08/18 15:59:38 - inject logging into job.0 - ERROR (version 3.2.3, build 11234 from 2009-11-21 22.40.48 by matt) : 
+2010/08/18 15:59:38 - inject logging into job.0 - ERROR (version 3.2.3, build 11234 from 2009-11-21 22.40.48 by matt) : 	at org.pentaho.di.trans.steps.scriptvalues_mod.ScriptValuesMod.addValues(ScriptValuesMod.java:436)
+2010/08/18 15:59:38 - inject logging into job.0 - ERROR (version 3.2.3, build 11234 from 2009-11-21 22.40.48 by matt) : 	at org.pentaho.di.trans.steps.scriptvalues_mod.ScriptValuesMod.processRow(ScriptValuesMod.java:667)
+2010/08/18 15:59:38 - inject logging into job.0 - ERROR (version 3.2.3, build 11234 from 2009-11-21 22.40.48 by matt) : 	at org.pentaho.di.trans.step.BaseStep.runStepThread(BaseStep.java:2889)
+2010/08/18 15:59:38 - inject logging into job.0 - ERROR (version 3.2.3, build 11234 from 2009-11-21 22.40.48 by matt) : 	at org.pentaho.di.trans.steps.scriptvalues_mod.ScriptValuesMod.run(ScriptValuesMod.java:731)
+2010/08/18 15:59:38 - inject logging into job.0 - ERROR (version 3.2.3, build 11234 from 2009-11-21 22.40.48 by matt) : Caused by: org.mozilla.javascript.WrappedException: Wrapped java.io.FileNotFoundException: file:/kff/projects/templates/datawarehouse/code/dwh/batch_dwh.kjb.new (No such file or directory) (script#10)
+2010/08/18 15:59:38 - inject logging into job.0 - ERROR (version 3.2.3, build 11234 from 2009-11-21 22.40.48 by matt) : 	at org.mozilla.javascript.Context.throwAsScriptRuntimeEx(Context.java:1654)
+2010/08/18 15:59:38 - inject logging into job.0 - ERROR (version 3.2.3, build 11234 from 2009-11-21 22.40.48 by matt) : 	at org.mozilla.javascript.MemberBox.newInstance(MemberBox.java:192)
+2010/08/18 15:59:38 - inject logging into job.0 - ERROR (version 3.2.3, build 11234 from 2009-11-21 22.40.48 by matt) : 	at org.mozilla.javascript.NativeJavaClass.constructSpecific(NativeJavaClass.java:274)
+2010/08/18 15:59:38 - inject logging into job.0 - ERROR (version 3.2.3, build 11234 from 2009-11-21 22.40.48 by matt) : 	at org.mozilla.javascript.NativeJavaClass.construct(NativeJavaClass.java:193)
+2010/08/18 15:59:38 - inject logging into job.0 - ERROR (version 3.2.3, build 11234 from 2009-11-21 22.40.48 by matt) : 	at org.mozilla.javascript.ScriptRuntime.newObject(ScriptRuntime.java:2266)
+2010/08/18 15:59:38 - inject logging into job.0 - ERROR (version 3.2.3, build 11234 from 2009-11-21 22.40.48 by matt) : 	at org.mozilla.javascript.gen.c1._c0(script:10)
+2010/08/18 15:59:38 - inject logging into job.0 - ERROR (version 3.2.3, build 11234 from 2009-11-21 22.40.48 by matt) : 	at org.mozilla.javascript.gen.c1.call(script)
+2010/08/18 15:59:38 - inject logging into job.0 - ERROR (version 3.2.3, build 11234 from 2009-11-21 22.40.48 by matt) : 	at org.mozilla.javascript.ContextFactory.doTopCall(ContextFactory.java:401)
+2010/08/18 15:59:38 - inject logging into job.0 - ERROR (version 3.2.3, build 11234 from 2009-11-21 22.40.48 by matt) : 	at org.mozilla.javascript.ScriptRuntime.doTopCall(ScriptRuntime.java:3003)
+2010/08/18 15:59:38 - inject logging into job.0 - ERROR (version 3.2.3, build 11234 from 2009-11-21 22.40.48 by matt) : 	at org.mozilla.javascript.gen.c1.call(script)
+2010/08/18 15:59:38 - inject logging into job.0 - ERROR (version 3.2.3, build 11234 from 2009-11-21 22.40.48 by matt) : 	at org.mozilla.javascript.gen.c1.exec(script)
+2010/08/18 15:59:38 - inject logging into job.0 - ERROR (version 3.2.3, build 11234 from 2009-11-21 22.40.48 by matt) : 	at org.pentaho.di.trans.steps.scriptvalues_mod.ScriptValuesMod.addValues(ScriptValuesMod.java:355)
+2010/08/18 15:59:38 - inject logging into job.0 - ERROR (version 3.2.3, build 11234 from 2009-11-21 22.40.48 by matt) : 	... 3 more
+2010/08/18 15:59:38 - inject logging into job.0 - ERROR (version 3.2.3, build 11234 from 2009-11-21 22.40.48 by matt) : Caused by: java.io.FileNotFoundException: file:/kff/projects/templates/datawarehouse/code/dwh/batch_dwh.kjb.new (No such file or directory)
+2010/08/18 15:59:38 - inject logging into job.0 - ERROR (version 3.2.3, build 11234 from 2009-11-21 22.40.48 by matt) : 	at java.io.FileOutputStream.open(Native Method)
+2010/08/18 15:59:38 - inject logging into job.0 - ERROR (version 3.2.3, build 11234 from 2009-11-21 22.40.48 by matt) : 	at java.io.FileOutputStream.<init>(FileOutputStream.java:179)
+2010/08/18 15:59:38 - inject logging into job.0 - ERROR (version 3.2.3, build 11234 from 2009-11-21 22.40.48 by matt) : 	at java.io.FileOutputStream.<init>(FileOutputStream.java:70)
+2010/08/18 15:59:38 - inject logging into job.0 - ERROR (version 3.2.3, build 11234 from 2009-11-21 22.40.48 by matt) : 	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+2010/08/18 15:59:38 - inject logging into job.0 - ERROR (version 3.2.3, build 11234 from 2009-11-21 22.40.48 by matt) : 	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:39)
+2010/08/18 15:59:38 - inject logging into job.0 - ERROR (version 3.2.3, build 11234 from 2009-11-21 22.40.48 by matt) : 	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:27)
+2010/08/18 15:59:38 - inject logging into job.0 - ERROR (version 3.2.3, build 11234 from 2009-11-21 22.40.48 by matt) : 	at java.lang.reflect.Constructor.newInstance(Constructor.java:513)
+2010/08/18 15:59:38 - inject logging into job.0 - ERROR (version 3.2.3, build 11234 from 2009-11-21 22.40.48 by matt) : 	at org.mozilla.javascript.MemberBox.newInstance(MemberBox.java:184)
+2010/08/18 15:59:38 - inject logging into job.0 - ERROR (version 3.2.3, build 11234 from 2009-11-21 22.40.48 by matt) : 	... 13 more
+2010/08/18 15:59:38 - kff_logging_inject_jobs - ERROR (version 3.2.3, build 11234 from 2009-11-21 22.40.48 by matt) : Errors detected!
+2010/08/18 15:59:38 - kff_logging_inject_jobs - ERROR (version 3.2.3, build 11234 from 2009-11-21 22.40.48 by matt) : Errors detected!
+2010/08/18 15:59:38 - inject logging into job.0 - Finished processing (I=0, O=0, R=1, W=0, U=0, E=1)
+2010/08/18 15:59:38 - kff_logging_inject_jobs - Transformation detected one or more steps with errors.
+2010/08/18 15:59:38 - kff_logging_inject_jobs - Transformation is killing the other steps!
+2010/08/18 15:59:38 - kff_logging_inject - Finished job entry [kff_logging_inject_jobs] (result=[false])
+2010/08/18 15:59:38 - kff_logging_inject - Finished job entry [Add kjb to result] (result=[false])
+2010/08/18 15:59:38 - kff_logging_inject - Starting entry [Add ktr to result]
+2010/08/18 15:59:38 - Thread[kff_logging_inject (kff_logging_inject (Thread-9)),5,main] - exec(8, 0, Add ktr to result.0)
+2010/08/18 15:59:38 - Add ktr to result - [0] file(s) were found in the result filenames...
+2010/08/18 15:59:38 - Add ktr to result - Result filenames list was cleared!. [0] file(s) were deleted from the result filenames.
+2010/08/18 15:59:38 - Add ktr to result - Processing argument [${KFF_BASE_DIR}/projects/${KFF_CUSTOMER}/${KFF_APPLICATION}/code].. wildcard [.*\.ktr] ?
+2010/08/18 15:59:38 - kff_logging_inject - Starting entry [kff_logging_inject_trnsf]
+2010/08/18 15:59:38 - Thread[kff_logging_inject (kff_logging_inject (Thread-9)),5,main] - exec(9, 0, kff_logging_inject_trnsf.0)
+2010/08/18 15:59:38 - kff_logging_inject_trnsf - Opening filename : [file:///kff/reusable/kff-logging/kff_logging_inject_trnsf.ktr]
+2010/08/18 15:59:38 - kff_logging_inject_trnsf - Opening transformation: [file:///kff/reusable/kff-logging/kff_logging_inject_trnsf.ktr]
+2010/08/18 15:59:38 - kff_logging_inject_trnsf - Loading transformation from XML file [file:///kff/reusable/kff-logging/kff_logging_inject_trnsf.ktr]
+2010/08/18 15:59:38 - SharedObjects - Reading the shared objects file [file:///home/matt/.kettle/shared.xml]
+2010/08/18 15:59:38 - kff_logging_inject_trnsf - Starting transformation...(file=${Internal.Job.Filename.Directory}/kff_logging_inject_trnsf.ktr, name=kff_logging_inject_trnsf, repinfo=Transformation)
+2010/08/18 15:59:38 - kff_logging_inject_trnsf - Transformation is pre-loaded.
+2010/08/18 15:59:38 - kff_logging_inject_trnsf - Dispatching started for transformation [kff_logging_inject_trnsf]
+2010/08/18 15:59:38 - kff_logging_inject_trnsf - Nr of arguments detected:0 
+2010/08/18 15:59:38 - kff_logging_inject_trnsf - This is not a replay transformation
+2010/08/18 15:59:38 - kff_logging_inject_trnsf - I found 4 different steps to launch.
+2010/08/18 15:59:38 - kff_logging_inject_trnsf - Allocating rowsets...
+2010/08/18 15:59:38 - kff_logging_inject_trnsf -  Allocating rowsets for step 0 --> Files from result
+2010/08/18 15:59:38 - kff_logging_inject_trnsf -   prevcopies = 1, nextcopies=1
+2010/08/18 15:59:38 - kff_logging_inject_trnsf - Transformation allocated new rowset [Files from result.0 - Get KFF_LOGGING_JOB_TABLE.0]
+2010/08/18 15:59:38 - kff_logging_inject_trnsf -  Allocated 1 rowsets for step 0 --> Files from result  
+2010/08/18 15:59:38 - kff_logging_inject_trnsf -  Allocating rowsets for step 1 --> Get KFF_LOGGING_JOB_TABLE
+2010/08/18 15:59:38 - kff_logging_inject_trnsf -   prevcopies = 1, nextcopies=1
+2010/08/18 15:59:38 - kff_logging_inject_trnsf - Transformation allocated new rowset [Get KFF_LOGGING_JOB_TABLE.0 - LOG_CONNECTION.0]
+2010/08/18 15:59:38 - kff_logging_inject_trnsf -  Allocated 2 rowsets for step 1 --> Get KFF_LOGGING_JOB_TABLE  
+2010/08/18 15:59:38 - kff_logging_inject_trnsf -  Allocating rowsets for step 2 --> LOG_CONNECTION
+2010/08/18 15:59:38 - kff_logging_inject_trnsf -   prevcopies = 1, nextcopies=1
+2010/08/18 15:59:38 - kff_logging_inject_trnsf - Transformation allocated new rowset [LOG_CONNECTION.0 - inject logging into trans.0]
+2010/08/18 15:59:38 - kff_logging_inject_trnsf -  Allocated 3 rowsets for step 2 --> LOG_CONNECTION  
+2010/08/18 15:59:38 - kff_logging_inject_trnsf -  Allocating rowsets for step 3 --> inject logging into trans
+2010/08/18 15:59:38 - kff_logging_inject_trnsf -  Allocated 3 rowsets for step 3 --> inject logging into trans  
+2010/08/18 15:59:38 - kff_logging_inject_trnsf - Allocating Steps & StepData...
+2010/08/18 15:59:38 - kff_logging_inject_trnsf -  Transformation is about to allocate step [Files from result] of type [FilesFromResult]
+2010/08/18 15:59:38 - Files from result.0 - Starting allocation of buffers & new threads...
+2010/08/18 15:59:38 - Files from result.0 - Step info: nrinput=0 nroutput=1
+2010/08/18 15:59:38 - Files from result.0 - output rel. is  1:1
+2010/08/18 15:59:38 - Files from result.0 - Found output rowset [Files from result.0 - Get KFF_LOGGING_JOB_TABLE.0]
+2010/08/18 15:59:38 - Files from result.0 - Finished dispatching
+2010/08/18 15:59:38 - kff_logging_inject_trnsf -  Transformation has allocated a new step: [Files from result].0
+2010/08/18 15:59:38 - kff_logging_inject_trnsf -  Transformation is about to allocate step [Get KFF_LOGGING_JOB_TABLE] of type [GetVariable]
+2010/08/18 15:59:38 - Get KFF_LOGGING_JOB_TABLE.0 - distribution activated
+2010/08/18 15:59:38 - Get KFF_LOGGING_JOB_TABLE.0 - Starting allocation of buffers & new threads...
+2010/08/18 15:59:38 - Get KFF_LOGGING_JOB_TABLE.0 - Step info: nrinput=1 nroutput=1
+2010/08/18 15:59:38 - Get KFF_LOGGING_JOB_TABLE.0 - Got previous step from [Get KFF_LOGGING_JOB_TABLE] #0 --> Files from result
+2010/08/18 15:59:38 - Get KFF_LOGGING_JOB_TABLE.0 - input rel is 1:1
+2010/08/18 15:59:38 - Get KFF_LOGGING_JOB_TABLE.0 - Found input rowset [Files from result.0 - Get KFF_LOGGING_JOB_TABLE.0]
+2010/08/18 15:59:38 - Get KFF_LOGGING_JOB_TABLE.0 - output rel. is  1:1
+2010/08/18 15:59:38 - Get KFF_LOGGING_JOB_TABLE.0 - Found output rowset [Get KFF_LOGGING_JOB_TABLE.0 - LOG_CONNECTION.0]
+2010/08/18 15:59:38 - Get KFF_LOGGING_JOB_TABLE.0 - Finished dispatching
+2010/08/18 15:59:38 - kff_logging_inject_trnsf -  Transformation has allocated a new step: [Get KFF_LOGGING_JOB_TABLE].0
+2010/08/18 15:59:38 - kff_logging_inject_trnsf -  Transformation is about to allocate step [LOG_CONNECTION] of type [Constant]
+2010/08/18 15:59:38 - LOG_CONNECTION.0 - distribution activated
+2010/08/18 15:59:38 - LOG_CONNECTION.0 - Starting allocation of buffers & new threads...
+2010/08/18 15:59:38 - LOG_CONNECTION.0 - Step info: nrinput=1 nroutput=1
+2010/08/18 15:59:38 - LOG_CONNECTION.0 - Got previous step from [LOG_CONNECTION] #0 --> Get KFF_LOGGING_JOB_TABLE
+2010/08/18 15:59:38 - LOG_CONNECTION.0 - input rel is 1:1
+2010/08/18 15:59:38 - LOG_CONNECTION.0 - Found input rowset [Get KFF_LOGGING_JOB_TABLE.0 - LOG_CONNECTION.0]
+2010/08/18 15:59:38 - LOG_CONNECTION.0 - output rel. is  1:1
+2010/08/18 15:59:38 - LOG_CONNECTION.0 - Found output rowset [LOG_CONNECTION.0 - inject logging into trans.0]
+2010/08/18 15:59:38 - LOG_CONNECTION.0 - Finished dispatching
+2010/08/18 15:59:38 - kff_logging_inject_trnsf -  Transformation has allocated a new step: [LOG_CONNECTION].0
+2010/08/18 15:59:38 - kff_logging_inject_trnsf -  Transformation is about to allocate step [inject logging into trans] of type [ScriptValueMod]
+2010/08/18 15:59:38 - inject logging into trans.0 - distribution activated
+2010/08/18 15:59:38 - inject logging into trans.0 - Starting allocation of buffers & new threads...
+2010/08/18 15:59:38 - inject logging into trans.0 - Step info: nrinput=1 nroutput=0
+2010/08/18 15:59:38 - inject logging into trans.0 - Got previous step from [inject logging into trans] #0 --> LOG_CONNECTION
+2010/08/18 15:59:38 - inject logging into trans.0 - input rel is 1:1
+2010/08/18 15:59:38 - inject logging into trans.0 - Found input rowset [LOG_CONNECTION.0 - inject logging into trans.0]
+2010/08/18 15:59:38 - inject logging into trans.0 - Finished dispatching
+2010/08/18 15:59:38 - kff_logging_inject_trnsf -  Transformation has allocated a new step: [inject logging into trans].0
+2010/08/18 15:59:38 - kff_logging_inject_trnsf - This transformation can be replayed with replay date: 2010/08/18 15:59:38
+2010/08/18 15:59:38 - kff_logging_inject_trnsf - Initialising 4 steps...
+2010/08/18 15:59:38 - Files from result.0 - Running on slave server #0/1.
+2010/08/18 15:59:38 - LOG_CONNECTION.0 - Running on slave server #0/1.
+2010/08/18 15:59:38 - Get KFF_LOGGING_JOB_TABLE.0 - Running on slave server #0/1.
+2010/08/18 15:59:38 - inject logging into trans.0 - Running on slave server #0/1.
+2010/08/18 15:59:38 - kff_logging_inject_trnsf - Step [Files from result.0] initialized flawlessly.
+2010/08/18 15:59:38 - kff_logging_inject_trnsf - Step [Get KFF_LOGGING_JOB_TABLE.0] initialized flawlessly.
+2010/08/18 15:59:38 - kff_logging_inject_trnsf - Step [LOG_CONNECTION.0] initialized flawlessly.
+2010/08/18 15:59:38 - kff_logging_inject_trnsf - Step [inject logging into trans.0] initialized flawlessly.
+2010/08/18 15:59:38 - Get KFF_LOGGING_JOB_TABLE.0 - Starting to run...
+2010/08/18 15:59:38 - LOG_CONNECTION.0 - Starting to run...
+2010/08/18 15:59:38 - kff_logging_inject_trnsf - Transformation has allocated 4 threads and 3 rowsets.
+2010/08/18 15:59:38 - inject logging into trans.0 - Starting to run...
+2010/08/18 15:59:38 - Files from result.0 - Starting to run...
+2010/08/18 15:59:38 - Files from result.0 - Finished processing (I=0, O=0, R=0, W=0, U=0, E=0)
+2010/08/18 15:59:38 - Get KFF_LOGGING_JOB_TABLE.0 - Finished processing (I=0, O=0, R=0, W=0, U=0, E=0)
+2010/08/18 15:59:38 - LOG_CONNECTION.0 - Finished processing (I=0, O=0, R=0, W=0, U=0, E=0)
+2010/08/18 15:59:38 - inject logging into trans.0 - Finished processing (I=0, O=0, R=0, W=0, U=0, E=0)
+2010/08/18 15:59:38 - kff_logging_inject - Finished job entry [kff_logging_inject_trnsf] (result=[true])
+2010/08/18 15:59:38 - kff_logging_inject - Finished job entry [Add ktr to result] (result=[true])
+2010/08/18 15:59:38 - kff_logging_tables - Starting entry [set_batch_id]
+2010/08/18 15:59:38 - Thread[kff_logging_tables (kff_logging_tables (Thread-5)),5,main] - exec(7, 0, set_batch_id.0)
+2010/08/18 15:59:38 - set_batch_id - Opening filename : [file:///kff/reusable/kff-logging/kff_logging_set_batch_id.ktr]
+2010/08/18 15:59:38 - set_batch_id - Opening transformation: [file:///kff/reusable/kff-logging/kff_logging_set_batch_id.ktr]
+2010/08/18 15:59:38 - set_batch_id - Loading transformation from XML file [file:///kff/reusable/kff-logging/kff_logging_set_batch_id.ktr]
+2010/08/18 15:59:38 - SharedObjects - Reading the shared objects file [file:///home/matt/.kettle/shared.xml]
+2010/08/18 15:59:38 - set_batch_id - Starting transformation...(file=${Internal.Job.Filename.Directory}/kff_logging_set_batch_id.ktr, name=set_batch_id, repinfo=Transformation)
+2010/08/18 15:59:38 - set_batch_id - Transformation is pre-loaded.
+2010/08/18 15:59:38 - set_batch_id - Dispatching started for transformation [set_batch_id]
+2010/08/18 15:59:38 - set_batch_id - Nr of arguments detected:0 
+2010/08/18 15:59:38 - set_batch_id - This is not a replay transformation
+2010/08/18 15:59:38 - set_batch_id - I found 5 different steps to launch.
+2010/08/18 15:59:38 - set_batch_id - Allocating rowsets...
+2010/08/18 15:59:38 - set_batch_id -  Allocating rowsets for step 0 --> Get System Info
+2010/08/18 15:59:38 - set_batch_id -   prevcopies = 1, nextcopies=1
+2010/08/18 15:59:38 - set_batch_id - Transformation allocated new rowset [Get System Info.0 - Select values.0]
+2010/08/18 15:59:38 - set_batch_id -  Allocated 1 rowsets for step 0 --> Get System Info  
+2010/08/18 15:59:38 - set_batch_id -  Allocating rowsets for step 1 --> Select values
+2010/08/18 15:59:38 - set_batch_id -   prevcopies = 1, nextcopies=1
+2010/08/18 15:59:38 - set_batch_id - Transformation allocated new rowset [Select values.0 - Set Variables.0]
+2010/08/18 15:59:38 - set_batch_id -  Allocated 2 rowsets for step 1 --> Select values  
+2010/08/18 15:59:38 - set_batch_id -  Allocating rowsets for step 2 --> Set Variables
+2010/08/18 15:59:38 - set_batch_id -  Allocated 2 rowsets for step 2 --> Set Variables  
+2010/08/18 15:59:38 - set_batch_id -  Allocating rowsets for step 3 --> Set batch_date
+2010/08/18 15:59:38 - set_batch_id -   prevcopies = 1, nextcopies=1
+2010/08/18 15:59:38 - set_batch_id - Transformation allocated new rowset [Set batch_date.0 - Modified Java Script Value.0]
+2010/08/18 15:59:38 - set_batch_id -  Allocated 3 rowsets for step 3 --> Set batch_date  
+2010/08/18 15:59:38 - set_batch_id -  Allocating rowsets for step 4 --> Modified Java Script Value
+2010/08/18 15:59:38 - set_batch_id -   prevcopies = 1, nextcopies=1
+2010/08/18 15:59:38 - set_batch_id - Transformation allocated new rowset [Modified Java Script Value.0 - Get System Info.0]
+2010/08/18 15:59:38 - set_batch_id -  Allocated 4 rowsets for step 4 --> Modified Java Script Value  
+2010/08/18 15:59:38 - set_batch_id - Allocating Steps & StepData...
+2010/08/18 15:59:38 - set_batch_id -  Transformation is about to allocate step [Get System Info] of type [SystemInfo]
+2010/08/18 15:59:38 - Get System Info.0 - distribution activated
+2010/08/18 15:59:38 - Get System Info.0 - Starting allocation of buffers & new threads...
+2010/08/18 15:59:38 - Get System Info.0 - Step info: nrinput=1 nroutput=1
+2010/08/18 15:59:38 - Get System Info.0 - Got previous step from [Get System Info] #0 --> Modified Java Script Value
+2010/08/18 15:59:38 - Get System Info.0 - input rel is 1:1
+2010/08/18 15:59:38 - Get System Info.0 - Found input rowset [Modified Java Script Value.0 - Get System Info.0]
+2010/08/18 15:59:38 - Get System Info.0 - output rel. is  1:1
+2010/08/18 15:59:38 - Get System Info.0 - Found output rowset [Get System Info.0 - Select values.0]
+2010/08/18 15:59:38 - Get System Info.0 - Finished dispatching
+2010/08/18 15:59:38 - set_batch_id -  Transformation has allocated a new step: [Get System Info].0
+2010/08/18 15:59:38 - set_batch_id -  Transformation is about to allocate step [Select values] of type [SelectValues]
+2010/08/18 15:59:38 - Select values.0 - distribution activated
+2010/08/18 15:59:38 - Select values.0 - Starting allocation of buffers & new threads...
+2010/08/18 15:59:38 - Select values.0 - Step info: nrinput=1 nroutput=1
+2010/08/18 15:59:38 - Select values.0 - Got previous step from [Select values] #0 --> Get System Info
+2010/08/18 15:59:38 - Select values.0 - input rel is 1:1
+2010/08/18 15:59:38 - Select values.0 - Found input rowset [Get System Info.0 - Select values.0]
+2010/08/18 15:59:38 - Select values.0 - output rel. is  1:1
+2010/08/18 15:59:38 - Select values.0 - Found output rowset [Select values.0 - Set Variables.0]
+2010/08/18 15:59:38 - Select values.0 - Finished dispatching
+2010/08/18 15:59:38 - set_batch_id -  Transformation has allocated a new step: [Select values].0
+2010/08/18 15:59:38 - set_batch_id -  Transformation is about to allocate step [Set Variables] of type [SetVariable]
+2010/08/18 15:59:38 - Set Variables.0 - distribution activated
+2010/08/18 15:59:38 - Set Variables.0 - Starting allocation of buffers & new threads...
+2010/08/18 15:59:38 - Set Variables.0 - Step info: nrinput=1 nroutput=0
+2010/08/18 15:59:38 - Set Variables.0 - Got previous step from [Set Variables] #0 --> Select values
+2010/08/18 15:59:38 - Set Variables.0 - input rel is 1:1
+2010/08/18 15:59:38 - Set Variables.0 - Found input rowset [Select values.0 - Set Variables.0]
+2010/08/18 15:59:38 - Set Variables.0 - Finished dispatching
+2010/08/18 15:59:38 - set_batch_id -  Transformation has allocated a new step: [Set Variables].0
+2010/08/18 15:59:38 - set_batch_id -  Transformation is about to allocate step [Set batch_date] of type [TableInput]
+2010/08/18 15:59:38 - Set batch_date.0 - distribution activated
+2010/08/18 15:59:38 - Set batch_date.0 - Starting allocation of buffers & new threads...
+2010/08/18 15:59:38 - Set batch_date.0 - Step info: nrinput=0 nroutput=1
+2010/08/18 15:59:38 - Set batch_date.0 - output rel. is  1:1
+2010/08/18 15:59:38 - Set batch_date.0 - Found output rowset [Set batch_date.0 - Modified Java Script Value.0]
+2010/08/18 15:59:38 - Set batch_date.0 - Finished dispatching
+2010/08/18 15:59:38 - set_batch_id -  Transformation has allocated a new step: [Set batch_date].0
+2010/08/18 15:59:38 - set_batch_id -  Transformation is about to allocate step [Modified Java Script Value] of type [ScriptValueMod]
+2010/08/18 15:59:38 - Modified Java Script Value.0 - distribution activated
+2010/08/18 15:59:38 - Modified Java Script Value.0 - Starting allocation of buffers & new threads...
+2010/08/18 15:59:38 - Modified Java Script Value.0 - Step info: nrinput=1 nroutput=1
+2010/08/18 15:59:38 - Modified Java Script Value.0 - Got previous step from [Modified Java Script Value] #0 --> Set batch_date
+2010/08/18 15:59:38 - Modified Java Script Value.0 - input rel is 1:1
+2010/08/18 15:59:38 - Modified Java Script Value.0 - Found input rowset [Set batch_date.0 - Modified Java Script Value.0]
+2010/08/18 15:59:38 - Modified Java Script Value.0 - output rel. is  1:1
+2010/08/18 15:59:38 - Modified Java Script Value.0 - Found output rowset [Modified Java Script Value.0 - Get System Info.0]
+2010/08/18 15:59:38 - Modified Java Script Value.0 - Finished dispatching
+2010/08/18 15:59:38 - set_batch_id -  Transformation has allocated a new step: [Modified Java Script Value].0
+2010/08/18 15:59:38 - set_batch_id - This transformation can be replayed with replay date: 2010/08/18 15:59:38
+2010/08/18 15:59:38 - set_batch_id - Initialising 5 steps...
+2010/08/18 15:59:38 - Get System Info.0 - Running on slave server #0/1.
+2010/08/18 15:59:38 - Set Variables.0 - Running on slave server #0/1.
+2010/08/18 15:59:38 - Set batch_date.0 - Running on slave server #0/1.
+2010/08/18 15:59:38 - Select values.0 - Running on slave server #0/1.
+2010/08/18 15:59:38 - Modified Java Script Value.0 - Running on slave server #0/1.
+2010/08/18 15:59:38 - DWH_LOG - New database connection defined
+2010/08/18 15:59:38 - DWH_LOG - Connected to database.
+2010/08/18 15:59:38 - DWH_LOG - Auto commit off
+2010/08/18 15:59:38 - Set batch_date.0 - Connected to database...
+2010/08/18 15:59:38 - set_batch_id - Step [Get System Info.0] initialized flawlessly.
+2010/08/18 15:59:38 - set_batch_id - Step [Select values.0] initialized flawlessly.
+2010/08/18 15:59:38 - set_batch_id - Step [Set Variables.0] initialized flawlessly.
+2010/08/18 15:59:38 - set_batch_id - Step [Set batch_date.0] initialized flawlessly.
+2010/08/18 15:59:38 - set_batch_id - Step [Modified Java Script Value.0] initialized flawlessly.
+2010/08/18 15:59:38 - Get System Info.0 - Starting to run...
+2010/08/18 15:59:38 - Select values.0 - Starting to run...
+2010/08/18 15:59:38 - Set Variables.0 - Starting to run...
+2010/08/18 15:59:38 - Set batch_date.0 - Starting to run...
+2010/08/18 15:59:38 - Set batch_date.0 - SQL query : SELECT 
+2010/08/18 15:59:38 - Set batch_date.0 -  max(id_job) + 1 as KFF_BATCH_ID
+2010/08/18 15:59:38 - Set batch_date.0 - from
+2010/08/18 15:59:38 - Set batch_date.0 -  KFF_LOG_BATCH
+2010/08/18 15:59:38 - Modified Java Script Value.0 - Starting to run...
+2010/08/18 15:59:38 - set_batch_id - Transformation has allocated 5 threads and 4 rowsets.
+2010/08/18 15:59:39 - Modified Java Script Value.0 - Value #0 -  [KFF_BATCH_ID] is used in the script.
+2010/08/18 15:59:39 - Modified Java Script Value.0 - This script is using 1 values from the input stream(s)
+2010/08/18 15:59:39 - Set batch_date.0 - Finished reading query, closing connection.
+2010/08/18 15:59:39 - DWH_LOG - Connection to database closed!
+2010/08/18 15:59:39 - Set batch_date.0 - Finished processing (I=1, O=0, R=0, W=1, U=0, E=0)
+2010/08/18 15:59:39 - Modified Java Script Value.0 - No starting Script found!
+2010/08/18 15:59:39 - Modified Java Script Value.0 - No tran_Status found. Transformation status checking not available.
+2010/08/18 15:59:39 - Set Variables.0 - Setting environment variables...
+2010/08/18 15:59:39 - Set Variables.0 - Set variable KFF_BATCH_ID to value [000000]
+2010/08/18 15:59:39 - Set Variables.0 - Set variable KFF_BATCH_DATE to value [20100818-155938]
+2010/08/18 15:59:39 - Modified Java Script Value.0 - No end Script found!
+2010/08/18 15:59:39 - Modified Java Script Value.0 - Finished processing (I=0, O=0, R=1, W=1, U=0, E=0)
+2010/08/18 15:59:39 - Get System Info.0 - Finished processing (I=0, O=0, R=1, W=1, U=0, E=0)
+2010/08/18 15:59:39 - Select values.0 - Finished processing (I=0, O=0, R=1, W=1, U=0, E=0)
+2010/08/18 15:59:39 - Set Variables.0 - Finished after 1 rows.
+2010/08/18 15:59:39 - Set Variables.0 - Finished processing (I=0, O=0, R=1, W=1, U=0, E=0)
+2010/08/18 15:59:39 - kff_logging_tables - Starting entry [Truncate current log]
+2010/08/18 15:59:39 - Thread[kff_logging_tables (kff_logging_tables (Thread-5)),5,main] - exec(8, 0, Truncate current log.0)
+2010/08/18 15:59:39 - DWH_LOG - New database connection defined
+2010/08/18 15:59:39 - DWH_LOG - Connected to database.
+2010/08/18 15:59:39 - Truncate current log - We are processing argument tablename=[${KFF_LOGGING_JOB_TABLE}], schemaname =[null]
+2010/08/18 15:59:39 - Truncate current log - Table [KFF_LOG_JOB] was truncated.
+2010/08/18 15:59:39 - Truncate current log - We are processing argument tablename=[${KFF_LOGGING_REJECT_TABLE}], schemaname =[null]
+2010/08/18 15:59:39 - Truncate current log - Table [KFF_LOG_REJECT] was truncated.
+2010/08/18 15:59:39 - Truncate current log - We are processing argument tablename=[${KFF_LOGGING_STEP_TABLE}], schemaname =[null]
+2010/08/18 15:59:39 - Truncate current log - Table [KFF_LOG_STEP] was truncated.
+2010/08/18 15:59:39 - Truncate current log - We are processing argument tablename=[${KFF_LOGGING_TRNSF_TABLE}], schemaname =[null]
+2010/08/18 15:59:39 - Truncate current log - Table [KFF_LOG_TRNSF] was truncated.
+2010/08/18 15:59:39 - DWH_LOG - Connection to database closed!
+2010/08/18 15:59:39 - kff_logging_tables - Finished job entry [Truncate current log] (result=[true])
+2010/08/18 15:59:39 - kff_logging_tables - Finished job entry [set_batch_id] (result=[true])
+2010/08/18 15:59:39 - kff_logging_tables - Finished job entry [kff_logging_inject] (result=[true])
+2010/08/18 15:59:39 - kff_logging_tables - Finished job entry [kff_logging_tables_mysql] (result=[true])
+2010/08/18 15:59:39 - kff_logging_tables - Finished job entry [DWH_LOG database = MySQL] (result=[true])
+2010/08/18 15:59:39 - batch_launcher - Starting entry [${KFF_BATCH}]
+2010/08/18 15:59:39 - Thread[batch_launcher (batch_launcher (Thread-3)),5,main] - exec(3, 0, ${KFF_BATCH}.0)
+2010/08/18 15:59:39 - ${KFF_BATCH} - Loading job from XML file : [file:///kff/projects/templates/datawarehouse/code/batch_datawarehouse.kjb]
+2010/08/18 15:59:39 - SharedObjects - Reading the shared objects file [file:///home/matt/.kettle/shared.xml]
+2010/08/18 15:59:39 - ${KFF_BATCH} - Starting job, loaded from XML file : [file:///kff/projects/templates/datawarehouse/code/batch_datawarehouse.kjb]
+2010/08/18 15:59:39 - DWH_LOG - New database connection defined
+2010/08/18 15:59:39 - DWH_LOG - Connected to database.
+2010/08/18 15:59:39 - DWH_LOG - Auto commit off
+2010/08/18 15:59:39 - DWH_LOG - launch DDL statement: 
+2010/08/18 15:59:39 - DWH_LOG - LOCK TABLES KFF_LOG_BATCH WRITE
+2010/08/18 15:59:39 - DWH_LOG - 1 statement executed
+2010/08/18 15:59:39 - DWH_LOG - Connection to database closed!
+2010/08/18 15:59:39 - Thread[batch data warehouse (batch data warehouse (Thread-37)),5,main] - exec(4, 0, START.0)
+2010/08/18 15:59:39 - batch data warehouse - Starting entry [pre]
+2010/08/18 15:59:39 - Thread[batch data warehouse (batch data warehouse (Thread-37)),5,main] - exec(5, 0, pre.0)
+2010/08/18 15:59:39 - pre - Loading job from XML file : [file:///kff/projects/templates/datawarehouse/code/pre/batch_pre.kjb]
+2010/08/18 15:59:39 - SharedObjects - Reading the shared objects file [file:///home/matt/.kettle/shared.xml]
+2010/08/18 15:59:39 - pre - Starting job, loaded from XML file : [file:///kff/projects/templates/datawarehouse/code/pre/batch_pre.kjb]
+2010/08/18 15:59:39 - DWH_LOG - New database connection defined
+2010/08/18 15:59:39 - DWH_LOG - Connected to database.
+2010/08/18 15:59:39 - DWH_LOG - Auto commit off
+2010/08/18 15:59:39 - DWH_LOG - launch DDL statement: 
+2010/08/18 15:59:39 - DWH_LOG - LOCK TABLES KFF_LOG_JOB WRITE
+2010/08/18 15:59:39 - DWH_LOG - 1 statement executed
+2010/08/18 15:59:39 - DWH_LOG - Connection to database closed!
+2010/08/18 15:59:39 - Thread[batch_pre (batch_pre (Thread-39)),5,main] - exec(6, 0, START.0)
+2010/08/18 15:59:39 - batch_pre - Starting entry [DUMMY 1]
+2010/08/18 15:59:39 - Thread[batch_pre (batch_pre (Thread-39)),5,main] - exec(7, 0, DUMMY 1.0)
+2010/08/18 15:59:39 - batch_pre - Finished job entry [DUMMY 1] (result=[true])
+2010/08/18 15:59:39 - DWH_LOG - New database connection defined
+2010/08/18 15:59:39 - DWH_LOG - Connected to database.
+2010/08/18 15:59:39 - DWH_LOG - Connection to database closed!
+2010/08/18 15:59:39 - batch data warehouse - Starting entry [staging]
+2010/08/18 15:59:39 - Thread[batch data warehouse (batch data warehouse (Thread-37)),5,main] - exec(6, 0, staging.0)
+2010/08/18 15:59:39 - staging - Loading job from XML file : [file:///kff/projects/templates/datawarehouse/code/stg/batch_stg.kjb]
+2010/08/18 15:59:39 - SharedObjects - Reading the shared objects file [file:///home/matt/.kettle/shared.xml]
+2010/08/18 15:59:39 - staging - Starting job, loaded from XML file : [file:///kff/projects/templates/datawarehouse/code/stg/batch_stg.kjb]
+2010/08/18 15:59:39 - DWH_LOG - New database connection defined
+2010/08/18 15:59:39 - DWH_LOG - Connected to database.
+2010/08/18 15:59:39 - DWH_LOG - Auto commit off
+2010/08/18 15:59:39 - DWH_LOG - launch DDL statement: 
+2010/08/18 15:59:39 - DWH_LOG - LOCK TABLES KFF_LOG_JOB WRITE
+2010/08/18 15:59:39 - DWH_LOG - 1 statement executed
+2010/08/18 15:59:39 - DWH_LOG - Connection to database closed!
+2010/08/18 15:59:39 - Thread[batch stg (batch stg (Thread-41)),5,main] - exec(7, 0, START.0)
+2010/08/18 15:59:39 - batch stg - Starting entry [DUMMY 1]
+2010/08/18 15:59:39 - Thread[batch stg (batch stg (Thread-41)),5,main] - exec(8, 0, DUMMY 1.0)
+2010/08/18 15:59:39 - batch stg - Finished job entry [DUMMY 1] (result=[true])
+2010/08/18 15:59:39 - DWH_LOG - New database connection defined
+2010/08/18 15:59:39 - DWH_LOG - Connected to database.
+2010/08/18 15:59:39 - DWH_LOG - Connection to database closed!
+2010/08/18 15:59:39 - batch data warehouse - Starting entry [ods]
+2010/08/18 15:59:39 - Thread[batch data warehouse (batch data warehouse (Thread-37)),5,main] - exec(7, 0, ods.0)
+2010/08/18 15:59:39 - ods - Loading job from XML file : [file:///kff/projects/templates/datawarehouse/code/ods/batch_ods.kjb]
+2010/08/18 15:59:39 - SharedObjects - Reading the shared objects file [file:///home/matt/.kettle/shared.xml]
+2010/08/18 15:59:39 - ods - Starting job, loaded from XML file : [file:///kff/projects/templates/datawarehouse/code/ods/batch_ods.kjb]
+2010/08/18 15:59:39 - DWH_LOG - New database connection defined
+2010/08/18 15:59:39 - DWH_LOG - Connected to database.
+2010/08/18 15:59:39 - DWH_LOG - Auto commit off
+2010/08/18 15:59:39 - DWH_LOG - launch DDL statement: 
+2010/08/18 15:59:39 - DWH_LOG - LOCK TABLES KFF_LOG_JOB WRITE
+2010/08/18 15:59:39 - DWH_LOG - 1 statement executed
+2010/08/18 15:59:39 - DWH_LOG - Connection to database closed!
+2010/08/18 15:59:39 - Thread[batch ods (batch ods (Thread-43)),5,main] - exec(8, 0, START.0)
+2010/08/18 15:59:39 - batch ods - Starting entry [DUMMY 1]
+2010/08/18 15:59:39 - Thread[batch ods (batch ods (Thread-43)),5,main] - exec(9, 0, DUMMY 1.0)
+2010/08/18 15:59:39 - batch ods - Finished job entry [DUMMY 1] (result=[true])
+2010/08/18 15:59:39 - DWH_LOG - New database connection defined
+2010/08/18 15:59:39 - DWH_LOG - Connected to database.
+2010/08/18 15:59:39 - DWH_LOG - Connection to database closed!
+2010/08/18 15:59:39 - batch data warehouse - Starting entry [dwh]
+2010/08/18 15:59:39 - Thread[batch data warehouse (batch data warehouse (Thread-37)),5,main] - exec(8, 0, dwh.0)
+2010/08/18 15:59:39 - dwh - Loading job from XML file : [file:///kff/projects/templates/datawarehouse/code/dwh/batch_dwh.kjb]
+2010/08/18 15:59:39 - SharedObjects - Reading the shared objects file [file:///home/matt/.kettle/shared.xml]
+2010/08/18 15:59:39 - dwh - Starting job, loaded from XML file : [file:///kff/projects/templates/datawarehouse/code/dwh/batch_dwh.kjb]
+2010/08/18 15:59:39 - DWH_LOG - New database connection defined
+2010/08/18 15:59:39 - DWH_LOG - Connected to database.
+2010/08/18 15:59:39 - DWH_LOG - Auto commit off
+2010/08/18 15:59:39 - DWH_LOG - launch DDL statement: 
+2010/08/18 15:59:39 - DWH_LOG - LOCK TABLES KFF_LOG_JOB WRITE
+2010/08/18 15:59:39 - DWH_LOG - 1 statement executed
+2010/08/18 15:59:39 - DWH_LOG - Connection to database closed!
+2010/08/18 15:59:39 - Thread[batch dwh (batch dwh (Thread-45)),5,main] - exec(9, 0, START.0)
+2010/08/18 15:59:39 - batch dwh - Starting entry [batch_dwh_dimensions]
+2010/08/18 15:59:39 - Thread[batch dwh (batch dwh (Thread-45)),5,main] - exec(10, 0, batch_dwh_dimensions.0)
+2010/08/18 15:59:39 - batch_dwh_dimensions - Loading job from XML file : [file:///kff/projects/templates/datawarehouse/code/dwh/batch_dwh_dimensions.kjb]
+2010/08/18 15:59:39 - SharedObjects - Reading the shared objects file [file:///home/matt/.kettle/shared.xml]
+2010/08/18 15:59:39 - batch_dwh_dimensions - Starting job, loaded from XML file : [file:///kff/projects/templates/datawarehouse/code/dwh/batch_dwh_dimensions.kjb]
+2010/08/18 15:59:39 - DWH_LOG - New database connection defined
+2010/08/18 15:59:39 - DWH_LOG - Connected to database.
+2010/08/18 15:59:39 - DWH_LOG - Auto commit off
+2010/08/18 15:59:39 - DWH_LOG - launch DDL statement: 
+2010/08/18 15:59:39 - DWH_LOG - LOCK TABLES KFF_LOG_JOB WRITE
+2010/08/18 15:59:39 - DWH_LOG - 1 statement executed
+2010/08/18 15:59:39 - DWH_LOG - Connection to database closed!
+2010/08/18 15:59:39 - Thread[batch dwh dimensions (batch dwh dimensions (Thread-47)),5,main] - exec(11, 0, START.0)
+2010/08/18 15:59:39 - batch dwh dimensions - Starting entry [DUMMY 1]
+2010/08/18 15:59:39 - Thread[batch dwh dimensions (batch dwh dimensions (Thread-47)),5,main] - exec(12, 0, DUMMY 1.0)
+2010/08/18 15:59:39 - batch dwh dimensions - Finished job entry [DUMMY 1] (result=[true])
+2010/08/18 15:59:39 - DWH_LOG - New database connection defined
+2010/08/18 15:59:39 - DWH_LOG - Connected to database.
+2010/08/18 15:59:39 - DWH_LOG - Connection to database closed!
+2010/08/18 15:59:39 - batch dwh - Starting entry [batch_dwh_facts]
+2010/08/18 15:59:39 - Thread[batch dwh (batch dwh (Thread-45)),5,main] - exec(11, 0, batch_dwh_facts.0)
+2010/08/18 15:59:39 - batch_dwh_facts - Loading job from XML file : [file:///kff/projects/templates/datawarehouse/code/dwh/batch_dwh_facts.kjb]
+2010/08/18 15:59:39 - SharedObjects - Reading the shared objects file [file:///home/matt/.kettle/shared.xml]
+2010/08/18 15:59:39 - batch_dwh_facts - Starting job, loaded from XML file : [file:///kff/projects/templates/datawarehouse/code/dwh/batch_dwh_facts.kjb]
+2010/08/18 15:59:39 - DWH_LOG - New database connection defined
+2010/08/18 15:59:39 - DWH_LOG - Connected to database.
+2010/08/18 15:59:39 - DWH_LOG - Auto commit off
+2010/08/18 15:59:39 - DWH_LOG - launch DDL statement: 
+2010/08/18 15:59:39 - DWH_LOG - LOCK TABLES KFF_LOG_JOB WRITE
+2010/08/18 15:59:39 - DWH_LOG - 1 statement executed
+2010/08/18 15:59:39 - DWH_LOG - Connection to database closed!
+2010/08/18 15:59:39 - Thread[batch dwh facts (batch dwh facts (Thread-49)),5,main] - exec(12, 0, START.0)
+2010/08/18 15:59:39 - batch dwh facts - Starting entry [DUMMY 1]
+2010/08/18 15:59:39 - Thread[batch dwh facts (batch dwh facts (Thread-49)),5,main] - exec(13, 0, DUMMY 1.0)
+2010/08/18 15:59:39 - batch dwh facts - Finished job entry [DUMMY 1] (result=[true])
+2010/08/18 15:59:39 - DWH_LOG - New database connection defined
+2010/08/18 15:59:39 - DWH_LOG - Connected to database.
+2010/08/18 15:59:39 - DWH_LOG - Connection to database closed!
+2010/08/18 15:59:39 - batch dwh - Starting entry [batch_dwh_aggregates]
+2010/08/18 15:59:39 - Thread[batch dwh (batch dwh (Thread-45)),5,main] - exec(12, 0, batch_dwh_aggregates.0)
+2010/08/18 15:59:39 - batch_dwh_aggregates - Loading job from XML file : [file:///kff/projects/templates/datawarehouse/code/dwh/batch_dwh_aggregates.kjb]
+2010/08/18 15:59:39 - SharedObjects - Reading the shared objects file [file:///home/matt/.kettle/shared.xml]
+2010/08/18 15:59:39 - batch_dwh_aggregates - Starting job, loaded from XML file : [file:///kff/projects/templates/datawarehouse/code/dwh/batch_dwh_aggregates.kjb]
+2010/08/18 15:59:39 - DWH_LOG - New database connection defined
+2010/08/18 15:59:39 - DWH_LOG - Connected to database.
+2010/08/18 15:59:39 - DWH_LOG - Auto commit off
+2010/08/18 15:59:39 - DWH_LOG - launch DDL statement: 
+2010/08/18 15:59:39 - DWH_LOG - LOCK TABLES KFF_LOG_JOB WRITE
+2010/08/18 15:59:39 - DWH_LOG - 1 statement executed
+2010/08/18 15:59:39 - DWH_LOG - Connection to database closed!
+2010/08/18 15:59:39 - Thread[batch dwh aggregates (batch dwh aggregates (Thread-51)),5,main] - exec(13, 0, START.0)
+2010/08/18 15:59:39 - batch dwh aggregates - Starting entry [DUMMY 1]
+2010/08/18 15:59:39 - Thread[batch dwh aggregates (batch dwh aggregates (Thread-51)),5,main] - exec(14, 0, DUMMY 1.0)
+2010/08/18 15:59:39 - batch dwh aggregates - Finished job entry [DUMMY 1] (result=[true])
+2010/08/18 15:59:39 - DWH_LOG - New database connection defined
+2010/08/18 15:59:39 - DWH_LOG - Connected to database.
+2010/08/18 15:59:39 - DWH_LOG - Connection to database closed!
+2010/08/18 15:59:39 - batch dwh - Finished job entry [batch_dwh_aggregates] (result=[true])
+2010/08/18 15:59:39 - batch dwh - Finished job entry [batch_dwh_facts] (result=[true])
+2010/08/18 15:59:39 - batch dwh - Finished job entry [batch_dwh_dimensions] (result=[true])
+2010/08/18 15:59:39 - DWH_LOG - New database connection defined
+2010/08/18 15:59:39 - DWH_LOG - Connected to database.
+2010/08/18 15:59:39 - DWH_LOG - Connection to database closed!
+2010/08/18 15:59:39 - batch data warehouse - Starting entry [post]
+2010/08/18 15:59:39 - Thread[batch data warehouse (batch data warehouse (Thread-37)),5,main] - exec(9, 0, post.0)
+2010/08/18 15:59:39 - post - Loading job from XML file : [file:///kff/projects/templates/datawarehouse/code/pst/batch_post.kjb]
+2010/08/18 15:59:39 - SharedObjects - Reading the shared objects file [file:///home/matt/.kettle/shared.xml]
+2010/08/18 15:59:39 - post - Starting job, loaded from XML file : [file:///kff/projects/templates/datawarehouse/code/pst/batch_post.kjb]
+2010/08/18 15:59:39 - DWH_LOG - New database connection defined
+2010/08/18 15:59:39 - DWH_LOG - Connected to database.
+2010/08/18 15:59:39 - DWH_LOG - Auto commit off
+2010/08/18 15:59:39 - DWH_LOG - launch DDL statement: 
+2010/08/18 15:59:39 - DWH_LOG - LOCK TABLES KFF_LOG_JOB WRITE
+2010/08/18 15:59:39 - DWH_LOG - 1 statement executed
+2010/08/18 15:59:39 - DWH_LOG - Connection to database closed!
+2010/08/18 15:59:39 - Thread[batch_post (batch_post (Thread-53)),5,main] - exec(10, 0, START.0)
+2010/08/18 15:59:39 - batch_post - Starting entry [DUMMY 1]
+2010/08/18 15:59:39 - Thread[batch_post (batch_post (Thread-53)),5,main] - exec(11, 0, DUMMY 1.0)
+2010/08/18 15:59:39 - batch_post - Finished job entry [DUMMY 1] (result=[true])
+2010/08/18 15:59:39 - DWH_LOG - New database connection defined
+2010/08/18 15:59:39 - DWH_LOG - Connected to database.
+2010/08/18 15:59:39 - DWH_LOG - Connection to database closed!
+2010/08/18 15:59:39 - batch data warehouse - Finished job entry [post] (result=[true])
+2010/08/18 15:59:39 - batch data warehouse - Finished job entry [dwh] (result=[true])
+2010/08/18 15:59:39 - batch data warehouse - Finished job entry [ods] (result=[true])
+2010/08/18 15:59:39 - batch data warehouse - Finished job entry [staging] (result=[true])
+2010/08/18 15:59:39 - batch data warehouse - Finished job entry [pre] (result=[true])
+2010/08/18 15:59:39 - DWH_LOG - New database connection defined
+2010/08/18 15:59:39 - DWH_LOG - Connected to database.
+2010/08/18 15:59:39 - DWH_LOG - Connection to database closed!
+2010/08/18 15:59:39 - batch_launcher - Starting entry [kff_logging_reports]
+2010/08/18 15:59:39 - Thread[batch_launcher (batch_launcher (Thread-3)),5,main] - exec(4, 0, kff_logging_reports.0)
+2010/08/18 15:59:39 - kff_logging_reports - Loading job from XML file : [/kff/reusable/kff-logging/kff_logging_reports.kjb]
+2010/08/18 15:59:39 - SharedObjects - Reading the shared objects file [file:///home/matt/.kettle/shared.xml]
+2010/08/18 15:59:39 - kff_logging_reports - Starting job, loaded from XML file : [/kff/reusable/kff-logging/kff_logging_reports.kjb]
+2010/08/18 15:59:39 - Thread[kjube_etl_reports (kjube_etl_reports (Thread-55)),5,main] - exec(5, 0, START.0)
+2010/08/18 15:59:39 - kjube_etl_reports - Starting entry [kff_logging_reports_batch_result]
+2010/08/18 15:59:39 - Thread[kjube_etl_reports (kjube_etl_reports (Thread-55)),5,main] - exec(6, 0, kff_logging_reports_batch_result.0)
+2010/08/18 15:59:39 - kff_logging_reports_batch_result - Opening filename : [file:///kff/reusable/kff-logging/kff_logging_reports_batch_result.ktr]
+2010/08/18 15:59:39 - kff_logging_reports_batch_result - Opening transformation: [file:///kff/reusable/kff-logging/kff_logging_reports_batch_result.ktr]
+2010/08/18 15:59:39 - kff_logging_reports_batch_result - Loading transformation from XML file [file:///kff/reusable/kff-logging/kff_logging_reports_batch_result.ktr]
+2010/08/18 15:59:39 - SharedObjects - Reading the shared objects file [file:///home/matt/.kettle/shared.xml]
+2010/08/18 15:59:39 - kff_logging_reports_batch_result - Starting transformation...(file=${Internal.Job.Filename.Directory}/kff_logging_reports_batch_result.ktr, name=kff_logging_reports_batch_result, repinfo=Transformation)
+2010/08/18 15:59:39 - kff_logging_reports_batch_result - Transformation is pre-loaded.
+2010/08/18 15:59:39 - kff_logging_reports_batch_result - Dispatching started for transformation [kff_logging_reports_batch_result]
+2010/08/18 15:59:39 - kff_logging_reports_batch_result - Nr of arguments detected:0 
+2010/08/18 15:59:39 - kff_logging_reports_batch_result - This is not a replay transformation
+2010/08/18 15:59:39 - kff_logging_reports_batch_result - I found 4 different steps to launch.
+2010/08/18 15:59:39 - kff_logging_reports_batch_result - Allocating rowsets...
+2010/08/18 15:59:39 - kff_logging_reports_batch_result -  Allocating rowsets for step 0 --> batch result
+2010/08/18 15:59:39 - kff_logging_reports_batch_result -   prevcopies = 1, nextcopies=1
+2010/08/18 15:59:39 - kff_logging_reports_batch_result - Transformation allocated new rowset [batch result.0 - Select values.0]
+2010/08/18 15:59:39 - kff_logging_reports_batch_result -  Allocated 1 rowsets for step 0 --> batch result  
+2010/08/18 15:59:39 - kff_logging_reports_batch_result -  Allocating rowsets for step 1 --> Select values
+2010/08/18 15:59:39 - kff_logging_reports_batch_result -   prevcopies = 1, nextcopies=1
+2010/08/18 15:59:39 - kff_logging_reports_batch_result - Transformation allocated new rowset [Select values.0 - Calculator.0]
+2010/08/18 15:59:39 - kff_logging_reports_batch_result -  Allocated 2 rowsets for step 1 --> Select values  
+2010/08/18 15:59:39 - kff_logging_reports_batch_result -  Allocating rowsets for step 2 --> Calculator
+2010/08/18 15:59:39 - kff_logging_reports_batch_result -   prevcopies = 1, nextcopies=1
+2010/08/18 15:59:39 - kff_logging_reports_batch_result - Transformation allocated new rowset [Calculator.0 - Excel Output.0]
+2010/08/18 15:59:39 - kff_logging_reports_batch_result -  Allocated 3 rowsets for step 2 --> Calculator  
+2010/08/18 15:59:39 - kff_logging_reports_batch_result -  Allocating rowsets for step 3 --> Excel Output
+2010/08/18 15:59:39 - kff_logging_reports_batch_result -  Allocated 3 rowsets for step 3 --> Excel Output  
+2010/08/18 15:59:39 - kff_logging_reports_batch_result - Allocating Steps & StepData...
+2010/08/18 15:59:39 - kff_logging_reports_batch_result -  Transformation is about to allocate step [batch result] of type [TableInput]
+2010/08/18 15:59:39 - batch result.0 - distribution activated
+2010/08/18 15:59:39 - batch result.0 - Starting allocation of buffers & new threads...
+2010/08/18 15:59:39 - batch result.0 - Step info: nrinput=0 nroutput=1
+2010/08/18 15:59:39 - batch result.0 - output rel. is  1:1
+2010/08/18 15:59:39 - batch result.0 - Found output rowset [batch result.0 - Select values.0]
+2010/08/18 15:59:39 - batch result.0 - Finished dispatching
+2010/08/18 15:59:39 - kff_logging_reports_batch_result -  Transformation has allocated a new step: [batch result].0
+2010/08/18 15:59:39 - kff_logging_reports_batch_result -  Transformation is about to allocate step [Select values] of type [SelectValues]
+2010/08/18 15:59:39 - Select values.0 - distribution activated
+2010/08/18 15:59:39 - Select values.0 - Starting allocation of buffers & new threads...
+2010/08/18 15:59:39 - Select values.0 - Step info: nrinput=1 nroutput=1
+2010/08/18 15:59:39 - Select values.0 - Got previous step from [Select values] #0 --> batch result
+2010/08/18 15:59:39 - Select values.0 - input rel is 1:1
+2010/08/18 15:59:39 - Select values.0 - Found input rowset [batch result.0 - Select values.0]
+2010/08/18 15:59:39 - Select values.0 - output rel. is  1:1
+2010/08/18 15:59:39 - Select values.0 - Found output rowset [Select values.0 - Calculator.0]
+2010/08/18 15:59:39 - Select values.0 - Finished dispatching
+2010/08/18 15:59:39 - kff_logging_reports_batch_result -  Transformation has allocated a new step: [Select values].0
+2010/08/18 15:59:39 - kff_logging_reports_batch_result -  Transformation is about to allocate step [Calculator] of type [Calculator]
+2010/08/18 15:59:39 - Calculator.0 - distribution activated
+2010/08/18 15:59:39 - Calculator.0 - Starting allocation of buffers & new threads...
+2010/08/18 15:59:39 - Calculator.0 - Step info: nrinput=1 nroutput=1
+2010/08/18 15:59:39 - Calculator.0 - Got previous step from [Calculator] #0 --> Select values
+2010/08/18 15:59:39 - Calculator.0 - input rel is 1:1
+2010/08/18 15:59:39 - Calculator.0 - Found input rowset [Select values.0 - Calculator.0]
+2010/08/18 15:59:39 - Calculator.0 - output rel. is  1:1
+2010/08/18 15:59:39 - Calculator.0 - Found output rowset [Calculator.0 - Excel Output.0]
+2010/08/18 15:59:39 - Calculator.0 - Finished dispatching
+2010/08/18 15:59:39 - kff_logging_reports_batch_result -  Transformation has allocated a new step: [Calculator].0
+2010/08/18 15:59:39 - kff_logging_reports_batch_result -  Transformation is about to allocate step [Excel Output] of type [ExcelOutput]
+2010/08/18 15:59:39 - Excel Output.0 - distribution activated
+2010/08/18 15:59:39 - Excel Output.0 - Starting allocation of buffers & new threads...
+2010/08/18 15:59:39 - Excel Output.0 - Step info: nrinput=1 nroutput=0
+2010/08/18 15:59:39 - Excel Output.0 - Got previous step from [Excel Output] #0 --> Calculator
+2010/08/18 15:59:39 - Excel Output.0 - input rel is 1:1
+2010/08/18 15:59:39 - Excel Output.0 - Found input rowset [Calculator.0 - Excel Output.0]
+2010/08/18 15:59:39 - Excel Output.0 - Finished dispatching
+2010/08/18 15:59:39 - kff_logging_reports_batch_result -  Transformation has allocated a new step: [Excel Output].0
+2010/08/18 15:59:39 - kff_logging_reports_batch_result - This transformation can be replayed with replay date: 2010/08/18 15:59:39
+2010/08/18 15:59:39 - kff_logging_reports_batch_result - Initialising 4 steps...
+2010/08/18 15:59:39 - batch result.0 - Running on slave server #0/1.
+2010/08/18 15:59:39 - DWH_LOG - New database connection defined
+2010/08/18 15:59:39 - Select values.0 - Running on slave server #0/1.
+2010/08/18 15:59:39 - Calculator.0 - Running on slave server #0/1.
+2010/08/18 15:59:39 - Excel Output.0 - Running on slave server #0/1.
+2010/08/18 15:59:39 - DWH_LOG - Connected to database.
+2010/08/18 15:59:39 - DWH_LOG - Auto commit off
+2010/08/18 15:59:39 - batch result.0 - Connected to database...
+2010/08/18 15:59:40 - kff_logging_reports_batch_result - Step [batch result.0] initialized flawlessly.
+2010/08/18 15:59:40 - kff_logging_reports_batch_result - Step [Select values.0] initialized flawlessly.
+2010/08/18 15:59:40 - kff_logging_reports_batch_result - Step [Calculator.0] initialized flawlessly.
+2010/08/18 15:59:40 - kff_logging_reports_batch_result - Step [Excel Output.0] initialized flawlessly.
+2010/08/18 15:59:40 - batch result.0 - Starting to run...
+2010/08/18 15:59:40 - Calculator.0 - Starting to run...
+2010/08/18 15:59:40 - Excel Output.0 - Starting to run...
+2010/08/18 15:59:40 - kff_logging_reports_batch_result - Transformation has allocated 4 threads and 3 rowsets.
+2010/08/18 15:59:40 - batch result.0 - SQL query : select 
+2010/08/18 15:59:40 - batch result.0 -   *
+2010/08/18 15:59:40 - batch result.0 - from
+2010/08/18 15:59:40 - batch result.0 -   KFF_LOG_BATCH
+2010/08/18 15:59:40 - batch result.0 - where 
+2010/08/18 15:59:40 - batch result.0 -   id_job between 
+2010/08/18 15:59:40 - batch result.0 -            (select  max(id_job) from KFF_LOG_BATCH ) - 100 and
+2010/08/18 15:59:40 - batch result.0 -            (select  max(id_job) from KFF_LOG_BATCH ) 
+2010/08/18 15:59:40 - batch result.0 - order by
+2010/08/18 15:59:40 - batch result.0 -   id_job desc
+2010/08/18 15:59:40 - Select values.0 - Starting to run...
+2010/08/18 15:59:40 - batch result.0 - Finished reading query, closing connection.
+2010/08/18 15:59:40 - DWH_LOG - Connection to database closed!
+2010/08/18 15:59:40 - batch result.0 - Finished processing (I=1, O=0, R=0, W=1, U=0, E=0)
+2010/08/18 15:59:40 - Select values.0 - Finished processing (I=0, O=0, R=1, W=1, U=0, E=0)
+2010/08/18 15:59:40 - Calculator.0 - Finished processing (I=0, O=0, R=1, W=1, U=0, E=0)
+2010/08/18 15:59:40 - Excel Output.0 - Finished processing (I=0, O=2, R=1, W=1, U=0, E=0)
+2010/08/18 15:59:40 - kjube_etl_reports - Starting entry [kff_logging_reports_jobtrf_details]
+2010/08/18 15:59:40 - Thread[kjube_etl_reports (kjube_etl_reports (Thread-55)),5,main] - exec(7, 0, kff_logging_reports_jobtrf_details.0)
+2010/08/18 15:59:40 - kff_logging_reports_jobtrf_details - Opening filename : [file:///kff/reusable/kff-logging/kff_logging_reports_jobtrf_details.ktr]
+2010/08/18 15:59:40 - kff_logging_reports_jobtrf_details - Opening transformation: [file:///kff/reusable/kff-logging/kff_logging_reports_jobtrf_details.ktr]
+2010/08/18 15:59:40 - kff_logging_reports_jobtrf_details - Loading transformation from XML file [file:///kff/reusable/kff-logging/kff_logging_reports_jobtrf_details.ktr]
+2010/08/18 15:59:40 - SharedObjects - Reading the shared objects file [file:///home/matt/.kettle/shared.xml]
+2010/08/18 15:59:40 - kff_logging_reports_jobtrf_details - Starting transformation...(file=${Internal.Job.Filename.Directory}/kff_logging_reports_jobtrf_details.ktr, name=kff_logging_reports_jobtrf_details, repinfo=Transformation)
+2010/08/18 15:59:40 - kff_logging_reports_jobtrf_details - Transformation is pre-loaded.
+2010/08/18 15:59:40 - kff_logging_reports_jobtrf_details - Dispatching started for transformation [kff_logging_reports_jobtrf_details]
+2010/08/18 15:59:40 - kff_logging_reports_jobtrf_details - Nr of arguments detected:0 
+2010/08/18 15:59:40 - kff_logging_reports_jobtrf_details - This is not a replay transformation
+2010/08/18 15:59:40 - kff_logging_reports_jobtrf_details - I found 14 different steps to launch.
+2010/08/18 15:59:40 - kff_logging_reports_jobtrf_details - Allocating rowsets...
+2010/08/18 15:59:40 - kff_logging_reports_jobtrf_details -  Allocating rowsets for step 0 --> Sort rows
+2010/08/18 15:59:40 - kff_logging_reports_jobtrf_details -   prevcopies = 1, nextcopies=1
+2010/08/18 15:59:40 - kff_logging_reports_jobtrf_details - Transformation allocated new rowset [Sort rows.0 - Excel Output.0]
+2010/08/18 15:59:40 - kff_logging_reports_jobtrf_details -  Allocated 1 rowsets for step 0 --> Sort rows  
+2010/08/18 15:59:40 - kff_logging_reports_jobtrf_details -  Allocating rowsets for step 1 --> Excel Output
+2010/08/18 15:59:40 - kff_logging_reports_jobtrf_details -  Allocated 1 rowsets for step 1 --> Excel Output  
+2010/08/18 15:59:40 - kff_logging_reports_jobtrf_details -  Allocating rowsets for step 2 --> Dummy (do nothing)
+2010/08/18 15:59:40 - kff_logging_reports_jobtrf_details -   prevcopies = 1, nextcopies=1
+2010/08/18 15:59:40 - kff_logging_reports_jobtrf_details - Transformation allocated new rowset [Dummy (do nothing).0 - Stream lookup.0]
+2010/08/18 15:59:40 - kff_logging_reports_jobtrf_details -  Allocated 2 rowsets for step 2 --> Dummy (do nothing)  
+2010/08/18 15:59:40 - kff_logging_reports_jobtrf_details -  Allocating rowsets for step 3 --> Stream lookup
+2010/08/18 15:59:40 - kff_logging_reports_jobtrf_details -   prevcopies = 1, nextcopies=1
+2010/08/18 15:59:40 - kff_logging_reports_jobtrf_details - Transformation allocated new rowset [Stream lookup.0 - Sort rows.0]
+2010/08/18 15:59:40 - kff_logging_reports_jobtrf_details -  Allocated 3 rowsets for step 3 --> Stream lookup  
+2010/08/18 15:59:40 - kff_logging_reports_jobtrf_details -  Allocating rowsets for step 4 --> Transformations ended
+2010/08/18 15:59:40 - kff_logging_reports_jobtrf_details -   prevcopies = 1, nextcopies=1
+2010/08/18 15:59:40 - kff_logging_reports_jobtrf_details - Transformation allocated new rowset [Transformations ended.0 - T ended.0]
+2010/08/18 15:59:40 - kff_logging_reports_jobtrf_details -  Allocated 4 rowsets for step 4 --> Transformations ended  
+2010/08/18 15:59:40 - kff_logging_reports_jobtrf_details -  Allocating rowsets for step 5 --> T ended
+2010/08/18 15:59:40 - kff_logging_reports_jobtrf_details -   prevcopies = 1, nextcopies=1
+2010/08/18 15:59:40 - kff_logging_reports_jobtrf_details - Transformation allocated new rowset [T ended.0 - Dummy (do nothing).0]
+2010/08/18 15:59:40 - kff_logging_reports_jobtrf_details -  Allocated 5 rowsets for step 5 --> T ended  
+2010/08/18 15:59:40 - kff_logging_reports_jobtrf_details -  Allocating rowsets for step 6 --> Transformations running
+2010/08/18 15:59:40 - kff_logging_reports_jobtrf_details -   prevcopies = 1, nextcopies=1
+2010/08/18 15:59:40 - kff_logging_reports_jobtrf_details - Transformation allocated new rowset [Transformations running.0 - T running.0]
+2010/08/18 15:59:40 - kff_logging_reports_jobtrf_details -  Allocated 6 rowsets for step 6 --> Transformations running  
+2010/08/18 15:59:40 - kff_logging_reports_jobtrf_details -  Allocating rowsets for step 7 --> T running
+2010/08/18 15:59:40 - kff_logging_reports_jobtrf_details -   prevcopies = 1, nextcopies=1
+2010/08/18 15:59:40 - kff_logging_reports_jobtrf_details - Transformation allocated new rowset [T running.0 - Dummy (do nothing).0]
+2010/08/18 15:59:40 - kff_logging_reports_jobtrf_details -  Allocated 7 rowsets for step 7 --> T running  
+2010/08/18 15:59:40 - kff_logging_reports_jobtrf_details -  Allocating rowsets for step 8 --> Jobs ended
+2010/08/18 15:59:40 - kff_logging_reports_jobtrf_details -   prevcopies = 1, nextcopies=1
+2010/08/18 15:59:40 - kff_logging_reports_jobtrf_details - Transformation allocated new rowset [Jobs ended.0 - J ended.0]
+2010/08/18 15:59:40 - kff_logging_reports_jobtrf_details -  Allocated 8 rowsets for step 8 --> Jobs ended  
+2010/08/18 15:59:40 - kff_logging_reports_jobtrf_details -  Allocating rowsets for step 9 --> J ended
+2010/08/18 15:59:40 - kff_logging_reports_jobtrf_details -   prevcopies = 1, nextcopies=1
+2010/08/18 15:59:40 - kff_logging_reports_jobtrf_details - Transformation allocated new rowset [J ended.0 - Dummy (do nothing).0]
+2010/08/18 15:59:40 - kff_logging_reports_jobtrf_details -  Allocated 9 rowsets for step 9 --> J ended  
+2010/08/18 15:59:40 - kff_logging_reports_jobtrf_details -  Allocating rowsets for step 10 --> Jobs running
+2010/08/18 15:59:40 - kff_logging_reports_jobtrf_details -   prevcopies = 1, nextcopies=1
+2010/08/18 15:59:40 - kff_logging_reports_jobtrf_details - Transformation allocated new rowset [Jobs running.0 - J running.0]
+2010/08/18 15:59:40 - kff_logging_reports_jobtrf_details -  Allocated 10 rowsets for step 10 --> Jobs running  
+2010/08/18 15:59:40 - kff_logging_reports_jobtrf_details -  Allocating rowsets for step 11 --> J running
+2010/08/18 15:59:40 - kff_logging_reports_jobtrf_details -   prevcopies = 1, nextcopies=1
+2010/08/18 15:59:40 - kff_logging_reports_jobtrf_details - Transformation allocated new rowset [J running.0 - Dummy (do nothing).0]
+2010/08/18 15:59:40 - kff_logging_reports_jobtrf_details -  Allocated 11 rowsets for step 11 --> J running  
+2010/08/18 15:59:40 - kff_logging_reports_jobtrf_details -  Allocating rowsets for step 12 --> rejects
+2010/08/18 15:59:40 - kff_logging_reports_jobtrf_details -   prevcopies = 1, nextcopies=1
+2010/08/18 15:59:40 - kff_logging_reports_jobtrf_details - Transformation allocated new rowset [rejects.0 - Select values.0]
+2010/08/18 15:59:40 - kff_logging_reports_jobtrf_details -  Allocated 12 rowsets for step 12 --> rejects  
+2010/08/18 15:59:40 - kff_logging_reports_jobtrf_details -  Allocating rowsets for step 13 --> Select values
+2010/08/18 15:59:40 - kff_logging_reports_jobtrf_details -   prevcopies = 1, nextcopies=1
+2010/08/18 15:59:40 - kff_logging_reports_jobtrf_details - Transformation allocated new rowset [Select values.0 - Stream lookup.0]
+2010/08/18 15:59:40 - kff_logging_reports_jobtrf_details -  Allocated 13 rowsets for step 13 --> Select values  
+2010/08/18 15:59:40 - kff_logging_reports_jobtrf_details - Allocating Steps & StepData...
+2010/08/18 15:59:40 - kff_logging_reports_jobtrf_details -  Transformation is about to allocate step [Sort rows] of type [SortRows]
+2010/08/18 15:59:40 - Sort rows.0 - distribution activated
+2010/08/18 15:59:40 - Sort rows.0 - Starting allocation of buffers & new threads...
+2010/08/18 15:59:40 - Sort rows.0 - Step info: nrinput=1 nroutput=1
+2010/08/18 15:59:40 - Sort rows.0 - Got previous step from [Sort rows] #0 --> Stream lookup
+2010/08/18 15:59:40 - Sort rows.0 - input rel is 1:1
+2010/08/18 15:59:40 - Sort rows.0 - Found input rowset [Stream lookup.0 - Sort rows.0]
+2010/08/18 15:59:40 - Sort rows.0 - output rel. is  1:1
+2010/08/18 15:59:40 - Sort rows.0 - Found output rowset [Sort rows.0 - Excel Output.0]
+2010/08/18 15:59:40 - Sort rows.0 - Finished dispatching
+2010/08/18 15:59:40 - kff_logging_reports_jobtrf_details -  Transformation has allocated a new step: [Sort rows].0
+2010/08/18 15:59:40 - kff_logging_reports_jobtrf_details -  Transformation is about to allocate step [Excel Output] of type [ExcelOutput]
+2010/08/18 15:59:40 - Excel Output.0 - distribution activated
+2010/08/18 15:59:40 - Excel Output.0 - Starting allocation of buffers & new threads...
+2010/08/18 15:59:40 - Excel Output.0 - Step info: nrinput=1 nroutput=0
+2010/08/18 15:59:40 - Excel Output.0 - Got previous step from [Excel Output] #0 --> Sort rows
+2010/08/18 15:59:40 - Excel Output.0 - input rel is 1:1
+2010/08/18 15:59:40 - Excel Output.0 - Found input rowset [Sort rows.0 - Excel Output.0]
+2010/08/18 15:59:40 - Excel Output.0 - Finished dispatching
+2010/08/18 15:59:40 - kff_logging_reports_jobtrf_details -  Transformation has allocated a new step: [Excel Output].0
+2010/08/18 15:59:40 - kff_logging_reports_jobtrf_details -  Transformation is about to allocate step [Dummy (do nothing)] of type [Dummy]
+2010/08/18 15:59:40 - Dummy (do nothing).0 - distribution activated
+2010/08/18 15:59:40 - Dummy (do nothing).0 - Starting allocation of buffers & new threads...
+2010/08/18 15:59:40 - Dummy (do nothing).0 - Step info: nrinput=4 nroutput=1
+2010/08/18 15:59:40 - Dummy (do nothing).0 - Got previous step from [Dummy (do nothing)] #0 --> T ended
+2010/08/18 15:59:40 - Dummy (do nothing).0 - input rel is 1:1
+2010/08/18 15:59:40 - Dummy (do nothing).0 - Found input rowset [T ended.0 - Dummy (do nothing).0]
+2010/08/18 15:59:40 - Dummy (do nothing).0 - Got previous step from [Dummy (do nothing)] #1 --> T running
+2010/08/18 15:59:40 - Dummy (do nothing).0 - input rel is 1:1
+2010/08/18 15:59:40 - Dummy (do nothing).0 - Found input rowset [T running.0 - Dummy (do nothing).0]
+2010/08/18 15:59:40 - Dummy (do nothing).0 - Got previous step from [Dummy (do nothing)] #2 --> J ended
+2010/08/18 15:59:40 - Dummy (do nothing).0 - input rel is 1:1
+2010/08/18 15:59:40 - Dummy (do nothing).0 - Found input rowset [J ended.0 - Dummy (do nothing).0]
+2010/08/18 15:59:40 - Dummy (do nothing).0 - Got previous step from [Dummy (do nothing)] #3 --> J running
+2010/08/18 15:59:40 - Dummy (do nothing).0 - input rel is 1:1
+2010/08/18 15:59:40 - Dummy (do nothing).0 - Found input rowset [J running.0 - Dummy (do nothing).0]
+2010/08/18 15:59:40 - Dummy (do nothing).0 - output rel. is  1:1
+2010/08/18 15:59:40 - Dummy (do nothing).0 - Found output rowset [Dummy (do nothing).0 - Stream lookup.0]
+2010/08/18 15:59:40 - Dummy (do nothing).0 - Finished dispatching
+2010/08/18 15:59:40 - kff_logging_reports_jobtrf_details -  Transformation has allocated a new step: [Dummy (do nothing)].0
+2010/08/18 15:59:40 - kff_logging_reports_jobtrf_details -  Transformation is about to allocate step [Stream lookup] of type [StreamLookup]
+2010/08/18 15:59:40 - Stream lookup.0 - distribution activated
+2010/08/18 15:59:40 - Stream lookup.0 - Starting allocation of buffers & new threads...
+2010/08/18 15:59:40 - Stream lookup.0 - Step info: nrinput=2 nroutput=1
+2010/08/18 15:59:40 - Stream lookup.0 - Got previous step from [Stream lookup] #0 --> Dummy (do nothing)
+2010/08/18 15:59:40 - Stream lookup.0 - input rel is 1:1
+2010/08/18 15:59:40 - Stream lookup.0 - Found input rowset [Dummy (do nothing).0 - Stream lookup.0]
+2010/08/18 15:59:40 - Stream lookup.0 - Got previous step from [Stream lookup] #1 --> Select values
+2010/08/18 15:59:40 - Stream lookup.0 - input rel is 1:1
+2010/08/18 15:59:40 - Stream lookup.0 - Found input rowset [Select values.0 - Stream lookup.0]
+2010/08/18 15:59:40 - Stream lookup.0 - output rel. is  1:1
+2010/08/18 15:59:40 - Stream lookup.0 - Found output rowset [Stream lookup.0 - Sort rows.0]
+2010/08/18 15:59:40 - Stream lookup.0 - Finished dispatching
+2010/08/18 15:59:40 - kff_logging_reports_jobtrf_details -  Transformation has allocated a new step: [Stream lookup].0
+2010/08/18 15:59:40 - kff_logging_reports_jobtrf_details -  Transformation is about to allocate step [Transformations ended] of type [TableInput]
+2010/08/18 15:59:40 - Transformations ended.0 - distribution activated
+2010/08/18 15:59:40 - Transformations ended.0 - Starting allocation of buffers & new threads...
+2010/08/18 15:59:40 - Transformations ended.0 - Step info: nrinput=0 nroutput=1
+2010/08/18 15:59:40 - Transformations ended.0 - output rel. is  1:1
+2010/08/18 15:59:40 - Transformations ended.0 - Found output rowset [Transformations ended.0 - T ended.0]
+2010/08/18 15:59:40 - Transformations ended.0 - Finished dispatching
+2010/08/18 15:59:40 - kff_logging_reports_jobtrf_details -  Transformation has allocated a new step: [Transformations ended].0
+2010/08/18 15:59:40 - kff_logging_reports_jobtrf_details -  Transformation is about to allocate step [T ended] of type [SelectValues]
+2010/08/18 15:59:40 - T ended.0 - distribution activated
+2010/08/18 15:59:40 - T ended.0 - Starting allocation of buffers & new threads...
+2010/08/18 15:59:40 - T ended.0 - Step info: nrinput=1 nroutput=1
+2010/08/18 15:59:40 - T ended.0 - Got previous step from [T ended] #0 --> Transformations ended
+2010/08/18 15:59:40 - T ended.0 - input rel is 1:1
+2010/08/18 15:59:40 - T ended.0 - Found input rowset [Transformations ended.0 - T ended.0]
+2010/08/18 15:59:40 - T ended.0 - output rel. is  1:1
+2010/08/18 15:59:40 - T ended.0 - Found output rowset [T ended.0 - Dummy (do nothing).0]
+2010/08/18 15:59:40 - T ended.0 - Finished dispatching
+2010/08/18 15:59:40 - kff_logging_reports_jobtrf_details -  Transformation has allocated a new step: [T ended].0
+2010/08/18 15:59:40 - kff_logging_reports_jobtrf_details -  Transformation is about to allocate step [Transformations running] of type [TableInput]
+2010/08/18 15:59:40 - Transformations running.0 - distribution activated
+2010/08/18 15:59:40 - Transformations running.0 - Starting allocation of buffers & new threads...
+2010/08/18 15:59:40 - Transformations running.0 - Step info: nrinput=0 nroutput=1
+2010/08/18 15:59:40 - Transformations running.0 - output rel. is  1:1
+2010/08/18 15:59:40 - Transformations running.0 - Found output rowset [Transformations running.0 - T running.0]
+2010/08/18 15:59:40 - Transformations running.0 - Finished dispatching
+2010/08/18 15:59:40 - kff_logging_reports_jobtrf_details -  Transformation has allocated a new step: [Transformations running].0
+2010/08/18 15:59:40 - kff_logging_reports_jobtrf_details -  Transformation is about to allocate step [T running] of type [SelectValues]
+2010/08/18 15:59:40 - T running.0 - distribution activated
+2010/08/18 15:59:40 - T running.0 - Starting allocation of buffers & new threads...
+2010/08/18 15:59:40 - T running.0 - Step info: nrinput=1 nroutput=1
+2010/08/18 15:59:40 - T running.0 - Got previous step from [T running] #0 --> Transformations running
+2010/08/18 15:59:40 - T running.0 - input rel is 1:1
+2010/08/18 15:59:40 - T running.0 - Found input rowset [Transformations running.0 - T running.0]
+2010/08/18 15:59:40 - T running.0 - output rel. is  1:1
+2010/08/18 15:59:40 - T running.0 - Found output rowset [T running.0 - Dummy (do nothing).0]
+2010/08/18 15:59:40 - T running.0 - Finished dispatching
+2010/08/18 15:59:40 - kff_logging_reports_jobtrf_details -  Transformation has allocated a new step: [T running].0
+2010/08/18 15:59:40 - kff_logging_reports_jobtrf_details -  Transformation is about to allocate step [Jobs ended] of type [TableInput]
+2010/08/18 15:59:40 - Jobs ended.0 - distribution activated
+2010/08/18 15:59:40 - Jobs ended.0 - Starting allocation of buffers & new threads...
+2010/08/18 15:59:40 - Jobs ended.0 - Step info: nrinput=0 nroutput=1
+2010/08/18 15:59:40 - Jobs ended.0 - output rel. is  1:1
+2010/08/18 15:59:40 - Jobs ended.0 - Found output rowset [Jobs ended.0 - J ended.0]
+2010/08/18 15:59:40 - Jobs ended.0 - Finished dispatching
+2010/08/18 15:59:40 - kff_logging_reports_jobtrf_details -  Transformation has allocated a new step: [Jobs ended].0
+2010/08/18 15:59:40 - kff_logging_reports_jobtrf_details -  Transformation is about to allocate step [J ended] of type [SelectValues]
+2010/08/18 15:59:40 - J ended.0 - distribution activated
+2010/08/18 15:59:40 - J ended.0 - Starting allocation of buffers & new threads...
+2010/08/18 15:59:40 - J ended.0 - Step info: nrinput=1 nroutput=1
+2010/08/18 15:59:40 - J ended.0 - Got previous step from [J ended] #0 --> Jobs ended
+2010/08/18 15:59:40 - J ended.0 - input rel is 1:1
+2010/08/18 15:59:40 - J ended.0 - Found input rowset [Jobs ended.0 - J ended.0]
+2010/08/18 15:59:40 - J ended.0 - output rel. is  1:1
+2010/08/18 15:59:40 - J ended.0 - Found output rowset [J ended.0 - Dummy (do nothing).0]
+2010/08/18 15:59:40 - J ended.0 - Finished dispatching
+2010/08/18 15:59:40 - kff_logging_reports_jobtrf_details -  Transformation has allocated a new step: [J ended].0
+2010/08/18 15:59:40 - kff_logging_reports_jobtrf_details -  Transformation is about to allocate step [Jobs running] of type [TableInput]
+2010/08/18 15:59:40 - Jobs running.0 - distribution activated
+2010/08/18 15:59:40 - Jobs running.0 - Starting allocation of buffers & new threads...
+2010/08/18 15:59:40 - Jobs running.0 - Step info: nrinput=0 nroutput=1
+2010/08/18 15:59:40 - Jobs running.0 - output rel. is  1:1
+2010/08/18 15:59:40 - Jobs running.0 - Found output rowset [Jobs running.0 - J running.0]
+2010/08/18 15:59:40 - Jobs running.0 - Finished dispatching
+2010/08/18 15:59:40 - kff_logging_reports_jobtrf_details -  Transformation has allocated a new step: [Jobs running].0
+2010/08/18 15:59:40 - kff_logging_reports_jobtrf_details -  Transformation is about to allocate step [J running] of type [SelectValues]
+2010/08/18 15:59:40 - J running.0 - distribution activated
+2010/08/18 15:59:40 - J running.0 - Starting allocation of buffers & new threads...
+2010/08/18 15:59:40 - J running.0 - Step info: nrinput=1 nroutput=1
+2010/08/18 15:59:40 - J running.0 - Got previous step from [J running] #0 --> Jobs running
+2010/08/18 15:59:40 - J running.0 - input rel is 1:1
+2010/08/18 15:59:40 - J running.0 - Found input rowset [Jobs running.0 - J running.0]
+2010/08/18 15:59:40 - J running.0 - output rel. is  1:1
+2010/08/18 15:59:40 - J running.0 - Found output rowset [J running.0 - Dummy (do nothing).0]
+2010/08/18 15:59:40 - J running.0 - Finished dispatching
+2010/08/18 15:59:40 - kff_logging_reports_jobtrf_details -  Transformation has allocated a new step: [J running].0
+2010/08/18 15:59:40 - kff_logging_reports_jobtrf_details -  Transformation is about to allocate step [rejects] of type [TableInput]
+2010/08/18 15:59:40 - rejects.0 - distribution activated
+2010/08/18 15:59:40 - rejects.0 - Starting allocation of buffers & new threads...
+2010/08/18 15:59:40 - rejects.0 - Step info: nrinput=0 nroutput=1
+2010/08/18 15:59:40 - rejects.0 - output rel. is  1:1
+2010/08/18 15:59:40 - rejects.0 - Found output rowset [rejects.0 - Select values.0]
+2010/08/18 15:59:40 - rejects.0 - Finished dispatching
+2010/08/18 15:59:40 - kff_logging_reports_jobtrf_details -  Transformation has allocated a new step: [rejects].0
+2010/08/18 15:59:40 - kff_logging_reports_jobtrf_details -  Transformation is about to allocate step [Select values] of type [SelectValues]
+2010/08/18 15:59:40 - Select values.0 - distribution activated
+2010/08/18 15:59:40 - Select values.0 - Starting allocation of buffers & new threads...
+2010/08/18 15:59:40 - Select values.0 - Step info: nrinput=1 nroutput=1
+2010/08/18 15:59:40 - Select values.0 - Got previous step from [Select values] #0 --> rejects
+2010/08/18 15:59:40 - Select values.0 - input rel is 1:1
+2010/08/18 15:59:40 - Select values.0 - Found input rowset [rejects.0 - Select values.0]
+2010/08/18 15:59:40 - Select values.0 - output rel. is  1:1
+2010/08/18 15:59:40 - Select values.0 - Found output rowset [Select values.0 - Stream lookup.0]
+2010/08/18 15:59:40 - Select values.0 - Finished dispatching
+2010/08/18 15:59:40 - kff_logging_reports_jobtrf_details -  Transformation has allocated a new step: [Select values].0
+2010/08/18 15:59:40 - kff_logging_reports_jobtrf_details - This transformation can be replayed with replay date: 2010/08/18 15:59:40
+2010/08/18 15:59:40 - kff_logging_reports_jobtrf_details - Initialising 14 steps...
+2010/08/18 15:59:40 - Sort rows.0 - Running on slave server #0/1.
+2010/08/18 15:59:40 - Excel Output.0 - Running on slave server #0/1.
+2010/08/18 15:59:40 - Dummy (do nothing).0 - Running on slave server #0/1.
+2010/08/18 15:59:40 - Stream lookup.0 - Running on slave server #0/1.
+2010/08/18 15:59:40 - Transformations ended.0 - Running on slave server #0/1.
+2010/08/18 15:59:40 - DWH_LOG - New database connection defined
+2010/08/18 15:59:40 - Transformations running.0 - Running on slave server #0/1.
+2010/08/18 15:59:40 - DWH_LOG - New database connection defined
+2010/08/18 15:59:40 - DWH_LOG - Connected to database.
+2010/08/18 15:59:40 - DWH_LOG - Auto commit off
+2010/08/18 15:59:40 - Transformations ended.0 - Connected to database...
+2010/08/18 15:59:40 - T running.0 - Running on slave server #0/1.
+2010/08/18 15:59:40 - Jobs ended.0 - Running on slave server #0/1.
+2010/08/18 15:59:40 - DWH_LOG - New database connection defined
+2010/08/18 15:59:40 - DWH_LOG - Connected to database.
+2010/08/18 15:59:40 - DWH_LOG - Auto commit off
+2010/08/18 15:59:40 - Transformations running.0 - Connected to database...
+2010/08/18 15:59:40 - T ended.0 - Running on slave server #0/1.
+2010/08/18 15:59:40 - Jobs running.0 - Running on slave server #0/1.
+2010/08/18 15:59:40 - DWH_LOG - New database connection defined
+2010/08/18 15:59:40 - J ended.0 - Running on slave server #0/1.
+2010/08/18 15:59:40 - DWH_LOG - Connected to database.
+2010/08/18 15:59:40 - DWH_LOG - Auto commit off
+2010/08/18 15:59:40 - Jobs ended.0 - Connected to database...
+2010/08/18 15:59:40 - J running.0 - Running on slave server #0/1.
+2010/08/18 15:59:40 - rejects.0 - Running on slave server #0/1.
+2010/08/18 15:59:40 - DWH_LOG - New database connection defined
+2010/08/18 15:59:40 - DWH_LOG - Connected to database.
+2010/08/18 15:59:40 - DWH_LOG - Auto commit off
+2010/08/18 15:59:40 - Jobs running.0 - Connected to database...
+2010/08/18 15:59:40 - Select values.0 - Running on slave server #0/1.
+2010/08/18 15:59:40 - DWH_LOG - Connected to database.
+2010/08/18 15:59:40 - DWH_LOG - Auto commit off
+2010/08/18 15:59:40 - rejects.0 - Connected to database...
+2010/08/18 15:59:40 - kff_logging_reports_jobtrf_details - Step [Sort rows.0] initialized flawlessly.
+2010/08/18 15:59:40 - kff_logging_reports_jobtrf_details - Step [Excel Output.0] initialized flawlessly.
+2010/08/18 15:59:40 - kff_logging_reports_jobtrf_details - Step [Dummy (do nothing).0] initialized flawlessly.
+2010/08/18 15:59:40 - kff_logging_reports_jobtrf_details - Step [Stream lookup.0] initialized flawlessly.
+2010/08/18 15:59:40 - kff_logging_reports_jobtrf_details - Step [Transformations ended.0] initialized flawlessly.
+2010/08/18 15:59:40 - kff_logging_reports_jobtrf_details - Step [T ended.0] initialized flawlessly.
+2010/08/18 15:59:40 - kff_logging_reports_jobtrf_details - Step [Transformations running.0] initialized flawlessly.
+2010/08/18 15:59:40 - kff_logging_reports_jobtrf_details - Step [T running.0] initialized flawlessly.
+2010/08/18 15:59:40 - kff_logging_reports_jobtrf_details - Step [Jobs ended.0] initialized flawlessly.
+2010/08/18 15:59:40 - kff_logging_reports_jobtrf_details - Step [J ended.0] initialized flawlessly.
+2010/08/18 15:59:40 - kff_logging_reports_jobtrf_details - Step [Jobs running.0] initialized flawlessly.
+2010/08/18 15:59:40 - kff_logging_reports_jobtrf_details - Step [J running.0] initialized flawlessly.
+2010/08/18 15:59:40 - kff_logging_reports_jobtrf_details - Step [rejects.0] initialized flawlessly.
+2010/08/18 15:59:40 - kff_logging_reports_jobtrf_details - Step [Select values.0] initialized flawlessly.
+2010/08/18 15:59:40 - Sort rows.0 - Starting to run...
+2010/08/18 15:59:40 - Excel Output.0 - Starting to run...
+2010/08/18 15:59:40 - Dummy (do nothing).0 - Starting to run...
+2010/08/18 15:59:40 - Stream lookup.0 - Starting to run...
+2010/08/18 15:59:40 - Stream lookup.0 - Reading lookup values from step [Select values]
+2010/08/18 15:59:40 - Stream lookup.0 - Reading from stream [Select values]
+2010/08/18 15:59:40 - Transformations ended.0 - Starting to run...
+2010/08/18 15:59:40 - Transformations ended.0 - SQL query : select 
+2010/08/18 15:59:40 - Transformations ended.0 -  transname as JOB_NAME,
+2010/08/18 15:59:40 - Transformations ended.0 -  'transformation' as JOB_TYPE,
+2010/08/18 15:59:40 - Transformations ended.0 -  STATUS,
+2010/08/18 15:59:40 - Transformations ended.0 -  round((LOGDATE-ENDDATE)*24*60,2) as DURATION_MIN,
+2010/08/18 15:59:40 - Transformations ended.0 -  LINES_INPUT   ,
+2010/08/18 15:59:40 - Transformations ended.0 -  LINES_OUTPUT  , 
+2010/08/18 15:59:40 - Transformations ended.0 -  LINES_UPDATED , 
+2010/08/18 15:59:40 - Transformations ended.0 -  ERRORS ,
+2010/08/18 15:59:40 - Transformations ended.0 -  REPLAYDATE AS STARTDATE,
+2010/08/18 15:59:40 - Transformations ended.0 -  LOGDATE AS ENDDATE
+2010/08/18 15:59:40 - Transformations ended.0 - from KFF_LOG_TRNSF
+2010/08/18 15:59:40 - Transformations ended.0 - where status in ('end','stop')
+2010/08/18 15:59:40 - T ended.0 - Starting to run...
+2010/08/18 15:59:40 - Transformations running.0 - Starting to run...
+2010/08/18 15:59:40 - Transformations running.0 - SQL query : select 
+2010/08/18 15:59:40 - Transformations running.0 -  t.transname as JOB_NAME,
+2010/08/18 15:59:40 - Transformations running.0 -  'transformation' as JOB_TYPE,
+2010/08/18 15:59:40 - Transformations running.0 -  t.STATUS,
+2010/08/18 15:59:40 - Transformations running.0 - -- round((SYSDATE-t.ENDDATE)*24*60,2) as DURATION_MIN,
+2010/08/18 15:59:40 - Transformations running.0 -  6666 as DURATION_MIN,
+2010/08/18 15:59:40 - Transformations running.0 -  t.LINES_INPUT ,
+2010/08/18 15:59:40 - Transformations running.0 -  t.LINES_OUTPUT , 
+2010/08/18 15:59:40 - Transformations running.0 -  t.LINES_UPDATED , 
+2010/08/18 15:59:40 - Transformations running.0 -  1 as ERRORS ,
+2010/08/18 15:59:40 - Transformations running.0 -  t.REPLAYDATE AS STARTDATE,
+2010/08/18 15:59:40 - Transformations running.0 -  t.LOGDATE AS ENDDATE
+2010/08/18 15:59:40 - Transformations running.0 - from KFF_LOG_TRNSF t
+2010/08/18 15:59:40 - Transformations running.0 - where t.status = 'start'
+2010/08/18 15:59:40 - Transformations running.0 -   and not exists
+2010/08/18 15:59:40 - Transformations running.0 -        (select * 
+2010/08/18 15:59:40 - Transformations running.0 -         from KFF_LOG_TRNSF s
+2010/08/18 15:59:40 - Transformations running.0 -         where s.transname = t.transname
+2010/08/18 15:59:40 - Transformations running.0 -           and s.enddate = t.enddate
+2010/08/18 15:59:40 - Transformations running.0 -           and s.STATUS = 'end')
+2010/08/18 15:59:40 - T running.0 - Starting to run...
+2010/08/18 15:59:40 - Jobs ended.0 - Starting to run...
+2010/08/18 15:59:40 - Jobs ended.0 - SQL query : select 
+2010/08/18 15:59:40 - Jobs ended.0 -  JOBNAME as JOB_NAME,
+2010/08/18 15:59:40 - Jobs ended.0 -  'job' as JOB_TYPE,
+2010/08/18 15:59:40 - Jobs ended.0 -  STATUS,
+2010/08/18 15:59:40 - Jobs ended.0 -  round((LOGDATE-ENDDATE)*24*60,2) as DURATION_MIN,
+2010/08/18 15:59:40 - Jobs ended.0 -  LINES_INPUT ,
+2010/08/18 15:59:40 - Jobs ended.0 -  LINES_OUTPUT , 
+2010/08/18 15:59:40 - Jobs ended.0 -  LINES_UPDATED , 
+2010/08/18 15:59:40 - Jobs ended.0 -  ERRORS ,
+2010/08/18 15:59:40 - Jobs ended.0 -  REPLAYDATE AS STARTDATE,
+2010/08/18 15:59:40 - Jobs ended.0 -  LOGDATE AS ENDDATE
+2010/08/18 15:59:40 - Jobs ended.0 - -- LOG_FIELD
+2010/08/18 15:59:40 - Jobs ended.0 - from KFF_LOG_JOB
+2010/08/18 15:59:40 - Jobs ended.0 - where status = 'end'
+2010/08/18 15:59:40 - Select values.0 - Starting to run...
+2010/08/18 15:59:40 - kff_logging_reports_jobtrf_details - Transformation has allocated 14 threads and 13 rowsets.
+2010/08/18 15:59:40 - rejects.0 - Starting to run...
+2010/08/18 15:59:40 - rejects.0 - SQL query : SELECT 
+2010/08/18 15:59:40 - rejects.0 -  transname        JOBNAME,    
+2010/08/18 15:59:40 - rejects.0 -  'transformation' JOBTYPE,
+2010/08/18 15:59:40 - rejects.0 -  count(*)         LINES_REJECTED
+2010/08/18 15:59:40 - rejects.0 - from
+2010/08/18 15:59:40 - rejects.0 -  KFF_LOG_REJECT
+2010/08/18 15:59:40 - rejects.0 - group by 
+2010/08/18 15:59:40 - rejects.0 -  transname
+2010/08/18 15:59:40 - rejects.0 -  
+2010/08/18 15:59:40 - J running.0 - Starting to run...
+2010/08/18 15:59:40 - J ended.0 - Starting to run...
+2010/08/18 15:59:40 - Jobs running.0 - Starting to run...
+2010/08/18 15:59:40 - Jobs running.0 - SQL query : SELECT 
+2010/08/18 15:59:40 - Jobs running.0 -  JOBNAME as JOB_NAME,
+2010/08/18 15:59:40 - Jobs running.0 -  'job' as JOB_TYPE,
+2010/08/18 15:59:40 - Jobs running.0 -  STATUS,
+2010/08/18 15:59:40 - Jobs running.0 - -- round((SYSDATE-ENDDATE)*24*60,2) as DURATION_MIN,
+2010/08/18 15:59:40 - Jobs running.0 -  6666 as DURATION_MIN,
+2010/08/18 15:59:40 - Jobs running.0 -  LINES_INPUT ,
+2010/08/18 15:59:40 - Jobs running.0 -  LINES_OUTPUT ,
+2010/08/18 15:59:40 - Jobs running.0 -  LINES_UPDATED,
+2010/08/18 15:59:40 - Jobs running.0 -  1 as ERRORS ,
+2010/08/18 15:59:40 - Jobs running.0 -  REPLAYDATE AS STARTDATE,
+2010/08/18 15:59:40 - Jobs running.0 -  LOGDATE AS ENDDATE
+2010/08/18 15:59:40 - Jobs running.0 - -- LOG_FIELD
+2010/08/18 15:59:40 - Jobs running.0 - from KFF_LOG_JOB t
+2010/08/18 15:59:40 - Jobs running.0 - where status = 'start'
+2010/08/18 15:59:40 - Jobs running.0 -   and not exists
+2010/08/18 15:59:40 - Jobs running.0 -        (select * 
+2010/08/18 15:59:40 - Jobs running.0 -         from KFF_LOG_JOB s
+2010/08/18 15:59:40 - Jobs running.0 -         where s.jobname = t.jobname
+2010/08/18 15:59:40 - Jobs running.0 -           and s.enddate = t.enddate
+2010/08/18 15:59:40 - Jobs running.0 -           and s.status = 'end')
+2010/08/18 15:59:40 - Transformations running.0 - Finished reading query, closing connection.
+2010/08/18 15:59:40 - Jobs running.0 - Finished reading query, closing connection.
+2010/08/18 15:59:40 - DWH_LOG - Connection to database closed!
+2010/08/18 15:59:40 - Jobs running.0 - Finished processing (I=0, O=0, R=0, W=0, U=0, E=0)
+2010/08/18 15:59:40 - rejects.0 - Finished reading query, closing connection.
+2010/08/18 15:59:40 - Transformations ended.0 - Finished reading query, closing connection.
+2010/08/18 15:59:40 - J running.0 - Finished processing (I=0, O=0, R=0, W=0, U=0, E=0)
+2010/08/18 15:59:40 - T running.0 - Finished processing (I=0, O=0, R=0, W=0, U=0, E=0)
+2010/08/18 15:59:40 - DWH_LOG - Connection to database closed!
+2010/08/18 15:59:40 - DWH_LOG - Connection to database closed!
+2010/08/18 15:59:40 - rejects.0 - Finished processing (I=0, O=0, R=0, W=0, U=0, E=0)
+2010/08/18 15:59:40 - Transformations running.0 - Finished processing (I=0, O=0, R=0, W=0, U=0, E=0)
+2010/08/18 15:59:40 - Select values.0 - Finished processing (I=0, O=0, R=0, W=0, U=0, E=0)
+2010/08/18 15:59:40 - DWH_LOG - Connection to database closed!
+2010/08/18 15:59:40 - Transformations ended.0 - Finished processing (I=0, O=0, R=0, W=0, U=0, E=0)
+2010/08/18 15:59:40 - Jobs ended.0 - Finished reading query, closing connection.
+2010/08/18 15:59:40 - T ended.0 - Finished processing (I=0, O=0, R=0, W=0, U=0, E=0)
+2010/08/18 15:59:40 - DWH_LOG - Connection to database closed!
+2010/08/18 15:59:40 - Jobs ended.0 - Finished processing (I=8, O=0, R=0, W=8, U=0, E=0)
+2010/08/18 15:59:40 - J ended.0 - Finished processing (I=0, O=0, R=8, W=8, U=0, E=0)
+2010/08/18 15:59:40 - Dummy (do nothing).0 - Finished processing (I=0, O=0, R=8, W=8, U=0, E=0)
+2010/08/18 15:59:40 - Stream lookup.0 - Field [JOB_NAME] has nr [0]
+2010/08/18 15:59:40 - Stream lookup.0 - Field [JOB_TYPE] has nr [1]
+2010/08/18 15:59:40 - Stream lookup.0 - Stopped processing with empty row after 8 rows.
+2010/08/18 15:59:40 - Stream lookup.0 - Finished processing (I=0, O=0, R=8, W=8, U=0, E=0)
+2010/08/18 15:59:40 - Sort rows.0 - Starting quickSort algorithm...
+2010/08/18 15:59:40 - Sort rows.0 - The number of binary string to data type conversions done in this sort block is 0
+2010/08/18 15:59:40 - Sort rows.0 - QuickSort algorithm has finished.
+2010/08/18 15:59:40 - Sort rows.0 - Finished processing (I=0, O=0, R=8, W=8, U=0, E=0)
+2010/08/18 15:59:41 - Excel Output.0 - Finished processing (I=0, O=9, R=8, W=8, U=0, E=0)
+2010/08/18 15:59:41 - kjube_etl_reports - Starting entry [kff_logging_reports_error_details]
+2010/08/18 15:59:41 - Thread[kjube_etl_reports (kjube_etl_reports (Thread-55)),5,main] - exec(8, 0, kff_logging_reports_error_details.0)
+2010/08/18 15:59:41 - kff_logging_reports_error_details - Opening filename : [file:///kff/reusable/kff-logging/kff_logging_reports_error_details.ktr]
+2010/08/18 15:59:41 - kff_logging_reports_error_details - Opening transformation: [file:///kff/reusable/kff-logging/kff_logging_reports_error_details.ktr]
+2010/08/18 15:59:41 - kff_logging_reports_error_details - Loading transformation from XML file [file:///kff/reusable/kff-logging/kff_logging_reports_error_details.ktr]
+2010/08/18 15:59:41 - SharedObjects - Reading the shared objects file [file:///home/matt/.kettle/shared.xml]
+2010/08/18 15:59:41 - kff_logging_reports_error_details - Starting transformation...(file=${Internal.Job.Filename.Directory}/kff_logging_reports_error_details.ktr, name=kff_logging_reports_error_details, repinfo=Transformation)
+2010/08/18 15:59:41 - kff_logging_reports_error_details - Transformation is pre-loaded.
+2010/08/18 15:59:41 - kff_logging_reports_error_details - Dispatching started for transformation [kff_logging_reports_error_details]
+2010/08/18 15:59:41 - kff_logging_reports_error_details - Nr of arguments detected:0 
+2010/08/18 15:59:41 - kff_logging_reports_error_details - This is not a replay transformation
+2010/08/18 15:59:41 - kff_logging_reports_error_details - I found 5 different steps to launch.
+2010/08/18 15:59:41 - kff_logging_reports_error_details - Allocating rowsets...
+2010/08/18 15:59:41 - kff_logging_reports_error_details -  Allocating rowsets for step 0 --> Get error logfield joblogging
+2010/08/18 15:59:41 - kff_logging_reports_error_details -   prevcopies = 1, nextcopies=1
+2010/08/18 15:59:41 - kff_logging_reports_error_details - Transformation allocated new rowset [Get error logfield joblogging.0 - Dummy (do nothing).0]
+2010/08/18 15:59:41 - kff_logging_reports_error_details -  Allocated 1 rowsets for step 0 --> Get error logfield joblogging  
+2010/08/18 15:59:41 - kff_logging_reports_error_details -  Allocating rowsets for step 1 --> Dummy (do nothing)
+2010/08/18 15:59:41 - kff_logging_reports_error_details -   prevcopies = 1, nextcopies=1
+2010/08/18 15:59:41 - kff_logging_reports_error_details - Transformation allocated new rowset [Dummy (do nothing).0 - Strings cut.0]
+2010/08/18 15:59:41 - kff_logging_reports_error_details -  Allocated 2 rowsets for step 1 --> Dummy (do nothing)  
+2010/08/18 15:59:41 - kff_logging_reports_error_details -  Allocating rowsets for step 2 --> Get error log field from transformations
+2010/08/18 15:59:41 - kff_logging_reports_error_details -   prevcopies = 1, nextcopies=1
+2010/08/18 15:59:41 - kff_logging_reports_error_details - Transformation allocated new rowset [Get error log field from transformations.0 - Dummy (do nothing).0]
+2010/08/18 15:59:41 - kff_logging_reports_error_details -  Allocated 3 rowsets for step 2 --> Get error log field from transformations  
+2010/08/18 15:59:41 - kff_logging_reports_error_details -  Allocating rowsets for step 3 --> Strings cut
+2010/08/18 15:59:41 - kff_logging_reports_error_details -   prevcopies = 1, nextcopies=1
+2010/08/18 15:59:41 - kff_logging_reports_error_details - Transformation allocated new rowset [Strings cut.0 - Excel Output.0]
+2010/08/18 15:59:41 - kff_logging_reports_error_details -  Allocated 4 rowsets for step 3 --> Strings cut  
+2010/08/18 15:59:41 - kff_logging_reports_error_details -  Allocating rowsets for step 4 --> Excel Output
+2010/08/18 15:59:41 - kff_logging_reports_error_details -  Allocated 4 rowsets for step 4 --> Excel Output  
+2010/08/18 15:59:41 - kff_logging_reports_error_details - Allocating Steps & StepData...
+2010/08/18 15:59:41 - kff_logging_reports_error_details -  Transformation is about to allocate step [Get error logfield joblogging] of type [TableInput]
+2010/08/18 15:59:41 - Get error logfield joblogging.0 - distribution activated
+2010/08/18 15:59:41 - Get error logfield joblogging.0 - Starting allocation of buffers & new threads...
+2010/08/18 15:59:41 - Get error logfield joblogging.0 - Step info: nrinput=0 nroutput=1
+2010/08/18 15:59:41 - Get error logfield joblogging.0 - output rel. is  1:1
+2010/08/18 15:59:41 - Get error logfield joblogging.0 - Found output rowset [Get error logfield joblogging.0 - Dummy (do nothing).0]
+2010/08/18 15:59:41 - Get error logfield joblogging.0 - Finished dispatching
+2010/08/18 15:59:41 - kff_logging_reports_error_details -  Transformation has allocated a new step: [Get error logfield joblogging].0
+2010/08/18 15:59:41 - kff_logging_reports_error_details -  Transformation is about to allocate step [Dummy (do nothing)] of type [Dummy]
+2010/08/18 15:59:41 - Dummy (do nothing).0 - distribution activated
+2010/08/18 15:59:41 - Dummy (do nothing).0 - Starting allocation of buffers & new threads...
+2010/08/18 15:59:41 - Dummy (do nothing).0 - Step info: nrinput=2 nroutput=1
+2010/08/18 15:59:41 - Dummy (do nothing).0 - Got previous step from [Dummy (do nothing)] #0 --> Get error logfield joblogging
+2010/08/18 15:59:41 - Dummy (do nothing).0 - input rel is 1:1
+2010/08/18 15:59:41 - Dummy (do nothing).0 - Found input rowset [Get error logfield joblogging.0 - Dummy (do nothing).0]
+2010/08/18 15:59:41 - Dummy (do nothing).0 - Got previous step from [Dummy (do nothing)] #1 --> Get error log field from transformations
+2010/08/18 15:59:41 - Dummy (do nothing).0 - input rel is 1:1
+2010/08/18 15:59:41 - Dummy (do nothing).0 - Found input rowset [Get error log field from transformations.0 - Dummy (do nothing).0]
+2010/08/18 15:59:41 - Dummy (do nothing).0 - output rel. is  1:1
+2010/08/18 15:59:41 - Dummy (do nothing).0 - Found output rowset [Dummy (do nothing).0 - Strings cut.0]
+2010/08/18 15:59:41 - Dummy (do nothing).0 - Finished dispatching
+2010/08/18 15:59:41 - kff_logging_reports_error_details -  Transformation has allocated a new step: [Dummy (do nothing)].0
+2010/08/18 15:59:41 - kff_logging_reports_error_details -  Transformation is about to allocate step [Get error log field from transformations] of type [TableInput]
+2010/08/18 15:59:41 - Get error log field from transformations.0 - distribution activated
+2010/08/18 15:59:41 - Get error log field from transformations.0 - Starting allocation of buffers & new threads...
+2010/08/18 15:59:41 - Get error log field from transformations.0 - Step info: nrinput=0 nroutput=1
+2010/08/18 15:59:41 - Get error log field from transformations.0 - output rel. is  1:1
+2010/08/18 15:59:41 - Get error log field from transformations.0 - Found output rowset [Get error log field from transformations.0 - Dummy (do nothing).0]
+2010/08/18 15:59:41 - Get error log field from transformations.0 - Finished dispatching
+2010/08/18 15:59:41 - kff_logging_reports_error_details -  Transformation has allocated a new step: [Get error log field from transformations].0
+2010/08/18 15:59:41 - kff_logging_reports_error_details -  Transformation is about to allocate step [Strings cut] of type [StringCut]
+2010/08/18 15:59:41 - Strings cut.0 - distribution activated
+2010/08/18 15:59:41 - Strings cut.0 - Starting allocation of buffers & new threads...
+2010/08/18 15:59:41 - Strings cut.0 - Step info: nrinput=1 nroutput=1
+2010/08/18 15:59:41 - Strings cut.0 - Got previous step from [Strings cut] #0 --> Dummy (do nothing)
+2010/08/18 15:59:41 - Strings cut.0 - input rel is 1:1
+2010/08/18 15:59:41 - Strings cut.0 - Found input rowset [Dummy (do nothing).0 - Strings cut.0]
+2010/08/18 15:59:41 - Strings cut.0 - output rel. is  1:1
+2010/08/18 15:59:41 - Strings cut.0 - Found output rowset [Strings cut.0 - Excel Output.0]
+2010/08/18 15:59:41 - Strings cut.0 - Finished dispatching
+2010/08/18 15:59:41 - kff_logging_reports_error_details -  Transformation has allocated a new step: [Strings cut].0
+2010/08/18 15:59:41 - kff_logging_reports_error_details -  Transformation is about to allocate step [Excel Output] of type [ExcelOutput]
+2010/08/18 15:59:41 - Excel Output.0 - distribution activated
+2010/08/18 15:59:41 - Excel Output.0 - Starting allocation of buffers & new threads...
+2010/08/18 15:59:41 - Excel Output.0 - Step info: nrinput=1 nroutput=0
+2010/08/18 15:59:41 - Excel Output.0 - Got previous step from [Excel Output] #0 --> Strings cut
+2010/08/18 15:59:41 - Excel Output.0 - input rel is 1:1
+2010/08/18 15:59:41 - Excel Output.0 - Found input rowset [Strings cut.0 - Excel Output.0]
+2010/08/18 15:59:41 - Excel Output.0 - Finished dispatching
+2010/08/18 15:59:41 - kff_logging_reports_error_details -  Transformation has allocated a new step: [Excel Output].0
+2010/08/18 15:59:41 - kff_logging_reports_error_details - This transformation can be replayed with replay date: 2010/08/18 15:59:41
+2010/08/18 15:59:41 - kff_logging_reports_error_details - Initialising 5 steps...
+2010/08/18 15:59:41 - Get error logfield joblogging.0 - Running on slave server #0/1.
+2010/08/18 15:59:41 - DWH_LOG - New database connection defined
+2010/08/18 15:59:41 - Dummy (do nothing).0 - Running on slave server #0/1.
+2010/08/18 15:59:41 - Get error log field from transformations.0 - Running on slave server #0/1.
+2010/08/18 15:59:41 - DWH_LOG - New database connection defined
+2010/08/18 15:59:41 - Strings cut.0 - Running on slave server #0/1.
+2010/08/18 15:59:41 - Excel Output.0 - Running on slave server #0/1.
+2010/08/18 15:59:41 - DWH_LOG - Connected to database.
+2010/08/18 15:59:41 - DWH_LOG - Auto commit off
+2010/08/18 15:59:41 - Get error logfield joblogging.0 - Connected to database...
+2010/08/18 15:59:41 - DWH_LOG - Connected to database.
+2010/08/18 15:59:41 - DWH_LOG - Auto commit off
+2010/08/18 15:59:41 - Get error log field from transformations.0 - Connected to database...
+2010/08/18 15:59:41 - kff_logging_reports_error_details - Step [Get error logfield joblogging.0] initialized flawlessly.
+2010/08/18 15:59:41 - kff_logging_reports_error_details - Step [Dummy (do nothing).0] initialized flawlessly.
+2010/08/18 15:59:41 - kff_logging_reports_error_details - Step [Get error log field from transformations.0] initialized flawlessly.
+2010/08/18 15:59:41 - kff_logging_reports_error_details - Step [Strings cut.0] initialized flawlessly.
+2010/08/18 15:59:41 - kff_logging_reports_error_details - Step [Excel Output.0] initialized flawlessly.
+2010/08/18 15:59:41 - Get error logfield joblogging.0 - Starting to run...
+2010/08/18 15:59:41 - Get error logfield joblogging.0 - SQL query : SELECT 
+2010/08/18 15:59:41 - Get error logfield joblogging.0 -  JOBNAME as JOBNAME,
+2010/08/18 15:59:41 - Get error logfield joblogging.0 -  'job' as JOBTYPE,
+2010/08/18 15:59:41 - Get error logfield joblogging.0 -  ERRORS,
+2010/08/18 15:59:41 - Get error logfield joblogging.0 -  LOG_FIELD
+2010/08/18 15:59:41 - Get error logfield joblogging.0 - FROM 
+2010/08/18 15:59:41 - Get error logfield joblogging.0 -  KFF_LOG_JOB
+2010/08/18 15:59:41 - Get error logfield joblogging.0 - WHERE
+2010/08/18 15:59:41 - Get error logfield joblogging.0 -  STATUS='end' AND  
+2010/08/18 15:59:41 - Get error logfield joblogging.0 -  ERRORS > 0
+2010/08/18 15:59:41 - Get error logfield joblogging.0 - 
+2010/08/18 15:59:41 - Get error logfield joblogging.0 -  
+2010/08/18 15:59:41 - Get error log field from transformations.0 - Starting to run...
+2010/08/18 15:59:41 - Get error log field from transformations.0 - SQL query : SELECT
+2010/08/18 15:59:41 - Get error log field from transformations.0 -  t.TRANSNAME as JOBNAME,
+2010/08/18 15:59:41 - Get error log field from transformations.0 -  'transformation' as JOBTYPE,
+2010/08/18 15:59:41 - Get error log field from transformations.0 -  t.ERRORS,
+2010/08/18 15:59:41 - Get error log field from transformations.0 -  t.LOG_FIELD
+2010/08/18 15:59:41 - Get error log field from transformations.0 - FROM
+2010/08/18 15:59:41 - Get error log field from transformations.0 -  KFF_LOG_TRNSF t
+2010/08/18 15:59:41 - Get error log field from transformations.0 - WHERE (STATUS='stop' AND ERRORS > 0) or
+2010/08/18 15:59:41 - Get error log field from transformations.0 -       (STATUS='start' and not exists (select * 
+2010/08/18 15:59:41 - Get error log field from transformations.0 -                                         from  KFF_LOG_TRNSF s
+2010/08/18 15:59:41 - Get error log field from transformations.0 -                                        where s.STATUS in ('end','stop') 
+2010/08/18 15:59:41 - Get error log field from transformations.0 -                                          and s.transname = t.transname
+2010/08/18 15:59:41 - Get error log field from transformations.0 -                                          and s.enddate = t.enddate))
+2010/08/18 15:59:41 - Strings cut.0 - Starting to run...
+2010/08/18 15:59:41 - kff_logging_reports_error_details - Transformation has allocated 5 threads and 4 rowsets.
+2010/08/18 15:59:41 - Dummy (do nothing).0 - Starting to run...
+2010/08/18 15:59:41 - Excel Output.0 - Starting to run...
+2010/08/18 15:59:41 - Get error logfield joblogging.0 - Finished reading query, closing connection.
+2010/08/18 15:59:41 - Get error log field from transformations.0 - Finished reading query, closing connection.
+2010/08/18 15:59:41 - DWH_LOG - Connection to database closed!
+2010/08/18 15:59:41 - Get error log field from transformations.0 - Finished processing (I=0, O=0, R=0, W=0, U=0, E=0)
+2010/08/18 15:59:41 - DWH_LOG - Connection to database closed!
+2010/08/18 15:59:41 - Get error logfield joblogging.0 - Finished processing (I=0, O=0, R=0, W=0, U=0, E=0)
+2010/08/18 15:59:41 - Dummy (do nothing).0 - Finished processing (I=0, O=0, R=0, W=0, U=0, E=0)
+2010/08/18 15:59:41 - Strings cut.0 - Finished processing (I=0, O=0, R=0, W=0, U=0, E=0)
+2010/08/18 15:59:41 - Excel Output.0 - Finished processing (I=0, O=0, R=0, W=0, U=0, E=0)
+2010/08/18 15:59:41 - kjube_etl_reports - Finished job entry [kff_logging_reports_error_details] (result=[true])
+2010/08/18 15:59:41 - kjube_etl_reports - Finished job entry [kff_logging_reports_jobtrf_details] (result=[true])
+2010/08/18 15:59:41 - kjube_etl_reports - Finished job entry [kff_logging_reports_batch_result] (result=[true])
+2010/08/18 15:59:41 - batch_launcher - Starting entry [kff_logging_archive]
+2010/08/18 15:59:41 - Thread[batch_launcher (batch_launcher (Thread-3)),5,main] - exec(5, 0, kff_logging_archive.0)
+2010/08/18 15:59:41 - kff_logging_archive - Loading job from XML file : [/kff/reusable/kff-logging/kff_logging_archive.kjb]
+2010/08/18 15:59:41 - SharedObjects - Reading the shared objects file [file:///home/matt/.kettle/shared.xml]
+2010/08/18 15:59:41 - kff_logging_archive - Starting job, loaded from XML file : [/kff/reusable/kff-logging/kff_logging_archive.kjb]
+2010/08/18 15:59:41 - Thread[kjube_etl_log_archive (kjube_etl_log_archive (Thread-103)),5,main] - exec(6, 0, START.0)
+2010/08/18 15:59:41 - kjube_etl_log_archive - Starting entry [kff_logging_archive]
+2010/08/18 15:59:41 - Thread[kjube_etl_log_archive (kjube_etl_log_archive (Thread-103)),5,main] - exec(7, 0, kff_logging_archive.0)
+2010/08/18 15:59:41 - kff_logging_archive - Opening filename : [file:///kff/reusable/kff-logging/kff_logging_archive.ktr]
+2010/08/18 15:59:41 - kff_logging_archive - Opening transformation: [file:///kff/reusable/kff-logging/kff_logging_archive.ktr]
+2010/08/18 15:59:41 - kff_logging_archive - Loading transformation from XML file [file:///kff/reusable/kff-logging/kff_logging_archive.ktr]
+2010/08/18 15:59:41 - SharedObjects - Reading the shared objects file [file:///home/matt/.kettle/shared.xml]
+2010/08/18 15:59:41 - kff_logging_archive - Starting transformation...(file=${Internal.Job.Filename.Directory}/kff_logging_archive.ktr, name=kff_logging_archive, repinfo=Transformation)
+2010/08/18 15:59:41 - kjube_etl_log_archive - Transformation is pre-loaded.
+2010/08/18 15:59:41 - kjube_etl_log_archive - Dispatching started for transformation [kjube_etl_log_archive]
+2010/08/18 15:59:41 - kjube_etl_log_archive - Nr of arguments detected:0 
+2010/08/18 15:59:41 - kjube_etl_log_archive - This is not a replay transformation
+2010/08/18 15:59:41 - kjube_etl_log_archive - I found 12 different steps to launch.
+2010/08/18 15:59:41 - kjube_etl_log_archive - Allocating rowsets...
+2010/08/18 15:59:41 - kjube_etl_log_archive -  Allocating rowsets for step 0 --> ${KFF_LOGGING_JOB_TABLE}
+2010/08/18 15:59:41 - kjube_etl_log_archive -   prevcopies = 1, nextcopies=1
+2010/08/18 15:59:41 - kjube_etl_log_archive - Transformation allocated new rowset [${KFF_LOGGING_JOB_TABLE}.0 - Get Variables.0]
+2010/08/18 15:59:41 - kjube_etl_log_archive -  Allocated 1 rowsets for step 0 --> ${KFF_LOGGING_JOB_TABLE}  
+2010/08/18 15:59:41 - kjube_etl_log_archive -  Allocating rowsets for step 1 --> Get Variables
+2010/08/18 15:59:41 - kjube_etl_log_archive -   prevcopies = 1, nextcopies=1
+2010/08/18 15:59:41 - kjube_etl_log_archive - Transformation allocated new rowset [Get Variables.0 - ${KFF_LOGGING_JOB_TABLE_HIST}.0]
+2010/08/18 15:59:41 - kjube_etl_log_archive -  Allocated 2 rowsets for step 1 --> Get Variables  
+2010/08/18 15:59:41 - kjube_etl_log_archive -  Allocating rowsets for step 2 --> ${KFF_LOGGING_JOB_TABLE_HIST}
+2010/08/18 15:59:41 - kjube_etl_log_archive -  Allocated 2 rowsets for step 2 --> ${KFF_LOGGING_JOB_TABLE_HIST}  
+2010/08/18 15:59:41 - kjube_etl_log_archive -  Allocating rowsets for step 3 --> ${KFF_LOGGING_TRNSF_TABLE}
+2010/08/18 15:59:41 - kjube_etl_log_archive -   prevcopies = 1, nextcopies=1
+2010/08/18 15:59:41 - kjube_etl_log_archive - Transformation allocated new rowset [${KFF_LOGGING_TRNSF_TABLE}.0 - Get Variables 2.0]
+2010/08/18 15:59:41 - kjube_etl_log_archive -  Allocated 3 rowsets for step 3 --> ${KFF_LOGGING_TRNSF_TABLE}  
+2010/08/18 15:59:41 - kjube_etl_log_archive -  Allocating rowsets for step 4 --> Get Variables 2
+2010/08/18 15:59:41 - kjube_etl_log_archive -   prevcopies = 1, nextcopies=1
+2010/08/18 15:59:41 - kjube_etl_log_archive - Transformation allocated new rowset [Get Variables 2.0 - ${KFF_LOGGING_TRNSF_TABLE_HIST}.0]
+2010/08/18 15:59:41 - kjube_etl_log_archive -  Allocated 4 rowsets for step 4 --> Get Variables 2  
+2010/08/18 15:59:41 - kjube_etl_log_archive -  Allocating rowsets for step 5 --> ${KFF_LOGGING_TRNSF_TABLE_HIST}
+2010/08/18 15:59:41 - kjube_etl_log_archive -  Allocated 4 rowsets for step 5 --> ${KFF_LOGGING_TRNSF_TABLE_HIST}  
+2010/08/18 15:59:41 - kjube_etl_log_archive -  Allocating rowsets for step 6 --> ${KFF_LOGGING_STEP_TABLE}
+2010/08/18 15:59:41 - kjube_etl_log_archive -   prevcopies = 1, nextcopies=1
+2010/08/18 15:59:41 - kjube_etl_log_archive - Transformation allocated new rowset [${KFF_LOGGING_STEP_TABLE}.0 - Get Variables 3.0]
+2010/08/18 15:59:41 - kjube_etl_log_archive -  Allocated 5 rowsets for step 6 --> ${KFF_LOGGING_STEP_TABLE}  
+2010/08/18 15:59:41 - kjube_etl_log_archive -  Allocating rowsets for step 7 --> Get Variables 3
+2010/08/18 15:59:41 - kjube_etl_log_archive -   prevcopies = 1, nextcopies=1
+2010/08/18 15:59:41 - kjube_etl_log_archive - Transformation allocated new rowset [Get Variables 3.0 - ${KFF_LOGGING_STEP_TABLE_HIST}.0]
+2010/08/18 15:59:41 - kjube_etl_log_archive -  Allocated 6 rowsets for step 7 --> Get Variables 3  
+2010/08/18 15:59:41 - kjube_etl_log_archive -  Allocating rowsets for step 8 --> ${KFF_LOGGING_STEP_TABLE_HIST}
+2010/08/18 15:59:41 - kjube_etl_log_archive -  Allocated 6 rowsets for step 8 --> ${KFF_LOGGING_STEP_TABLE_HIST}  
+2010/08/18 15:59:41 - kjube_etl_log_archive -  Allocating rowsets for step 9 --> ${KFF_LOGGING_REJECT_TABLE}
+2010/08/18 15:59:41 - kjube_etl_log_archive -   prevcopies = 1, nextcopies=1
+2010/08/18 15:59:41 - kjube_etl_log_archive - Transformation allocated new rowset [${KFF_LOGGING_REJECT_TABLE}.0 - Get Variables 4.0]
+2010/08/18 15:59:41 - kjube_etl_log_archive -  Allocated 7 rowsets for step 9 --> ${KFF_LOGGING_REJECT_TABLE}  
+2010/08/18 15:59:41 - kjube_etl_log_archive -  Allocating rowsets for step 10 --> Get Variables 4
+2010/08/18 15:59:41 - kjube_etl_log_archive -   prevcopies = 1, nextcopies=1
+2010/08/18 15:59:41 - kjube_etl_log_archive - Transformation allocated new rowset [Get Variables 4.0 - ${KFF_LOGGING_REJECT_TABLE_HIST}.0]
+2010/08/18 15:59:41 - kjube_etl_log_archive -  Allocated 8 rowsets for step 10 --> Get Variables 4  
+2010/08/18 15:59:41 - kjube_etl_log_archive -  Allocating rowsets for step 11 --> ${KFF_LOGGING_REJECT_TABLE_HIST}
+2010/08/18 15:59:41 - kjube_etl_log_archive -  Allocated 8 rowsets for step 11 --> ${KFF_LOGGING_REJECT_TABLE_HIST}  
+2010/08/18 15:59:41 - kjube_etl_log_archive - Allocating Steps & StepData...
+2010/08/18 15:59:41 - kjube_etl_log_archive -  Transformation is about to allocate step [${KFF_LOGGING_JOB_TABLE}] of type [TableInput]
+2010/08/18 15:59:41 - ${KFF_LOGGING_JOB_TABLE}.0 - distribution activated
+2010/08/18 15:59:41 - ${KFF_LOGGING_JOB_TABLE}.0 - Starting allocation of buffers & new threads...
+2010/08/18 15:59:41 - ${KFF_LOGGING_JOB_TABLE}.0 - Step info: nrinput=0 nroutput=1
+2010/08/18 15:59:41 - ${KFF_LOGGING_JOB_TABLE}.0 - output rel. is  1:1
+2010/08/18 15:59:41 - ${KFF_LOGGING_JOB_TABLE}.0 - Found output rowset [${KFF_LOGGING_JOB_TABLE}.0 - Get Variables.0]
+2010/08/18 15:59:41 - ${KFF_LOGGING_JOB_TABLE}.0 - Finished dispatching
+2010/08/18 15:59:41 - kjube_etl_log_archive -  Transformation has allocated a new step: [${KFF_LOGGING_JOB_TABLE}].0
+2010/08/18 15:59:41 - kjube_etl_log_archive -  Transformation is about to allocate step [Get Variables] of type [GetVariable]
+2010/08/18 15:59:41 - Get Variables.0 - distribution activated
+2010/08/18 15:59:41 - Get Variables.0 - Starting allocation of buffers & new threads...
+2010/08/18 15:59:41 - Get Variables.0 - Step info: nrinput=1 nroutput=1
+2010/08/18 15:59:41 - Get Variables.0 - Got previous step from [Get Variables] #0 --> ${KFF_LOGGING_JOB_TABLE}
+2010/08/18 15:59:41 - Get Variables.0 - input rel is 1:1
+2010/08/18 15:59:41 - Get Variables.0 - Found input rowset [${KFF_LOGGING_JOB_TABLE}.0 - Get Variables.0]
+2010/08/18 15:59:41 - Get Variables.0 - output rel. is  1:1
+2010/08/18 15:59:41 - Get Variables.0 - Found output rowset [Get Variables.0 - ${KFF_LOGGING_JOB_TABLE_HIST}.0]
+2010/08/18 15:59:41 - Get Variables.0 - Finished dispatching
+2010/08/18 15:59:41 - kjube_etl_log_archive -  Transformation has allocated a new step: [Get Variables].0
+2010/08/18 15:59:41 - kjube_etl_log_archive -  Transformation is about to allocate step [${KFF_LOGGING_JOB_TABLE_HIST}] of type [TableOutput]
+2010/08/18 15:59:41 - ${KFF_LOGGING_JOB_TABLE_HIST}.0 - distribution activated
+2010/08/18 15:59:41 - ${KFF_LOGGING_JOB_TABLE_HIST}.0 - Starting allocation of buffers & new threads...
+2010/08/18 15:59:41 - ${KFF_LOGGING_JOB_TABLE_HIST}.0 - Step info: nrinput=1 nroutput=0
+2010/08/18 15:59:41 - ${KFF_LOGGING_JOB_TABLE_HIST}.0 - Got previous step from [${KFF_LOGGING_JOB_TABLE_HIST}] #0 --> Get Variables
+2010/08/18 15:59:41 - ${KFF_LOGGING_JOB_TABLE_HIST}.0 - input rel is 1:1
+2010/08/18 15:59:41 - ${KFF_LOGGING_JOB_TABLE_HIST}.0 - Found input rowset [Get Variables.0 - ${KFF_LOGGING_JOB_TABLE_HIST}.0]
+2010/08/18 15:59:41 - ${KFF_LOGGING_JOB_TABLE_HIST}.0 - Finished dispatching
+2010/08/18 15:59:41 - kjube_etl_log_archive -  Transformation has allocated a new step: [${KFF_LOGGING_JOB_TABLE_HIST}].0
+2010/08/18 15:59:41 - kjube_etl_log_archive -  Transformation is about to allocate step [${KFF_LOGGING_TRNSF_TABLE}] of type [TableInput]
+2010/08/18 15:59:41 - ${KFF_LOGGING_TRNSF_TABLE}.0 - distribution activated
+2010/08/18 15:59:41 - ${KFF_LOGGING_TRNSF_TABLE}.0 - Starting allocation of buffers & new threads...
+2010/08/18 15:59:41 - ${KFF_LOGGING_TRNSF_TABLE}.0 - Step info: nrinput=0 nroutput=1
+2010/08/18 15:59:41 - ${KFF_LOGGING_TRNSF_TABLE}.0 - output rel. is  1:1
+2010/08/18 15:59:41 - ${KFF_LOGGING_TRNSF_TABLE}.0 - Found output rowset [${KFF_LOGGING_TRNSF_TABLE}.0 - Get Variables 2.0]
+2010/08/18 15:59:41 - ${KFF_LOGGING_TRNSF_TABLE}.0 - Finished dispatching
+2010/08/18 15:59:41 - kjube_etl_log_archive -  Transformation has allocated a new step: [${KFF_LOGGING_TRNSF_TABLE}].0
+2010/08/18 15:59:41 - kjube_etl_log_archive -  Transformation is about to allocate step [Get Variables 2] of type [GetVariable]
+2010/08/18 15:59:41 - Get Variables 2.0 - distribution activated
+2010/08/18 15:59:41 - Get Variables 2.0 - Starting allocation of buffers & new threads...
+2010/08/18 15:59:41 - Get Variables 2.0 - Step info: nrinput=1 nroutput=1
+2010/08/18 15:59:41 - Get Variables 2.0 - Got previous step from [Get Variables 2] #0 --> ${KFF_LOGGING_TRNSF_TABLE}
+2010/08/18 15:59:41 - Get Variables 2.0 - input rel is 1:1
+2010/08/18 15:59:41 - Get Variables 2.0 - Found input rowset [${KFF_LOGGING_TRNSF_TABLE}.0 - Get Variables 2.0]
+2010/08/18 15:59:41 - Get Variables 2.0 - output rel. is  1:1
+2010/08/18 15:59:41 - Get Variables 2.0 - Found output rowset [Get Variables 2.0 - ${KFF_LOGGING_TRNSF_TABLE_HIST}.0]
+2010/08/18 15:59:41 - Get Variables 2.0 - Finished dispatching
+2010/08/18 15:59:41 - kjube_etl_log_archive -  Transformation has allocated a new step: [Get Variables 2].0
+2010/08/18 15:59:41 - kjube_etl_log_archive -  Transformation is about to allocate step [${KFF_LOGGING_TRNSF_TABLE_HIST}] of type [TableOutput]
+2010/08/18 15:59:41 - ${KFF_LOGGING_TRNSF_TABLE_HIST}.0 - distribution activated
+2010/08/18 15:59:41 - ${KFF_LOGGING_TRNSF_TABLE_HIST}.0 - Starting allocation of buffers & new threads...
+2010/08/18 15:59:41 - ${KFF_LOGGING_TRNSF_TABLE_HIST}.0 - Step info: nrinput=1 nroutput=0
+2010/08/18 15:59:41 - ${KFF_LOGGING_TRNSF_TABLE_HIST}.0 - Got previous step from [${KFF_LOGGING_TRNSF_TABLE_HIST}] #0 --> Get Variables 2
+2010/08/18 15:59:41 - ${KFF_LOGGING_TRNSF_TABLE_HIST}.0 - input rel is 1:1
+2010/08/18 15:59:41 - ${KFF_LOGGING_TRNSF_TABLE_HIST}.0 - Found input rowset [Get Variables 2.0 - ${KFF_LOGGING_TRNSF_TABLE_HIST}.0]
+2010/08/18 15:59:41 - ${KFF_LOGGING_TRNSF_TABLE_HIST}.0 - Finished dispatching
+2010/08/18 15:59:41 - kjube_etl_log_archive -  Transformation has allocated a new step: [${KFF_LOGGING_TRNSF_TABLE_HIST}].0
+2010/08/18 15:59:41 - kjube_etl_log_archive -  Transformation is about to allocate step [${KFF_LOGGING_STEP_TABLE}] of type [TableInput]
+2010/08/18 15:59:41 - ${KFF_LOGGING_STEP_TABLE}.0 - distribution activated
+2010/08/18 15:59:41 - ${KFF_LOGGING_STEP_TABLE}.0 - Starting allocation of buffers & new threads...
+2010/08/18 15:59:41 - ${KFF_LOGGING_STEP_TABLE}.0 - Step info: nrinput=0 nroutput=1
+2010/08/18 15:59:41 - ${KFF_LOGGING_STEP_TABLE}.0 - output rel. is  1:1
+2010/08/18 15:59:41 - ${KFF_LOGGING_STEP_TABLE}.0 - Found output rowset [${KFF_LOGGING_STEP_TABLE}.0 - Get Variables 3.0]
+2010/08/18 15:59:41 - ${KFF_LOGGING_STEP_TABLE}.0 - Finished dispatching
+2010/08/18 15:59:41 - kjube_etl_log_archive -  Transformation has allocated a new step: [${KFF_LOGGING_STEP_TABLE}].0
+2010/08/18 15:59:41 - kjube_etl_log_archive -  Transformation is about to allocate step [Get Variables 3] of type [GetVariable]
+2010/08/18 15:59:41 - Get Variables 3.0 - distribution activated
+2010/08/18 15:59:41 - Get Variables 3.0 - Starting allocation of buffers & new threads...
+2010/08/18 15:59:41 - Get Variables 3.0 - Step info: nrinput=1 nroutput=1
+2010/08/18 15:59:41 - Get Variables 3.0 - Got previous step from [Get Variables 3] #0 --> ${KFF_LOGGING_STEP_TABLE}
+2010/08/18 15:59:41 - Get Variables 3.0 - input rel is 1:1
+2010/08/18 15:59:41 - Get Variables 3.0 - Found input rowset [${KFF_LOGGING_STEP_TABLE}.0 - Get Variables 3.0]
+2010/08/18 15:59:41 - Get Variables 3.0 - output rel. is  1:1
+2010/08/18 15:59:41 - Get Variables 3.0 - Found output rowset [Get Variables 3.0 - ${KFF_LOGGING_STEP_TABLE_HIST}.0]
+2010/08/18 15:59:41 - Get Variables 3.0 - Finished dispatching
+2010/08/18 15:59:41 - kjube_etl_log_archive -  Transformation has allocated a new step: [Get Variables 3].0
+2010/08/18 15:59:41 - kjube_etl_log_archive -  Transformation is about to allocate step [${KFF_LOGGING_STEP_TABLE_HIST}] of type [TableOutput]
+2010/08/18 15:59:41 - ${KFF_LOGGING_STEP_TABLE_HIST}.0 - distribution activated
+2010/08/18 15:59:41 - ${KFF_LOGGING_STEP_TABLE_HIST}.0 - Starting allocation of buffers & new threads...
+2010/08/18 15:59:41 - ${KFF_LOGGING_STEP_TABLE_HIST}.0 - Step info: nrinput=1 nroutput=0
+2010/08/18 15:59:41 - ${KFF_LOGGING_STEP_TABLE_HIST}.0 - Got previous step from [${KFF_LOGGING_STEP_TABLE_HIST}] #0 --> Get Variables 3
+2010/08/18 15:59:41 - ${KFF_LOGGING_STEP_TABLE_HIST}.0 - input rel is 1:1
+2010/08/18 15:59:41 - ${KFF_LOGGING_STEP_TABLE_HIST}.0 - Found input rowset [Get Variables 3.0 - ${KFF_LOGGING_STEP_TABLE_HIST}.0]
+2010/08/18 15:59:41 - ${KFF_LOGGING_STEP_TABLE_HIST}.0 - Finished dispatching
+2010/08/18 15:59:41 - kjube_etl_log_archive -  Transformation has allocated a new step: [${KFF_LOGGING_STEP_TABLE_HIST}].0
+2010/08/18 15:59:41 - kjube_etl_log_archive -  Transformation is about to allocate step [${KFF_LOGGING_REJECT_TABLE}] of type [TableInput]
+2010/08/18 15:59:41 - ${KFF_LOGGING_REJECT_TABLE}.0 - distribution activated
+2010/08/18 15:59:41 - ${KFF_LOGGING_REJECT_TABLE}.0 - Starting allocation of buffers & new threads...
+2010/08/18 15:59:41 - ${KFF_LOGGING_REJECT_TABLE}.0 - Step info: nrinput=0 nroutput=1
+2010/08/18 15:59:41 - ${KFF_LOGGING_REJECT_TABLE}.0 - output rel. is  1:1
+2010/08/18 15:59:41 - ${KFF_LOGGING_REJECT_TABLE}.0 - Found output rowset [${KFF_LOGGING_REJECT_TABLE}.0 - Get Variables 4.0]
+2010/08/18 15:59:41 - ${KFF_LOGGING_REJECT_TABLE}.0 - Finished dispatching
+2010/08/18 15:59:41 - kjube_etl_log_archive -  Transformation has allocated a new step: [${KFF_LOGGING_REJECT_TABLE}].0
+2010/08/18 15:59:41 - kjube_etl_log_archive -  Transformation is about to allocate step [Get Variables 4] of type [GetVariable]
+2010/08/18 15:59:41 - Get Variables 4.0 - distribution activated
+2010/08/18 15:59:41 - Get Variables 4.0 - Starting allocation of buffers & new threads...
+2010/08/18 15:59:41 - Get Variables 4.0 - Step info: nrinput=1 nroutput=1
+2010/08/18 15:59:41 - Get Variables 4.0 - Got previous step from [Get Variables 4] #0 --> ${KFF_LOGGING_REJECT_TABLE}
+2010/08/18 15:59:41 - Get Variables 4.0 - input rel is 1:1
+2010/08/18 15:59:41 - Get Variables 4.0 - Found input rowset [${KFF_LOGGING_REJECT_TABLE}.0 - Get Variables 4.0]
+2010/08/18 15:59:41 - Get Variables 4.0 - output rel. is  1:1
+2010/08/18 15:59:41 - Get Variables 4.0 - Found output rowset [Get Variables 4.0 - ${KFF_LOGGING_REJECT_TABLE_HIST}.0]
+2010/08/18 15:59:41 - Get Variables 4.0 - Finished dispatching
+2010/08/18 15:59:41 - kjube_etl_log_archive -  Transformation has allocated a new step: [Get Variables 4].0
+2010/08/18 15:59:41 - kjube_etl_log_archive -  Transformation is about to allocate step [${KFF_LOGGING_REJECT_TABLE_HIST}] of type [TableOutput]
+2010/08/18 15:59:41 - ${KFF_LOGGING_REJECT_TABLE_HIST}.0 - distribution activated
+2010/08/18 15:59:41 - ${KFF_LOGGING_REJECT_TABLE_HIST}.0 - Starting allocation of buffers & new threads...
+2010/08/18 15:59:41 - ${KFF_LOGGING_REJECT_TABLE_HIST}.0 - Step info: nrinput=1 nroutput=0
+2010/08/18 15:59:41 - ${KFF_LOGGING_REJECT_TABLE_HIST}.0 - Got previous step from [${KFF_LOGGING_REJECT_TABLE_HIST}] #0 --> Get Variables 4
+2010/08/18 15:59:41 - ${KFF_LOGGING_REJECT_TABLE_HIST}.0 - input rel is 1:1
+2010/08/18 15:59:41 - ${KFF_LOGGING_REJECT_TABLE_HIST}.0 - Found input rowset [Get Variables 4.0 - ${KFF_LOGGING_REJECT_TABLE_HIST}.0]
+2010/08/18 15:59:41 - ${KFF_LOGGING_REJECT_TABLE_HIST}.0 - Finished dispatching
+2010/08/18 15:59:41 - kjube_etl_log_archive -  Transformation has allocated a new step: [${KFF_LOGGING_REJECT_TABLE_HIST}].0
+2010/08/18 15:59:41 - kjube_etl_log_archive - This transformation can be replayed with replay date: 2010/08/18 15:59:41
+2010/08/18 15:59:41 - kjube_etl_log_archive - Initialising 12 steps...
+2010/08/18 15:59:41 - ${KFF_LOGGING_JOB_TABLE}.0 - Running on slave server #0/1.
+2010/08/18 15:59:41 - DWH_LOG - New database connection defined
+2010/08/18 15:59:41 - DWH_LOG - Connected to database.
+2010/08/18 15:59:41 - DWH_LOG - Auto commit off
+2010/08/18 15:59:41 - ${KFF_LOGGING_JOB_TABLE}.0 - Connected to database...
+2010/08/18 15:59:41 - ${KFF_LOGGING_JOB_TABLE_HIST}.0 - Running on slave server #0/1.
+2010/08/18 15:59:41 - DWH_LOG - New database connection defined
+2010/08/18 15:59:41 - Get Variables.0 - Running on slave server #0/1.
+2010/08/18 15:59:41 - ${KFF_LOGGING_TRNSF_TABLE}.0 - Running on slave server #0/1.
+2010/08/18 15:59:41 - DWH_LOG - New database connection defined
+2010/08/18 15:59:41 - DWH_LOG - Connected to database.
+2010/08/18 15:59:41 - Get Variables 2.0 - Running on slave server #0/1.
+2010/08/18 15:59:41 - ${KFF_LOGGING_TRNSF_TABLE_HIST}.0 - Running on slave server #0/1.
+2010/08/18 15:59:41 - ${KFF_LOGGING_JOB_TABLE_HIST}.0 - Connected to database [DWH_LOG] (commit=100)
+2010/08/18 15:59:41 - DWH_LOG - Auto commit off
+2010/08/18 15:59:41 - DWH_LOG - New database connection defined
+2010/08/18 15:59:41 - DWH_LOG - Connected to database.
+2010/08/18 15:59:41 - DWH_LOG - Auto commit off
+2010/08/18 15:59:41 - ${KFF_LOGGING_TRNSF_TABLE}.0 - Connected to database...
+2010/08/18 15:59:41 - ${KFF_LOGGING_STEP_TABLE}.0 - Running on slave server #0/1.
+2010/08/18 15:59:41 - DWH_LOG - New database connection defined
+2010/08/18 15:59:41 - DWH_LOG - Connected to database.
+2010/08/18 15:59:41 - ${KFF_LOGGING_TRNSF_TABLE_HIST}.0 - Connected to database [DWH_LOG] (commit=100)
+2010/08/18 15:59:41 - DWH_LOG - Auto commit off
+2010/08/18 15:59:41 - Get Variables 3.0 - Running on slave server #0/1.
+2010/08/18 15:59:41 - ${KFF_LOGGING_REJECT_TABLE}.0 - Running on slave server #0/1.
+2010/08/18 15:59:41 - DWH_LOG - New database connection defined
+2010/08/18 15:59:41 - Get Variables 4.0 - Running on slave server #0/1.
+2010/08/18 15:59:41 - ${KFF_LOGGING_STEP_TABLE_HIST}.0 - Running on slave server #0/1.
+2010/08/18 15:59:41 - DWH_LOG - New database connection defined
+2010/08/18 15:59:41 - DWH_LOG - Connected to database.
+2010/08/18 15:59:41 - DWH_LOG - Auto commit off
+2010/08/18 15:59:41 - ${KFF_LOGGING_STEP_TABLE}.0 - Connected to database...
+2010/08/18 15:59:41 - ${KFF_LOGGING_REJECT_TABLE_HIST}.0 - Running on slave server #0/1.
+2010/08/18 15:59:41 - DWH_LOG - New database connection defined
+2010/08/18 15:59:41 - DWH_LOG - Connected to database.
+2010/08/18 15:59:41 - ${KFF_LOGGING_STEP_TABLE_HIST}.0 - Connected to database [DWH_LOG] (commit=100)
+2010/08/18 15:59:41 - DWH_LOG - Auto commit off
+2010/08/18 15:59:41 - DWH_LOG - Connected to database.
+2010/08/18 15:59:41 - ${KFF_LOGGING_REJECT_TABLE_HIST}.0 - Connected to database [DWH_LOG] (commit=100)
+2010/08/18 15:59:41 - DWH_LOG - Auto commit off
+2010/08/18 15:59:41 - DWH_LOG - Connected to database.
+2010/08/18 15:59:41 - DWH_LOG - Auto commit off
+2010/08/18 15:59:41 - ${KFF_LOGGING_REJECT_TABLE}.0 - Connected to database...
+2010/08/18 15:59:41 - kjube_etl_log_archive - Step [${KFF_LOGGING_JOB_TABLE}.0] initialized flawlessly.
+2010/08/18 15:59:41 - kjube_etl_log_archive - Step [Get Variables.0] initialized flawlessly.
+2010/08/18 15:59:41 - kjube_etl_log_archive - Step [${KFF_LOGGING_JOB_TABLE_HIST}.0] initialized flawlessly.
+2010/08/18 15:59:41 - kjube_etl_log_archive - Step [${KFF_LOGGING_TRNSF_TABLE}.0] initialized flawlessly.
+2010/08/18 15:59:41 - kjube_etl_log_archive - Step [Get Variables 2.0] initialized flawlessly.
+2010/08/18 15:59:41 - kjube_etl_log_archive - Step [${KFF_LOGGING_TRNSF_TABLE_HIST}.0] initialized flawlessly.
+2010/08/18 15:59:41 - kjube_etl_log_archive - Step [${KFF_LOGGING_STEP_TABLE}.0] initialized flawlessly.
+2010/08/18 15:59:41 - kjube_etl_log_archive - Step [Get Variables 3.0] initialized flawlessly.
+2010/08/18 15:59:41 - kjube_etl_log_archive - Step [${KFF_LOGGING_STEP_TABLE_HIST}.0] initialized flawlessly.
+2010/08/18 15:59:41 - kjube_etl_log_archive - Step [${KFF_LOGGING_REJECT_TABLE}.0] initialized flawlessly.
+2010/08/18 15:59:41 - kjube_etl_log_archive - Step [Get Variables 4.0] initialized flawlessly.
+2010/08/18 15:59:41 - kjube_etl_log_archive - Step [${KFF_LOGGING_REJECT_TABLE_HIST}.0] initialized flawlessly.
+2010/08/18 15:59:41 - ${KFF_LOGGING_JOB_TABLE}.0 - Starting to run...
+2010/08/18 15:59:41 - Get Variables.0 - Starting to run...
+2010/08/18 15:59:41 - ${KFF_LOGGING_TRNSF_TABLE}.0 - Starting to run...
+2010/08/18 15:59:41 - Get Variables 2.0 - Starting to run...
+2010/08/18 15:59:41 - ${KFF_LOGGING_TRNSF_TABLE_HIST}.0 - Starting to run...
+2010/08/18 15:59:41 - Get Variables 3.0 - Starting to run...
+2010/08/18 15:59:41 - ${KFF_LOGGING_STEP_TABLE_HIST}.0 - Starting to run...
+2010/08/18 15:59:41 - Get Variables 4.0 - Starting to run...
+2010/08/18 15:59:41 - ${KFF_LOGGING_REJECT_TABLE_HIST}.0 - Starting to run...
+2010/08/18 15:59:41 - kjube_etl_log_archive - Transformation has allocated 12 threads and 8 rowsets.
+2010/08/18 15:59:41 - ${KFF_LOGGING_REJECT_TABLE}.0 - Starting to run...
+2010/08/18 15:59:41 - ${KFF_LOGGING_REJECT_TABLE}.0 - SQL query : select 
+2010/08/18 15:59:41 - ${KFF_LOGGING_REJECT_TABLE}.0 -  *
+2010/08/18 15:59:41 - ${KFF_LOGGING_REJECT_TABLE}.0 - from KFF_LOG_REJECT
+2010/08/18 15:59:41 - ${KFF_LOGGING_STEP_TABLE}.0 - Starting to run...
+2010/08/18 15:59:41 - ${KFF_LOGGING_TRNSF_TABLE}.0 - SQL query : select 
+2010/08/18 15:59:41 - ${KFF_LOGGING_TRNSF_TABLE}.0 -  *
+2010/08/18 15:59:41 - ${KFF_LOGGING_TRNSF_TABLE}.0 - from KFF_LOG_TRNSF
+2010/08/18 15:59:41 - ${KFF_LOGGING_JOB_TABLE_HIST}.0 - Starting to run...
+2010/08/18 15:59:41 - ${KFF_LOGGING_JOB_TABLE}.0 - SQL query : select 
+2010/08/18 15:59:41 - ${KFF_LOGGING_JOB_TABLE}.0 -  *
+2010/08/18 15:59:41 - ${KFF_LOGGING_JOB_TABLE}.0 - from KFF_LOG_JOB
+2010/08/18 15:59:41 - ${KFF_LOGGING_STEP_TABLE}.0 - SQL query : select 
+2010/08/18 15:59:41 - ${KFF_LOGGING_STEP_TABLE}.0 -  *
+2010/08/18 15:59:41 - ${KFF_LOGGING_STEP_TABLE}.0 - from KFF_LOG_STEP
+2010/08/18 15:59:41 - ${KFF_LOGGING_JOB_TABLE}.0 - Finished reading query, closing connection.
+2010/08/18 15:59:41 - ${KFF_LOGGING_STEP_TABLE}.0 - Finished reading query, closing connection.
+2010/08/18 15:59:41 - Get Variables.0 - field [KJUBE_BATCH_ID] has value [000000]
+2010/08/18 15:59:41 - ${KFF_LOGGING_TRNSF_TABLE}.0 - Finished reading query, closing connection.
+2010/08/18 15:59:41 - ${KFF_LOGGING_REJECT_TABLE}.0 - Finished reading query, closing connection.
+2010/08/18 15:59:41 - Get Variables 3.0 - Finished processing (I=0, O=0, R=0, W=0, U=0, E=0)
+2010/08/18 15:59:41 - DWH_LOG - Connection to database closed!
+2010/08/18 15:59:41 - ${KFF_LOGGING_STEP_TABLE}.0 - Finished processing (I=0, O=0, R=0, W=0, U=0, E=0)
+2010/08/18 15:59:41 - DWH_LOG - Connection to database closed!
+2010/08/18 15:59:41 - Get Variables 2.0 - Finished processing (I=0, O=0, R=0, W=0, U=0, E=0)
+2010/08/18 15:59:41 - ${KFF_LOGGING_TRNSF_TABLE_HIST}.0 - Finished processing (I=0, O=0, R=0, W=0, U=0, E=0)
+2010/08/18 15:59:41 - DWH_LOG - Connection to database closed!
+2010/08/18 15:59:41 - DWH_LOG - Connection to database closed!
+2010/08/18 15:59:41 - ${KFF_LOGGING_JOB_TABLE}.0 - Finished processing (I=8, O=0, R=0, W=8, U=0, E=0)
+2010/08/18 15:59:41 - Get Variables.0 - Finished processing (I=0, O=0, R=8, W=8, U=0, E=0)
+2010/08/18 15:59:41 - ${KFF_LOGGING_JOB_TABLE_HIST}.0 - Prepared statement : INSERT INTO KFF_LOG_JOB_HIST (ID_JOB, JOBNAME, STATUS, LINES_READ, LINES_WRITTEN, LINES_UPDATED, LINES_INPUT, LINES_OUTPUT, ERRORS, STARTDATE, ENDDATE, LOGDATE, DEPDATE, REPLAYDATE, LOG_FIELD, KJUBE_BATCH_ID) VALUES ( ?,  ?,  ?,  ?,  ?,  ?,  ?,  ?,  ?,  ?,  ?,  ?,  ?,  ?,  ?,  ?)
+2010/08/18 15:59:41 - ${KFF_LOGGING_TRNSF_TABLE}.0 - Finished processing (I=0, O=0, R=0, W=0, U=0, E=0)
+2010/08/18 15:59:41 - DWH_LOG - Connection to database closed!
+2010/08/18 15:59:41 - ${KFF_LOGGING_REJECT_TABLE}.0 - Finished processing (I=0, O=0, R=0, W=0, U=0, E=0)
+2010/08/18 15:59:41 - Get Variables 4.0 - Finished processing (I=0, O=0, R=0, W=0, U=0, E=0)
+2010/08/18 15:59:41 - DWH_LOG - Connection to database closed!
+2010/08/18 15:59:41 - ${KFF_LOGGING_STEP_TABLE_HIST}.0 - Finished processing (I=0, O=0, R=0, W=0, U=0, E=0)
+2010/08/18 15:59:41 - DWH_LOG - Connection to database closed!
+2010/08/18 15:59:41 - ${KFF_LOGGING_JOB_TABLE_HIST}.0 - Finished processing (I=0, O=8, R=8, W=8, U=0, E=0)
+2010/08/18 15:59:41 - DWH_LOG - Connection to database closed!
+2010/08/18 15:59:41 - ${KFF_LOGGING_REJECT_TABLE_HIST}.0 - Finished processing (I=0, O=0, R=0, W=0, U=0, E=0)
+2010/08/18 15:59:41 - kjube_etl_log_archive - Finished job entry [kff_logging_archive] (result=[true])
+2010/08/18 15:59:41 - batch_launcher - Finished job entry [kff_logging_archive] (result=[true])
+2010/08/18 15:59:41 - batch_launcher - Finished job entry [kff_logging_reports] (result=[true])
+2010/08/18 15:59:41 - batch_launcher - Finished job entry [${KFF_BATCH}] (result=[true])
+2010/08/18 15:59:41 - batch_launcher - Finished job entry [Parameters] (result=[true])
+2010/08/18 15:59:41 - Kitchen - Finished!
+2010/08/18 15:59:41 - Kitchen - Start=2010/08/18 15:59:36.696, Stop=2010/08/18 15:59:41.879
+2010/08/18 15:59:41 - Kitchen - Processing ended after 5 seconds.
