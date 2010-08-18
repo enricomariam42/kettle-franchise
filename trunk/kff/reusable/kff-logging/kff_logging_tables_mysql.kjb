@@ -1,0 +1,1042 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<job>
+  <name>kjube_etl_log_tables_mysql</name>
+    <description>Standard kJube framework job for creation of logging tables (MySQL)</description>
+    <extended_description>Standard kJube framework job for creation of logging tables (MySQL)</extended_description>
+    <job_version>1.0</job_version>
+    <job_status>2</job_status>
+  <directory>&#47;</directory>
+  <created_user>-</created_user>
+  <created_date>2010&#47;01&#47;18 21:22:11.253</created_date>
+  <modified_user>-</modified_user>
+  <modified_date>2010&#47;01&#47;18 21:22:11.253</modified_date>
+    <parameters>
+    </parameters>
+  <connection>
+    <name>DWH_DWH</name>
+    <server>${DWH_DWH_HOSTNAME}</server>
+    <type>MYSQL</type>
+    <access>Native</access>
+    <database>${DWH_DWH_DATABASE}</database>
+    <port>${DWH_DWH_PORT}</port>
+    <username>${DWH_DWH_USERNAME}</username>
+    <password>${DWH_DWH_PASSWORD}</password>
+    <servername/>
+    <data_tablespace/>
+    <index_tablespace/>
+    <attributes>
+      <attribute><code>FORCE_IDENTIFIERS_TO_LOWERCASE</code><attribute>N</attribute></attribute>
+      <attribute><code>FORCE_IDENTIFIERS_TO_UPPERCASE</code><attribute>N</attribute></attribute>
+      <attribute><code>IS_CLUSTERED</code><attribute>N</attribute></attribute>
+      <attribute><code>PORT_NUMBER</code><attribute>${DWH_DWH_PORT}</attribute></attribute>
+      <attribute><code>QUOTE_ALL_FIELDS</code><attribute>N</attribute></attribute>
+      <attribute><code>STREAM_RESULTS</code><attribute>Y</attribute></attribute>
+      <attribute><code>USE_POOLING</code><attribute>N</attribute></attribute>
+    </attributes>
+  </connection>
+  <connection>
+    <name>DWH_LOG</name>
+    <server>${DWH_LOG_HOSTNAME}</server>
+    <type>MYSQL</type>
+    <access>Native</access>
+    <database>${DWH_LOG_DATABASE}</database>
+    <port>${DWH_LOG_PORT}</port>
+    <username>${DWH_LOG_USERNAME}</username>
+    <password>${DWH_LOG_PASSWORD}</password>
+    <servername/>
+    <data_tablespace/>
+    <index_tablespace/>
+    <attributes>
+      <attribute><code>FORCE_IDENTIFIERS_TO_LOWERCASE</code><attribute>N</attribute></attribute>
+      <attribute><code>FORCE_IDENTIFIERS_TO_UPPERCASE</code><attribute>N</attribute></attribute>
+      <attribute><code>IS_CLUSTERED</code><attribute>N</attribute></attribute>
+      <attribute><code>PORT_NUMBER</code><attribute>${DWH_LOG_PORT}</attribute></attribute>
+      <attribute><code>QUOTE_ALL_FIELDS</code><attribute>N</attribute></attribute>
+      <attribute><code>STREAM_RESULTS</code><attribute>Y</attribute></attribute>
+      <attribute><code>USE_POOLING</code><attribute>N</attribute></attribute>
+    </attributes>
+  </connection>
+  <connection>
+    <name>DWH_ODS</name>
+    <server>${DWH_ODS_HOSTNAME}</server>
+    <type>MYSQL</type>
+    <access>Native</access>
+    <database>${DWH_ODS_DATABASE}</database>
+    <port>${DWH_ODS_PORT}</port>
+    <username>${DWH_ODS_USERNAME}</username>
+    <password>${DWH_ODS_PASSWORD}</password>
+    <servername/>
+    <data_tablespace/>
+    <index_tablespace/>
+    <attributes>
+      <attribute><code>FORCE_IDENTIFIERS_TO_LOWERCASE</code><attribute>N</attribute></attribute>
+      <attribute><code>FORCE_IDENTIFIERS_TO_UPPERCASE</code><attribute>N</attribute></attribute>
+      <attribute><code>IS_CLUSTERED</code><attribute>N</attribute></attribute>
+      <attribute><code>PORT_NUMBER</code><attribute>${DWH_ODS_PORT}</attribute></attribute>
+      <attribute><code>QUOTE_ALL_FIELDS</code><attribute>N</attribute></attribute>
+      <attribute><code>STREAM_RESULTS</code><attribute>Y</attribute></attribute>
+      <attribute><code>USE_POOLING</code><attribute>N</attribute></attribute>
+    </attributes>
+  </connection>
+  <connection>
+    <name>DWH_STG</name>
+    <server>${DWH_STG_HOSTNAME}</server>
+    <type>MYSQL</type>
+    <access>Native</access>
+    <database>${DWH_STG_DATABASE}</database>
+    <port>${DWH_STG_PORT}</port>
+    <username>${DWH_STG_USERNAME}</username>
+    <password>${DWH_STG_PASSWORD}</password>
+    <servername/>
+    <data_tablespace/>
+    <index_tablespace/>
+    <attributes>
+      <attribute><code>FORCE_IDENTIFIERS_TO_LOWERCASE</code><attribute>N</attribute></attribute>
+      <attribute><code>FORCE_IDENTIFIERS_TO_UPPERCASE</code><attribute>N</attribute></attribute>
+      <attribute><code>IS_CLUSTERED</code><attribute>N</attribute></attribute>
+      <attribute><code>PORT_NUMBER</code><attribute>${DWH_STG_PORT}</attribute></attribute>
+      <attribute><code>QUOTE_ALL_FIELDS</code><attribute>N</attribute></attribute>
+      <attribute><code>STREAM_RESULTS</code><attribute>Y</attribute></attribute>
+      <attribute><code>USE_POOLING</code><attribute>N</attribute></attribute>
+    </attributes>
+  </connection>
+    <slaveservers>
+         <slaveserver><name>CARTE</name><hostname>${CARTE_HOSTNAME}</hostname><port>${CARTE_PORT}</port><username>${CARTE_USER}</username><password>${CARTE_PWD}</password><proxy_hostname>${CARTE_PROXY_HOST}</proxy_hostname><proxy_port>${CARTE_PROXY_PORT}</proxy_port><non_proxy_hosts>${CARTE_NON_PROXY}</non_proxy_hosts><master>Y</master></slaveserver>
+         <slaveserver><name>TST (DRP-DWDB)</name><hostname>10.89.20.14</hostname><port>8181</port><username>cluster</username><password>Encrypted 2be98afc86aa7f2e4cb1aa265cd86aac8</password><proxy_hostname/><proxy_port/><non_proxy_hosts/><master>Y</master></slaveserver>
+         <slaveserver><name>DWDB1</name><hostname>10.89.0.191</hostname><port>8181</port><username>cluster</username><password>Encrypted 2be98afc86aa7f2e4cb1aa265cd86aac8</password><proxy_hostname>proxy2.fendi.com</proxy_hostname><proxy_port>3128</proxy_port><non_proxy_hosts>10.89.*</non_proxy_hosts><master>N</master></slaveserver>
+         <slaveserver><name>PRD (FNDRMDWDB1)</name><hostname>10.89.30.76</hostname><port>8181</port><username>cluster</username><password>Encrypted 2be98afc86aa7f2e4cb1aa265cd86aac8</password><proxy_hostname>proxy2.fendi.com</proxy_hostname><proxy_port>3128</proxy_port><non_proxy_hosts>10.89.*</non_proxy_hosts><master>N</master></slaveserver>
+         <slaveserver><name>DRP-DWDB</name><hostname>10.89.20.14</hostname><port>8181</port><username>cluster</username><password>Encrypted 2be98afc86aa7f2e4cb1aa265cd86aac8</password><proxy_hostname/><proxy_port/><non_proxy_hosts/><master>Y</master></slaveserver>
+         <slaveserver><name>UAI (DWDB1)</name><hostname>10.89.0.191</hostname><port>8181</port><username>cluster</username><password>Encrypted 2be98afc86aa7f2e4cb1aa265cd86aac8</password><proxy_hostname>proxy2.fendi.com</proxy_hostname><proxy_port>3128</proxy_port><non_proxy_hosts>10.89.*</non_proxy_hosts><master>N</master></slaveserver>
+    </slaveservers>
+  <logconnection/>
+  <logtable/>
+  <size_limit_lines/>
+   <use_batchid>N</use_batchid>
+   <pass_batchid>N</pass_batchid>
+   <use_logfield>Y</use_logfield>
+   <shared_objects_file/>
+  <entries>
+    <entry>
+      <name>START</name>
+      <description>Special entries</description>
+      <type>SPECIAL</type>
+      <start>Y</start>
+      <dummy>N</dummy>
+      <repeat>N</repeat>
+      <schedulerType>0</schedulerType>
+      <intervalSeconds>0</intervalSeconds>
+      <intervalMinutes>60</intervalMinutes>
+      <hour>12</hour>
+      <minutes>0</minutes>
+      <weekDay>1</weekDay>
+      <DayOfMonth>1</DayOfMonth>
+      <parallel>N</parallel>
+      <draw>Y</draw>
+      <nr>0</nr>
+      <xloc>188</xloc>
+      <yloc>39</yloc>
+      </entry>
+    <entry>
+      <name>Check ${KFF_LOGGING_JOB_TABLE}</name>
+      <description>Table exists</description>
+      <type>TABLE_EXISTS</type>
+      <tablename>${KFF_LOGGING_JOB_TABLE}</tablename>
+      <schemaname/>
+      <connection>DWH_LOG</connection>
+      <parallel>N</parallel>
+      <draw>Y</draw>
+      <nr>0</nr>
+      <xloc>188</xloc>
+      <yloc>356</yloc>
+      </entry>
+    <entry>
+      <name>Create ${KFF_LOGGING_JOB_TABLE}</name>
+      <description>SQL</description>
+      <type>SQL</type>
+      <sql>CREATE TABLE ${KFF_LOGGING_JOB_TABLE}
+(
+  ID_JOB INT
+, JOBNAME VARCHAR(255)
+, STATUS VARCHAR(15)
+, LINES_READ BIGINT
+, LINES_WRITTEN BIGINT
+, LINES_UPDATED BIGINT
+, LINES_INPUT BIGINT
+, LINES_OUTPUT BIGINT
+, ERRORS BIGINT
+, STARTDATE DATETIME
+, ENDDATE DATETIME
+, LOGDATE DATETIME
+, DEPDATE DATETIME
+, REPLAYDATE DATETIME
+, LOG_FIELD MEDIUMTEXT
+)
+;
+
+CREATE INDEX ${KFF_LOGGING_JOB_TABLE}_UIX
+on ${KFF_LOGGING_JOB_TABLE} (JOBNAME)
+;</sql>
+      <useVariableSubstitution>T</useVariableSubstitution>
+      <sqlfromfile>F</sqlfromfile>
+      <sqlfilename/>
+      <connection>DWH_LOG</connection>
+      <parallel>N</parallel>
+      <draw>Y</draw>
+      <nr>0</nr>
+      <xloc>472</xloc>
+      <yloc>350</yloc>
+      </entry>
+    <entry>
+      <name>Check ${KFF_LOGGING_TRNSF_TABLE}</name>
+      <description>Table exists</description>
+      <type>TABLE_EXISTS</type>
+      <tablename>${KFF_LOGGING_TRNSF_TABLE}</tablename>
+      <schemaname/>
+      <connection>DWH_LOG</connection>
+      <parallel>N</parallel>
+      <draw>Y</draw>
+      <nr>0</nr>
+      <xloc>188</xloc>
+      <yloc>210</yloc>
+      </entry>
+    <entry>
+      <name>Create ${KFF_LOGGING_TRNSF_TABLE}</name>
+      <description>SQL</description>
+      <type>SQL</type>
+      <sql>CREATE TABLE ${KFF_LOGGING_TRNSF_TABLE}
+(
+  ID_BATCH INT
+, TRANSNAME VARCHAR(255)
+, STATUS VARCHAR(15)
+, LINES_READ BIGINT
+, LINES_WRITTEN BIGINT
+, LINES_UPDATED BIGINT
+, LINES_INPUT BIGINT
+, LINES_OUTPUT BIGINT
+, ERRORS BIGINT
+, STARTDATE DATETIME
+, ENDDATE DATETIME
+, LOGDATE DATETIME
+, DEPDATE DATETIME
+, REPLAYDATE DATETIME
+, LOG_FIELD MEDIUMTEXT
+);
+
+
+CREATE INDEX ${KFF_LOGGING_TRNSF_TABLE}_UIX
+on ${KFF_LOGGING_TRNSF_TABLE} (TRANSNAME)
+;
+</sql>
+      <useVariableSubstitution>T</useVariableSubstitution>
+      <sqlfromfile>F</sqlfromfile>
+      <sqlfilename/>
+      <connection>DWH_LOG</connection>
+      <parallel>N</parallel>
+      <draw>Y</draw>
+      <nr>0</nr>
+      <xloc>474</xloc>
+      <yloc>210</yloc>
+      </entry>
+    <entry>
+      <name>Create ${KFF_LOGGING_REJECT_TABLE}</name>
+      <description>SQL</description>
+      <type>SQL</type>
+      <sql>CREATE TABLE ${KFF_LOGGING_REJECT_TABLE}
+(
+  id VARCHAR(2000)
+, value VARCHAR(4000)
+, batch_id INT
+, transname VARCHAR(255)
+, jobname VARCHAR(255)
+, stepname VARCHAR(255)
+, error_count BIGINT
+, error_descriptions VARCHAR(4000)
+, error_fields VARCHAR(255)
+, error_codes VARCHAR(255)
+, logdate DATETIME
+)
+;
+
+CREATE INDEX ${KFF_LOGGING_REJECT_TABLE}_UIX
+on ${KFF_LOGGING_REJECT_TABLE} (TRANSNAME, JOBNAME)
+;</sql>
+      <useVariableSubstitution>T</useVariableSubstitution>
+      <sqlfromfile>F</sqlfromfile>
+      <sqlfilename/>
+      <connection>DWH_LOG</connection>
+      <parallel>N</parallel>
+      <draw>Y</draw>
+      <nr>0</nr>
+      <xloc>474</xloc>
+      <yloc>416</yloc>
+      </entry>
+    <entry>
+      <name>Check ${KFF_LOGGING_REJECT_TABLE}</name>
+      <description>Table exists</description>
+      <type>TABLE_EXISTS</type>
+      <tablename>${KFF_LOGGING_REJECT_TABLE}</tablename>
+      <schemaname/>
+      <connection>DWH_LOG</connection>
+      <parallel>N</parallel>
+      <draw>Y</draw>
+      <nr>0</nr>
+      <xloc>190</xloc>
+      <yloc>421</yloc>
+      </entry>
+    <entry>
+      <name>Create ${KFF_LOGGING_STEP_TABLE}</name>
+      <description>SQL</description>
+      <type>SQL</type>
+      <sql>CREATE TABLE ${KFF_LOGGING_STEP_TABLE}
+(
+  ID_BATCH INT
+, SEQ_NR INT
+, LOGDATE DATETIME
+, TRANSNAME VARCHAR(255)
+, STEPNAME VARCHAR(255)
+, STEP_COPY INT
+, LINES_READ BIGINT
+, LINES_WRITTEN BIGINT
+, LINES_UPDATED BIGINT
+, LINES_INPUT BIGINT
+, LINES_OUTPUT BIGINT
+, LINES_REJECTED BIGINT
+, ERRORS BIGINT
+, INPUT_BUFFER_ROWS BIGINT
+, OUTPUT_BUFFER_ROWS BIGINT
+)
+;
+
+
+CREATE INDEX ${KFF_LOGGING_STEP_TABLE}_UIX
+on ${KFF_LOGGING_STEP_TABLE} (STEPNAME)
+;
+</sql>
+      <useVariableSubstitution>T</useVariableSubstitution>
+      <sqlfromfile>F</sqlfromfile>
+      <sqlfilename/>
+      <connection>DWH_LOG</connection>
+      <parallel>N</parallel>
+      <draw>Y</draw>
+      <nr>0</nr>
+      <xloc>473</xloc>
+      <yloc>286</yloc>
+      </entry>
+    <entry>
+      <name>Check ${KFF_LOGGING_STEP_TABLE}</name>
+      <description>Table exists</description>
+      <type>TABLE_EXISTS</type>
+      <tablename>${KFF_LOGGING_STEP_TABLE}</tablename>
+      <schemaname/>
+      <connection>DWH_LOG</connection>
+      <parallel>N</parallel>
+      <draw>Y</draw>
+      <nr>0</nr>
+      <xloc>189</xloc>
+      <yloc>290</yloc>
+      </entry>
+    <entry>
+      <name>Check ${KFF_LOGGING_BATCH_TABLE}</name>
+      <description>Table exists</description>
+      <type>TABLE_EXISTS</type>
+      <tablename>${KFF_LOGGING_BATCH_TABLE}</tablename>
+      <schemaname/>
+      <connection>DWH_LOG</connection>
+      <parallel>N</parallel>
+      <draw>Y</draw>
+      <nr>0</nr>
+      <xloc>189</xloc>
+      <yloc>133</yloc>
+      </entry>
+    <entry>
+      <name>Create ${KFF_LOGGING_BATCH_TABLE}</name>
+      <description>SQL</description>
+      <type>SQL</type>
+      <sql>CREATE TABLE ${KFF_LOGGING_BATCH_TABLE}
+(
+  ID_JOB INT
+, JOBNAME VARCHAR(255)
+, STATUS VARCHAR(15)
+, LINES_READ BIGINT
+, LINES_WRITTEN BIGINT
+, LINES_UPDATED BIGINT
+, LINES_INPUT BIGINT
+, LINES_OUTPUT BIGINT
+, ERRORS BIGINT
+, STARTDATE DATETIME
+, ENDDATE DATETIME
+, LOGDATE DATETIME
+, DEPDATE DATETIME
+, REPLAYDATE DATETIME
+, LOG_FIELD MEDIUMTEXT
+)
+;
+
+CREATE INDEX ${KFF_LOGGING_BATCH_TABLE}_UIX
+ON ${KFF_LOGGING_BATCH_TABLE} (ID_JOB, JOBNAME)
+;</sql>
+      <useVariableSubstitution>T</useVariableSubstitution>
+      <sqlfromfile>F</sqlfromfile>
+      <sqlfilename/>
+      <connection>DWH_LOG</connection>
+      <parallel>N</parallel>
+      <draw>Y</draw>
+      <nr>0</nr>
+      <xloc>475</xloc>
+      <yloc>132</yloc>
+      </entry>
+    <entry>
+      <name>Check last batch</name>
+      <description>Evaluate rows number in a table</description>
+      <type>EVAL_TABLE_CONTENT</type>
+      <connection>DWH_LOG</connection>
+      <schemaname/>
+      <tablename/>
+      <success_condition>rows_count_equal</success_condition>
+      <limit>1</limit>
+      <is_custom_sql>Y</is_custom_sql>
+      <is_usevars>Y</is_usevars>
+      <custom_sql>select 
+ jobname
+from 
+ ${KJUBE_LOGGING_BATCH_TABLE}
+where 
+ id_job = ( select max(id_job) from ${KJUBE_LOGGING_BATCH_TABLE} ) and
+ status in (&apos;end&apos;,&apos;failed&apos;,&apos;stopped&apos;,&apos;stop&apos;)</custom_sql>
+      <add_rows_result>N</add_rows_result>
+      <clear_result_rows>Y</clear_result_rows>
+      <parallel>N</parallel>
+      <draw>Y</draw>
+      <nr>0</nr>
+      <xloc>675</xloc>
+      <yloc>77</yloc>
+      </entry>
+    <entry>
+      <name>Abort job</name>
+      <description>Abort job</description>
+      <type>ABORT</type>
+      <message>Previous batch not concluded</message>
+      <parallel>N</parallel>
+      <draw>Y</draw>
+      <nr>0</nr>
+      <xloc>939</xloc>
+      <yloc>195</yloc>
+      </entry>
+    <entry>
+      <name>Error</name>
+      <description>Mail</description>
+      <type>MAIL</type>
+      <server>${MAIL_SMTP_SERVER}</server>
+      <port>${MAIL_SMTP_PORT}</port>
+      <destination>${MAIL_DESTINATION_ADDRESS}</destination>
+      <destinationCc>${MAIL_DESTINATION_CC}</destinationCc>
+      <destinationBCc>${MAIL_DESTINATION_BCC}</destinationBCc>
+      <replyto>${MAIL_SENDER_ADDRESS}</replyto>
+      <replytoname>${MAIL_SENDER_NAME}</replytoname>
+      <subject>${KJUBE_BATCH} in ${KJUBE_APPLICATION} (${KJUBE_LIFECYCLE}) @ ${KJUBE_CUSTOMER} - Failure - Previous batch not finished</subject>
+      <include_date>Y</include_date>
+      <contact_person>${MAIL_CONTACT_PERSON}</contact_person>
+      <contact_phone>${MAIL_CONTACT_PHONE}</contact_phone>
+      <comment>&lt;b&gt;Job result&lt;&#47;b&gt;&lt;br&gt;
+The following job failed:&lt;br&gt;
+- Batch: &lt;b&gt;${KJUBE_BATCH}&lt;&#47;b&gt;&lt;br&gt;
+- Application: ${KJUBE_APPLICATION}&lt;br&gt;
+- Environment: ${KJUBE_LIFECYCLE}&lt;br&gt;
+- Customer: ${KJUBE_CUSTOMER}&lt;br&gt;
+&lt;b&gt;because the previous batch with the same name didn&apos;t conclude yet.&lt;&#47;b&gt;&lt;br&gt;
+Regards,&lt;br&gt;
+${MAIL_SENDER_NAME}&lt;br&gt;
+&lt;br&gt;</comment>
+      <include_files>N</include_files>
+      <zip_files>N</zip_files>
+      <zip_name>logging</zip_name>
+      <use_auth>N</use_auth>
+      <use_secure_auth>N</use_secure_auth>
+      <auth_user>${MAIL_SMTP_USER}</auth_user>
+      <auth_password>${MAIL_SMTP_PWD}</auth_password>
+      <only_comment>Y</only_comment>
+      <use_HTML>Y</use_HTML>
+      <use_Priority>Y</use_Priority>
+      <encoding>UTF-8</encoding>
+      <priority>high</priority>
+      <importance>high</importance>
+      <secureconnectiontype>SSL</secureconnectiontype>
+      <replyToAddresses>${MAIL_REPLY_TO}</replyToAddresses>
+      <filetypes>        <filetype>GENERAL</filetype>
+        <filetype>LOG</filetype>
+        <filetype>ERRORLINE</filetype>
+        <filetype>ERROR</filetype>
+        <filetype>WARNING</filetype>
+      </filetypes>      <parallel>N</parallel>
+      <draw>Y</draw>
+      <nr>0</nr>
+      <xloc>936</xloc>
+      <yloc>82</yloc>
+      </entry>
+    <entry>
+      <name>Check ${KFF_LOGGING_JOB_TABLE_HIST}</name>
+      <description>Table exists</description>
+      <type>TABLE_EXISTS</type>
+      <tablename>${KFF_LOGGING_JOB_TABLE_HIST}</tablename>
+      <schemaname/>
+      <connection>DWH_LOG</connection>
+      <parallel>N</parallel>
+      <draw>Y</draw>
+      <nr>0</nr>
+      <xloc>195</xloc>
+      <yloc>581</yloc>
+      </entry>
+    <entry>
+      <name>Create ${KFF_LOGGING_JOB_TABLE_HIST}</name>
+      <description>SQL</description>
+      <type>SQL</type>
+      <sql>CREATE TABLE ${KFF_LOGGING_JOB_TABLE_HIST}
+( KJUBE_BATCH_ID INT
+, ID_JOB INT
+, JOBNAME VARCHAR(255)
+, STATUS VARCHAR(15)
+, LINES_READ BIGINT
+, LINES_WRITTEN BIGINT
+, LINES_UPDATED BIGINT
+, LINES_INPUT BIGINT
+, LINES_OUTPUT BIGINT
+, ERRORS BIGINT
+, STARTDATE DATETIME
+, ENDDATE DATETIME
+, LOGDATE DATETIME
+, DEPDATE DATETIME
+, REPLAYDATE DATETIME
+, LOG_FIELD MEDIUMTEXT
+)
+;
+
+CREATE INDEX ${KFF_LOGGING_JOB_TABLE_HIST}_UIX
+on ${KFF_LOGGING_JOB_TABLE_HIST} (KJUBE_BATCH_ID, JOBNAME)
+;</sql>
+      <useVariableSubstitution>T</useVariableSubstitution>
+      <sqlfromfile>F</sqlfromfile>
+      <sqlfilename/>
+      <connection>DWH_LOG</connection>
+      <parallel>N</parallel>
+      <draw>Y</draw>
+      <nr>0</nr>
+      <xloc>494</xloc>
+      <yloc>577</yloc>
+      </entry>
+    <entry>
+      <name>Check ${KFF_LOGGING_TRNSF_TABLE_HIST}</name>
+      <description>Table exists</description>
+      <type>TABLE_EXISTS</type>
+      <tablename>${KFF_LOGGING_TRNSF_TABLE_HIST}</tablename>
+      <schemaname/>
+      <connection>DWH_LOG</connection>
+      <parallel>N</parallel>
+      <draw>Y</draw>
+      <nr>0</nr>
+      <xloc>193</xloc>
+      <yloc>644</yloc>
+      </entry>
+    <entry>
+      <name>Create ${KFF_LOGGING_TRNSF_TABLE_HIST}</name>
+      <description>SQL</description>
+      <type>SQL</type>
+      <sql>CREATE TABLE ${KFF_LOGGING_TRNSF_TABLE_HIST}
+( KJUBE_BATCH_ID INT
+, ID_BATCH INT
+, TRANSNAME VARCHAR(255)
+, STATUS VARCHAR(15)
+, LINES_READ BIGINT
+, LINES_WRITTEN BIGINT
+, LINES_UPDATED BIGINT
+, LINES_INPUT BIGINT
+, LINES_OUTPUT BIGINT
+, ERRORS BIGINT
+, STARTDATE DATETIME
+, ENDDATE DATETIME
+, LOGDATE DATETIME
+, DEPDATE DATETIME
+, REPLAYDATE DATETIME
+, LOG_FIELD MEDIUMTEXT
+);
+
+
+CREATE INDEX ${KFF_LOGGING_TRNSF_TABLE_HIST}_UIX
+on ${KFF_LOGGING_TRNSF_TABLE_HIST} (KJUBE_BATCH_ID, TRANSNAME)
+;
+</sql>
+      <useVariableSubstitution>T</useVariableSubstitution>
+      <sqlfromfile>F</sqlfromfile>
+      <sqlfilename/>
+      <connection>DWH_LOG</connection>
+      <parallel>N</parallel>
+      <draw>Y</draw>
+      <nr>0</nr>
+      <xloc>493</xloc>
+      <yloc>639</yloc>
+      </entry>
+    <entry>
+      <name>Check ${KFF_LOGGING_STEP_TABLE_HIST}</name>
+      <description>Table exists</description>
+      <type>TABLE_EXISTS</type>
+      <tablename>${KFF_LOGGING_STEP_TABLE_HIST}</tablename>
+      <schemaname/>
+      <connection>DWH_LOG</connection>
+      <parallel>N</parallel>
+      <draw>Y</draw>
+      <nr>0</nr>
+      <xloc>196</xloc>
+      <yloc>705</yloc>
+      </entry>
+    <entry>
+      <name>Create ${KFF_LOGGING_STEP_TABLE}_HIST</name>
+      <description>SQL</description>
+      <type>SQL</type>
+      <sql>CREATE TABLE ${KFF_LOGGING_STEP_TABLE_HIST}
+(
+  KJUBE_BATCH_ID INT
+, ID_BATCH INT
+, SEQ_NR INT
+, LOGDATE DATETIME
+, TRANSNAME VARCHAR(255)
+, STEPNAME VARCHAR(255)
+, STEP_COPY INT
+, LINES_READ BIGINT
+, LINES_WRITTEN BIGINT
+, LINES_UPDATED BIGINT
+, LINES_INPUT BIGINT
+, LINES_OUTPUT BIGINT
+, LINES_REJECTED BIGINT
+, ERRORS BIGINT
+, INPUT_BUFFER_ROWS BIGINT
+, OUTPUT_BUFFER_ROWS BIGINT
+)
+;
+
+
+CREATE INDEX ${KFF_LOGGING_STEP_TABLE_HIST}_UIX
+on ${KFF_LOGGING_STEP_TABLE_HIST} (KJUBE_BATCH_ID,STEPNAME)
+;
+</sql>
+      <useVariableSubstitution>T</useVariableSubstitution>
+      <sqlfromfile>F</sqlfromfile>
+      <sqlfilename/>
+      <connection>DWH_LOG</connection>
+      <parallel>N</parallel>
+      <draw>Y</draw>
+      <nr>0</nr>
+      <xloc>491</xloc>
+      <yloc>700</yloc>
+      </entry>
+    <entry>
+      <name>Check ${KFF_LOGGING_REJECT_TABLE_HIST}</name>
+      <description>Table exists</description>
+      <type>TABLE_EXISTS</type>
+      <tablename>${KFF_LOGGING_REJECT_TABLE_HIST}</tablename>
+      <schemaname/>
+      <connection>DWH_LOG</connection>
+      <parallel>N</parallel>
+      <draw>Y</draw>
+      <nr>0</nr>
+      <xloc>198</xloc>
+      <yloc>771</yloc>
+      </entry>
+    <entry>
+      <name>Create ${KFF_LOGGING_REJECT_TABLE_HIST}</name>
+      <description>SQL</description>
+      <type>SQL</type>
+      <sql>CREATE TABLE ${KFF_LOGGING_REJECT_TABLE_HIST}
+(
+  KJUBE_BATCH_ID INT
+, ID VARCHAR(2000)
+, value VARCHAR(4000)
+, batch_id INT
+, transname VARCHAR(255)
+, jobname VARCHAR(255)
+, stepname VARCHAR(255)
+, error_count BIGINT
+, error_descriptions  VARCHAR(4000)
+, error_fields VARCHAR(255)
+, error_codes VARCHAR(255)
+, logdate DATETIME
+)
+;
+
+CREATE INDEX ${KFF_LOGGING_REJECT_TABLE_HIST}_UIX
+on ${KFF_LOGGING_REJECT_TABLE_HIST} (KJUBE_BATCH_ID, TRANSNAME, JOBNAME)
+;</sql>
+      <useVariableSubstitution>T</useVariableSubstitution>
+      <sqlfromfile>F</sqlfromfile>
+      <sqlfilename/>
+      <connection>DWH_LOG</connection>
+      <parallel>N</parallel>
+      <draw>Y</draw>
+      <nr>0</nr>
+      <xloc>489</xloc>
+      <yloc>768</yloc>
+      </entry>
+    <entry>
+      <name>New batch - first run ?</name>
+      <description>Evaluate rows number in a table</description>
+      <type>EVAL_TABLE_CONTENT</type>
+      <connection>DWH_LOG</connection>
+      <schemaname/>
+      <tablename/>
+      <success_condition>rows_count_equal</success_condition>
+      <limit>0</limit>
+      <is_custom_sql>Y</is_custom_sql>
+      <is_usevars>Y</is_usevars>
+      <custom_sql>select 
+ distinct jobname
+from 
+ ${KJUBE_LOGGING_BATCH_TABLE}
+where 
+ jobname = &apos;${KJUBE_BATCH}&apos; </custom_sql>
+      <add_rows_result>N</add_rows_result>
+      <clear_result_rows>Y</clear_result_rows>
+      <parallel>N</parallel>
+      <draw>Y</draw>
+      <nr>0</nr>
+      <xloc>812</xloc>
+      <yloc>78</yloc>
+      </entry>
+    <entry>
+      <name>Error 2</name>
+      <description>Mail</description>
+      <type>MAIL</type>
+      <server>${MAIL_SMTP_SERVER}</server>
+      <port>${MAIL_SMTP_PORT}</port>
+      <destination>${MAIL_DESTINATION_ADDRESS}</destination>
+      <destinationCc>${MAIL_DESTINATION_CC}</destinationCc>
+      <destinationBCc>${MAIL_DESTINATION_BCC}</destinationBCc>
+      <replyto>${MAIL_SENDER_ADDRESS}</replyto>
+      <replytoname>${MAIL_SENDER_NAME}</replytoname>
+      <subject>${KJUBE_BATCH} in ${KJUBE_APPLICATION} (${KJUBE_LIFECYCLE}) @ ${KJUBE_CUSTOMER} - Failure - Cannot start batch process</subject>
+      <include_date>Y</include_date>
+      <contact_person>${MAIL_CONTACT_PERSON}</contact_person>
+      <contact_phone>${MAIL_CONTACT_PHONE}</contact_phone>
+      <comment>&lt;b&gt;Job result&lt;&#47;b&gt;&lt;br&gt;
+The following job failed:&lt;br&gt;
+- Batch: &lt;b&gt;${KJUBE_BATCH}&lt;&#47;b&gt;&lt;br&gt;
+- Application: ${KJUBE_APPLICATION}&lt;br&gt;
+- Environment: ${KJUBE_LIFECYCLE}&lt;br&gt;
+- Customer: ${KJUBE_CUSTOMER}&lt;br&gt;
+&lt;b&gt;because it seems the table ${KJUBE_LOGGING_BATCH_TABLE} does not exist or is not reachable.&lt;&#47;b&gt;&lt;br&gt;
+Regards,&lt;br&gt;
+${MAIL_SENDER_NAME}&lt;br&gt;
+&lt;br&gt;</comment>
+      <include_files>N</include_files>
+      <zip_files>N</zip_files>
+      <zip_name>logging</zip_name>
+      <use_auth>N</use_auth>
+      <use_secure_auth>N</use_secure_auth>
+      <auth_user>${MAIL_SMTP_USER}</auth_user>
+      <auth_password>${MAIL_SMTP_PWD}</auth_password>
+      <only_comment>Y</only_comment>
+      <use_HTML>Y</use_HTML>
+      <use_Priority>Y</use_Priority>
+      <encoding>UTF-8</encoding>
+      <priority>high</priority>
+      <importance>high</importance>
+      <secureconnectiontype>SSL</secureconnectiontype>
+      <replyToAddresses>${MAIL_REPLY_TO}</replyToAddresses>
+      <filetypes>        <filetype>GENERAL</filetype>
+        <filetype>LOG</filetype>
+        <filetype>ERRORLINE</filetype>
+        <filetype>ERROR</filetype>
+        <filetype>WARNING</filetype>
+      </filetypes>      <parallel>N</parallel>
+      <draw>Y</draw>
+      <nr>0</nr>
+      <xloc>802</xloc>
+      <yloc>193</yloc>
+      </entry>
+  </entries>
+  <hops>
+    <hop>
+      <from>Check ${KFF_LOGGING_JOB_TABLE}</from>
+      <to>Create ${KFF_LOGGING_JOB_TABLE}</to>
+      <from_nr>0</from_nr>
+      <to_nr>0</to_nr>
+      <enabled>Y</enabled>
+      <evaluation>N</evaluation>
+      <unconditional>N</unconditional>
+    </hop>
+    <hop>
+      <from>Check ${KFF_LOGGING_TRNSF_TABLE}</from>
+      <to>Create ${KFF_LOGGING_TRNSF_TABLE}</to>
+      <from_nr>0</from_nr>
+      <to_nr>0</to_nr>
+      <enabled>Y</enabled>
+      <evaluation>N</evaluation>
+      <unconditional>N</unconditional>
+    </hop>
+    <hop>
+      <from>Check ${KFF_LOGGING_TRNSF_TABLE}</from>
+      <to>Check ${KFF_LOGGING_STEP_TABLE}</to>
+      <from_nr>0</from_nr>
+      <to_nr>0</to_nr>
+      <enabled>Y</enabled>
+      <evaluation>Y</evaluation>
+      <unconditional>N</unconditional>
+    </hop>
+    <hop>
+      <from>Create ${KFF_LOGGING_TRNSF_TABLE}</from>
+      <to>Check ${KFF_LOGGING_STEP_TABLE}</to>
+      <from_nr>0</from_nr>
+      <to_nr>0</to_nr>
+      <enabled>Y</enabled>
+      <evaluation>Y</evaluation>
+      <unconditional>N</unconditional>
+    </hop>
+    <hop>
+      <from>Check ${KFF_LOGGING_STEP_TABLE}</from>
+      <to>Create ${KFF_LOGGING_STEP_TABLE}</to>
+      <from_nr>0</from_nr>
+      <to_nr>0</to_nr>
+      <enabled>Y</enabled>
+      <evaluation>N</evaluation>
+      <unconditional>N</unconditional>
+    </hop>
+    <hop>
+      <from>Check ${KFF_LOGGING_BATCH_TABLE}</from>
+      <to>Create ${KFF_LOGGING_BATCH_TABLE}</to>
+      <from_nr>0</from_nr>
+      <to_nr>0</to_nr>
+      <enabled>Y</enabled>
+      <evaluation>N</evaluation>
+      <unconditional>N</unconditional>
+    </hop>
+    <hop>
+      <from>Error</from>
+      <to>Abort job</to>
+      <from_nr>0</from_nr>
+      <to_nr>0</to_nr>
+      <enabled>Y</enabled>
+      <evaluation>Y</evaluation>
+      <unconditional>N</unconditional>
+    </hop>
+    <hop>
+      <from>Check ${KFF_LOGGING_JOB_TABLE_HIST}</from>
+      <to>Create ${KFF_LOGGING_JOB_TABLE_HIST}</to>
+      <from_nr>0</from_nr>
+      <to_nr>0</to_nr>
+      <enabled>Y</enabled>
+      <evaluation>N</evaluation>
+      <unconditional>N</unconditional>
+    </hop>
+    <hop>
+      <from>Check ${KFF_LOGGING_JOB_TABLE_HIST}</from>
+      <to>Check ${KFF_LOGGING_TRNSF_TABLE_HIST}</to>
+      <from_nr>0</from_nr>
+      <to_nr>0</to_nr>
+      <enabled>Y</enabled>
+      <evaluation>Y</evaluation>
+      <unconditional>N</unconditional>
+    </hop>
+    <hop>
+      <from>Create ${KFF_LOGGING_JOB_TABLE_HIST}</from>
+      <to>Check ${KFF_LOGGING_TRNSF_TABLE_HIST}</to>
+      <from_nr>0</from_nr>
+      <to_nr>0</to_nr>
+      <enabled>Y</enabled>
+      <evaluation>Y</evaluation>
+      <unconditional>N</unconditional>
+    </hop>
+    <hop>
+      <from>Check ${KFF_LOGGING_TRNSF_TABLE_HIST}</from>
+      <to>Create ${KFF_LOGGING_TRNSF_TABLE_HIST}</to>
+      <from_nr>0</from_nr>
+      <to_nr>0</to_nr>
+      <enabled>Y</enabled>
+      <evaluation>N</evaluation>
+      <unconditional>N</unconditional>
+    </hop>
+    <hop>
+      <from>Check ${KFF_LOGGING_TRNSF_TABLE_HIST}</from>
+      <to>Check ${KFF_LOGGING_STEP_TABLE_HIST}</to>
+      <from_nr>0</from_nr>
+      <to_nr>0</to_nr>
+      <enabled>Y</enabled>
+      <evaluation>Y</evaluation>
+      <unconditional>N</unconditional>
+    </hop>
+    <hop>
+      <from>Check ${KFF_LOGGING_STEP_TABLE_HIST}</from>
+      <to>Create ${KFF_LOGGING_STEP_TABLE}_HIST</to>
+      <from_nr>0</from_nr>
+      <to_nr>0</to_nr>
+      <enabled>Y</enabled>
+      <evaluation>N</evaluation>
+      <unconditional>N</unconditional>
+    </hop>
+    <hop>
+      <from>Create ${KFF_LOGGING_TRNSF_TABLE_HIST}</from>
+      <to>Check ${KFF_LOGGING_STEP_TABLE_HIST}</to>
+      <from_nr>0</from_nr>
+      <to_nr>0</to_nr>
+      <enabled>Y</enabled>
+      <evaluation>Y</evaluation>
+      <unconditional>N</unconditional>
+    </hop>
+    <hop>
+      <from>New batch - first run ?</from>
+      <to>Error</to>
+      <from_nr>0</from_nr>
+      <to_nr>0</to_nr>
+      <enabled>Y</enabled>
+      <evaluation>N</evaluation>
+      <unconditional>N</unconditional>
+    </hop>
+    <hop>
+      <from>Check last batch</from>
+      <to>New batch - first run ?</to>
+      <from_nr>0</from_nr>
+      <to_nr>0</to_nr>
+      <enabled>Y</enabled>
+      <evaluation>N</evaluation>
+      <unconditional>N</unconditional>
+    </hop>
+    <hop>
+      <from>Error 2</from>
+      <to>Abort job</to>
+      <from_nr>0</from_nr>
+      <to_nr>0</to_nr>
+      <enabled>Y</enabled>
+      <evaluation>Y</evaluation>
+      <unconditional>N</unconditional>
+    </hop>
+    <hop>
+      <from>Create ${KFF_LOGGING_STEP_TABLE}</from>
+      <to>Check ${KFF_LOGGING_JOB_TABLE}</to>
+      <from_nr>0</from_nr>
+      <to_nr>0</to_nr>
+      <enabled>Y</enabled>
+      <evaluation>Y</evaluation>
+      <unconditional>N</unconditional>
+    </hop>
+    <hop>
+      <from>Check ${KFF_LOGGING_STEP_TABLE}</from>
+      <to>Check ${KFF_LOGGING_JOB_TABLE}</to>
+      <from_nr>0</from_nr>
+      <to_nr>0</to_nr>
+      <enabled>Y</enabled>
+      <evaluation>Y</evaluation>
+      <unconditional>N</unconditional>
+    </hop>
+    <hop>
+      <from>START</from>
+      <to>Check ${KFF_LOGGING_BATCH_TABLE}</to>
+      <from_nr>0</from_nr>
+      <to_nr>0</to_nr>
+      <enabled>Y</enabled>
+      <evaluation>Y</evaluation>
+      <unconditional>Y</unconditional>
+    </hop>
+    <hop>
+      <from>Check ${KFF_LOGGING_BATCH_TABLE}</from>
+      <to>Check ${KFF_LOGGING_TRNSF_TABLE}</to>
+      <from_nr>0</from_nr>
+      <to_nr>0</to_nr>
+      <enabled>Y</enabled>
+      <evaluation>Y</evaluation>
+      <unconditional>N</unconditional>
+    </hop>
+    <hop>
+      <from>Create ${KFF_LOGGING_BATCH_TABLE}</from>
+      <to>Check ${KFF_LOGGING_TRNSF_TABLE}</to>
+      <from_nr>0</from_nr>
+      <to_nr>0</to_nr>
+      <enabled>Y</enabled>
+      <evaluation>Y</evaluation>
+      <unconditional>N</unconditional>
+    </hop>
+    <hop>
+      <from>Check ${KFF_LOGGING_REJECT_TABLE}</from>
+      <to>Create ${KFF_LOGGING_REJECT_TABLE}</to>
+      <from_nr>0</from_nr>
+      <to_nr>0</to_nr>
+      <enabled>Y</enabled>
+      <evaluation>N</evaluation>
+      <unconditional>N</unconditional>
+    </hop>
+    <hop>
+      <from>Create ${KFF_LOGGING_JOB_TABLE}</from>
+      <to>Check ${KFF_LOGGING_REJECT_TABLE}</to>
+      <from_nr>0</from_nr>
+      <to_nr>0</to_nr>
+      <enabled>Y</enabled>
+      <evaluation>Y</evaluation>
+      <unconditional>N</unconditional>
+    </hop>
+    <hop>
+      <from>Check ${KFF_LOGGING_JOB_TABLE}</from>
+      <to>Check ${KFF_LOGGING_REJECT_TABLE}</to>
+      <from_nr>0</from_nr>
+      <to_nr>0</to_nr>
+      <enabled>Y</enabled>
+      <evaluation>Y</evaluation>
+      <unconditional>N</unconditional>
+    </hop>
+    <hop>
+      <from>Create ${KFF_LOGGING_REJECT_TABLE}</from>
+      <to>Check ${KFF_LOGGING_JOB_TABLE_HIST}</to>
+      <from_nr>0</from_nr>
+      <to_nr>0</to_nr>
+      <enabled>Y</enabled>
+      <evaluation>Y</evaluation>
+      <unconditional>N</unconditional>
+    </hop>
+    <hop>
+      <from>Check ${KFF_LOGGING_REJECT_TABLE}</from>
+      <to>Check ${KFF_LOGGING_JOB_TABLE_HIST}</to>
+      <from_nr>0</from_nr>
+      <to_nr>0</to_nr>
+      <enabled>Y</enabled>
+      <evaluation>Y</evaluation>
+      <unconditional>N</unconditional>
+    </hop>
+    <hop>
+      <from>Check ${KFF_LOGGING_STEP_TABLE_HIST}</from>
+      <to>Check ${KFF_LOGGING_REJECT_TABLE_HIST}</to>
+      <from_nr>0</from_nr>
+      <to_nr>0</to_nr>
+      <enabled>Y</enabled>
+      <evaluation>Y</evaluation>
+      <unconditional>N</unconditional>
+    </hop>
+    <hop>
+      <from>Create ${KFF_LOGGING_STEP_TABLE}_HIST</from>
+      <to>Check ${KFF_LOGGING_REJECT_TABLE_HIST}</to>
+      <from_nr>0</from_nr>
+      <to_nr>0</to_nr>
+      <enabled>Y</enabled>
+      <evaluation>Y</evaluation>
+      <unconditional>N</unconditional>
+    </hop>
+    <hop>
+      <from>Check ${KFF_LOGGING_REJECT_TABLE_HIST}</from>
+      <to>Create ${KFF_LOGGING_REJECT_TABLE_HIST}</to>
+      <from_nr>0</from_nr>
+      <to_nr>0</to_nr>
+      <enabled>Y</enabled>
+      <evaluation>N</evaluation>
+      <unconditional>N</unconditional>
+    </hop>
+  </hops>
+  <notepads>
+    <notepad>
+      <note>Current log tables</note>
+      <xloc>41</xloc>
+      <yloc>113</yloc>
+      <width>117</width>
+      <heigth>31</heigth>
+    </notepad>
+    <notepad>
+      <note>History log tables</note>
+      <xloc>41</xloc>
+      <yloc>545</yloc>
+      <width>114</width>
+      <heigth>31</heigth>
+    </notepad>
+  </notepads>
+</job>

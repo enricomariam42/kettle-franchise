@@ -1,0 +1,293 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<job>
+  <name>kjube_batch_logging</name>
+    <description>Generic batch logging logic</description>
+    <extended_description>Generic batch logging logic
+- Generates logging reports
+- Archives logging tables
+- Truncates logging tables</extended_description>
+    <job_version>1.0</job_version>
+    <job_status>2</job_status>
+  <directory>&#47;</directory>
+  <created_user>-</created_user>
+  <created_date>2010&#47;01&#47;17 18:24:43.639</created_date>
+  <modified_user>-</modified_user>
+  <modified_date>2010&#47;01&#47;17 18:24:43.639</modified_date>
+    <parameters>
+        <parameter>
+            <name>KJUBE_APPLICATION</name>
+            <default_value>wholesale</default_value>
+            <description>This mandatory parameter contains the code for the customer application (project, dept., etc.).</description>
+        </parameter>
+        <parameter>
+            <name>KJUBE_CUSTOMER</name>
+            <default_value>fendi</default_value>
+            <description>This mandatory parameter describes the customer code (or name).</description>
+        </parameter>
+        <parameter>
+            <name>KJUBE_LIFECYCLE</name>
+            <default_value>UAI</default_value>
+            <description>This mandatory parameter contains the code for the project lifecycle.  Possible values are: DEV, TST, UAI or PRD</description>
+        </parameter>
+    </parameters>
+  <connection>
+    <name>DWH_DWH</name>
+    <server>${DWH_DWH_HOSTNAME}</server>
+    <type>ORACLE</type>
+    <access>Native</access>
+    <database>${DWH_DWH_DATABASE}</database>
+    <port>${DWH_DWH_PORT}</port>
+    <username>${DWH_DWH_USERNAME}</username>
+    <password>${DWH_DWH_PASSWORD}</password>
+    <servername/>
+    <data_tablespace/>
+    <index_tablespace/>
+    <attributes>
+      <attribute><code>FORCE_IDENTIFIERS_TO_LOWERCASE</code><attribute>N</attribute></attribute>
+      <attribute><code>FORCE_IDENTIFIERS_TO_UPPERCASE</code><attribute>N</attribute></attribute>
+      <attribute><code>IS_CLUSTERED</code><attribute>N</attribute></attribute>
+      <attribute><code>PORT_NUMBER</code><attribute>${DWH_DWH_PORT}</attribute></attribute>
+      <attribute><code>QUOTE_ALL_FIELDS</code><attribute>N</attribute></attribute>
+      <attribute><code>SUPPORTS_BOOLEAN_DATA_TYPE</code><attribute>N</attribute></attribute>
+      <attribute><code>USE_POOLING</code><attribute>N</attribute></attribute>
+    </attributes>
+  </connection>
+  <connection>
+    <name>DWH_LOG</name>
+    <server>${DWH_LOG_HOSTNAME}</server>
+    <type>ORACLE</type>
+    <access>Native</access>
+    <database>${DWH_LOG_DATABASE}</database>
+    <port>${DWH_LOG_PORT}</port>
+    <username>${DWH_LOG_USERNAME}</username>
+    <password>${DWH_LOG_PASSWORD}</password>
+    <servername/>
+    <data_tablespace/>
+    <index_tablespace/>
+    <attributes>
+      <attribute><code>FORCE_IDENTIFIERS_TO_LOWERCASE</code><attribute>N</attribute></attribute>
+      <attribute><code>FORCE_IDENTIFIERS_TO_UPPERCASE</code><attribute>N</attribute></attribute>
+      <attribute><code>IS_CLUSTERED</code><attribute>N</attribute></attribute>
+      <attribute><code>PORT_NUMBER</code><attribute>${DWH_LOG_PORT}</attribute></attribute>
+      <attribute><code>QUOTE_ALL_FIELDS</code><attribute>N</attribute></attribute>
+      <attribute><code>SUPPORTS_BOOLEAN_DATA_TYPE</code><attribute>N</attribute></attribute>
+      <attribute><code>USE_POOLING</code><attribute>N</attribute></attribute>
+    </attributes>
+  </connection>
+  <connection>
+    <name>DWH_ODS</name>
+    <server>${DWH_ODS_HOSTNAME}</server>
+    <type>ORACLE</type>
+    <access>Native</access>
+    <database>${DWH_ODS_DATABASE}</database>
+    <port>${DWH_ODS_PORT}</port>
+    <username>${DWH_ODS_USERNAME}</username>
+    <password>${DWH_ODS_PASSWORD}</password>
+    <servername/>
+    <data_tablespace/>
+    <index_tablespace/>
+    <attributes>
+      <attribute><code>FORCE_IDENTIFIERS_TO_LOWERCASE</code><attribute>N</attribute></attribute>
+      <attribute><code>FORCE_IDENTIFIERS_TO_UPPERCASE</code><attribute>N</attribute></attribute>
+      <attribute><code>IS_CLUSTERED</code><attribute>N</attribute></attribute>
+      <attribute><code>PORT_NUMBER</code><attribute>${DWH_ODS_PORT}</attribute></attribute>
+      <attribute><code>QUOTE_ALL_FIELDS</code><attribute>N</attribute></attribute>
+      <attribute><code>SUPPORTS_BOOLEAN_DATA_TYPE</code><attribute>N</attribute></attribute>
+      <attribute><code>USE_POOLING</code><attribute>N</attribute></attribute>
+    </attributes>
+  </connection>
+  <connection>
+    <name>DWH_STG</name>
+    <server>${DWH_STG_HOSTNAME}</server>
+    <type>ORACLE</type>
+    <access>Native</access>
+    <database>${DWH_STG_DATABASE}</database>
+    <port>${DWH_STG_PORT}</port>
+    <username>${DWH_STG_USERNAME}</username>
+    <password>${DWH_STG_PASSWORD}</password>
+    <servername/>
+    <data_tablespace/>
+    <index_tablespace/>
+    <attributes>
+      <attribute><code>FORCE_IDENTIFIERS_TO_LOWERCASE</code><attribute>N</attribute></attribute>
+      <attribute><code>FORCE_IDENTIFIERS_TO_UPPERCASE</code><attribute>N</attribute></attribute>
+      <attribute><code>IS_CLUSTERED</code><attribute>N</attribute></attribute>
+      <attribute><code>PORT_NUMBER</code><attribute>${DWH_STG_PORT}</attribute></attribute>
+      <attribute><code>QUOTE_ALL_FIELDS</code><attribute>N</attribute></attribute>
+      <attribute><code>SUPPORTS_BOOLEAN_DATA_TYPE</code><attribute>N</attribute></attribute>
+      <attribute><code>USE_POOLING</code><attribute>N</attribute></attribute>
+    </attributes>
+  </connection>
+  <connection>
+    <name>STEALTHXX</name>
+    <server>${STEALTHXX_HOSTNAME}</server>
+    <type>AS&#47;400</type>
+    <access>Native</access>
+    <database>${STEALTHXX_DATABASE}</database>
+    <port>${STEALTH02_PORT}</port>
+    <username>${STEALTHXX_USERNAME}</username>
+    <password>${STEALTHXX_PASSWORD}</password>
+    <servername/>
+    <data_tablespace/>
+    <index_tablespace/>
+    <attributes>
+      <attribute><code>FORCE_IDENTIFIERS_TO_LOWERCASE</code><attribute>N</attribute></attribute>
+      <attribute><code>FORCE_IDENTIFIERS_TO_UPPERCASE</code><attribute>N</attribute></attribute>
+      <attribute><code>IS_CLUSTERED</code><attribute>N</attribute></attribute>
+      <attribute><code>PORT_NUMBER</code><attribute>${STEALTH02_PORT}</attribute></attribute>
+      <attribute><code>QUOTE_ALL_FIELDS</code><attribute>N</attribute></attribute>
+      <attribute><code>SUPPORTS_BOOLEAN_DATA_TYPE</code><attribute>N</attribute></attribute>
+      <attribute><code>USE_POOLING</code><attribute>N</attribute></attribute>
+    </attributes>
+  </connection>
+    <slaveservers>
+         <slaveserver><name>DRP-DWDB</name><hostname>10.89.20.14</hostname><port>8181</port><username>cluster</username><password>Encrypted 2be98afc86aa7f2e4cb1aa265cd86aac8</password><proxy_hostname/><proxy_port/><non_proxy_hosts/><master>Y</master></slaveserver>
+    </slaveservers>
+  <logconnection/>
+  <logtable/>
+  <size_limit_lines/>
+   <use_batchid>Y</use_batchid>
+   <pass_batchid>N</pass_batchid>
+   <use_logfield>Y</use_logfield>
+   <shared_objects_file/>
+  <entries>
+    <entry>
+      <name>START</name>
+      <description>Special entries</description>
+      <type>SPECIAL</type>
+      <start>Y</start>
+      <dummy>N</dummy>
+      <repeat>N</repeat>
+      <schedulerType>0</schedulerType>
+      <intervalSeconds>0</intervalSeconds>
+      <intervalMinutes>60</intervalMinutes>
+      <hour>12</hour>
+      <minutes>0</minutes>
+      <weekDay>1</weekDay>
+      <DayOfMonth>1</DayOfMonth>
+      <parallel>N</parallel>
+      <draw>Y</draw>
+      <nr>0</nr>
+      <xloc>40</xloc>
+      <yloc>40</yloc>
+      </entry>
+    <entry>
+      <name>OK</name>
+      <description>Mail</description>
+      <type>MAIL</type>
+      <server>${MAIL_SMTP_SERVER}</server>
+      <port>${MAIL_SMTP_PORT}</port>
+      <destination>${MAIL_DESTINATION_ADDRESS}</destination>
+      <destinationCc>${MAIL_DESTINATION_CC}</destinationCc>
+      <destinationBCc>${MAIL_DESTINATION_BCC}</destinationBCc>
+      <replyto>${MAIL_SENDER_ADDRESS}</replyto>
+      <replytoname>${MAIL_SENDER_NAME}</replytoname>
+      <subject>${Internal.Job.Name}&#47;${KJUBE_APPLICATION}(${KJUBE_LIFECYCLE})@${KJUBE_CUSTOMER}: Succes</subject>
+      <include_date>Y</include_date>
+      <contact_person>${MAIL_CONTACT_PERSON}</contact_person>
+      <contact_phone>${MAIL_CONTACT_PHONE}</contact_phone>
+      <comment>&lt;b&gt;Job result&lt;&#47;b&gt;&lt;br&gt;
+The following job ended successfully:&lt;br&gt;
+- Job: &lt;b&gt;${Internal.Job.Name}&lt;&#47;b&gt;&lt;br&gt;
+- Application: ${KJUBE_APPLICATION}&lt;br&gt;
+- Environment: ${KJUBE_LIFECYCLE}&lt;br&gt;
+- Customer: ${KJUBE_CUSTOMER}&lt;br&gt;
+&lt;br&gt;
+&lt;b&gt;Attachments&lt;&#47;b&gt;&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;b&gt;Debugging information&lt;&#47;b&gt;&lt;br&gt;
+Job: &lt;br&gt;
+ - Jobname: ${Internal.Job.Name}  &lt;br&gt;
+ - File:  ${Internal.Job.Filename.Name}&lt;br&gt;
+ - Dir: ${Internal.Job.Filename.Directory}&lt;br&gt;
+&lt;br&gt;
+Kettle:&lt;br&gt;
+ - Version: ${Internal.Kettle.Version}&lt;br&gt;
+ - Build date: ${Internal.Kettle.Build.Date}&lt;br&gt; 
+ - Build version: ${Internal.Kettle.Build.Version}&lt;br&gt;
+ &lt;br&gt;
+Java:&lt;br&gt;
+ - Java version: ${java.version}&lt;br&gt;
+ - Java Version: ${java.class.version}  &lt;br&gt;
+ - AWT: ${java.awt.graphicsenv}  &lt;br&gt;
+&lt;br&gt;
+Java class path:&lt;br&gt;
+ - ${java.class.path}&lt;br&gt;
+</comment>
+      <include_files>Y</include_files>
+      <zip_files>N</zip_files>
+      <zip_name>logging</zip_name>
+      <use_auth>N</use_auth>
+      <use_secure_auth>N</use_secure_auth>
+      <auth_user>${MAIL_SMTP_USER} </auth_user>
+      <auth_password>${MAIL_SMTP_PWD}</auth_password>
+      <only_comment>N</only_comment>
+      <use_HTML>Y</use_HTML>
+      <use_Priority>N</use_Priority>
+      <encoding>UTF-8</encoding>
+      <priority>normal</priority>
+      <importance>normal</importance>
+      <secureconnectiontype>SSL</secureconnectiontype>
+      <replyToAddresses>${MAIL_REPLY_TO}</replyToAddresses>
+      <filetypes>        <filetype>GENERAL</filetype>
+        <filetype>LOG</filetype>
+      </filetypes>      <parallel>N</parallel>
+      <draw>Y</draw>
+      <nr>0</nr>
+      <xloc>323</xloc>
+      <yloc>39</yloc>
+      </entry>
+    <entry>
+      <name>kjube-etl-logging</name>
+      <description>Transformation</description>
+      <type>TRANS</type>
+      <filename>${Internal.Job.Filename.Directory}&#47;kjube-etl-logging.ktr</filename>
+      <transname/>
+      <arg_from_previous>N</arg_from_previous>
+      <params_from_previous>N</params_from_previous>
+      <exec_per_row>N</exec_per_row>
+      <clear_rows>N</clear_rows>
+      <clear_files>N</clear_files>
+      <set_logfile>N</set_logfile>
+      <logfile/>
+      <logext/>
+      <add_date>N</add_date>
+      <add_time>N</add_time>
+      <loglevel>Nothing</loglevel>
+      <cluster>N</cluster>
+      <slave_server_name/>
+      <set_append_logfile>N</set_append_logfile>
+      <wait_until_finished>Y</wait_until_finished>
+      <follow_abort_remote>N</follow_abort_remote>
+      <parameters>        <pass_all_parameters>Y</pass_all_parameters>
+      </parameters>      <parallel>N</parallel>
+      <draw>Y</draw>
+      <nr>0</nr>
+      <xloc>172</xloc>
+      <yloc>39</yloc>
+      </entry>
+  </entries>
+  <hops>
+    <hop>
+      <from>START</from>
+      <to>kjube-etl-logging</to>
+      <from_nr>0</from_nr>
+      <to_nr>0</to_nr>
+      <enabled>Y</enabled>
+      <evaluation>Y</evaluation>
+      <unconditional>Y</unconditional>
+    </hop>
+    <hop>
+      <from>kjube-etl-logging</from>
+      <to>OK</to>
+      <from_nr>0</from_nr>
+      <to_nr>0</to_nr>
+      <enabled>Y</enabled>
+      <evaluation>Y</evaluation>
+      <unconditional>N</unconditional>
+    </hop>
+  </hops>
+  <notepads>
+  </notepads>
+</job>
