@@ -16,7 +16,7 @@ Please install JRE in the directory:
 as described in the [StandardsDirectory standard directory guideliness].
 
 = Kettle - PDI =
-You can get the latest stable version(s) of kettle on [http://sourceforge.net/projects/pentaho/ sourceforge], while nightly builds of kettle are available [ftp://download.pentaho.org/ here] for the more courageous amongst you. KFF works with kettle 3.2.0 and above.
+You can get the latest stable version(s) of kettle on [http://sourceforge.net/projects/pentaho/ sourceforge], while nightly builds of kettle are available [http://ci.pentaho.com/ here] for the more courageous amongst you. KFF works with kettle 3.2.0 and above.
 
 Please unzip PDI in the directory:
 {{{
