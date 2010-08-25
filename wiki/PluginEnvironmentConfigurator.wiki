@@ -4,3 +4,12 @@
 The environment configurator allows you read a 'kettle.properties' in any location you want and override the value set in $HOME/.kettle/kettle.properties.
 
 = Details =
+
+
+http://www.kjube.be/images/pic164.png
+
+
+http://www.kjube.be/images/pic165.png
+
+
+http://www.kjube.be/images/pic166.png
