@@ -175,30 +175,39 @@
       <yloc>52</yloc>
       </entry>
     <entry>
-      <name>DUMMY 1</name>
-      <description>Special entries</description>
-      <type>SPECIAL</type>
-      <start>N</start>
-      <dummy>Y</dummy>
-      <repeat>N</repeat>
-      <schedulerType>0</schedulerType>
-      <intervalSeconds>0</intervalSeconds>
-      <intervalMinutes>60</intervalMinutes>
-      <hour>12</hour>
-      <minutes>0</minutes>
-      <weekDay>1</weekDay>
-      <DayOfMonth>1</DayOfMonth>
-      <parallel>N</parallel>
+      <name>Generate D_DATE</name>
+      <description>Transformation</description>
+      <type>TRANS</type>
+      <filename>${Internal.Job.Filename.Directory}&#47;d_date.ktr</filename>
+      <transname/>
+      <arg_from_previous>N</arg_from_previous>
+      <params_from_previous>N</params_from_previous>
+      <exec_per_row>N</exec_per_row>
+      <clear_rows>N</clear_rows>
+      <clear_files>N</clear_files>
+      <set_logfile>N</set_logfile>
+      <logfile/>
+      <logext/>
+      <add_date>N</add_date>
+      <add_time>N</add_time>
+      <loglevel>Nothing</loglevel>
+      <cluster>N</cluster>
+      <slave_server_name/>
+      <set_append_logfile>N</set_append_logfile>
+      <wait_until_finished>Y</wait_until_finished>
+      <follow_abort_remote>N</follow_abort_remote>
+      <parameters>        <pass_all_parameters>Y</pass_all_parameters>
+      </parameters>      <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
       <xloc>174</xloc>
-      <yloc>52</yloc>
+      <yloc>51</yloc>
       </entry>
   </entries>
   <hops>
     <hop>
       <from>START</from>
-      <to>DUMMY 1</to>
+      <to>Generate D_DATE</to>
       <from_nr>0</from_nr>
       <to_nr>0</to_nr>
       <enabled>Y</enabled>
@@ -207,5 +216,18 @@
     </hop>
   </hops>
   <notepads>
+    <notepad>
+      <note>Dimension d_date is just 
+the dimension from the samples
+directory. This is there as a 
+transformation to test the KFF.
+
+Over time this d_date should be 
+replace with a &quot;perfect&quot; date dimension.</note>
+      <xloc>252</xloc>
+      <yloc>35</yloc>
+      <width>239</width>
+      <heigth>157</heigth>
+    </notepad>
   </notepads>
 </job>

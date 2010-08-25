@@ -179,8 +179,8 @@
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>199</xloc>
-      <yloc>336</yloc>
+      <xloc>198</xloc>
+      <yloc>388</yloc>
       </entry>
     <entry>
       <name>kff_logging_tables_mysql</name>
@@ -405,12 +405,14 @@
   </hops>
   <notepads>
     <notepad>
-      <note>You can easily add your own database type.
+      <note>Need to fix Oracle database!
+
+You can easily add your own database type.
 Just use one of the above as a template.</note>
-      <xloc>194</xloc>
-      <yloc>246</yloc>
+      <xloc>198</xloc>
+      <yloc>251</yloc>
       <width>270</width>
-      <heigth>52</heigth>
+      <heigth>94</heigth>
     </notepad>
     <notepad>
       <note>Create logging tables 

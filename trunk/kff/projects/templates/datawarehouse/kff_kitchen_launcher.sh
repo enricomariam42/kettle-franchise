@@ -6,13 +6,17 @@ KFF_APPLICATION=datawarehouse ;
 KFF_BATCH=batch_datawarehouse.kjb
 
 # Quickly switch logging level  #################################################################
+#KFF_LOG_LEVEL=None
 #KFF_LOG_LEVEL=Error
-#KFF_LOG_LEVEL=Basic
-KFF_LOG_LEVEL=Detailed
+KFF_LOG_LEVEL=Basic
+#KFF_LOG_LEVEL=Detailed
+#KFF_LOG_LEVEL=Debug
+#KFF_LOG_LEVEL=Rowlevel
+
 
 # Lifecycle management ##########################################################################
 case $(hostname) in
-"Hannelore")
+"Jaybox")
 KFF_BASE_DIR=/kff ;
 KFF_LIFECYCLE=DEV ; 
 KFF_PDI_VERSION=/kff/software/pdi/3.2.3 ; 

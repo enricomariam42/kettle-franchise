@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <job>
-  <name>kjube_etl_reports</name>
-    <description>Job that creates all required outputs from loggin to append to mail</description>
-    <extended_description>Job that creates all required outputs from loggin to append to mail</extended_description>
-    <job_version>1.0</job_version>
-    <job_status>1</job_status>
+  <name>kjube_backup_etl</name>
+    <description/>
+    <extended_description/>
+    <job_version/>
+    <job_status>0</job_status>
   <directory>&#47;</directory>
   <created_user>-</created_user>
-  <created_date>2010&#47;01&#47;17 12:36:01.732</created_date>
+  <created_date>2009&#47;12&#47;29 14:54:41.532</created_date>
   <modified_user>-</modified_user>
-  <modified_date>2010&#47;01&#47;17 12:36:01.732</modified_date>
+  <modified_date>2009&#47;12&#47;29 14:54:41.532</modified_date>
     <parameters>
     </parameters>
   <connection>
@@ -124,8 +124,8 @@
   </connection>
     <slaveservers>
          <slaveserver><name>CARTE</name><hostname>${CARTE_HOSTNAME}</hostname><port>${CARTE_PORT}</port><username>${CARTE_USER}</username><password>${CARTE_PWD}</password><proxy_hostname>${CARTE_PROXY_HOST}</proxy_hostname><proxy_port>${CARTE_PROXY_PORT}</proxy_port><non_proxy_hosts>${CARTE_NON_PROXY}</non_proxy_hosts><master>Y</master></slaveserver>
-         <slaveserver><name>DWDB1</name><hostname>10.89.0.191</hostname><port>8181</port><username>cluster</username><password>Encrypted 2be98afc86aa7f2e4cb1aa265cd86aac8</password><proxy_hostname>proxy2.fendi.com</proxy_hostname><proxy_port>3128</proxy_port><non_proxy_hosts>10.89.*</non_proxy_hosts><master>N</master></slaveserver>
          <slaveserver><name>DRP-DWDB</name><hostname>10.89.20.14</hostname><port>8181</port><username>cluster</username><password>Encrypted 2be98afc86aa7f2e4cb1aa265cd86aac8</password><proxy_hostname/><proxy_port/><non_proxy_hosts/><master>Y</master></slaveserver>
+         <slaveserver><name>DWDB1</name><hostname>10.89.0.191</hostname><port>8181</port><username>cluster</username><password>Encrypted 2be98afc86aa7f2e4cb1aa265cd86aac8</password><proxy_hostname>proxy2.fendi.com</proxy_hostname><proxy_port>3128</proxy_port><non_proxy_hosts>10.89.*</non_proxy_hosts><master>N</master></slaveserver>
     </slaveservers>
   <logconnection/>
   <logtable/>
@@ -135,6 +135,59 @@
    <use_logfield>Y</use_logfield>
    <shared_objects_file/>
   <entries>
+    <entry>
+      <name>backup etl code</name>
+      <description>Zip file</description>
+      <type>ZIP_FILE</type>
+      <zipfilename/>
+      <compressionrate>3</compressionrate>
+      <ifzipfileexists>1</ifzipfileexists>
+      <wildcard/>
+      <wildcardexclude/>
+      <sourcedirectory/>
+      <movetodirectory/>
+      <afterzip>0</afterzip>
+      <addfiletoresult>Y</addfiletoresult>
+      <isfromprevious>Y</isfromprevious>
+      <createparentfolder>N</createparentfolder>
+      <adddate>N</adddate>
+      <addtime>N</addtime>
+      <SpecifyFormat>N</SpecifyFormat>
+      <date_time_format/>
+      <createMoveToDirectory>N</createMoveToDirectory>
+      <parallel>N</parallel>
+      <draw>Y</draw>
+      <nr>0</nr>
+      <xloc>254</xloc>
+      <yloc>243</yloc>
+      </entry>
+    <entry>
+      <name>Get all jobs, trfs and csv (etl-config) from &#47;etl&#47;</name>
+      <description>Add filenames to result</description>
+      <type>ADD_RESULT_FILENAMES</type>
+      <arg_from_previous>N</arg_from_previous>
+      <include_subfolders>Y</include_subfolders>
+      <delete_all_before>Y</delete_all_before>
+      <fields>
+        <field>
+          <name>${KFF_BASE_DIR}&#47;projects&#47;${KFF_CUSTOMER}&#47;${KFF_APPLICATION}&#47;code&#47;</name>
+          <filemask>.*.kjb$</filemask>
+        </field>
+        <field>
+          <name>${KFF_BASE_DIR}&#47;projects&#47;${KFF_CUSTOMER}&#47;${KFF_APPLICATION}&#47;code&#47;</name>
+          <filemask>.*.csv$</filemask>
+        </field>
+        <field>
+          <name>${KFF_BASE_DIR}&#47;projects&#47;${KFF_CUSTOMER}&#47;${KFF_APPLICATION}&#47;code&#47;</name>
+          <filemask>.*.ktr$</filemask>
+        </field>
+      </fields>
+      <parallel>N</parallel>
+      <draw>Y</draw>
+      <nr>0</nr>
+      <xloc>254</xloc>
+      <yloc>30</yloc>
+      </entry>
     <entry>
       <name>START</name>
       <description>Special entries</description>
@@ -152,15 +205,16 @@
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>116</xloc>
-      <yloc>42</yloc>
+      <xloc>74</xloc>
+      <yloc>30</yloc>
       </entry>
     <entry>
-      <name>kff_logging_reports_jobtrf_details</name>
+      <name>prepare backup filenames</name>
       <description>Transformation</description>
       <type>TRANS</type>
-      <filename>${Internal.Job.Filename.Directory}&#47;kff_logging_reports_jobtrf_details.ktr</filename>
+      <filename>${Internal.Job.Filename.Directory}&#47;kjube_backup_code.ktr</filename>
       <transname/>
+      <directory/>
       <arg_from_previous>N</arg_from_previous>
       <params_from_previous>N</params_from_previous>
       <exec_per_row>N</exec_per_row>
@@ -181,110 +235,78 @@
       </parameters>      <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>262</xloc>
-      <yloc>131</yloc>
+      <xloc>254</xloc>
+      <yloc>117</yloc>
       </entry>
     <entry>
-      <name>kff_logging_reports_rejects</name>
-      <description>Transformation</description>
-      <type>TRANS</type>
-      <filename>${Internal.Job.Filename.Directory}&#47;kff_logging_reports_rejects.ktr</filename>
-      <transname/>
-      <arg_from_previous>N</arg_from_previous>
-      <params_from_previous>N</params_from_previous>
-      <exec_per_row>N</exec_per_row>
-      <clear_rows>N</clear_rows>
-      <clear_files>N</clear_files>
-      <set_logfile>N</set_logfile>
-      <logfile/>
-      <logext/>
-      <add_date>N</add_date>
-      <add_time>N</add_time>
-      <loglevel>Nothing</loglevel>
-      <cluster>N</cluster>
-      <slave_server_name/>
-      <set_append_logfile>N</set_append_logfile>
-      <wait_until_finished>Y</wait_until_finished>
-      <follow_abort_remote>N</follow_abort_remote>
-      <parameters>        <pass_all_parameters>Y</pass_all_parameters>
-      </parameters>      <parallel>N</parallel>
+      <name>Mail back-up file to administrator</name>
+      <description>Mail</description>
+      <type>MAIL</type>
+      <server>${MAIL_SMTP_SERVER}</server>
+      <port>${MAIL_SMTP_PORT}</port>
+      <destination>${MAIL_DESTINATION_ADDRESS}</destination>
+      <destinationCc>${MAIL_DESTINATION_CC}</destinationCc>
+      <destinationBCc>${MAIL_DESTINATION_BCC}</destinationBCc>
+      <replyto>${MAIL_SENDER_ADDRESS}</replyto>
+      <replytoname>${MAIL_SENDER_NAME}</replytoname>
+      <subject>${KJUBE_BATCH} in ${KJUBE_APPLICATION} (${KJUBE_LIFECYCLE}) @ ${KJUBE_CUSTOMER} - ETL-code backup</subject>
+      <include_date>Y</include_date>
+      <contact_person>${MAIL_CONTACT_PERSON}</contact_person>
+      <contact_phone>${MAIL_CONTACT_PHONE}</contact_phone>
+      <comment>Hello,&lt;br&gt;
+Please find attached the ETL-code back-up for:&lt;br&gt;
+- Batch proces: ${KJUBE_BATCH}&lt;br&gt;
+- Batch id: ${KJUBE_BATCH_ID}&lt;br&gt;
+- Batch date: ${KJUBE_BATCH_DATE}&lt;br&gt;
+&lt;br&gt;
+Environment:&lt;br&gt;
+- Application: ${KJUBE_APPLICATION}&lt;br&gt;
+- Environment: ${KJUBE_LIFECYCLE}&lt;br&gt;
+- Customer: ${KJUBE_CUSTOMER}&lt;br&gt;
+&lt;br&gt;
+Regards,&lt;br&gt;
+${MAIL_SENDER_NAME}&lt;br&gt;</comment>
+      <include_files>Y</include_files>
+      <zip_files>N</zip_files>
+      <zip_name>logging</zip_name>
+      <use_auth>N</use_auth>
+      <use_secure_auth>N</use_secure_auth>
+      <auth_user>${MAIL_SMTP_USER} </auth_user>
+      <auth_password>${MAIL_SMTP_PWD}</auth_password>
+      <only_comment>Y</only_comment>
+      <use_HTML>Y</use_HTML>
+      <use_Priority>N</use_Priority>
+      <encoding>UTF-8</encoding>
+      <priority>normal</priority>
+      <importance>normal</importance>
+      <secureconnectiontype>SSL</secureconnectiontype>
+      <replyToAddresses>${MAIL_REPLY_TO}</replyToAddresses>
+      <filetypes>        <filetype>GENERAL</filetype>
+      </filetypes>      <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>266</xloc>
-      <yloc>319</yloc>
+      <xloc>253</xloc>
+      <yloc>332</yloc>
       </entry>
     <entry>
-      <name>kff_logging_reports_error_details</name>
-      <description>Transformation</description>
-      <type>TRANS</type>
-      <filename>${Internal.Job.Filename.Directory}&#47;kff_logging_reports_error_details.ktr</filename>
-      <transname/>
-      <arg_from_previous>N</arg_from_previous>
-      <params_from_previous>N</params_from_previous>
-      <exec_per_row>N</exec_per_row>
-      <clear_rows>N</clear_rows>
-      <clear_files>N</clear_files>
-      <set_logfile>N</set_logfile>
-      <logfile/>
-      <logext/>
-      <add_date>N</add_date>
-      <add_time>N</add_time>
-      <loglevel>Nothing</loglevel>
-      <cluster>N</cluster>
-      <slave_server_name/>
-      <set_append_logfile>N</set_append_logfile>
-      <wait_until_finished>Y</wait_until_finished>
-      <follow_abort_remote>N</follow_abort_remote>
-      <parameters>        <pass_all_parameters>Y</pass_all_parameters>
-      </parameters>      <parallel>N</parallel>
+      <name>Delete filenames from result 1</name>
+      <description>Delete filenames from result</description>
+      <type>DELETE_RESULT_FILENAMES</type>
+      <foldername/>
+      <specify_wildcard>N</specify_wildcard>
+      <wildcard/>
+      <wildcardexclude/>
+      <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>263</xloc>
-      <yloc>220</yloc>
-      </entry>
-    <entry>
-      <name>kff_logging_reports_batch_result</name>
-      <description>Transformation</description>
-      <type>TRANS</type>
-      <filename>${Internal.Job.Filename.Directory}&#47;kff_logging_reports_batch_result.ktr</filename>
-      <transname/>
-      <arg_from_previous>N</arg_from_previous>
-      <params_from_previous>N</params_from_previous>
-      <exec_per_row>N</exec_per_row>
-      <clear_rows>N</clear_rows>
-      <clear_files>N</clear_files>
-      <set_logfile>N</set_logfile>
-      <logfile/>
-      <logext/>
-      <add_date>N</add_date>
-      <add_time>N</add_time>
-      <loglevel>Nothing</loglevel>
-      <cluster>N</cluster>
-      <slave_server_name/>
-      <set_append_logfile>N</set_append_logfile>
-      <wait_until_finished>Y</wait_until_finished>
-      <follow_abort_remote>N</follow_abort_remote>
-      <parameters>        <pass_all_parameters>Y</pass_all_parameters>
-      </parameters>      <parallel>N</parallel>
-      <draw>Y</draw>
-      <nr>0</nr>
-      <xloc>261</xloc>
-      <yloc>42</yloc>
+      <xloc>254</xloc>
+      <yloc>180</yloc>
       </entry>
   </entries>
   <hops>
     <hop>
-      <from>kff_logging_reports_jobtrf_details</from>
-      <to>kff_logging_reports_error_details</to>
-      <from_nr>0</from_nr>
-      <to_nr>0</to_nr>
-      <enabled>Y</enabled>
-      <evaluation>Y</evaluation>
-      <unconditional>Y</unconditional>
-    </hop>
-    <hop>
       <from>START</from>
-      <to>kff_logging_reports_batch_result</to>
+      <to>Get all jobs, trfs and csv (etl-config) from &#47;etl&#47;</to>
       <from_nr>0</from_nr>
       <to_nr>0</to_nr>
       <enabled>Y</enabled>
@@ -292,25 +314,42 @@
       <unconditional>Y</unconditional>
     </hop>
     <hop>
-      <from>kff_logging_reports_batch_result</from>
-      <to>kff_logging_reports_jobtrf_details</to>
+      <from>Get all jobs, trfs and csv (etl-config) from &#47;etl&#47;</from>
+      <to>prepare backup filenames</to>
       <from_nr>0</from_nr>
       <to_nr>0</to_nr>
       <enabled>Y</enabled>
       <evaluation>Y</evaluation>
-      <unconditional>Y</unconditional>
+      <unconditional>N</unconditional>
+    </hop>
+    <hop>
+      <from>backup etl code</from>
+      <to>Mail back-up file to administrator</to>
+      <from_nr>0</from_nr>
+      <to_nr>0</to_nr>
+      <enabled>N</enabled>
+      <evaluation>Y</evaluation>
+      <unconditional>N</unconditional>
+    </hop>
+    <hop>
+      <from>prepare backup filenames</from>
+      <to>Delete filenames from result 1</to>
+      <from_nr>0</from_nr>
+      <to_nr>0</to_nr>
+      <enabled>Y</enabled>
+      <evaluation>Y</evaluation>
+      <unconditional>N</unconditional>
+    </hop>
+    <hop>
+      <from>Delete filenames from result 1</from>
+      <to>backup etl code</to>
+      <from_nr>0</from_nr>
+      <to_nr>0</to_nr>
+      <enabled>Y</enabled>
+      <evaluation>Y</evaluation>
+      <unconditional>N</unconditional>
     </hop>
   </hops>
   <notepads>
-    <notepad>
-      <note>Temporarily disabled.
-Waiting for rejects step
-to be included in 
-kff-plugins.jar</note>
-      <xloc>361</xloc>
-      <yloc>313</yloc>
-      <width>142</width>
-      <heigth>94</heigth>
-    </notepad>
   </notepads>
 </job>
