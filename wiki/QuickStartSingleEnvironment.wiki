@@ -1,0 +1,8 @@
+#summary How to get started with KFF, running one single environment
+
+= Introduction =
+This quick start guide shows you how to get started with KFF, installing, configuring and launching it for just one single environment.
+
+
+= Details =
+Coming up ...
