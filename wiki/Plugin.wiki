@@ -1,0 +1,20 @@
+#summary kettle plug-ins
+
+= Introduction =
+This page documents the KFF plugins for kettle.
+
+= "Install" the jar file =
+All KFF plugins are available as a [http://code.google.com/p/kettle-franchise/downloads/detail?name=kff-plugins.jar&can=2&q= jar file] which you need to drop into the libext directory of your kettle installation.
+
+http://www.kjube.be/images/pic160.png
+
+= Environment variables =
+In order for the plugin to work correctly in versions before PDI 4.0, you need to set two environment variables:
+ * GDK_NATIVE_WINDOWS=1
+ * KETTLE_PLUGIN_PACKAGES=be.kjube
+
+In case you use the KFF start-up script you needn't worry about these variables since KFF includes it's own start-up script [kff_spoon_launcher.sh] (only for Linux right now) which set these variables.
+
+= Plug-in's= 
+The following plug-in's have been released:
+ * 
