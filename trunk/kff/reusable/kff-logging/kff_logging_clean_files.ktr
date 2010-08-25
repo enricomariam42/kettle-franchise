@@ -1,29 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <transformation>
   <info>
-    <name>get_batch_id</name>
-    <description>Transformation to get batch id and batch date</description>
-    <extended_description>Transformation to set batch id and batch date
-
-Review
-- To be integrated in kJube batch ID manager</extended_description>
-    <trans_version>1.0</trans_version>
-    <trans_status>1</trans_status>
+    <name>kff_logging_clean_files</name>
+    <description/>
+    <extended_description/>
+    <trans_version/>
     <directory>&#47;</directory>
     <parameters>
     </parameters>
     <log>
-      <read>Get batch_date</read>
-      <write>Set Variables</write>
-      <input>Get batch_date</input>
+      <read/>
+      <write/>
+      <input/>
       <output/>
       <update/>
       <rejected/>
-      <connection>DWH_LOG</connection>
-      <table>TSDWHLOGTRNSF</table>
+      <connection/>
+      <table/>
       <step_performance_table/>
-      <use_batchid>N</use_batchid>
-      <use_logfield>Y</use_logfield>
+      <use_batchid>Y</use_batchid>
+      <use_logfield>N</use_logfield>
       <size_limit_lines/>
     </log>
     <maxdate>
@@ -48,30 +44,19 @@ Review
     <partitionschemas>
     </partitionschemas>
     <slaveservers>
-         <slaveserver><name>DWDB1</name><hostname>10.89.0.191</hostname><port>8181</port><username>cluster</username><password>Encrypted 2be98afc86aa7f2e4cb1aa265cd86aac8</password><proxy_hostname>proxy2.fendi.com</proxy_hostname><proxy_port>3128</proxy_port><non_proxy_hosts>10.89.*</non_proxy_hosts><master>N</master></slaveserver>
-         <slaveserver><name>DRP-DWDB</name><hostname>10.89.20.14</hostname><port>8181</port><username>cluster</username><password>Encrypted 2be98afc86aa7f2e4cb1aa265cd86aac8</password><proxy_hostname/><proxy_port/><non_proxy_hosts/><master>Y</master></slaveserver>
+         <slaveserver><name>CARTE</name><hostname>${CARTE_HOSTNAME}</hostname><port>${CARTE_PORT}</port><username>${CARTE_USER}</username><password>${CARTE_PWD}</password><proxy_hostname>${CARTE_PROXY_HOST}</proxy_hostname><proxy_port>${CARTE_PROXY_PORT}</proxy_port><non_proxy_hosts>${CARTE_NON_PROXY}</non_proxy_hosts><master>Y</master></slaveserver>
     </slaveservers>
     <clusterschemas>
-        <clusterschema>
-          <name>DRP-DWDB</name>
-          <base_port>8181</base_port>
-          <sockets_buffer_size>2000</sockets_buffer_size>
-          <sockets_flush_interval>5000</sockets_flush_interval>
-          <sockets_compressed>Y</sockets_compressed>
-          <dynamic>N</dynamic>
-          <slaveservers>
-          </slaveservers>
-        </clusterschema>
     </clusterschemas>
   <modified_user>-</modified_user>
-  <modified_date>2009&#47;12&#47;30 21:51:08.879</modified_date>
+  <modified_date>2010&#47;08&#47;25 18:12:49.411</modified_date>
   </info>
   <notepads>
   </notepads>
   <connection>
     <name>DWH_DWH</name>
     <server>${DWH_DWH_HOSTNAME}</server>
-    <type>ORACLE</type>
+    <type>MYSQL</type>
     <access>Native</access>
     <database>${DWH_DWH_DATABASE}</database>
     <port>${DWH_DWH_PORT}</port>
@@ -86,14 +71,14 @@ Review
       <attribute><code>IS_CLUSTERED</code><attribute>N</attribute></attribute>
       <attribute><code>PORT_NUMBER</code><attribute>${DWH_DWH_PORT}</attribute></attribute>
       <attribute><code>QUOTE_ALL_FIELDS</code><attribute>N</attribute></attribute>
-      <attribute><code>SQL_CONNECT</code><attribute>alter session set NLS_SORT=ITALIAN;</attribute></attribute>
+      <attribute><code>STREAM_RESULTS</code><attribute>Y</attribute></attribute>
       <attribute><code>USE_POOLING</code><attribute>N</attribute></attribute>
     </attributes>
   </connection>
   <connection>
     <name>DWH_LOG</name>
     <server>${DWH_LOG_HOSTNAME}</server>
-    <type>ORACLE</type>
+    <type>MYSQL</type>
     <access>Native</access>
     <database>${DWH_LOG_DATABASE}</database>
     <port>${DWH_LOG_PORT}</port>
@@ -108,14 +93,14 @@ Review
       <attribute><code>IS_CLUSTERED</code><attribute>N</attribute></attribute>
       <attribute><code>PORT_NUMBER</code><attribute>${DWH_LOG_PORT}</attribute></attribute>
       <attribute><code>QUOTE_ALL_FIELDS</code><attribute>N</attribute></attribute>
-      <attribute><code>SQL_CONNECT</code><attribute>alter session set NLS_SORT=ITALIAN;</attribute></attribute>
+      <attribute><code>STREAM_RESULTS</code><attribute>Y</attribute></attribute>
       <attribute><code>USE_POOLING</code><attribute>N</attribute></attribute>
     </attributes>
   </connection>
   <connection>
     <name>DWH_ODS</name>
     <server>${DWH_ODS_HOSTNAME}</server>
-    <type>ORACLE</type>
+    <type>MYSQL</type>
     <access>Native</access>
     <database>${DWH_ODS_DATABASE}</database>
     <port>${DWH_ODS_PORT}</port>
@@ -130,14 +115,14 @@ Review
       <attribute><code>IS_CLUSTERED</code><attribute>N</attribute></attribute>
       <attribute><code>PORT_NUMBER</code><attribute>${DWH_ODS_PORT}</attribute></attribute>
       <attribute><code>QUOTE_ALL_FIELDS</code><attribute>N</attribute></attribute>
-      <attribute><code>SQL_CONNECT</code><attribute>alter session set NLS_SORT=ITALIAN;</attribute></attribute>
+      <attribute><code>STREAM_RESULTS</code><attribute>Y</attribute></attribute>
       <attribute><code>USE_POOLING</code><attribute>N</attribute></attribute>
     </attributes>
   </connection>
   <connection>
     <name>DWH_STG</name>
     <server>${DWH_STG_HOSTNAME}</server>
-    <type>ORACLE</type>
+    <type>MYSQL</type>
     <access>Native</access>
     <database>${DWH_STG_DATABASE}</database>
     <port>${DWH_STG_PORT}</port>
@@ -152,37 +137,15 @@ Review
       <attribute><code>IS_CLUSTERED</code><attribute>N</attribute></attribute>
       <attribute><code>PORT_NUMBER</code><attribute>${DWH_STG_PORT}</attribute></attribute>
       <attribute><code>QUOTE_ALL_FIELDS</code><attribute>N</attribute></attribute>
-      <attribute><code>SQL_CONNECT</code><attribute>alter session set NLS_SORT=ITALIAN;</attribute></attribute>
-      <attribute><code>USE_POOLING</code><attribute>N</attribute></attribute>
-    </attributes>
-  </connection>
-  <connection>
-    <name>STEALTHXX</name>
-    <server>${STEALTHXX_HOSTNAME}</server>
-    <type>AS&#47;400</type>
-    <access>Native</access>
-    <database>${STEALTHXX_DATABASE}</database>
-    <port>${STEALTH02_PORT}</port>
-    <username>${STEALTHXX_USERNAME}</username>
-    <password>${STEALTHXX_PASSWORD}</password>
-    <servername/>
-    <data_tablespace/>
-    <index_tablespace/>
-    <attributes>
-      <attribute><code>FORCE_IDENTIFIERS_TO_LOWERCASE</code><attribute>N</attribute></attribute>
-      <attribute><code>FORCE_IDENTIFIERS_TO_UPPERCASE</code><attribute>N</attribute></attribute>
-      <attribute><code>IS_CLUSTERED</code><attribute>N</attribute></attribute>
-      <attribute><code>PORT_NUMBER</code><attribute>${STEALTH02_PORT}</attribute></attribute>
-      <attribute><code>QUOTE_ALL_FIELDS</code><attribute>N</attribute></attribute>
-      <attribute><code>SUPPORTS_BOOLEAN_DATA_TYPE</code><attribute>N</attribute></attribute>
+      <attribute><code>STREAM_RESULTS</code><attribute>Y</attribute></attribute>
       <attribute><code>USE_POOLING</code><attribute>N</attribute></attribute>
     </attributes>
   </connection>
   <order>
-  <hop> <from>Select values</from><to>Set Variables</to><enabled>Y</enabled> </hop>  <hop> <from>Get batch_date</from><to>Select values</to><enabled>Y</enabled> </hop>  </order>
+  <hop> <from>Get files from result</from><to>GetSystemDate</to><enabled>Y</enabled> </hop>  <hop> <from>GetSystemDate</from><to>MyTODAY-60</to><enabled>Y</enabled> </hop>  <hop> <from>MyTODAY-60</from><to>Filter rows</to><enabled>Y</enabled> </hop>  <hop> <from>Filter rows</from><to>Set files in result</to><enabled>Y</enabled> </hop>  </order>
   <step>
-    <name>Get batch_date</name>
-    <type>TableInput</type>
+    <name>Filter rows</name>
+    <type>FilterRows</type>
     <description/>
     <distribute>Y</distribute>
     <copies>1</copies>
@@ -190,31 +153,27 @@ Review
            <method>none</method>
            <schema_name/>
            </partitioning>
-    <connection>DWH_LOG</connection>
-    <sql>SELECT 
- NVL(id_job,0) as KJUBE_BATCH_ID,
- jobname as KJUBE_BATCH,
- logdate as KJUBE_BATCH_DATE
-from
- ${KJUBE_LOGGING_BATCH_TABLE}
-WHERE 
- id_job = (select max(id_job) from ${KJUBE_LOGGING_BATCH_TABLE})</sql>
-    <limit>0</limit>
-    <lookup/>
-    <execute_each_row>N</execute_each_row>
-    <variables_active>Y</variables_active>
-    <lazy_conversion_active>N</lazy_conversion_active>
+<send_true_to/>
+<send_false_to/>
+    <compare>
+<condition>
+ <negated>N</negated>
+ <leftvalue>timestamp</leftvalue>
+ <function>&lt;</function>
+ <rightvalue>TODAY-2M</rightvalue>
+ </condition>
+    </compare>
      <cluster_schema/>
  <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>56</xloc>
-      <yloc>40</yloc>
+      <xloc>436</xloc>
+      <yloc>66</yloc>
       <draw>Y</draw>
       </GUI>
     </step>
 
   <step>
-    <name>Select values</name>
-    <type>SelectValues</type>
+    <name>Get files from result</name>
+    <type>FilesFromResult</type>
     <description/>
     <distribute>Y</distribute>
     <copies>1</copies>
@@ -222,38 +181,17 @@ WHERE
            <method>none</method>
            <schema_name/>
            </partitioning>
-    <fields>        <select_unspecified>N</select_unspecified>
-      <meta>        <name>KJUBE_BATCH_ID</name>
-        <rename>KJUBE_BATCH_ID</rename>
-        <type>Integer</type>
-        <length>6</length>
-        <precision>-2</precision>
-        <conversion_mask>000000</conversion_mask>
-        <decimal_symbol/>
-        <grouping_symbol/>
-        <currency_symbol/>
-        <storage_type/>
-      </meta>      <meta>        <name>KJUBE_BATCH_DATE</name>
-        <rename>KJUBE_BATCH_DATE</rename>
-        <type>String</type>
-        <length>15</length>
-        <precision>-2</precision>
-        <conversion_mask>yyyyMMdd-HHmmss</conversion_mask>
-        <decimal_symbol/>
-        <grouping_symbol/>
-        <currency_symbol/>
-        <storage_type/>
-      </meta>    </fields>     <cluster_schema/>
+     <cluster_schema/>
  <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>186</xloc>
-      <yloc>40</yloc>
+      <xloc>109</xloc>
+      <yloc>66</yloc>
       <draw>Y</draw>
       </GUI>
     </step>
 
   <step>
-    <name>Set Variables</name>
-    <type>SetVariable</type>
+    <name>GetSystemDate</name>
+    <type>SystemInfo</type>
     <description/>
     <distribute>Y</distribute>
     <copies>1</copies>
@@ -263,29 +201,80 @@ WHERE
            </partitioning>
     <fields>
       <field>
-        <field_name>KJUBE_BATCH_ID</field_name>
-        <variable_name>KJUBE_BATCH_ID</variable_name>
-        <variable_type>ROOT_JOB</variable_type>
-        <default_value>000000</default_value>
-        </field>
-      <field>
-        <field_name>KJUBE_BATCH_DATE</field_name>
-        <variable_name>KJUBE_BATCH_DATE</variable_name>
-        <variable_type>ROOT_JOB</variable_type>
-        <default_value>00000000-000000</default_value>
-        </field>
-      <field>
-        <field_name>KJUBE_BATCH</field_name>
-        <variable_name>KJUBE_BATCH</variable_name>
-        <variable_type>JVM</variable_type>
-        <default_value>no_batch</default_value>
+        <name>todaymidnight</name>
+        <type>today start</type>
         </field>
       </fields>
-    <use_formatting>Y</use_formatting>
      <cluster_schema/>
  <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>299</xloc>
-      <yloc>40</yloc>
+      <xloc>229</xloc>
+      <yloc>66</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>MyTODAY-60</name>
+    <type>Calculator</type>
+    <description/>
+    <distribute>Y</distribute>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+       <calculation><field_name>2MONTHS</field_name>
+<calc_type>CONSTANT</calc_type>
+<field_a>-60</field_a>
+<field_b/>
+<field_c/>
+<value_type>Number</value_type>
+<value_length>4</value_length>
+<value_precision>-1</value_precision>
+<remove>Y</remove>
+<conversion_mask>#</conversion_mask>
+<decimal_symbol/>
+<grouping_symbol/>
+<currency_symbol/>
+</calculation>
+       <calculation><field_name>MyTODAY-2M</field_name>
+<calc_type>ADD_DAYS</calc_type>
+<field_a>todaymidnight</field_a>
+<field_b>2MONTHS</field_b>
+<field_c/>
+<value_type>Date</value_type>
+<value_length>-1</value_length>
+<value_precision>-1</value_precision>
+<remove>N</remove>
+<conversion_mask/>
+<decimal_symbol/>
+<grouping_symbol/>
+<currency_symbol/>
+</calculation>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>335</xloc>
+      <yloc>65</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>Set files in result</name>
+    <type>FilesToResult</type>
+    <description/>
+    <distribute>Y</distribute>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+<filename_field/>
+<file_type>GENERAL</file_type>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>540</xloc>
+      <yloc>65</yloc>
       <draw>Y</draw>
       </GUI>
     </step>
