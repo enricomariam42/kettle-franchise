@@ -52,6 +52,29 @@
   <modified_date>2010&#47;08&#47;18 10:46:20.389</modified_date>
   </info>
   <notepads>
+    <notepad>
+      <note>Don&apos;t change the order of the appends !!!</note>
+      <xloc>200</xloc>
+      <yloc>30</yloc>
+      <width>251</width>
+      <heigth>31</heigth>
+    </notepad>
+    <notepad>
+      <note>Could use Twitter here
+for simplification.</note>
+      <xloc>789</xloc>
+      <yloc>245</yloc>
+      <width>141</width>
+      <heigth>52</heigth>
+    </notepad>
+    <notepad>
+      <note>Need to add process 
+to grease up recipient.</note>
+      <xloc>491</xloc>
+      <yloc>173</yloc>
+      <width>140</width>
+      <heigth>52</heigth>
+    </notepad>
   </notepads>
   <connection>
     <name>DWH_DWH</name>
@@ -147,7 +170,7 @@
     <type>AS&#47;400</type>
     <access>Native</access>
     <database>KITCHEN</database>
-    <port/>
+    <port>-1</port>
     <username>the_cook</username>
     <password>Encrypted 2be98afc86aa7f2e4cb79be75ce82aac8</password>
     <servername/>
@@ -157,14 +180,15 @@
       <attribute><code>FORCE_IDENTIFIERS_TO_LOWERCASE</code><attribute>N</attribute></attribute>
       <attribute><code>FORCE_IDENTIFIERS_TO_UPPERCASE</code><attribute>N</attribute></attribute>
       <attribute><code>IS_CLUSTERED</code><attribute>N</attribute></attribute>
+      <attribute><code>PORT_NUMBER</code><attribute>-1</attribute></attribute>
       <attribute><code>QUOTE_ALL_FIELDS</code><attribute>N</attribute></attribute>
       <attribute><code>USE_POOLING</code><attribute>N</attribute></attribute>
     </attributes>
   </connection>
   <order>
-  </order>
+  <hop> <from>180gr flour</from><to>FlourSugarMix</to><enabled>Y</enabled> </hop>  <hop> <from>170gr sugar</from><to>FlourSugarMix</to><enabled>Y</enabled> </hop>  <hop> <from>150gr butter</from><to>MeltButter</to><enabled>Y</enabled> </hop>  <hop> <from>FlourSugarMix</from><to>FlourSuggarButterMix</to><enabled>Y</enabled> </hop>  <hop> <from>MeltButter</from><to>Wait </to><enabled>Y</enabled> </hop>  <hop> <from>Wait </from><to>FlourSuggarButterMix</to><enabled>Y</enabled> </hop>  <hop> <from>3 eggs</from><to>ViolentlyBreakEggs</to><enabled>Y</enabled> </hop>  <hop> <from>ViolentlyBreakEggs</from><to>BeatEggs</to><enabled>Y</enabled> </hop>  <hop> <from>BeatEggs</from><to>FlourSuggarButterEggsMix</to><enabled>Y</enabled> </hop>  <hop> <from>FlourSuggarButterMix</from><to>FlourSuggarButterEggsMix</to><enabled>Y</enabled> </hop>  <hop> <from>FlourSuggarButterEggsMix</from><to>InsertIntoRecipient</to><enabled>Y</enabled> </hop>  <hop> <from>InsertIntoRecipient</from><to>SendRecipientToOven</to><enabled>Y</enabled> </hop>  <hop> <from>SetOvenTemperature</from><to>SendRecipientToOven</to><enabled>Y</enabled> </hop>  <hop> <from>InsertIntoRecipient</from><to>ForWholeCakeOnly</to><enabled>Y</enabled> </hop>  <hop> <from>ForWholeCakeOnly</from><to>GetTime</to><enabled>Y</enabled> </hop>  <hop> <from>GetTime</from><to>Wait45Min</to><enabled>Y</enabled> </hop>  <hop> <from>Wait45Min</from><to>NotifyKitchenResonsible</to><enabled>Y</enabled> </hop>  <hop> <from>Wait45Min</from><to>GetCakeOutOfTheOven</to><enabled>Y</enabled> </hop>  <hop> <from>GetCakeOutOfTheOven</from><to>CutCake</to><enabled>Y</enabled> </hop>  <hop> <from>PentahoCommunityMembersList</from><to>CountRequiredPieces</to><enabled>Y</enabled> </hop>  <hop> <from>CountRequiredPieces</from><to>CutCake</to><enabled>Y</enabled> </hop>  <hop> <from>PentahoCommunityMembersList</from><to>Invite</to><enabled>Y</enabled> </hop>  </order>
   <step>
-    <name>180gr flour</name>
+    <name>150gr butter</name>
     <type>TableInput</type>
     <description/>
     <distribute>Y</distribute>
@@ -174,9 +198,11 @@
            <schema_name/>
            </partitioning>
     <connection>KITCHEN</connection>
-    <sql>SELECT FLOUR 
-FROM KITCHEN_CLOSET1_BOTTOM_SHELF  
-WHERE GRAM = 180</sql>
+    <sql>SELECT BUTTER 
+FROM FRIDGE 
+WHERE TYPE = &apos;Extra Greasy&apos;
+GROUP BY WEIGHT
+HAVING SUM(WEIGHT) = 150</sql>
     <limit>0</limit>
     <lookup/>
     <execute_each_row>N</execute_each_row>
@@ -184,8 +210,8 @@ WHERE GRAM = 180</sql>
     <lazy_conversion_active>N</lazy_conversion_active>
      <cluster_schema/>
  <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>91</xloc>
-      <yloc>53</yloc>
+      <xloc>44</xloc>
+      <yloc>174</yloc>
       <draw>Y</draw>
       </GUI>
     </step>
@@ -202,8 +228,11 @@ WHERE GRAM = 180</sql>
            </partitioning>
     <connection>KITCHEN</connection>
     <sql>SELECT SUGAR 
-FROM KITCHEN_CLOSET1_TOP_SHELF 
-WHERE GRAM = 170</sql>
+FROM KITCHEN_CLOSET1_TOP_SHELF  
+WHERE TYPE = &apos;Fine&apos;
+GROUP BY WEIGHT
+HAVING SUM(WEIGHT) = 170
+</sql>
     <limit>0</limit>
     <lookup/>
     <execute_each_row>N</execute_each_row>
@@ -211,14 +240,14 @@ WHERE GRAM = 170</sql>
     <lazy_conversion_active>N</lazy_conversion_active>
      <cluster_schema/>
  <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>93</xloc>
-      <yloc>138</yloc>
+      <xloc>42</xloc>
+      <yloc>104</yloc>
       <draw>Y</draw>
       </GUI>
     </step>
 
   <step>
-    <name>150gr butter</name>
+    <name>180gr flour</name>
     <type>TableInput</type>
     <description/>
     <distribute>Y</distribute>
@@ -228,9 +257,12 @@ WHERE GRAM = 170</sql>
            <schema_name/>
            </partitioning>
     <connection>KITCHEN</connection>
-    <sql>SELECT BUTTER 
-FROM FRIDGE 
-WHERE GRAM = 150</sql>
+    <sql>SELECT FLOUR 
+FROM KITCHEN_CLOSET1_BOTTOM_SHELF  
+WHERE TYPE = &apos;T45&apos;
+GROUP BY WEIGHT
+HAVING (SUM)WEIGHT = 180
+</sql>
     <limit>0</limit>
     <lookup/>
     <execute_each_row>N</execute_each_row>
@@ -238,8 +270,8 @@ WHERE GRAM = 150</sql>
     <lazy_conversion_active>N</lazy_conversion_active>
      <cluster_schema/>
  <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>94</xloc>
-      <yloc>218</yloc>
+      <xloc>39</xloc>
+      <yloc>32</yloc>
       <draw>Y</draw>
       </GUI>
     </step>
@@ -255,9 +287,10 @@ WHERE GRAM = 150</sql>
            <schema_name/>
            </partitioning>
     <connection>KITCHEN</connection>
-    <sql>SELECT BUTTER 
-FROM FRIDGE 
-WHERE GRAM = 150</sql>
+    <sql>SELECT EGGS
+FROM FRIDGE
+GROUP BY EGGS
+HAVING COUNT(EGGS)=3</sql>
     <limit>0</limit>
     <lookup/>
     <execute_each_row>N</execute_each_row>
@@ -265,8 +298,511 @@ WHERE GRAM = 150</sql>
     <lazy_conversion_active>N</lazy_conversion_active>
      <cluster_schema/>
  <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>94</xloc>
-      <yloc>296</yloc>
+      <xloc>47</xloc>
+      <yloc>253</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>BeatEggs</name>
+    <type>Flattener</type>
+    <description/>
+    <distribute>Y</distribute>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+      <field_name/>
+      <fields>
+        </fields>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>276</xloc>
+      <yloc>250</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>CountRequiredPieces</name>
+    <type>GroupBy</type>
+    <description/>
+    <distribute>Y</distribute>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+      <all_rows>N</all_rows>
+      <ignore_aggregate>N</ignore_aggregate>
+      <field_ignore/>
+      <directory>%%java.io.tmpdir%%</directory>
+      <prefix>grp</prefix>
+      <add_linenr>N</add_linenr>
+      <linenr_fieldname/>
+      <give_back_row>N</give_back_row>
+      <group>
+      </group>
+      <fields>
+      </fields>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>783</xloc>
+      <yloc>394</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>CutCake</name>
+    <type>StringCut</type>
+    <description/>
+    <distribute>Y</distribute>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <fields>
+    </fields>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>786</xloc>
+      <yloc>478</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>FlourSugarMix</name>
+    <type>Append</type>
+    <description/>
+    <distribute>Y</distribute>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+<head_name>180gr flour</head_name>
+<tail_name>170gr sugar</tail_name>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>207</xloc>
+      <yloc>103</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>FlourSuggarButterEggsMix</name>
+    <type>Append</type>
+    <description/>
+    <distribute>Y</distribute>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+<head_name>FlourSuggarButterMix</head_name>
+<tail_name>BeatEggs</tail_name>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>388</xloc>
+      <yloc>249</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>FlourSuggarButterMix</name>
+    <type>Append</type>
+    <description/>
+    <distribute>Y</distribute>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+<head_name>FlourSugarMix</head_name>
+<tail_name>MeltButter</tail_name>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>386</xloc>
+      <yloc>173</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>ForWholeCakeOnly</name>
+    <type>BlockingStep</type>
+    <description/>
+    <distribute>Y</distribute>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+      <pass_all_rows>N</pass_all_rows>
+      <directory>%%java.io.tmpdir%%</directory>
+      <prefix>block</prefix>
+      <cache_size>5000</cache_size>
+      <compress>Y</compress>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>535</xloc>
+      <yloc>326</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>GetCakeOutOfTheOven</name>
+    <type>WebServiceLookup</type>
+    <description/>
+    <distribute>Y</distribute>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <wsURL/>
+    <wsOperation/>
+    <wsOperationNamespace/>
+    <wsInFieldContainer/>
+    <wsInFieldArgument/>
+    <wsOutFieldContainer/>
+    <wsOutFieldArgument/>
+    <proxyHost/>
+    <proxyPort/>
+    <httpLogin/>
+    <httpPassword/>
+    <callStep>1000</callStep>
+    <passingInputData>Y</passingInputData>
+    <compatible>N</compatible>
+    <repeating_element/>
+    <reply_as_string>N</reply_as_string>
+    <fieldsIn>
+      </fieldsIn>
+    <fieldsOut>
+      </fieldsOut>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>659</xloc>
+      <yloc>477</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>GetTime</name>
+    <type>SystemInfo</type>
+    <description/>
+    <distribute>Y</distribute>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <fields>
+      </fields>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>535</xloc>
+      <yloc>401</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>InsertIntoRecipient</name>
+    <type>Injector</type>
+    <description/>
+    <distribute>N</distribute>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <fields>    </fields>     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>534</xloc>
+      <yloc>248</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>Invite</name>
+    <type>Mail</type>
+    <description/>
+    <distribute>Y</distribute>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+      <server/>
+      <port/>
+      <destination/>
+      <destinationCc/>
+      <destinationBCc/>
+      <replyToAddresses/>
+      <replyto/>
+      <replytoname/>
+      <subject/>
+      <include_date>N</include_date>
+      <include_subfolders>N</include_subfolders>
+      <zipFilenameDynamic>N</zipFilenameDynamic>
+      <isFilenameDynamic>N</isFilenameDynamic>
+      <dynamicFieldname/>
+      <dynamicWildcard/>
+      <dynamicZipFilename/>
+      <sourcefilefoldername/>
+      <sourcewildcard/>
+      <contact_person/>
+      <contact_phone/>
+      <comment/>
+      <include_files>N</include_files>
+      <zip_files>N</zip_files>
+      <zip_name/>
+      <zip_limit_size>0</zip_limit_size>
+      <use_auth>N</use_auth>
+      <use_secure_auth>N</use_secure_auth>
+      <auth_user/>
+      <auth_password>Encrypted </auth_password>
+      <only_comment>N</only_comment>
+      <use_HTML>N</use_HTML>
+      <use_Priority>N</use_Priority>
+    <encoding>UTF-8</encoding>
+    <priority>normal</priority>
+    <importance>normal</importance>
+    <secureconnectiontype>SSL</secureconnectiontype>
+      <filetypes>      </filetypes>     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>915</xloc>
+      <yloc>319</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>MeltButter</name>
+    <type>ExecProcess</type>
+    <description/>
+    <distribute>Y</distribute>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <processfield>BUTTER</processfield>
+    <resultfieldname>MELTED_BUTTER</resultfieldname>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>160</xloc>
+      <yloc>174</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>NotifyKitchenResonsible</name>
+    <type>Mail</type>
+    <description/>
+    <distribute>Y</distribute>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+      <server/>
+      <port/>
+      <destination/>
+      <destinationCc/>
+      <destinationBCc/>
+      <replyToAddresses/>
+      <replyto/>
+      <replytoname/>
+      <subject/>
+      <include_date>N</include_date>
+      <include_subfolders>N</include_subfolders>
+      <zipFilenameDynamic>N</zipFilenameDynamic>
+      <isFilenameDynamic>N</isFilenameDynamic>
+      <dynamicFieldname/>
+      <dynamicWildcard/>
+      <dynamicZipFilename/>
+      <sourcefilefoldername/>
+      <sourcewildcard/>
+      <contact_person/>
+      <contact_phone/>
+      <comment/>
+      <include_files>N</include_files>
+      <zip_files>N</zip_files>
+      <zip_name/>
+      <zip_limit_size>0</zip_limit_size>
+      <use_auth>N</use_auth>
+      <use_secure_auth>N</use_secure_auth>
+      <auth_user/>
+      <auth_password>Encrypted </auth_password>
+      <only_comment>N</only_comment>
+      <use_HTML>N</use_HTML>
+      <use_Priority>N</use_Priority>
+    <encoding>UTF-8</encoding>
+    <priority>normal</priority>
+    <importance>normal</importance>
+    <secureconnectiontype>SSL</secureconnectiontype>
+      <filetypes>      </filetypes>     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>537</xloc>
+      <yloc>555</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>PentahoCommunityMembersList</name>
+    <type>DataGrid</type>
+    <description/>
+    <distribute>N</distribute>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <fields>
+    </fields>
+    <data>
+      <line>  </line>
+    </data>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>784</xloc>
+      <yloc>319</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>SendRecipientToOven</name>
+    <type>HTTPPOST</type>
+    <description/>
+    <distribute>Y</distribute>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <postafile>N</postafile>
+    <encoding/>
+    <url/>
+    <urlInField>N</urlInField>
+    <urlField/>
+    <requestEntity/>
+    <lookup>
+      </lookup>
+    <result>
+      <name>result</name>
+      <code/>
+      </result>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>664</xloc>
+      <yloc>249</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>SetOvenTemperature</name>
+    <type>ScriptValueMod</type>
+    <description/>
+    <distribute>Y</distribute>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <compatible>N</compatible>
+    <jsScripts>      <jsScript>        <jsScript_type>0</jsScript_type>
+        <jsScript_name>Script 1</jsScript_name>
+        <jsScript_script>&#47;&#47;Script here
+
+setEnvironmentVar(&apos;OvenTemp&apos;,&apos;180&apos;);
+setEnvironmentVar(&apos;Oven&apos;,&apos;On&apos;);
+</jsScript_script>
+      </jsScript>    </jsScripts>    <fields>    </fields>     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>662</xloc>
+      <yloc>30</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>ViolentlyBreakEggs</name>
+    <type>StringCut</type>
+    <description/>
+    <distribute>Y</distribute>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <fields>
+      <field>
+        <in_stream_name>EGGS</in_stream_name>
+        <out_stream_name>EGGSWITHOUTSHELL</out_stream_name>
+        <cut_from>SHELL</cut_from>
+        <cut_to>SHELL</cut_to>
+      </field>
+    </fields>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>163</xloc>
+      <yloc>252</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>Wait </name>
+    <type>Delay</type>
+    <description/>
+    <distribute>Y</distribute>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <timeout>1</timeout>
+    <scaletime>minutes</scaletime>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>270</xloc>
+      <yloc>175</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>Wait45Min</name>
+    <type>Delay</type>
+    <description/>
+    <distribute>Y</distribute>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <timeout>45</timeout>
+    <scaletime>minutes</scaletime>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>537</xloc>
+      <yloc>477</yloc>
       <draw>Y</draw>
       </GUI>
     </step>

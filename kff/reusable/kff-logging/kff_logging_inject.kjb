@@ -4,6 +4,7 @@
     <description/>
     <extended_description/>
     <job_version/>
+    <job_status>0</job_status>
   <directory>&#47;</directory>
   <created_user>-</created_user>
   <created_date>2010&#47;08&#47;17 17:01:45.809</created_date>
@@ -101,6 +102,7 @@
   </connection>
     <slaveservers>
          <slaveserver><name>CARTE</name><hostname>${CARTE_HOSTNAME}</hostname><port>${CARTE_PORT}</port><username>${CARTE_USER}</username><password>${CARTE_PWD}</password><proxy_hostname>${CARTE_PROXY_HOST}</proxy_hostname><proxy_port>${CARTE_PROXY_PORT}</proxy_port><non_proxy_hosts>${CARTE_NON_PROXY}</non_proxy_hosts><master>Y</master></slaveserver>
+         <slaveserver><name>9999</name><hostname>localhost</hostname><port>9999</port><username>cluster</username><password>Encrypted 2be98afc86aa7f2e4cb1aa265cd86aac8</password><proxy_hostname/><proxy_port/><non_proxy_hosts/><master>N</master></slaveserver>
     </slaveservers>
   <logconnection/>
   <logtable/>
@@ -116,18 +118,18 @@
       <type>ADD_RESULT_FILENAMES</type>
       <arg_from_previous>N</arg_from_previous>
       <include_subfolders>Y</include_subfolders>
-      <delete_all_before>Y</delete_all_before>
+      <delete_all_before>N</delete_all_before>
       <fields>
         <field>
-          <name>${KFF_BASE_DIR}&#47;projects&#47;${KFF_CUSTOMER}&#47;${KFF_APPLICATION}&#47;code</name>
+          <name>${KFF_BASE_DIR}&#47;projects&#47;${KFF_CUSTOMER}&#47;${KFF_APPLICATION}&#47;code&#47;</name>
           <filemask>.*\.kjb</filemask>
         </field>
       </fields>
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>208</xloc>
-      <yloc>84</yloc>
+      <xloc>338</xloc>
+      <yloc>86</yloc>
       </entry>
     <entry>
       <name>kff_logging_inject_jobs</name>
@@ -156,8 +158,8 @@
       </parameters>      <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>377</xloc>
-      <yloc>82</yloc>
+      <xloc>464</xloc>
+      <yloc>84</yloc>
       </entry>
     <entry>
       <name>START</name>
@@ -176,8 +178,8 @@
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>69</xloc>
-      <yloc>124</yloc>
+      <xloc>43</xloc>
+      <yloc>125</yloc>
       </entry>
     <entry>
       <name>Add ktr to result</name>
@@ -185,17 +187,17 @@
       <type>ADD_RESULT_FILENAMES</type>
       <arg_from_previous>N</arg_from_previous>
       <include_subfolders>Y</include_subfolders>
-      <delete_all_before>Y</delete_all_before>
+      <delete_all_before>N</delete_all_before>
       <fields>
         <field>
-          <name>${KFF_BASE_DIR}&#47;projects&#47;${KFF_CUSTOMER}&#47;${KFF_APPLICATION}&#47;code</name>
+          <name>${KFF_BASE_DIR}&#47;projects&#47;${KFF_CUSTOMER}&#47;${KFF_APPLICATION}&#47;code&#47;</name>
           <filemask>.*\.ktr</filemask>
         </field>
       </fields>
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>208</xloc>
+      <xloc>338</xloc>
       <yloc>163</yloc>
       </entry>
     <entry>
@@ -204,7 +206,6 @@
       <type>TRANS</type>
       <filename>${Internal.Job.Filename.Directory}&#47;kff_logging_inject_trnsf.ktr</filename>
       <transname/>
-      <directory/>
       <arg_from_previous>N</arg_from_previous>
       <params_from_previous>N</params_from_previous>
       <exec_per_row>N</exec_per_row>
@@ -225,8 +226,22 @@
       </parameters>      <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>377</xloc>
-      <yloc>160</yloc>
+      <xloc>462</xloc>
+      <yloc>163</yloc>
+      </entry>
+    <entry>
+      <name>Delete filenames from result</name>
+      <description>Delete filenames from result</description>
+      <type>DELETE_RESULT_FILENAMES</type>
+      <foldername/>
+      <specify_wildcard>N</specify_wildcard>
+      <wildcard/>
+      <wildcardexclude/>
+      <parallel>N</parallel>
+      <draw>Y</draw>
+      <nr>0</nr>
+      <xloc>171</xloc>
+      <yloc>125</yloc>
       </entry>
   </entries>
   <hops>
@@ -240,8 +255,17 @@
       <unconditional>N</unconditional>
     </hop>
     <hop>
+      <from>Add ktr to result</from>
+      <to>kff_logging_inject_trnsf</to>
+      <from_nr>0</from_nr>
+      <to_nr>0</to_nr>
+      <enabled>Y</enabled>
+      <evaluation>Y</evaluation>
+      <unconditional>N</unconditional>
+    </hop>
+    <hop>
       <from>START</from>
-      <to>Add kjb to result</to>
+      <to>Delete filenames from result</to>
       <from_nr>0</from_nr>
       <to_nr>0</to_nr>
       <enabled>Y</enabled>
@@ -249,7 +273,7 @@
       <unconditional>Y</unconditional>
     </hop>
     <hop>
-      <from>START</from>
+      <from>Delete filenames from result</from>
       <to>Add ktr to result</to>
       <from_nr>0</from_nr>
       <to_nr>0</to_nr>
@@ -258,13 +282,13 @@
       <unconditional>Y</unconditional>
     </hop>
     <hop>
-      <from>Add ktr to result</from>
-      <to>kff_logging_inject_trnsf</to>
+      <from>Delete filenames from result</from>
+      <to>Add kjb to result</to>
       <from_nr>0</from_nr>
       <to_nr>0</to_nr>
       <enabled>Y</enabled>
-      <evaluation>Y</evaluation>
-      <unconditional>N</unconditional>
+      <evaluation>N</evaluation>
+      <unconditional>Y</unconditional>
     </hop>
   </hops>
   <notepads>
@@ -274,7 +298,7 @@ exclude
 &apos;batch_launcher.kjb&apos;</note>
       <xloc>175</xloc>
       <yloc>7</yloc>
-      <width>117</width>
+      <width>118</width>
       <heigth>73</heigth>
     </notepad>
   </notepads>

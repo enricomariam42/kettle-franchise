@@ -149,8 +149,8 @@
          <slaveserver><name>UAI (DWDB1)</name><hostname>10.89.0.191</hostname><port>8181</port><username>cluster</username><password>Encrypted 2be98afc86aa7f2e4cb1aa265cd86aac8</password><proxy_hostname>proxy2.fendi.com</proxy_hostname><proxy_port>3128</proxy_port><non_proxy_hosts>10.89.*</non_proxy_hosts><master>N</master></slaveserver>
          <slaveserver><name>DRP-DWDB</name><hostname>10.89.20.14</hostname><port>8181</port><username>cluster</username><password>Encrypted 2be98afc86aa7f2e4cb1aa265cd86aac8</password><proxy_hostname/><proxy_port/><non_proxy_hosts/><master>Y</master></slaveserver>
     </slaveservers>
-  <logconnection/>
-  <logtable/>
+  <logconnection>DWH_LOG</logconnection>
+  <logtable>KFF_LOG_JOB</logtable>
   <size_limit_lines/>
    <use_batchid>N</use_batchid>
    <pass_batchid>N</pass_batchid>
@@ -168,8 +168,8 @@
       <parallel>Y</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>134</xloc>
-      <yloc>75</yloc>
+      <xloc>127</xloc>
+      <yloc>68</yloc>
       </entry>
     <entry>
       <name>START</name>
@@ -188,8 +188,8 @@
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>29</xloc>
-      <yloc>74</yloc>
+      <xloc>22</xloc>
+      <yloc>67</yloc>
       </entry>
     <entry>
       <name>${KFF_BATCH}</name>
@@ -214,8 +214,8 @@
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>255</xloc>
-      <yloc>169</yloc>
+      <xloc>236</xloc>
+      <yloc>152</yloc>
       </entry>
     <entry>
       <name>kff_logging_archive</name>
@@ -240,8 +240,8 @@
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>256</xloc>
-      <yloc>375</yloc>
+      <xloc>238</xloc>
+      <yloc>317</yloc>
       </entry>
     <entry>
       <name>kff_logging_reports</name>
@@ -266,8 +266,8 @@
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>256</xloc>
-      <yloc>269</yloc>
+      <xloc>237</xloc>
+      <yloc>231</yloc>
       </entry>
     <entry>
       <name>kff_logging_init</name>
@@ -292,8 +292,34 @@
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>255</xloc>
-      <yloc>75</yloc>
+      <xloc>237</xloc>
+      <yloc>69</yloc>
+      </entry>
+    <entry>
+      <name>kff_backup_code</name>
+      <description>Job</description>
+      <type>JOB</type>
+      <filename>${KFF_BASE_DIR}&#47;reusable&#47;kff-backup&#47;kjube_backup_code.kjb</filename>
+      <jobname/>
+      <arg_from_previous>N</arg_from_previous>
+      <params_from_previous>N</params_from_previous>
+      <exec_per_row>N</exec_per_row>
+      <set_logfile>N</set_logfile>
+      <logfile/>
+      <logext/>
+      <add_date>N</add_date>
+      <add_time>N</add_time>
+      <loglevel>Nothing</loglevel>
+      <slave_server_name/>
+      <wait_until_finished>Y</wait_until_finished>
+      <follow_abort_remote>N</follow_abort_remote>
+      <parameters>        <pass_all_parameters>Y</pass_all_parameters>
+      </parameters>      <set_append_logfile>N</set_append_logfile>
+      <parallel>N</parallel>
+      <draw>Y</draw>
+      <nr>0</nr>
+      <xloc>237</xloc>
+      <yloc>405</yloc>
       </entry>
   </entries>
   <hops>
@@ -336,6 +362,15 @@
     <hop>
       <from>kff_logging_reports</from>
       <to>kff_logging_archive</to>
+      <from_nr>0</from_nr>
+      <to_nr>0</to_nr>
+      <enabled>Y</enabled>
+      <evaluation>Y</evaluation>
+      <unconditional>Y</unconditional>
+    </hop>
+    <hop>
+      <from>kff_logging_archive</from>
+      <to>kff_backup_code</to>
       <from_nr>0</from_nr>
       <to_nr>0</to_nr>
       <enabled>Y</enabled>
