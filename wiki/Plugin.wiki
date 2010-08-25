@@ -17,4 +17,5 @@ In case you use the KFF start-up script you needn't worry about these variables 
 
 = Plug-in's= 
 The following plug-in's have been released:
- * 
+ # [PluginDataGrid Data Grid]
+ # [PluginEnvironmentConfigurator Environment Configurator]
