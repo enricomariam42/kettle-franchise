@@ -1,20 +1,20 @@
 #!/bin/sh
 
-# Batch process (kettle job) to launch ##########################################################
+# Batch process (kettle job) to launch ##########################
 KFF_CUSTOMER=templates ;
 KFF_APPLICATION=datawarehouse ;
 KFF_BATCH=batch_datawarehouse.kjb
 
 # Quickly switch logging level  #################################################################
 #KFF_LOG_LEVEL=None
-#KFF_LOG_LEVEL=Error
-KFF_LOG_LEVEL=Basic
+KFF_LOG_LEVEL=Error
+#KFF_LOG_LEVEL=Basic
 #KFF_LOG_LEVEL=Detailed
 #KFF_LOG_LEVEL=Debug
 #KFF_LOG_LEVEL=Rowlevel
 
 
-# Lifecycle management ##########################################################################
+# Lifecycle management ##########################################
 case $(hostname) in
 "Jaybox")
 KFF_BASE_DIR=/kff ;
@@ -44,10 +44,10 @@ echo "$(hostname) is not a recognized system. This must be a mistake";
 exit;;
 esac
 
-# Date time Global Variables ###############################################################
+# Date time Global Variables ####################################
 DATE=$(date +%Y%m%d)
 TIME=$(date +%H%M%S)
 
-########## Launch batch ##############
+# Launch batch ##################################################
 cd "$KFF_PDI_VERSION"
 sh kitchen.sh -file="$KFF_BASE_DIR"/projects/"$KFF_CUSTOMER"/"$KFF_APPLICATION"/code/batch_launcher.kjb -level=$KFF_LOG_LEVEL -param:KFF_CUSTOMER="$KFF_CUSTOMER" -param:KFF_APPLICATION="$KFF_APPLICATION" -param:KFF_LIFECYCLE="$KFF_LIFECYCLE" -param:KFF_BATCH="$KFF_BATCH" -logfile="$KFF_BASE_DIR"/projects/"$KFF_CUSTOMER"/"$KFF_APPLICATION"/log/"$KFF_BATCH".$DATE.$TIME.log 
