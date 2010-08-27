@@ -149,8 +149,8 @@
          <slaveserver><name>UAI (DWDB1)</name><hostname>10.89.0.191</hostname><port>8181</port><username>cluster</username><password>Encrypted 2be98afc86aa7f2e4cb1aa265cd86aac8</password><proxy_hostname>proxy2.fendi.com</proxy_hostname><proxy_port>3128</proxy_port><non_proxy_hosts>10.89.*</non_proxy_hosts><master>N</master></slaveserver>
          <slaveserver><name>DRP-DWDB</name><hostname>10.89.20.14</hostname><port>8181</port><username>cluster</username><password>Encrypted 2be98afc86aa7f2e4cb1aa265cd86aac8</password><proxy_hostname/><proxy_port/><non_proxy_hosts/><master>Y</master></slaveserver>
     </slaveservers>
-  <logconnection>DWH_LOG</logconnection>
-  <logtable>KFF_LOG_JOB</logtable>
+  <logconnection/>
+  <logtable/>
   <size_limit_lines/>
    <use_batchid>N</use_batchid>
    <pass_batchid>N</pass_batchid>
