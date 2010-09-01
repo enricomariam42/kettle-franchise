@@ -49,6 +49,9 @@ KFF_PDI_VERSION=/kff/software/pdi/3.2.3 ;
 KFF_JVM_VERSION=/usr/lib/jvm/java-1.6.0-openjdk/jre/bin/java ;;
 }}}
 
+== Step 6 - Run ==
+Run kff_kitchen_launcher.sh
+
 = Still quick ... but more custom configuration =
 
 == Custom install directory ==
