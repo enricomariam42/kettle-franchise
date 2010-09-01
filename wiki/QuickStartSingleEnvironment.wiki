@@ -36,6 +36,19 @@ Idem dito set PROJECT_JAVA_VERSION_DEV to point to your java installation.
 PROJECT_JAVA_VERSION_DEV=/usr/lib/jvm/java-1.6.0-openjdk/jre/bin/java
 }}}
 
+=== Modify kff_kitchen_launcher.sh ===
+Similar, set KFF_PDI_VERSION and KFF_JVM_VERSION to point to PDI and Java. Additionally fill in the hostname (replace Jaybox) of your local machine for the start up of PDI.
+
+Sample
+{{{
+case $(hostname) in
+"Jaybox")
+KFF_BASE_DIR=/kff ;
+KFF_LIFECYCLE=DEV ; 
+KFF_PDI_VERSION=/kff/software/pdi/3.2.3 ; 
+KFF_JVM_VERSION=/usr/lib/jvm/java-1.6.0-openjdk/jre/bin/java ;;
+}}}
+
 = Still quick ... but more custom configuration =
 
 == Custom install directory ==
