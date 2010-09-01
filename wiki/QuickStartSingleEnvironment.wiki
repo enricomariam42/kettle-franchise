@@ -16,3 +16,8 @@ Unzip PDI into the /kff/software/pdi/3.2.3/ (for version 3.2.3).
 
 == Step 3 - [http://code.google.com/p/kettle-franchise/downloads/detail?name=kff-plugins.jar&can=2&q= Download the KFF plugins] ==
 ... and drop it into the libext directory of your PDI installation.
+
+== Step 4 - Configure your local MySQL database ==
+Create a database dwh_DEV on your MySQL machine with username dwh_DEV and pwd kff.
+
+== Step 5 - Modify the custom KFF launch scripts ==
