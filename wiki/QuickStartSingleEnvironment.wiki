@@ -25,8 +25,16 @@ Create a database dwh_DEV on your MySQL machine with username dwh_DEV and pwd kf
 You find the script under /kff/projects/templates/datawarehouse/
 
 Set PROJECT_KETTLE_VERSION_DEV to the right path of your PDI installation. 
-{{{PROJECT_KETTLE_VERSION_DEV=/kff/software/pdi/3.2.3}}}
 
+{{{
+PROJECT_KETTLE_VERSION_DEV=/kff/software/pdi/3.2.3
+}}}
+
+Idem dito set PROJECT_JAVA_VERSION_DEV to point to your java installation.
+
+{{{
+PROJECT_JAVA_VERSION_DEV=/usr/lib/jvm/java-1.6.0-openjdk/jre/bin/java
+}}}
 
 = Still quick ... but more custom configuration =
 
