@@ -7,4 +7,11 @@ This quick start guide shows you how to get started with KFF, installing, config
 = Details =
 
 == Step 1 - Download and install KFF ==
-Download KFF from the downloads section (, for the moment get the kff directory from svn) and place it in a directory /kff on the root of (one of) your disk(s).
+Download KFF from the downloads section (, for the moment get the kff directory from svn) and place it in a directory /kff on the root of (one of) your disk(s). The final directory structure should look like [StandardsDirectory this].
+
+Remark: You can also install KFF on other locations.
+
+== Step 2 - Download PDI (3.2.3 or above) and install ==
+Unzip PDI into the /kff/software/pdi/<version> directory.
+
+== Step 3 - Download the KFF plugins 
