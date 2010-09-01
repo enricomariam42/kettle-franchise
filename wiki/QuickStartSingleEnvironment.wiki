@@ -3,13 +3,13 @@
 = Introduction =
 This quick start guide shows you how to get started with KFF, installing, configuring and launching it for just one single environment.
 
+The first section (Real quick start) just goes for minimal modifications to get started. It will run the template project just as is. It is intended for evaluation purposes. For a more custom configuration, check out the next section (Quick start).
 
-= Details =
-
+= Real quick start =
 == Step 1 - Download and install KFF ==
 Download KFF from the downloads section (, for the moment get the kff directory from svn) and place it in a directory /kff on the root of (one of) your disk(s). The final directory structure should look like [StandardsDirectory this].
 
-Remark: You can also install KFF on other locations.
+Remark: You can also install KFF in other locations, see below.
 
 == Step 2 - Download PDI (3.2.3 or above) and install ==
 Unzip PDI into the /kff/software/pdi/3.2.3/ (for version 3.2.3).
@@ -21,3 +21,15 @@ Unzip PDI into the /kff/software/pdi/3.2.3/ (for version 3.2.3).
 Create a database dwh_DEV on your MySQL machine with username dwh_DEV and pwd kff.
 
 == Step 5 - Modify the custom KFF launch scripts ==
+=== Modify kff_spoon_launcher.sh ===
+You find the script under /kff/projects/templates/datawarehouse/
+
+Set PROJECT_KETTLE_VERSION_DEV to the right path of your PDI installation. 
+{{{PROJECT_KETTLE_VERSION_DEV=/kff/software/pdi/3.2.3}}}
+
+
+= Still quick ... but more custom configuration =
+
+== Custom install directory ==
+
+== Create your own project ==
