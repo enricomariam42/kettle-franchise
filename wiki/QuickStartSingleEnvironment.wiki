@@ -1,7 +1,7 @@
 #summary How to get started with KFF, running one single environment
 
 = Introduction =
-to be completed
+This how-to guide show how to set up a single (development) environment using KFF.
 
 = Installation =
 to be completed
