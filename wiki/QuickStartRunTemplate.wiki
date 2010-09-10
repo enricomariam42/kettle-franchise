@@ -55,4 +55,17 @@ KFF_JVM_VERSION=/usr/lib/jvm/java-1.6.0-openjdk/jre/bin/java ;;
 Run kff_kitchen_launcher.sh
 
 = Results =
-to be completed
+
+== Logging tables existence ==
+Logging tables are created under the database schema dwh_DEV.
+
+http://www.kjube.be/images/pic177.png
+
+== Log files ==
+Your project log directory will contain two log files with the timestamp of your execution.
+
+http://www.kjube.be/images/pic178.png
+
+The spreadsheet contains an overview of all the jobs/transformations that were executed.
+
+http://www.kjube.be/images/pic179.png
