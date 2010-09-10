@@ -7,7 +7,7 @@ This how-to guide show how to set up a single (development) environment using KF
 == Step 1 - Download and install KFF ==
 Download KFF from the downloads section (, for the moment get the kff directory from svn) and place it in a directory /kff on the root of (one of) your disk(s). The final directory structure should look like [StandardsDirectory this].
 
-Remark: You can also install KFF in other locations, see the section [QuickStartSingleEnvironment Setting up a single (development) environment ].
+In case you want to use another installation directory, that is no problem. You will have to adjust the some variables in your launch scripts: kff_spoon_launcher.sh and kff_kitchen_launcher.sh for that later on during the installation scenario.
 
 == Step 2 - Download PDI (3.2.3, 3.2.4 or 3.2.5) and install ==
 Unzip PDI into the /kff/software/pdi/3.2.3/ (for version 3.2.3).
@@ -19,6 +19,48 @@ A recent build of 3.2.5 (Sept 3rd, 2010) is placed [http://kettle3.s3.amazonaws.
 == Step 3 - [http://code.google.com/p/kettle-franchise/downloads/detail?name=kff-plugins.jar&can=2&q= Download the KFF plugins] ==
 ... and drop it into the libext directory of your PDI installation.
 
+== Step 4 - Copy the provided template to create your own datawarehouse project ==
+
+E.g. copy /kff/projects/templates/datawarehouse to /kff/projects/pepsi/finance-datamart/ if you are going to build the finance data mart for your precious customer Pepsi.
+
+== Step 5 - Modify your launch scripts ==
+=== kff_spoon_launcher.sh ===
+Set parameters according to your liking:
+
+{{{
+# Parameters for sample data warehouse project ##################################
+CUSTOMER_NAME=templates
+PROJECT_NAME=datawarehouse
+PROJECT_DIR=/kff/projects/$CUSTOMER_NAME/$PROJECT_NAME
+PROJECT_KETTLE_VERSION_PRD=/kff/software/pdi/3.2.3
+PROJECT_KETTLE_VERSION_UAI=/kff/software/pdi/3.2.3
+PROJECT_KETTLE_VERSION_TST=/kff/software/pdi/3.2.3
+PROJECT_KETTLE_VERSION_DEV=/kff/software/pdi/4.0.0
+PROJECT_JAVA_VERSION_PRD=/usr/lib/jvm/java-1.6.0-openjdk/jre/bin/java
+PROJECT_JAVA_VERSION_UAI=/usr/lib/jvm/java-1.6.0-openjdk/jre/bin/java
+PROJECT_JAVA_VERSION_TST=/usr/lib/jvm/java-1.6.0-openjdk/jre/bin/java
+PROJECT_JAVA_VERSION_DEV=/usr/lib/jvm/java-1.6.0-openjdk/jre/bin/java
+}}}
+
+=== kff_kitchen_launcher.sh ===
+Set parameters according to your liking:
+
+{{{
+# Batch process (kettle job) to launch ##########################
+KFF_CUSTOMER=templates ;
+KFF_APPLICATION=datawarehouse ;
+KFF_BATCH=batch_datawarehouse.kjb
+}}}
+
+{{{
+# Lifecycle management ##########################################
+case $(hostname) in
+"Jaybox")
+KFF_BASE_DIR=/kff ;
+KFF_LIFECYCLE=DEV ; 
+KFF_PDI_VERSION=/kff/software/pdi/3.2.3 ; 
+KFF_JVM_VERSION=/usr/lib/jvm/java-1.6.0-openjdk/jre/bin/java ;;
+}}}
 
 = Evaluation =
 to be completed
