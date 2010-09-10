@@ -4,7 +4,7 @@
 This page documents the KFF plugins for kettle.
 
 = "Install" the jar file =
-All KFF plugins are available as a [http://code.google.com/p/kettle-franchise/downloads/detail?name=kff-plugins.jar&can=2&q= jar file] which you need to drop into the libext directory of your kettle installation.
+All KFF plugins are available as a [http://code.google.com/p/kettle-franchise/downloads/list jar file] which you need to drop into the libext directory of your kettle installation in Kettle version 3.2 and in the plugins/steps folder in version 4.x.
 
 http://www.kjube.be/images/pic160.png
 
