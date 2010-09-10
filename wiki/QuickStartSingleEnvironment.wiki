@@ -4,7 +4,21 @@
 This how-to guide show how to set up a single (development) environment using KFF.
 
 = Installation =
-to be completed
+== Step 1 - Download and install KFF ==
+Download KFF from the downloads section (, for the moment get the kff directory from svn) and place it in a directory /kff on the root of (one of) your disk(s). The final directory structure should look like [StandardsDirectory this].
+
+Remark: You can also install KFF in other locations, see the section [QuickStartSingleEnvironment Setting up a single (development) environment ].
+
+== Step 2 - Download PDI (3.2.3, 3.2.4 or 3.2.5) and install ==
+Unzip PDI into the /kff/software/pdi/3.2.3/ (for version 3.2.3).
+
+The KFF reference build for 3.2.3 can be found over [http://kettle3.s3.amazonaws.com/pdi-ce-3.2.3-r13847.zip here].
+A recent build of 3.2.5 (Sept 3rd, 2010) is placed [http://kettle3.s3.amazonaws.com/pdi-ce-3.2.5-r13847.zip here].
+
+
+== Step 3 - [http://code.google.com/p/kettle-franchise/downloads/detail?name=kff-plugins.jar&can=2&q= Download the KFF plugins] ==
+... and drop it into the libext directory of your PDI installation.
+
 
 = Evaluation =
 to be completed
