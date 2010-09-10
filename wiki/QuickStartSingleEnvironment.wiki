@@ -62,5 +62,8 @@ KFF_PDI_VERSION=/kff/software/pdi/3.2.3 ;
 KFF_JVM_VERSION=/usr/lib/jvm/java-1.6.0-openjdk/jre/bin/java ;;
 }}}
 
+
+... busy writing here ...
+
 = Evaluation =
-to be completed
+Results should be the same as under the quick installation.
