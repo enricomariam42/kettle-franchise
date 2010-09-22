@@ -1,0 +1,16 @@
+#summary This page describes all the elements we still want to add to KFF, as well as ideas for brainstorming, and discarded ideas.
+
+= Introduction =
+This pages contains information on:
+- all todo's: anything we want to add to KFF but still didn't get around to do,
+- ideas: things we don't agree upon yet
+- discarded ideas: things we agree we won't do
+
+= Todo list =
+* Add data vault generator, contribution by E.Weber
+* Add support for some more databases
+* 
+
+= Ideas =
+
+= Discarded ideas =
