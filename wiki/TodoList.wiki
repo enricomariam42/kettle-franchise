@@ -7,9 +7,10 @@ This pages contains information on:
 - discarded ideas: things we agree we won't do
 
 = Todo list =
-* Add data vault generator, contribution by E.Weber
-* Add support for some more databases
-* 
+ * Add project template for data vault generator, contribution by E.Weber
+ * Add support for some more databases
+ * Add project template for database compare
+ * ...
 
 = Ideas =
 
