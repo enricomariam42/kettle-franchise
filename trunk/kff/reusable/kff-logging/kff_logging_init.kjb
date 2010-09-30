@@ -53,6 +53,7 @@
       <attribute><code>PORT_NUMBER</code><attribute>${DWH_LOG_PORT}</attribute></attribute>
       <attribute><code>QUOTE_ALL_FIELDS</code><attribute>N</attribute></attribute>
       <attribute><code>STREAM_RESULTS</code><attribute>Y</attribute></attribute>
+      <attribute><code>SUPPORTS_BOOLEAN_DATA_TYPE</code><attribute>N</attribute></attribute>
       <attribute><code>USE_POOLING</code><attribute>N</attribute></attribute>
     </attributes>
   </connection>
@@ -128,8 +129,8 @@
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>53</xloc>
-      <yloc>106</yloc>
+      <xloc>47</xloc>
+      <yloc>20</yloc>
       </entry>
     <entry>
       <name>DWH_LOG database = MySQL</name>
@@ -148,7 +149,7 @@
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>200</xloc>
+      <xloc>330</xloc>
       <yloc>106</yloc>
       </entry>
     <entry>
@@ -168,18 +169,18 @@
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>199</xloc>
+      <xloc>329</xloc>
       <yloc>175</yloc>
       </entry>
     <entry>
       <name>Abort kff_logging_tables</name>
       <description>Abort job</description>
       <type>ABORT</type>
-      <message>Database not supported by kff-logging</message>
+      <message>Database not supported by kff-logging component. Add your create scripts to kff_logging_tables.kjb.</message>
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>198</xloc>
+      <xloc>328</xloc>
       <yloc>388</yloc>
       </entry>
     <entry>
@@ -205,7 +206,7 @@
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>383</xloc>
+      <xloc>513</xloc>
       <yloc>105</yloc>
       </entry>
     <entry>
@@ -231,7 +232,7 @@
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>383</xloc>
+      <xloc>513</xloc>
       <yloc>174</yloc>
       </entry>
     <entry>
@@ -257,7 +258,7 @@
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>593</xloc>
+      <xloc>723</xloc>
       <yloc>105</yloc>
       </entry>
     <entry>
@@ -286,7 +287,7 @@
       </parameters>      <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>593</xloc>
+      <xloc>723</xloc>
       <yloc>255</yloc>
       </entry>
     <entry>
@@ -316,20 +317,37 @@
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>594</xloc>
+      <xloc>724</xloc>
       <yloc>372</yloc>
+      </entry>
+    <entry>
+      <name>kff_logging_no_batch_overlap</name>
+      <description>Job</description>
+      <type>JOB</type>
+      <filename>${Internal.Job.Filename.Directory}&#47;kff_logging_no_batch_overlap.kjb</filename>
+      <jobname/>
+      <arg_from_previous>N</arg_from_previous>
+      <params_from_previous>N</params_from_previous>
+      <exec_per_row>N</exec_per_row>
+      <set_logfile>N</set_logfile>
+      <logfile/>
+      <logext/>
+      <add_date>N</add_date>
+      <add_time>N</add_time>
+      <loglevel>Nothing</loglevel>
+      <slave_server_name/>
+      <wait_until_finished>Y</wait_until_finished>
+      <follow_abort_remote>N</follow_abort_remote>
+      <parameters>        <pass_all_parameters>Y</pass_all_parameters>
+      </parameters>      <set_append_logfile>N</set_append_logfile>
+      <parallel>N</parallel>
+      <draw>Y</draw>
+      <nr>0</nr>
+      <xloc>132</xloc>
+      <yloc>106</yloc>
       </entry>
   </entries>
   <hops>
-    <hop>
-      <from>START</from>
-      <to>DWH_LOG database = MySQL</to>
-      <from_nr>0</from_nr>
-      <to_nr>0</to_nr>
-      <enabled>Y</enabled>
-      <evaluation>Y</evaluation>
-      <unconditional>Y</unconditional>
-    </hop>
     <hop>
       <from>DWH_LOG database = MySQL</from>
       <to>DWH_LOG database = Oracle</to>
@@ -402,6 +420,24 @@
       <evaluation>Y</evaluation>
       <unconditional>N</unconditional>
     </hop>
+    <hop>
+      <from>START</from>
+      <to>kff_logging_no_batch_overlap</to>
+      <from_nr>0</from_nr>
+      <to_nr>0</to_nr>
+      <enabled>Y</enabled>
+      <evaluation>Y</evaluation>
+      <unconditional>Y</unconditional>
+    </hop>
+    <hop>
+      <from>kff_logging_no_batch_overlap</from>
+      <to>DWH_LOG database = MySQL</to>
+      <from_nr>0</from_nr>
+      <to_nr>0</to_nr>
+      <enabled>Y</enabled>
+      <evaluation>Y</evaluation>
+      <unconditional>N</unconditional>
+    </hop>
   </hops>
   <notepads>
     <notepad>
@@ -409,7 +445,7 @@
 
 You can easily add your own database type.
 Just use one of the above as a template.</note>
-      <xloc>198</xloc>
+      <xloc>323</xloc>
       <yloc>251</yloc>
       <width>270</width>
       <heigth>94</heigth>
@@ -417,23 +453,16 @@ Just use one of the above as a template.</note>
     <notepad>
       <note>Create logging tables 
 if they don&apos;t exist on this connection</note>
-      <xloc>196</xloc>
-      <yloc>22</yloc>
+      <xloc>326</xloc>
+      <yloc>21</yloc>
       <width>219</width>
       <heigth>52</heigth>
     </notepad>
     <notepad>
       <note>Set logging tables for all jobs&#47;trnsf</note>
-      <xloc>649</xloc>
-      <yloc>84</yloc>
+      <xloc>721</xloc>
+      <yloc>47</yloc>
       <width>208</width>
-      <heigth>31</heigth>
-    </notepad>
-    <notepad>
-      <note>Temporary until kff_logging_inject is fixed</note>
-      <xloc>650</xloc>
-      <yloc>196</yloc>
-      <width>247</width>
       <heigth>31</heigth>
     </notepad>
   </notepads>

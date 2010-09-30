@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <job>
-  <name>kjube_etl_reports</name>
+  <name>kff_logging_reports</name>
     <description>Job that creates all required outputs from loggin to append to mail</description>
     <extended_description>Job that creates all required outputs from loggin to append to mail</extended_description>
     <job_version>1.0</job_version>
@@ -181,8 +181,8 @@
       </parameters>      <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>262</xloc>
-      <yloc>131</yloc>
+      <xloc>261</xloc>
+      <yloc>141</yloc>
       </entry>
     <entry>
       <name>kff_logging_reports_rejects</name>
@@ -210,8 +210,8 @@
       </parameters>      <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>266</xloc>
-      <yloc>319</yloc>
+      <xloc>259</xloc>
+      <yloc>334</yloc>
       </entry>
     <entry>
       <name>kff_logging_reports_error_details</name>
@@ -239,8 +239,8 @@
       </parameters>      <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>263</xloc>
-      <yloc>220</yloc>
+      <xloc>261</xloc>
+      <yloc>235</yloc>
       </entry>
     <entry>
       <name>kff_logging_reports_batch_result</name>
@@ -271,6 +271,57 @@
       <xloc>261</xloc>
       <yloc>42</yloc>
       </entry>
+    <entry>
+      <name>Mail log file to administrator</name>
+      <description>Mail</description>
+      <type>MAIL</type>
+      <server>${MAIL_SMTP_SERVER}</server>
+      <port>${MAIL_SMTP_PORT}</port>
+      <destination>${MAIL_DESTINATION_ADDRESS}</destination>
+      <destinationCc>${MAIL_DESTINATION_CC}</destinationCc>
+      <destinationBCc>${MAIL_DESTINATION_BCC}</destinationBCc>
+      <replyto>${MAIL_SENDER_ADDRESS}</replyto>
+      <replytoname>${MAIL_SENDER_NAME}</replytoname>
+      <subject>${KFF_BATCH}&#47;${KFF_APPLICATION}(${KFF_LIFECYCLE})@${KFF_CUSTOMER}-Result: Errors()&#47;Rejects()</subject>
+      <include_date>Y</include_date>
+      <contact_person>${MAIL_CONTACT_PERSON}</contact_person>
+      <contact_phone>${MAIL_CONTACT_PHONE}</contact_phone>
+      <comment>Hello,&lt;br&gt;
+&lt;br&gt;
+Please find attached the logging files for:&lt;br&gt;
+- Batch proces: ${KFF_BATCH}&lt;br&gt;
+- Batch id: ${KFF_BATCH_ID}&lt;br&gt;
+- Batch date: ${KFF_BATCH_DATE}&lt;br&gt;
+&lt;br&gt;
+Environment:&lt;br&gt;
+- Application: ${KFF_APPLICATION}&lt;br&gt;
+- Environment: ${KFF_LIFECYCLE}&lt;br&gt;
+- Customer: ${KFF_CUSTOMER}&lt;br&gt;
+&lt;br&gt;
+Regards,&lt;br&gt;
+${MAIL_SENDER_NAME}&lt;br&gt;</comment>
+      <include_files>Y</include_files>
+      <zip_files>N</zip_files>
+      <zip_name>logging</zip_name>
+      <use_auth>N</use_auth>
+      <use_secure_auth>N</use_secure_auth>
+      <auth_user>${MAIL_SMTP_USER} </auth_user>
+      <auth_password>${MAIL_SMTP_PWD}</auth_password>
+      <only_comment>Y</only_comment>
+      <use_HTML>Y</use_HTML>
+      <use_Priority>N</use_Priority>
+      <encoding>UTF-8</encoding>
+      <priority>normal</priority>
+      <importance>normal</importance>
+      <secureconnectiontype>SSL</secureconnectiontype>
+      <replyToAddresses>${MAIL_REPLY_TO}</replyToAddresses>
+      <filetypes>        <filetype>GENERAL</filetype>
+      </filetypes>      <parallel>N</parallel>
+      <draw>Y</draw>
+      <nr>0</nr>
+      <xloc>461</xloc>
+      <yloc>333</yloc>
+      </entry>
   </entries>
   <hops>
     <hop>
@@ -300,17 +351,25 @@
       <evaluation>Y</evaluation>
       <unconditional>Y</unconditional>
     </hop>
+    <hop>
+      <from>kff_logging_reports_error_details</from>
+      <to>kff_logging_reports_rejects</to>
+      <from_nr>0</from_nr>
+      <to_nr>0</to_nr>
+      <enabled>Y</enabled>
+      <evaluation>Y</evaluation>
+      <unconditional>Y</unconditional>
+    </hop>
+    <hop>
+      <from>kff_logging_reports_rejects</from>
+      <to>Mail log file to administrator</to>
+      <from_nr>0</from_nr>
+      <to_nr>0</to_nr>
+      <enabled>Y</enabled>
+      <evaluation>Y</evaluation>
+      <unconditional>Y</unconditional>
+    </hop>
   </hops>
   <notepads>
-    <notepad>
-      <note>Temporarily disabled.
-Waiting for rejects step
-to be included in 
-kff-plugins.jar</note>
-      <xloc>361</xloc>
-      <yloc>313</yloc>
-      <width>142</width>
-      <heigth>94</heigth>
-    </notepad>
   </notepads>
 </job>

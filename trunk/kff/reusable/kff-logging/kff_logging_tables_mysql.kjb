@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <job>
-  <name>kjube_etl_log_tables_mysql</name>
+  <name>kff_logging_tables_mysql</name>
     <description>Standard kJube framework job for creation of logging tables (MySQL)</description>
     <extended_description>Standard kJube framework job for creation of logging tables (MySQL)</extended_description>
     <job_version>1.0</job_version>
@@ -386,94 +386,6 @@ ON ${KFF_LOGGING_BATCH_TABLE} (ID_JOB, JOBNAME)
       <yloc>132</yloc>
       </entry>
     <entry>
-      <name>Check last batch</name>
-      <description>Evaluate rows number in a table</description>
-      <type>EVAL_TABLE_CONTENT</type>
-      <connection>DWH_LOG</connection>
-      <schemaname/>
-      <tablename/>
-      <success_condition>rows_count_equal</success_condition>
-      <limit>1</limit>
-      <is_custom_sql>Y</is_custom_sql>
-      <is_usevars>Y</is_usevars>
-      <custom_sql>select 
- jobname
-from 
- ${KJUBE_LOGGING_BATCH_TABLE}
-where 
- id_job = ( select max(id_job) from ${KJUBE_LOGGING_BATCH_TABLE} ) and
- status in (&apos;end&apos;,&apos;failed&apos;,&apos;stopped&apos;,&apos;stop&apos;)</custom_sql>
-      <add_rows_result>N</add_rows_result>
-      <clear_result_rows>Y</clear_result_rows>
-      <parallel>N</parallel>
-      <draw>Y</draw>
-      <nr>0</nr>
-      <xloc>675</xloc>
-      <yloc>77</yloc>
-      </entry>
-    <entry>
-      <name>Abort job</name>
-      <description>Abort job</description>
-      <type>ABORT</type>
-      <message>Previous batch not concluded</message>
-      <parallel>N</parallel>
-      <draw>Y</draw>
-      <nr>0</nr>
-      <xloc>939</xloc>
-      <yloc>195</yloc>
-      </entry>
-    <entry>
-      <name>Error</name>
-      <description>Mail</description>
-      <type>MAIL</type>
-      <server>${MAIL_SMTP_SERVER}</server>
-      <port>${MAIL_SMTP_PORT}</port>
-      <destination>${MAIL_DESTINATION_ADDRESS}</destination>
-      <destinationCc>${MAIL_DESTINATION_CC}</destinationCc>
-      <destinationBCc>${MAIL_DESTINATION_BCC}</destinationBCc>
-      <replyto>${MAIL_SENDER_ADDRESS}</replyto>
-      <replytoname>${MAIL_SENDER_NAME}</replytoname>
-      <subject>${KJUBE_BATCH} in ${KJUBE_APPLICATION} (${KJUBE_LIFECYCLE}) @ ${KJUBE_CUSTOMER} - Failure - Previous batch not finished</subject>
-      <include_date>Y</include_date>
-      <contact_person>${MAIL_CONTACT_PERSON}</contact_person>
-      <contact_phone>${MAIL_CONTACT_PHONE}</contact_phone>
-      <comment>&lt;b&gt;Job result&lt;&#47;b&gt;&lt;br&gt;
-The following job failed:&lt;br&gt;
-- Batch: &lt;b&gt;${KJUBE_BATCH}&lt;&#47;b&gt;&lt;br&gt;
-- Application: ${KJUBE_APPLICATION}&lt;br&gt;
-- Environment: ${KJUBE_LIFECYCLE}&lt;br&gt;
-- Customer: ${KJUBE_CUSTOMER}&lt;br&gt;
-&lt;b&gt;because the previous batch with the same name didn&apos;t conclude yet.&lt;&#47;b&gt;&lt;br&gt;
-Regards,&lt;br&gt;
-${MAIL_SENDER_NAME}&lt;br&gt;
-&lt;br&gt;</comment>
-      <include_files>N</include_files>
-      <zip_files>N</zip_files>
-      <zip_name>logging</zip_name>
-      <use_auth>N</use_auth>
-      <use_secure_auth>N</use_secure_auth>
-      <auth_user>${MAIL_SMTP_USER}</auth_user>
-      <auth_password>${MAIL_SMTP_PWD}</auth_password>
-      <only_comment>Y</only_comment>
-      <use_HTML>Y</use_HTML>
-      <use_Priority>Y</use_Priority>
-      <encoding>UTF-8</encoding>
-      <priority>high</priority>
-      <importance>high</importance>
-      <secureconnectiontype>SSL</secureconnectiontype>
-      <replyToAddresses>${MAIL_REPLY_TO}</replyToAddresses>
-      <filetypes>        <filetype>GENERAL</filetype>
-        <filetype>LOG</filetype>
-        <filetype>ERRORLINE</filetype>
-        <filetype>ERROR</filetype>
-        <filetype>WARNING</filetype>
-      </filetypes>      <parallel>N</parallel>
-      <draw>Y</draw>
-      <nr>0</nr>
-      <xloc>936</xloc>
-      <yloc>82</yloc>
-      </entry>
-    <entry>
       <name>Check ${KFF_LOGGING_JOB_TABLE_HIST}</name>
       <description>Table exists</description>
       <type>TABLE_EXISTS</type>
@@ -674,82 +586,6 @@ on ${KFF_LOGGING_REJECT_TABLE_HIST} (KJUBE_BATCH_ID, TRANSNAME, JOBNAME)
       <xloc>489</xloc>
       <yloc>768</yloc>
       </entry>
-    <entry>
-      <name>New batch - first run ?</name>
-      <description>Evaluate rows number in a table</description>
-      <type>EVAL_TABLE_CONTENT</type>
-      <connection>DWH_LOG</connection>
-      <schemaname/>
-      <tablename/>
-      <success_condition>rows_count_equal</success_condition>
-      <limit>0</limit>
-      <is_custom_sql>Y</is_custom_sql>
-      <is_usevars>Y</is_usevars>
-      <custom_sql>select 
- distinct jobname
-from 
- ${KJUBE_LOGGING_BATCH_TABLE}
-where 
- jobname = &apos;${KJUBE_BATCH}&apos; </custom_sql>
-      <add_rows_result>N</add_rows_result>
-      <clear_result_rows>Y</clear_result_rows>
-      <parallel>N</parallel>
-      <draw>Y</draw>
-      <nr>0</nr>
-      <xloc>812</xloc>
-      <yloc>78</yloc>
-      </entry>
-    <entry>
-      <name>Error 2</name>
-      <description>Mail</description>
-      <type>MAIL</type>
-      <server>${MAIL_SMTP_SERVER}</server>
-      <port>${MAIL_SMTP_PORT}</port>
-      <destination>${MAIL_DESTINATION_ADDRESS}</destination>
-      <destinationCc>${MAIL_DESTINATION_CC}</destinationCc>
-      <destinationBCc>${MAIL_DESTINATION_BCC}</destinationBCc>
-      <replyto>${MAIL_SENDER_ADDRESS}</replyto>
-      <replytoname>${MAIL_SENDER_NAME}</replytoname>
-      <subject>${KJUBE_BATCH} in ${KJUBE_APPLICATION} (${KJUBE_LIFECYCLE}) @ ${KJUBE_CUSTOMER} - Failure - Cannot start batch process</subject>
-      <include_date>Y</include_date>
-      <contact_person>${MAIL_CONTACT_PERSON}</contact_person>
-      <contact_phone>${MAIL_CONTACT_PHONE}</contact_phone>
-      <comment>&lt;b&gt;Job result&lt;&#47;b&gt;&lt;br&gt;
-The following job failed:&lt;br&gt;
-- Batch: &lt;b&gt;${KJUBE_BATCH}&lt;&#47;b&gt;&lt;br&gt;
-- Application: ${KJUBE_APPLICATION}&lt;br&gt;
-- Environment: ${KJUBE_LIFECYCLE}&lt;br&gt;
-- Customer: ${KJUBE_CUSTOMER}&lt;br&gt;
-&lt;b&gt;because it seems the table ${KJUBE_LOGGING_BATCH_TABLE} does not exist or is not reachable.&lt;&#47;b&gt;&lt;br&gt;
-Regards,&lt;br&gt;
-${MAIL_SENDER_NAME}&lt;br&gt;
-&lt;br&gt;</comment>
-      <include_files>N</include_files>
-      <zip_files>N</zip_files>
-      <zip_name>logging</zip_name>
-      <use_auth>N</use_auth>
-      <use_secure_auth>N</use_secure_auth>
-      <auth_user>${MAIL_SMTP_USER}</auth_user>
-      <auth_password>${MAIL_SMTP_PWD}</auth_password>
-      <only_comment>Y</only_comment>
-      <use_HTML>Y</use_HTML>
-      <use_Priority>Y</use_Priority>
-      <encoding>UTF-8</encoding>
-      <priority>high</priority>
-      <importance>high</importance>
-      <secureconnectiontype>SSL</secureconnectiontype>
-      <replyToAddresses>${MAIL_REPLY_TO}</replyToAddresses>
-      <filetypes>        <filetype>GENERAL</filetype>
-        <filetype>LOG</filetype>
-        <filetype>ERRORLINE</filetype>
-        <filetype>ERROR</filetype>
-        <filetype>WARNING</filetype>
-      </filetypes>      <parallel>N</parallel>
-      <draw>Y</draw>
-      <nr>0</nr>
-      <xloc>802</xloc>
-      <yloc>193</yloc>
-      </entry>
   </entries>
   <hops>
     <hop>
@@ -804,15 +640,6 @@ ${MAIL_SENDER_NAME}&lt;br&gt;
       <to_nr>0</to_nr>
       <enabled>Y</enabled>
       <evaluation>N</evaluation>
-      <unconditional>N</unconditional>
-    </hop>
-    <hop>
-      <from>Error</from>
-      <to>Abort job</to>
-      <from_nr>0</from_nr>
-      <to_nr>0</to_nr>
-      <enabled>Y</enabled>
-      <evaluation>Y</evaluation>
       <unconditional>N</unconditional>
     </hop>
     <hop>
@@ -872,33 +699,6 @@ ${MAIL_SENDER_NAME}&lt;br&gt;
     <hop>
       <from>Create ${KFF_LOGGING_TRNSF_TABLE_HIST}</from>
       <to>Check ${KFF_LOGGING_STEP_TABLE_HIST}</to>
-      <from_nr>0</from_nr>
-      <to_nr>0</to_nr>
-      <enabled>Y</enabled>
-      <evaluation>Y</evaluation>
-      <unconditional>N</unconditional>
-    </hop>
-    <hop>
-      <from>New batch - first run ?</from>
-      <to>Error</to>
-      <from_nr>0</from_nr>
-      <to_nr>0</to_nr>
-      <enabled>Y</enabled>
-      <evaluation>N</evaluation>
-      <unconditional>N</unconditional>
-    </hop>
-    <hop>
-      <from>Check last batch</from>
-      <to>New batch - first run ?</to>
-      <from_nr>0</from_nr>
-      <to_nr>0</to_nr>
-      <enabled>Y</enabled>
-      <evaluation>N</evaluation>
-      <unconditional>N</unconditional>
-    </hop>
-    <hop>
-      <from>Error 2</from>
-      <to>Abort job</to>
       <from_nr>0</from_nr>
       <to_nr>0</to_nr>
       <enabled>Y</enabled>

@@ -138,6 +138,7 @@
       <attribute><code>IS_CLUSTERED</code><attribute>N</attribute></attribute>
       <attribute><code>PORT_NUMBER</code><attribute>${STEALTHXX_DATABASE}</attribute></attribute>
       <attribute><code>QUOTE_ALL_FIELDS</code><attribute>N</attribute></attribute>
+      <attribute><code>SUPPORTS_BOOLEAN_DATA_TYPE</code><attribute>N</attribute></attribute>
       <attribute><code>USE_POOLING</code><attribute>N</attribute></attribute>
     </attributes>
   </connection>
@@ -168,8 +169,8 @@
       <parallel>Y</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>127</xloc>
-      <yloc>68</yloc>
+      <xloc>185</xloc>
+      <yloc>51</yloc>
       </entry>
     <entry>
       <name>START</name>
@@ -188,8 +189,8 @@
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>22</xloc>
-      <yloc>67</yloc>
+      <xloc>85</xloc>
+      <yloc>127</yloc>
       </entry>
     <entry>
       <name>${KFF_BATCH}</name>
@@ -214,8 +215,8 @@
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>236</xloc>
-      <yloc>152</yloc>
+      <xloc>399</xloc>
+      <yloc>125</yloc>
       </entry>
     <entry>
       <name>kff_logging_archive</name>
@@ -240,8 +241,8 @@
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>238</xloc>
-      <yloc>317</yloc>
+      <xloc>304</xloc>
+      <yloc>292</yloc>
       </entry>
     <entry>
       <name>kff_logging_reports</name>
@@ -266,8 +267,8 @@
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>237</xloc>
-      <yloc>231</yloc>
+      <xloc>399</xloc>
+      <yloc>219</yloc>
       </entry>
     <entry>
       <name>kff_logging_init</name>
@@ -292,8 +293,8 @@
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>237</xloc>
-      <yloc>69</yloc>
+      <xloc>296</xloc>
+      <yloc>51</yloc>
       </entry>
     <entry>
       <name>kff_backup_code</name>
@@ -318,8 +319,8 @@
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>237</xloc>
-      <yloc>405</yloc>
+      <xloc>185</xloc>
+      <yloc>293</yloc>
       </entry>
   </entries>
   <hops>
@@ -380,11 +381,12 @@
   </hops>
   <notepads>
     <notepad>
-      <note>Don&apos;t enable logging in this job!</note>
-      <xloc>18</xloc>
-      <yloc>12</yloc>
-      <width>204</width>
-      <heigth>31</heigth>
+      <note>Don&apos;t enable logging in this job.
+</note>
+      <xloc>163</xloc>
+      <yloc>153</yloc>
+      <width>196</width>
+      <heigth>52</heigth>
     </notepad>
   </notepads>
 </job>
