@@ -194,7 +194,7 @@ Review:
     <footer>N</footer>
     <encoding/>
     <append>Y</append>
-    <add_to_result_filenames>Y</add_to_result_filenames>
+    <add_to_result_filenames>N</add_to_result_filenames>
     <file>
       <name>${KFF_BASE_DIR}&#47;projects&#47;${KFF_CUSTOMER}&#47;${KFF_APPLICATION}&#47;log&#47;${KFF_BATCH}.${KFF_BATCH_DATE}.${KFF_BATCH_ID}</name>
       <extention>xls</extention>

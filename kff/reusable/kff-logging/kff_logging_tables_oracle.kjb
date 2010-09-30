@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <job>
-  <name>kjube_etl_log_tables</name>
+  <name>kjube_etl_log_tables_oracle</name>
     <description>Standard kJube framework job for creation of logging tables</description>
     <extended_description>Standard kJube framework job for creation of logging tables.
 This job will assume that names of logging table are set in .properties files.</extended_description>
@@ -16,7 +16,7 @@ This job will assume that names of logging table are set in .properties files.</
   <connection>
     <name>DWH_DWH</name>
     <server>${DWH_DWH_HOSTNAME}</server>
-    <type>ORACLE</type>
+    <type>MYSQL</type>
     <access>Native</access>
     <database>${DWH_DWH_DATABASE}</database>
     <port>${DWH_DWH_PORT}</port>
@@ -31,14 +31,14 @@ This job will assume that names of logging table are set in .properties files.</
       <attribute><code>IS_CLUSTERED</code><attribute>N</attribute></attribute>
       <attribute><code>PORT_NUMBER</code><attribute>${DWH_DWH_PORT}</attribute></attribute>
       <attribute><code>QUOTE_ALL_FIELDS</code><attribute>N</attribute></attribute>
-      <attribute><code>SQL_CONNECT</code><attribute>alter session set NLS_SORT=ITALIAN;</attribute></attribute>
+      <attribute><code>STREAM_RESULTS</code><attribute>Y</attribute></attribute>
       <attribute><code>USE_POOLING</code><attribute>N</attribute></attribute>
     </attributes>
   </connection>
   <connection>
     <name>DWH_LOG</name>
     <server>${DWH_LOG_HOSTNAME}</server>
-    <type>ORACLE</type>
+    <type>MYSQL</type>
     <access>Native</access>
     <database>${DWH_LOG_DATABASE}</database>
     <port>${DWH_LOG_PORT}</port>
@@ -53,14 +53,14 @@ This job will assume that names of logging table are set in .properties files.</
       <attribute><code>IS_CLUSTERED</code><attribute>N</attribute></attribute>
       <attribute><code>PORT_NUMBER</code><attribute>${DWH_LOG_PORT}</attribute></attribute>
       <attribute><code>QUOTE_ALL_FIELDS</code><attribute>N</attribute></attribute>
-      <attribute><code>SQL_CONNECT</code><attribute>alter session set NLS_SORT=ITALIAN;</attribute></attribute>
+      <attribute><code>STREAM_RESULTS</code><attribute>Y</attribute></attribute>
       <attribute><code>USE_POOLING</code><attribute>N</attribute></attribute>
     </attributes>
   </connection>
   <connection>
     <name>DWH_ODS</name>
     <server>${DWH_ODS_HOSTNAME}</server>
-    <type>ORACLE</type>
+    <type>MYSQL</type>
     <access>Native</access>
     <database>${DWH_ODS_DATABASE}</database>
     <port>${DWH_ODS_PORT}</port>
@@ -75,14 +75,14 @@ This job will assume that names of logging table are set in .properties files.</
       <attribute><code>IS_CLUSTERED</code><attribute>N</attribute></attribute>
       <attribute><code>PORT_NUMBER</code><attribute>${DWH_ODS_PORT}</attribute></attribute>
       <attribute><code>QUOTE_ALL_FIELDS</code><attribute>N</attribute></attribute>
-      <attribute><code>SQL_CONNECT</code><attribute>alter session set NLS_SORT=ITALIAN;</attribute></attribute>
+      <attribute><code>STREAM_RESULTS</code><attribute>Y</attribute></attribute>
       <attribute><code>USE_POOLING</code><attribute>N</attribute></attribute>
     </attributes>
   </connection>
   <connection>
     <name>DWH_STG</name>
     <server>${DWH_STG_HOSTNAME}</server>
-    <type>ORACLE</type>
+    <type>MYSQL</type>
     <access>Native</access>
     <database>${DWH_STG_DATABASE}</database>
     <port>${DWH_STG_PORT}</port>
@@ -97,7 +97,7 @@ This job will assume that names of logging table are set in .properties files.</
       <attribute><code>IS_CLUSTERED</code><attribute>N</attribute></attribute>
       <attribute><code>PORT_NUMBER</code><attribute>${DWH_STG_PORT}</attribute></attribute>
       <attribute><code>QUOTE_ALL_FIELDS</code><attribute>N</attribute></attribute>
-      <attribute><code>SQL_CONNECT</code><attribute>alter session set NLS_SORT=ITALIAN;</attribute></attribute>
+      <attribute><code>STREAM_RESULTS</code><attribute>Y</attribute></attribute>
       <attribute><code>USE_POOLING</code><attribute>N</attribute></attribute>
     </attributes>
   </connection>
@@ -123,7 +123,7 @@ This job will assume that names of logging table are set in .properties files.</
     </attributes>
   </connection>
     <slaveservers>
-         <slaveserver><name>CARTE</name><hostname>${CARTE_HOSTNAME}</hostname><port>${CARTE_PORT}</port><username>${CARTE_USER}cluster</username><password>${CARTE_PWD}</password><proxy_hostname>${CARTE_PROXY_HOST}</proxy_hostname><proxy_port>${CARTE_PROXY_PORT}</proxy_port><non_proxy_hosts>${CARTE_NON_PROXY}</non_proxy_hosts><master>Y</master></slaveserver>
+         <slaveserver><name>CARTE</name><hostname>${CARTE_HOSTNAME}</hostname><port>${CARTE_PORT}</port><username>${CARTE_USER}</username><password>${CARTE_PWD}</password><proxy_hostname>${CARTE_PROXY_HOST}</proxy_hostname><proxy_port>${CARTE_PROXY_PORT}</proxy_port><non_proxy_hosts>${CARTE_NON_PROXY}</non_proxy_hosts><master>Y</master></slaveserver>
          <slaveserver><name>TST (DRP-DWDB)</name><hostname>10.89.20.14</hostname><port>8181</port><username>cluster</username><password>Encrypted 2be98afc86aa7f2e4cb1aa265cd86aac8</password><proxy_hostname/><proxy_port/><non_proxy_hosts/><master>Y</master></slaveserver>
          <slaveserver><name>DWDB1</name><hostname>10.89.0.191</hostname><port>8181</port><username>cluster</username><password>Encrypted 2be98afc86aa7f2e4cb1aa265cd86aac8</password><proxy_hostname>proxy2.fendi.com</proxy_hostname><proxy_port>3128</proxy_port><non_proxy_hosts>10.89.*</non_proxy_hosts><master>N</master></slaveserver>
          <slaveserver><name>PRD (FNDRMDWDB1)</name><hostname>10.89.30.76</hostname><port>8181</port><username>cluster</username><password>Encrypted 2be98afc86aa7f2e4cb1aa265cd86aac8</password><proxy_hostname>proxy2.fendi.com</proxy_hostname><proxy_port>3128</proxy_port><non_proxy_hosts>10.89.*</non_proxy_hosts><master>N</master></slaveserver>
@@ -155,27 +155,27 @@ This job will assume that names of logging table are set in .properties files.</
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>27</xloc>
-      <yloc>18</yloc>
+      <xloc>184</xloc>
+      <yloc>15</yloc>
       </entry>
     <entry>
-      <name>Check ${KJUBE_LOGGING_JOB_TABLE}</name>
+      <name>Check ${KFF_LOGGING_JOB_TABLE}</name>
       <description>Table exists</description>
       <type>TABLE_EXISTS</type>
-      <tablename>${KJUBE_LOGGING_JOB_TABLE}</tablename>
-      <schemaname>${KJUBE_LOGGING_SCHEMA}</schemaname>
+      <tablename>${KFF_LOGGING_JOB_TABLE}</tablename>
+      <schemaname>${KFF_LOGGING_SCHEMA}</schemaname>
       <connection>DWH_LOG</connection>
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>192</xloc>
-      <yloc>474</yloc>
+      <xloc>187</xloc>
+      <yloc>379</yloc>
       </entry>
     <entry>
-      <name>Create ${KJUBE_LOGGING_JOB_TABLE}</name>
+      <name>Create ${KFF_LOGGING_JOB_TABLE}</name>
       <description>SQL</description>
       <type>SQL</type>
-      <sql>CREATE TABLE ${KJUBE_LOGGING_JOB_TABLE}
+      <sql>CREATE TABLE ${KFF_LOGGING_JOB_TABLE}
 (
   ID_JOB INTEGER
 , JOBNAME VARCHAR2(255)
@@ -195,8 +195,8 @@ This job will assume that names of logging table are set in .properties files.</
 )
 ;
 
-CREATE INDEX ${KJUBE_LOGGING_JOB_TABLE}_UIX
-on ${KJUBE_LOGGING_JOB_TABLE} (JOBNAME)
+CREATE INDEX ${KFF_LOGGING_JOB_TABLE}_UIX
+on ${KFF_LOGGING_JOB_TABLE} (JOBNAME)
 ;</sql>
       <useVariableSubstitution>T</useVariableSubstitution>
       <sqlfromfile>F</sqlfromfile>
@@ -205,27 +205,27 @@ on ${KJUBE_LOGGING_JOB_TABLE} (JOBNAME)
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>484</xloc>
-      <yloc>472</yloc>
+      <xloc>479</xloc>
+      <yloc>377</yloc>
       </entry>
     <entry>
-      <name>Check ${KJUBE_LOGGING_TRNSF_TABLE}</name>
+      <name>Check ${KFF_LOGGING_TRNSF_TABLE}</name>
       <description>Table exists</description>
       <type>TABLE_EXISTS</type>
-      <tablename>${KJUBE_LOGGING_TRNSF_TABLE}</tablename>
-      <schemaname>${KJUBE_LOGGING_SCHEMA}</schemaname>
+      <tablename>${KFF_LOGGING_TRNSF_TABLE}</tablename>
+      <schemaname>${KFF_LOGGING_SCHEMA}</schemaname>
       <connection>DWH_LOG</connection>
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>189</xloc>
-      <yloc>292</yloc>
+      <xloc>184</xloc>
+      <yloc>197</yloc>
       </entry>
     <entry>
-      <name>Create ${KJUBE_LOGGING_TRNSF_TABLE}</name>
+      <name>Create ${KFF_LOGGING_TRNSF_TABLE}</name>
       <description>SQL</description>
       <type>SQL</type>
-      <sql>CREATE TABLE ${KJUBE_LOGGING_TRNSF_TABLE}
+      <sql>CREATE TABLE ${KFF_LOGGING_TRNSF_TABLE}
 (
   ID_BATCH INTEGER
 , TRANSNAME VARCHAR2(255)
@@ -245,8 +245,8 @@ on ${KJUBE_LOGGING_JOB_TABLE} (JOBNAME)
 );
 
 
-CREATE INDEX ${KJUBE_LOGGING_TRNSF_TABLE}_UIX
-on ${KJUBE_LOGGING_TRNSF_TABLE} (TRANSNAME)
+CREATE INDEX ${KFF_LOGGING_TRNSF_TABLE}_UIX
+on ${KFF_LOGGING_TRNSF_TABLE} (TRANSNAME)
 ;
 </sql>
       <useVariableSubstitution>T</useVariableSubstitution>
@@ -256,44 +256,14 @@ on ${KJUBE_LOGGING_TRNSF_TABLE} (TRANSNAME)
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>482</xloc>
-      <yloc>287</yloc>
+      <xloc>477</xloc>
+      <yloc>192</yloc>
       </entry>
     <entry>
-      <name>Truncate current log</name>
-      <description>Truncate tables</description>
-      <type>TRUNCATE_TABLES</type>
-      <connection>DWH_LOG</connection>
-      <arg_from_previous>N</arg_from_previous>
-      <fields>
-        <field>
-          <name>${KJUBE_LOGGING_JOB_TABLE}</name>
-          <schemaname/>
-        </field>
-        <field>
-          <name>${KJUBE_LOGGING_TRNSF_TABLE}</name>
-          <schemaname/>
-        </field>
-        <field>
-          <name>${KJUBE_LOGGING_STEP_TABLE}</name>
-          <schemaname/>
-        </field>
-        <field>
-          <name>${KJUBE_LOGGING_REJECT_TABLE}</name>
-          <schemaname/>
-        </field>
-      </fields>
-      <parallel>N</parallel>
-      <draw>Y</draw>
-      <nr>0</nr>
-      <xloc>191</xloc>
-      <yloc>551</yloc>
-      </entry>
-    <entry>
-      <name>Create ${KJUBE_LOGGING_REJECT_TABLE}</name>
+      <name>Create ${KFF_LOGGING_REJECT_TABLE}</name>
       <description>SQL</description>
       <type>SQL</type>
-      <sql>CREATE TABLE ${KJUBE_LOGGING_REJECT_TABLE}
+      <sql>CREATE TABLE ${KFF_LOGGING_REJECT_TABLE}
 (
   id VARCHAR2(2000)
 , value VARCHAR2(4000)
@@ -310,8 +280,8 @@ on ${KJUBE_LOGGING_TRNSF_TABLE} (TRANSNAME)
 ;
 
 
-CREATE INDEX ${KJUBE_LOGGING_REJECT_TABLE}_UIX
-on ${KJUBE_LOGGING_REJECT_TABLE} (TRANSNAME, JOBNAME)
+CREATE INDEX ${KFF_LOGGING_REJECT_TABLE}_UIX
+on ${KFF_LOGGING_REJECT_TABLE} (TRANSNAME, JOBNAME)
 ;</sql>
       <useVariableSubstitution>T</useVariableSubstitution>
       <sqlfromfile>F</sqlfromfile>
@@ -320,27 +290,27 @@ on ${KJUBE_LOGGING_REJECT_TABLE} (TRANSNAME, JOBNAME)
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>484</xloc>
-      <yloc>411</yloc>
+      <xloc>479</xloc>
+      <yloc>316</yloc>
       </entry>
     <entry>
-      <name>Check ${KJUBE_LOGGING_REJECT_TABLE}</name>
+      <name>Check ${KFF_LOGGING_REJECT_TABLE}</name>
       <description>Table exists</description>
       <type>TABLE_EXISTS</type>
-      <tablename>${KJUBE_LOGGING_REJECT_TABLE}</tablename>
-      <schemaname>${KJUBE_LOGGING_SCHEMA}</schemaname>
+      <tablename>${KFF_LOGGING_REJECT_TABLE}</tablename>
+      <schemaname>${KFF_LOGGING_SCHEMA}</schemaname>
       <connection>DWH_LOG</connection>
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>189</xloc>
-      <yloc>413</yloc>
+      <xloc>184</xloc>
+      <yloc>318</yloc>
       </entry>
     <entry>
-      <name>Create ${KJUBE_LOGGING_STEP_TABLE}</name>
+      <name>Create ${KFF_LOGGING_STEP_TABLE}</name>
       <description>SQL</description>
       <type>SQL</type>
-      <sql>CREATE TABLE ${KJUBE_LOGGING_STEP_TABLE}
+      <sql>CREATE TABLE ${KFF_LOGGING_STEP_TABLE}
 (
   ID_BATCH INTEGER
 , SEQ_NR INTEGER
@@ -361,8 +331,8 @@ on ${KJUBE_LOGGING_REJECT_TABLE} (TRANSNAME, JOBNAME)
 ;
 
 
-CREATE INDEX ${KJUBE_LOGGING_STEP_TABLE}_UIX
-on ${KJUBE_LOGGING_STEP_TABLE} (STEPNAME)
+CREATE INDEX ${KFF_LOGGING_STEP_TABLE}_UIX
+on ${KFF_LOGGING_STEP_TABLE} (STEPNAME)
 ;
 </sql>
       <useVariableSubstitution>T</useVariableSubstitution>
@@ -372,40 +342,40 @@ on ${KJUBE_LOGGING_STEP_TABLE} (STEPNAME)
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>483</xloc>
-      <yloc>348</yloc>
+      <xloc>478</xloc>
+      <yloc>253</yloc>
       </entry>
     <entry>
-      <name>Check ${KJUBE_LOGGING_STEP_TABLE}</name>
+      <name>Check ${KFF_LOGGING_STEP_TABLE}</name>
       <description>Table exists</description>
       <type>TABLE_EXISTS</type>
-      <tablename>${KJUBE_LOGGING_STEP_TABLE}</tablename>
-      <schemaname>${KJUBE_LOGGING_SCHEMA}</schemaname>
+      <tablename>${KFF_LOGGING_STEP_TABLE}</tablename>
+      <schemaname>${KFF_LOGGING_SCHEMA}</schemaname>
       <connection>DWH_LOG</connection>
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>189</xloc>
-      <yloc>354</yloc>
+      <xloc>184</xloc>
+      <yloc>259</yloc>
       </entry>
     <entry>
-      <name>Check ${KJUBE_LOGGING_BATCH_TABLE}</name>
+      <name>Check ${KFF_LOGGING_BATCH_TABLE}</name>
       <description>Table exists</description>
       <type>TABLE_EXISTS</type>
-      <tablename>${KJUBE_LOGGING_BATCH_TABLE}</tablename>
-      <schemaname>${KJUBE_LOGGING_SCHEMA}</schemaname>
+      <tablename>${KFF_LOGGING_BATCH_TABLE}</tablename>
+      <schemaname>${KFF_LOGGING_SCHEMA}</schemaname>
       <connection>DWH_LOG</connection>
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>183</xloc>
-      <yloc>77</yloc>
+      <xloc>182</xloc>
+      <yloc>117</yloc>
       </entry>
     <entry>
-      <name>Create ${KJUBE_LOGGING_BATCH_TABLE}</name>
+      <name>Create ${KFF_LOGGING_BATCH_TABLE}</name>
       <description>SQL</description>
       <type>SQL</type>
-      <sql>CREATE TABLE ${KJUBE_LOGGING_BATCH_TABLE}
+      <sql>CREATE TABLE ${KFF_LOGGING_BATCH_TABLE}
 (
   ID_JOB INTEGER
 , JOBNAME VARCHAR2(255)
@@ -425,8 +395,8 @@ on ${KJUBE_LOGGING_STEP_TABLE} (STEPNAME)
 )
 ;
 
-CREATE INDEX ${KJUBE_LOGGING_BATCH_TABLE}_UIX
-on ${KJUBE_LOGGING_BATCH_TABLE} (ID_JOB, JOBNAME)
+CREATE INDEX ${KFF_LOGGING_BATCH_TABLE}_UIX
+on ${KFF_LOGGING_BATCH_TABLE} (ID_JOB, JOBNAME)
 ;</sql>
       <useVariableSubstitution>T</useVariableSubstitution>
       <sqlfromfile>F</sqlfromfile>
@@ -435,144 +405,27 @@ on ${KJUBE_LOGGING_BATCH_TABLE} (ID_JOB, JOBNAME)
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>477</xloc>
-      <yloc>73</yloc>
+      <xloc>475</xloc>
+      <yloc>117</yloc>
       </entry>
     <entry>
-      <name>Check last batch</name>
-      <description>Evaluate rows number in a table</description>
-      <type>EVAL_TABLE_CONTENT</type>
-      <connection>DWH_LOG</connection>
-      <schemaname/>
-      <tablename/>
-      <success_condition>rows_count_equal</success_condition>
-      <limit>1</limit>
-      <is_custom_sql>Y</is_custom_sql>
-      <is_usevars>Y</is_usevars>
-      <custom_sql>select 
- jobname
-from 
- ${KJUBE_LOGGING_BATCH_TABLE}
-where 
- id_job = ( select max(id_job) from ${KJUBE_LOGGING_BATCH_TABLE} ) and
- status in (&apos;end&apos;,&apos;failed&apos;,&apos;stopped&apos;,&apos;stop&apos;)</custom_sql>
-      <add_rows_result>N</add_rows_result>
-      <clear_result_rows>Y</clear_result_rows>
-      <parallel>N</parallel>
-      <draw>Y</draw>
-      <nr>0</nr>
-      <xloc>189</xloc>
-      <yloc>193</yloc>
-      </entry>
-    <entry>
-      <name>Abort job</name>
-      <description>Abort job</description>
-      <type>ABORT</type>
-      <message>Previous batch not concluded</message>
-      <parallel>N</parallel>
-      <draw>Y</draw>
-      <nr>0</nr>
-      <xloc>655</xloc>
-      <yloc>186</yloc>
-      </entry>
-    <entry>
-      <name>Error</name>
-      <description>Mail</description>
-      <type>MAIL</type>
-      <server>${MAIL_SMTP_SERVER}</server>
-      <port>${MAIL_SMTP_PORT}</port>
-      <destination>${MAIL_DESTINATION_ADDRESS}</destination>
-      <destinationCc>${MAIL_DESTINATION_CC}</destinationCc>
-      <destinationBCc>${MAIL_DESTINATION_BCC}</destinationBCc>
-      <replyto>${MAIL_SENDER_ADDRESS}</replyto>
-      <replytoname>${MAIL_SENDER_NAME}</replytoname>
-      <subject>${KJUBE_BATCH} in ${KJUBE_APPLICATION} (${KJUBE_LIFECYCLE}) @ ${KJUBE_CUSTOMER} - Failure - Previous batch not finished</subject>
-      <include_date>Y</include_date>
-      <contact_person>${MAIL_CONTACT_PERSON}</contact_person>
-      <contact_phone>${MAIL_CONTACT_PHONE}</contact_phone>
-      <comment>&lt;b&gt;Job result&lt;&#47;b&gt;&lt;br&gt;
-The following job failed:&lt;br&gt;
-- Batch: &lt;b&gt;${KJUBE_BATCH}&lt;&#47;b&gt;&lt;br&gt;
-- Application: ${KJUBE_APPLICATION}&lt;br&gt;
-- Environment: ${KJUBE_LIFECYCLE}&lt;br&gt;
-- Customer: ${KJUBE_CUSTOMER}&lt;br&gt;
-&lt;b&gt;because the previous batch with the same name didn&apos;t conclude yet.&lt;&#47;b&gt;&lt;br&gt;
-Regards,&lt;br&gt;
-${MAIL_SENDER_NAME}&lt;br&gt;
-&lt;br&gt;</comment>
-      <include_files>N</include_files>
-      <zip_files>N</zip_files>
-      <zip_name>logging</zip_name>
-      <use_auth>N</use_auth>
-      <use_secure_auth>N</use_secure_auth>
-      <auth_user>${MAIL_SMTP_USER}</auth_user>
-      <auth_password>${MAIL_SMTP_PWD}</auth_password>
-      <only_comment>Y</only_comment>
-      <use_HTML>Y</use_HTML>
-      <use_Priority>Y</use_Priority>
-      <encoding>UTF-8</encoding>
-      <priority>high</priority>
-      <importance>high</importance>
-      <secureconnectiontype>SSL</secureconnectiontype>
-      <replyToAddresses>${MAIL_REPLY_TO}</replyToAddresses>
-      <filetypes>        <filetype>GENERAL</filetype>
-        <filetype>LOG</filetype>
-        <filetype>ERRORLINE</filetype>
-        <filetype>ERROR</filetype>
-        <filetype>WARNING</filetype>
-      </filetypes>      <parallel>N</parallel>
-      <draw>Y</draw>
-      <nr>0</nr>
-      <xloc>479</xloc>
-      <yloc>189</yloc>
-      </entry>
-    <entry>
-      <name>set_batch_id</name>
-      <description>Transformation</description>
-      <type>TRANS</type>
-      <filename>${Internal.Job.Filename.Directory}&#47;kjube_etl_logging_set_batch_id.ktr</filename>
-      <transname/>
-      <arg_from_previous>N</arg_from_previous>
-      <params_from_previous>N</params_from_previous>
-      <exec_per_row>N</exec_per_row>
-      <clear_rows>N</clear_rows>
-      <clear_files>N</clear_files>
-      <set_logfile>N</set_logfile>
-      <logfile/>
-      <logext/>
-      <add_date>N</add_date>
-      <add_time>N</add_time>
-      <loglevel>Nothing</loglevel>
-      <cluster>N</cluster>
-      <slave_server_name/>
-      <set_append_logfile>N</set_append_logfile>
-      <wait_until_finished>Y</wait_until_finished>
-      <follow_abort_remote>N</follow_abort_remote>
-      <parameters>        <pass_all_parameters>Y</pass_all_parameters>
-      </parameters>      <parallel>N</parallel>
-      <draw>Y</draw>
-      <nr>0</nr>
-      <xloc>183</xloc>
-      <yloc>899</yloc>
-      </entry>
-    <entry>
-      <name>Check ${KJUBE_LOGGING_JOB_TABLE}_HIST</name>
+      <name>Check ${KFF_LOGGING_JOB_TABLE_HIST}</name>
       <description>Table exists</description>
       <type>TABLE_EXISTS</type>
-      <tablename>${KJUBE_LOGGING_JOB_TABLE}_HIST</tablename>
-      <schemaname>${KJUBE_LOGGING_SCHEMA}</schemaname>
+      <tablename>${KFF_LOGGING_JOB_TABLE_HIST}</tablename>
+      <schemaname>${KFF_LOGGING_SCHEMA}</schemaname>
       <connection>DWH_LOG</connection>
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>187</xloc>
-      <yloc>633</yloc>
+      <xloc>188</xloc>
+      <yloc>500</yloc>
       </entry>
     <entry>
-      <name>Create ${KJUBE_LOGGING_JOB_TABLE}_HIST</name>
+      <name>Create ${KFF_LOGGING_JOB_TABLE_HIST}</name>
       <description>SQL</description>
       <type>SQL</type>
-      <sql>CREATE TABLE ${KJUBE_LOGGING_JOB_TABLE}_HIST
+      <sql>CREATE TABLE ${KFF_LOGGING_JOB_TABLE_HIST}
 ( KJUBE_BATCH_ID INTEGER
 , ID_JOB INTEGER
 , JOBNAME VARCHAR2(255)
@@ -592,8 +445,8 @@ ${MAIL_SENDER_NAME}&lt;br&gt;
 )
 ;
 
-CREATE INDEX ${KJUBE_LOGGING_JOB_TABLE}_HIST_UIX
-on ${KJUBE_LOGGING_JOB_TABLE}_HIST (KJUBE_BATCH_ID, JOBNAME)
+CREATE INDEX ${KFF_LOGGING_JOB_TABLE_HIST}_UIX
+on ${KFF_LOGGING_JOB_TABLE_HIST} (KJUBE_BATCH_ID, JOBNAME)
 ;</sql>
       <useVariableSubstitution>T</useVariableSubstitution>
       <sqlfromfile>F</sqlfromfile>
@@ -602,27 +455,27 @@ on ${KJUBE_LOGGING_JOB_TABLE}_HIST (KJUBE_BATCH_ID, JOBNAME)
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>486</xloc>
-      <yloc>629</yloc>
+      <xloc>487</xloc>
+      <yloc>496</yloc>
       </entry>
     <entry>
-      <name>Check ${KJUBE_LOGGING_TRNSF_TABLE}_HIST</name>
+      <name>Check ${KFF_LOGGING_TRNSF_TABLE_HIST}</name>
       <description>Table exists</description>
       <type>TABLE_EXISTS</type>
-      <tablename>${KJUBE_LOGGING_TRNSF_TABLE}_HIST</tablename>
-      <schemaname>${KJUBE_LOGGING_SCHEMA}</schemaname>
+      <tablename>${KFF_LOGGING_TRNSF_TABLE_HIST}</tablename>
+      <schemaname>${KFF_LOGGING_SCHEMA}</schemaname>
       <connection>DWH_LOG</connection>
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>185</xloc>
-      <yloc>696</yloc>
+      <xloc>186</xloc>
+      <yloc>563</yloc>
       </entry>
     <entry>
-      <name>Create ${KJUBE_LOGGING_TRNSF_TABLE}_HIST</name>
+      <name>Create ${KFF_LOGGING_TRNSF_TABLE_HIST}</name>
       <description>SQL</description>
       <type>SQL</type>
-      <sql>CREATE TABLE ${KJUBE_LOGGING_TRNSF_TABLE}_HIST
+      <sql>CREATE TABLE ${KFF_LOGGING_TRNSF_TABLE_HIST}
 ( KJUBE_BATCH_ID INTEGER
 , ID_BATCH INTEGER
 , TRANSNAME VARCHAR2(255)
@@ -642,8 +495,8 @@ on ${KJUBE_LOGGING_JOB_TABLE}_HIST (KJUBE_BATCH_ID, JOBNAME)
 );
 
 
-CREATE INDEX ${KJUBE_LOGGING_TRNSF_TABLE}_HIST_UIX
-on ${KJUBE_LOGGING_TRNSF_TABLE}_HIST (KJUBE_BATCH_ID, TRANSNAME)
+CREATE INDEX ${KFF_LOGGING_TRNSF_TABLE_HIST}_UIX
+on ${KFF_LOGGING_TRNSF_TABLE_HIST} (KJUBE_BATCH_ID, TRANSNAME)
 ;
 </sql>
       <useVariableSubstitution>T</useVariableSubstitution>
@@ -653,27 +506,27 @@ on ${KJUBE_LOGGING_TRNSF_TABLE}_HIST (KJUBE_BATCH_ID, TRANSNAME)
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>485</xloc>
-      <yloc>691</yloc>
+      <xloc>486</xloc>
+      <yloc>558</yloc>
       </entry>
     <entry>
-      <name>Check ${KJUBE_LOGGING_STEP_TABLE}_HIST</name>
+      <name>Check ${KFF_LOGGING_STEP_TABLE_HIST}</name>
       <description>Table exists</description>
       <type>TABLE_EXISTS</type>
-      <tablename>${KJUBE_LOGGING_STEP_TABLE}_HIST</tablename>
-      <schemaname>${KJUBE_LOGGING_SCHEMA}</schemaname>
+      <tablename>${KFF_LOGGING_STEP_TABLE_HIST}</tablename>
+      <schemaname>${KFF_LOGGING_SCHEMA}</schemaname>
       <connection>DWH_LOG</connection>
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>188</xloc>
-      <yloc>757</yloc>
+      <xloc>189</xloc>
+      <yloc>624</yloc>
       </entry>
     <entry>
-      <name>Create ${KJUBE_LOGGING_STEP_TABLE}_HIST</name>
+      <name>Create ${KFF_LOGGING_STEP_TABLE_HIST}</name>
       <description>SQL</description>
       <type>SQL</type>
-      <sql>CREATE TABLE ${KJUBE_LOGGING_STEP_TABLE}_HIST
+      <sql>CREATE TABLE ${KFF_LOGGING_STEP_TABLE_HIST}
 (
   KJUBE_BATCH_ID INTEGER
 , ID_BATCH INTEGER
@@ -695,8 +548,8 @@ on ${KJUBE_LOGGING_TRNSF_TABLE}_HIST (KJUBE_BATCH_ID, TRANSNAME)
 ;
 
 
-CREATE INDEX ${KJUBE_LOGGING_STEP_TABLE}_HIST_UIX
-on ${KJUBE_LOGGING_STEP_TABLE}_HIST (KJUBE_BATCH_ID,STEPNAME)
+CREATE INDEX ${KFF_LOGGING_STEP_TABLE_HIST}_UIX
+on ${KFF_LOGGING_STEP_TABLE_HIST} (KJUBE_BATCH_ID,STEPNAME)
 ;
 </sql>
       <useVariableSubstitution>T</useVariableSubstitution>
@@ -706,27 +559,27 @@ on ${KJUBE_LOGGING_STEP_TABLE}_HIST (KJUBE_BATCH_ID,STEPNAME)
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>484</xloc>
-      <yloc>752</yloc>
+      <xloc>485</xloc>
+      <yloc>619</yloc>
       </entry>
     <entry>
-      <name>Check ${KJUBE_LOGGING_REJECT_TABLE}_HIST</name>
+      <name>Check ${KFF_LOGGING_REJECT_TABLE_HIST}</name>
       <description>Table exists</description>
       <type>TABLE_EXISTS</type>
-      <tablename>${KJUBE_LOGGING_REJECT_TABLE}_HIST</tablename>
-      <schemaname>${KJUBE_LOGGING_SCHEMA}</schemaname>
+      <tablename>${KFF_LOGGING_REJECT_TABLE_HIST}</tablename>
+      <schemaname>${KFF_LOGGING_SCHEMA}</schemaname>
       <connection>DWH_LOG</connection>
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>186</xloc>
-      <yloc>819</yloc>
+      <xloc>187</xloc>
+      <yloc>686</yloc>
       </entry>
     <entry>
-      <name>Create ${KJUBE_LOGGING_REJECT_TABLE}_HIST</name>
+      <name>Create ${KFF_LOGGING_REJECT_TABLE_HIST}</name>
       <description>SQL</description>
       <type>SQL</type>
-      <sql>CREATE TABLE ${KJUBE_LOGGING_REJECT_TABLE}_HIST
+      <sql>CREATE TABLE ${KFF_LOGGING_REJECT_TABLE_HIST}
 (
   KJUBE_BATCH_ID INTEGER
 , ID VARCHAR2(2000)
@@ -743,8 +596,8 @@ on ${KJUBE_LOGGING_STEP_TABLE}_HIST (KJUBE_BATCH_ID,STEPNAME)
 )
 ;
 
-CREATE INDEX ${KJUBE_LOGGING_REJECT_TABLE}_HIST_UIX
-on ${KJUBE_LOGGING_REJECT_TABLE}_HIST (KJUBE_BATCH_ID, TRANSNAME, JOBNAME)
+CREATE INDEX ${KFF_LOGGING_REJECT_TABLE_HIST}_UIX
+on ${KFF_LOGGING_REJECT_TABLE_HIST} (KJUBE_BATCH_ID, TRANSNAME, JOBNAME)
 ;</sql>
       <useVariableSubstitution>T</useVariableSubstitution>
       <sqlfromfile>F</sqlfromfile>
@@ -753,90 +606,14 @@ on ${KJUBE_LOGGING_REJECT_TABLE}_HIST (KJUBE_BATCH_ID, TRANSNAME, JOBNAME)
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>484</xloc>
-      <yloc>815</yloc>
-      </entry>
-    <entry>
-      <name>New batch - first run ?</name>
-      <description>Evaluate rows number in a table</description>
-      <type>EVAL_TABLE_CONTENT</type>
-      <connection>DWH_LOG</connection>
-      <schemaname/>
-      <tablename/>
-      <success_condition>rows_count_equal</success_condition>
-      <limit>0</limit>
-      <is_custom_sql>Y</is_custom_sql>
-      <is_usevars>Y</is_usevars>
-      <custom_sql>select 
- distinct jobname
-from 
- ${KJUBE_LOGGING_BATCH_TABLE}
-where 
- jobname = &apos;${KJUBE_BATCH}&apos; </custom_sql>
-      <add_rows_result>N</add_rows_result>
-      <clear_result_rows>Y</clear_result_rows>
-      <parallel>N</parallel>
-      <draw>Y</draw>
-      <nr>0</nr>
-      <xloc>339</xloc>
-      <yloc>191</yloc>
-      </entry>
-    <entry>
-      <name>Error 2</name>
-      <description>Mail</description>
-      <type>MAIL</type>
-      <server>${MAIL_SMTP_SERVER}</server>
-      <port>${MAIL_SMTP_PORT}</port>
-      <destination>${MAIL_DESTINATION_ADDRESS}</destination>
-      <destinationCc>${MAIL_DESTINATION_CC}</destinationCc>
-      <destinationBCc>${MAIL_DESTINATION_BCC}</destinationBCc>
-      <replyto>${MAIL_SENDER_ADDRESS}</replyto>
-      <replytoname>${MAIL_SENDER_NAME}</replytoname>
-      <subject>${KJUBE_BATCH} in ${KJUBE_APPLICATION} (${KJUBE_LIFECYCLE}) @ ${KJUBE_CUSTOMER} - Failure - Cannot start batch process</subject>
-      <include_date>Y</include_date>
-      <contact_person>${MAIL_CONTACT_PERSON}</contact_person>
-      <contact_phone>${MAIL_CONTACT_PHONE}</contact_phone>
-      <comment>&lt;b&gt;Job result&lt;&#47;b&gt;&lt;br&gt;
-The following job failed:&lt;br&gt;
-- Batch: &lt;b&gt;${KJUBE_BATCH}&lt;&#47;b&gt;&lt;br&gt;
-- Application: ${KJUBE_APPLICATION}&lt;br&gt;
-- Environment: ${KJUBE_LIFECYCLE}&lt;br&gt;
-- Customer: ${KJUBE_CUSTOMER}&lt;br&gt;
-&lt;b&gt;because it seems the table ${KJUBE_LOGGING_BATCH_TABLE} does not exist or is not reachable.&lt;&#47;b&gt;&lt;br&gt;
-Regards,&lt;br&gt;
-${MAIL_SENDER_NAME}&lt;br&gt;
-&lt;br&gt;</comment>
-      <include_files>N</include_files>
-      <zip_files>N</zip_files>
-      <zip_name>logging</zip_name>
-      <use_auth>N</use_auth>
-      <use_secure_auth>N</use_secure_auth>
-      <auth_user>${MAIL_SMTP_USER}</auth_user>
-      <auth_password>${MAIL_SMTP_PWD}</auth_password>
-      <only_comment>Y</only_comment>
-      <use_HTML>Y</use_HTML>
-      <use_Priority>Y</use_Priority>
-      <encoding>UTF-8</encoding>
-      <priority>high</priority>
-      <importance>high</importance>
-      <secureconnectiontype>SSL</secureconnectiontype>
-      <replyToAddresses>${MAIL_REPLY_TO}</replyToAddresses>
-      <filetypes>        <filetype>GENERAL</filetype>
-        <filetype>LOG</filetype>
-        <filetype>ERRORLINE</filetype>
-        <filetype>ERROR</filetype>
-        <filetype>WARNING</filetype>
-      </filetypes>      <parallel>N</parallel>
-      <draw>Y</draw>
-      <nr>0</nr>
-      <xloc>653</xloc>
-      <yloc>72</yloc>
+      <xloc>485</xloc>
+      <yloc>682</yloc>
       </entry>
   </entries>
   <hops>
     <hop>
-      <from>Check ${KJUBE_LOGGING_JOB_TABLE}</from>
-      <to>Create ${KJUBE_LOGGING_JOB_TABLE}</to>
+      <from>Check ${KFF_LOGGING_JOB_TABLE}</from>
+      <to>Create ${KFF_LOGGING_JOB_TABLE}</to>
       <from_nr>0</from_nr>
       <to_nr>0</to_nr>
       <enabled>Y</enabled>
@@ -844,8 +621,8 @@ ${MAIL_SENDER_NAME}&lt;br&gt;
       <unconditional>N</unconditional>
     </hop>
     <hop>
-      <from>Check ${KJUBE_LOGGING_TRNSF_TABLE}</from>
-      <to>Create ${KJUBE_LOGGING_TRNSF_TABLE}</to>
+      <from>Check ${KFF_LOGGING_TRNSF_TABLE}</from>
+      <to>Create ${KFF_LOGGING_TRNSF_TABLE}</to>
       <from_nr>0</from_nr>
       <to_nr>0</to_nr>
       <enabled>Y</enabled>
@@ -853,8 +630,8 @@ ${MAIL_SENDER_NAME}&lt;br&gt;
       <unconditional>N</unconditional>
     </hop>
     <hop>
-      <from>Check ${KJUBE_LOGGING_TRNSF_TABLE}</from>
-      <to>Check ${KJUBE_LOGGING_STEP_TABLE}</to>
+      <from>Check ${KFF_LOGGING_TRNSF_TABLE}</from>
+      <to>Check ${KFF_LOGGING_STEP_TABLE}</to>
       <from_nr>0</from_nr>
       <to_nr>0</to_nr>
       <enabled>Y</enabled>
@@ -862,8 +639,8 @@ ${MAIL_SENDER_NAME}&lt;br&gt;
       <unconditional>N</unconditional>
     </hop>
     <hop>
-      <from>Create ${KJUBE_LOGGING_TRNSF_TABLE}</from>
-      <to>Check ${KJUBE_LOGGING_STEP_TABLE}</to>
+      <from>Create ${KFF_LOGGING_TRNSF_TABLE}</from>
+      <to>Check ${KFF_LOGGING_STEP_TABLE}</to>
       <from_nr>0</from_nr>
       <to_nr>0</to_nr>
       <enabled>Y</enabled>
@@ -871,8 +648,8 @@ ${MAIL_SENDER_NAME}&lt;br&gt;
       <unconditional>N</unconditional>
     </hop>
     <hop>
-      <from>Check ${KJUBE_LOGGING_STEP_TABLE}</from>
-      <to>Create ${KJUBE_LOGGING_STEP_TABLE}</to>
+      <from>Check ${KFF_LOGGING_STEP_TABLE}</from>
+      <to>Create ${KFF_LOGGING_STEP_TABLE}</to>
       <from_nr>0</from_nr>
       <to_nr>0</to_nr>
       <enabled>Y</enabled>
@@ -880,8 +657,8 @@ ${MAIL_SENDER_NAME}&lt;br&gt;
       <unconditional>N</unconditional>
     </hop>
     <hop>
-      <from>Check ${KJUBE_LOGGING_BATCH_TABLE}</from>
-      <to>Create ${KJUBE_LOGGING_BATCH_TABLE}</to>
+      <from>Check ${KFF_LOGGING_BATCH_TABLE}</from>
+      <to>Create ${KFF_LOGGING_BATCH_TABLE}</to>
       <from_nr>0</from_nr>
       <to_nr>0</to_nr>
       <enabled>Y</enabled>
@@ -889,8 +666,8 @@ ${MAIL_SENDER_NAME}&lt;br&gt;
       <unconditional>N</unconditional>
     </hop>
     <hop>
-      <from>Error</from>
-      <to>Abort job</to>
+      <from>Check ${KFF_LOGGING_STEP_TABLE}</from>
+      <to>Check ${KFF_LOGGING_REJECT_TABLE}</to>
       <from_nr>0</from_nr>
       <to_nr>0</to_nr>
       <enabled>Y</enabled>
@@ -898,17 +675,8 @@ ${MAIL_SENDER_NAME}&lt;br&gt;
       <unconditional>N</unconditional>
     </hop>
     <hop>
-      <from>Check ${KJUBE_LOGGING_STEP_TABLE}</from>
-      <to>Check ${KJUBE_LOGGING_REJECT_TABLE}</to>
-      <from_nr>0</from_nr>
-      <to_nr>0</to_nr>
-      <enabled>Y</enabled>
-      <evaluation>Y</evaluation>
-      <unconditional>N</unconditional>
-    </hop>
-    <hop>
-      <from>Check ${KJUBE_LOGGING_REJECT_TABLE}</from>
-      <to>Create ${KJUBE_LOGGING_REJECT_TABLE}</to>
+      <from>Check ${KFF_LOGGING_REJECT_TABLE}</from>
+      <to>Create ${KFF_LOGGING_REJECT_TABLE}</to>
       <from_nr>0</from_nr>
       <to_nr>0</to_nr>
       <enabled>Y</enabled>
@@ -916,8 +684,8 @@ ${MAIL_SENDER_NAME}&lt;br&gt;
       <unconditional>N</unconditional>
     </hop>
     <hop>
-      <from>Create ${KJUBE_LOGGING_STEP_TABLE}</from>
-      <to>Check ${KJUBE_LOGGING_REJECT_TABLE}</to>
+      <from>Create ${KFF_LOGGING_STEP_TABLE}</from>
+      <to>Check ${KFF_LOGGING_REJECT_TABLE}</to>
       <from_nr>0</from_nr>
       <to_nr>0</to_nr>
       <enabled>Y</enabled>
@@ -925,17 +693,8 @@ ${MAIL_SENDER_NAME}&lt;br&gt;
       <unconditional>N</unconditional>
     </hop>
     <hop>
-      <from>Truncate current log</from>
-      <to>Check ${KJUBE_LOGGING_JOB_TABLE}_HIST</to>
-      <from_nr>0</from_nr>
-      <to_nr>0</to_nr>
-      <enabled>Y</enabled>
-      <evaluation>Y</evaluation>
-      <unconditional>N</unconditional>
-    </hop>
-    <hop>
-      <from>Check ${KJUBE_LOGGING_JOB_TABLE}_HIST</from>
-      <to>Create ${KJUBE_LOGGING_JOB_TABLE}_HIST</to>
+      <from>Check ${KFF_LOGGING_JOB_TABLE_HIST}</from>
+      <to>Create ${KFF_LOGGING_JOB_TABLE_HIST}</to>
       <from_nr>0</from_nr>
       <to_nr>0</to_nr>
       <enabled>Y</enabled>
@@ -943,8 +702,8 @@ ${MAIL_SENDER_NAME}&lt;br&gt;
       <unconditional>N</unconditional>
     </hop>
     <hop>
-      <from>Check ${KJUBE_LOGGING_JOB_TABLE}_HIST</from>
-      <to>Check ${KJUBE_LOGGING_TRNSF_TABLE}_HIST</to>
+      <from>Check ${KFF_LOGGING_JOB_TABLE_HIST}</from>
+      <to>Check ${KFF_LOGGING_TRNSF_TABLE_HIST}</to>
       <from_nr>0</from_nr>
       <to_nr>0</to_nr>
       <enabled>Y</enabled>
@@ -952,8 +711,8 @@ ${MAIL_SENDER_NAME}&lt;br&gt;
       <unconditional>N</unconditional>
     </hop>
     <hop>
-      <from>Create ${KJUBE_LOGGING_JOB_TABLE}_HIST</from>
-      <to>Check ${KJUBE_LOGGING_TRNSF_TABLE}_HIST</to>
+      <from>Create ${KFF_LOGGING_JOB_TABLE_HIST}</from>
+      <to>Check ${KFF_LOGGING_TRNSF_TABLE_HIST}</to>
       <from_nr>0</from_nr>
       <to_nr>0</to_nr>
       <enabled>Y</enabled>
@@ -961,8 +720,8 @@ ${MAIL_SENDER_NAME}&lt;br&gt;
       <unconditional>N</unconditional>
     </hop>
     <hop>
-      <from>Check ${KJUBE_LOGGING_TRNSF_TABLE}_HIST</from>
-      <to>Create ${KJUBE_LOGGING_TRNSF_TABLE}_HIST</to>
+      <from>Check ${KFF_LOGGING_TRNSF_TABLE_HIST}</from>
+      <to>Create ${KFF_LOGGING_TRNSF_TABLE_HIST}</to>
       <from_nr>0</from_nr>
       <to_nr>0</to_nr>
       <enabled>Y</enabled>
@@ -970,8 +729,8 @@ ${MAIL_SENDER_NAME}&lt;br&gt;
       <unconditional>N</unconditional>
     </hop>
     <hop>
-      <from>Check ${KJUBE_LOGGING_TRNSF_TABLE}_HIST</from>
-      <to>Check ${KJUBE_LOGGING_STEP_TABLE}_HIST</to>
+      <from>Check ${KFF_LOGGING_TRNSF_TABLE_HIST}</from>
+      <to>Check ${KFF_LOGGING_STEP_TABLE_HIST}</to>
       <from_nr>0</from_nr>
       <to_nr>0</to_nr>
       <enabled>Y</enabled>
@@ -979,8 +738,8 @@ ${MAIL_SENDER_NAME}&lt;br&gt;
       <unconditional>N</unconditional>
     </hop>
     <hop>
-      <from>Check ${KJUBE_LOGGING_STEP_TABLE}_HIST</from>
-      <to>Create ${KJUBE_LOGGING_STEP_TABLE}_HIST</to>
+      <from>Check ${KFF_LOGGING_STEP_TABLE_HIST}</from>
+      <to>Create ${KFF_LOGGING_STEP_TABLE_HIST}</to>
       <from_nr>0</from_nr>
       <to_nr>0</to_nr>
       <enabled>Y</enabled>
@@ -988,8 +747,8 @@ ${MAIL_SENDER_NAME}&lt;br&gt;
       <unconditional>N</unconditional>
     </hop>
     <hop>
-      <from>Create ${KJUBE_LOGGING_TRNSF_TABLE}_HIST</from>
-      <to>Check ${KJUBE_LOGGING_STEP_TABLE}_HIST</to>
+      <from>Create ${KFF_LOGGING_TRNSF_TABLE_HIST}</from>
+      <to>Check ${KFF_LOGGING_STEP_TABLE_HIST}</to>
       <from_nr>0</from_nr>
       <to_nr>0</to_nr>
       <enabled>Y</enabled>
@@ -997,8 +756,8 @@ ${MAIL_SENDER_NAME}&lt;br&gt;
       <unconditional>N</unconditional>
     </hop>
     <hop>
-      <from>Check ${KJUBE_LOGGING_STEP_TABLE}_HIST</from>
-      <to>Check ${KJUBE_LOGGING_REJECT_TABLE}_HIST</to>
+      <from>Check ${KFF_LOGGING_STEP_TABLE_HIST}</from>
+      <to>Check ${KFF_LOGGING_REJECT_TABLE_HIST}</to>
       <from_nr>0</from_nr>
       <to_nr>0</to_nr>
       <enabled>Y</enabled>
@@ -1006,17 +765,8 @@ ${MAIL_SENDER_NAME}&lt;br&gt;
       <unconditional>N</unconditional>
     </hop>
     <hop>
-      <from>Check ${KJUBE_LOGGING_REJECT_TABLE}_HIST</from>
-      <to>set_batch_id</to>
-      <from_nr>0</from_nr>
-      <to_nr>0</to_nr>
-      <enabled>Y</enabled>
-      <evaluation>Y</evaluation>
-      <unconditional>N</unconditional>
-    </hop>
-    <hop>
-      <from>Check ${KJUBE_LOGGING_REJECT_TABLE}_HIST</from>
-      <to>Create ${KJUBE_LOGGING_REJECT_TABLE}_HIST</to>
+      <from>Check ${KFF_LOGGING_REJECT_TABLE_HIST}</from>
+      <to>Create ${KFF_LOGGING_REJECT_TABLE_HIST}</to>
       <from_nr>0</from_nr>
       <to_nr>0</to_nr>
       <enabled>Y</enabled>
@@ -1024,44 +774,8 @@ ${MAIL_SENDER_NAME}&lt;br&gt;
       <unconditional>N</unconditional>
     </hop>
     <hop>
-      <from>Create ${KJUBE_LOGGING_STEP_TABLE}_HIST</from>
-      <to>Check ${KJUBE_LOGGING_REJECT_TABLE}_HIST</to>
-      <from_nr>0</from_nr>
-      <to_nr>0</to_nr>
-      <enabled>Y</enabled>
-      <evaluation>Y</evaluation>
-      <unconditional>N</unconditional>
-    </hop>
-    <hop>
-      <from>New batch - first run ?</from>
-      <to>Error</to>
-      <from_nr>0</from_nr>
-      <to_nr>0</to_nr>
-      <enabled>Y</enabled>
-      <evaluation>N</evaluation>
-      <unconditional>N</unconditional>
-    </hop>
-    <hop>
-      <from>Check last batch</from>
-      <to>Check ${KJUBE_LOGGING_TRNSF_TABLE}</to>
-      <from_nr>0</from_nr>
-      <to_nr>0</to_nr>
-      <enabled>Y</enabled>
-      <evaluation>Y</evaluation>
-      <unconditional>N</unconditional>
-    </hop>
-    <hop>
-      <from>Check last batch</from>
-      <to>New batch - first run ?</to>
-      <from_nr>0</from_nr>
-      <to_nr>0</to_nr>
-      <enabled>Y</enabled>
-      <evaluation>N</evaluation>
-      <unconditional>N</unconditional>
-    </hop>
-    <hop>
-      <from>New batch - first run ?</from>
-      <to>Check ${KJUBE_LOGGING_TRNSF_TABLE}</to>
+      <from>Create ${KFF_LOGGING_STEP_TABLE_HIST}</from>
+      <to>Check ${KFF_LOGGING_REJECT_TABLE_HIST}</to>
       <from_nr>0</from_nr>
       <to_nr>0</to_nr>
       <enabled>Y</enabled>
@@ -1070,7 +784,7 @@ ${MAIL_SENDER_NAME}&lt;br&gt;
     </hop>
     <hop>
       <from>START</from>
-      <to>Check ${KJUBE_LOGGING_BATCH_TABLE}</to>
+      <to>Check ${KFF_LOGGING_BATCH_TABLE}</to>
       <from_nr>0</from_nr>
       <to_nr>0</to_nr>
       <enabled>Y</enabled>
@@ -1078,8 +792,8 @@ ${MAIL_SENDER_NAME}&lt;br&gt;
       <unconditional>Y</unconditional>
     </hop>
     <hop>
-      <from>Check ${KJUBE_LOGGING_BATCH_TABLE}</from>
-      <to>Check last batch</to>
+      <from>Check ${KFF_LOGGING_REJECT_TABLE}</from>
+      <to>Check ${KFF_LOGGING_JOB_TABLE}</to>
       <from_nr>0</from_nr>
       <to_nr>0</to_nr>
       <enabled>Y</enabled>
@@ -1087,8 +801,8 @@ ${MAIL_SENDER_NAME}&lt;br&gt;
       <unconditional>N</unconditional>
     </hop>
     <hop>
-      <from>Create ${KJUBE_LOGGING_BATCH_TABLE}</from>
-      <to>Check last batch</to>
+      <from>Create ${KFF_LOGGING_REJECT_TABLE}</from>
+      <to>Check ${KFF_LOGGING_JOB_TABLE}</to>
       <from_nr>0</from_nr>
       <to_nr>0</to_nr>
       <enabled>Y</enabled>
@@ -1096,8 +810,8 @@ ${MAIL_SENDER_NAME}&lt;br&gt;
       <unconditional>N</unconditional>
     </hop>
     <hop>
-      <from>Check ${KJUBE_LOGGING_REJECT_TABLE}</from>
-      <to>Check ${KJUBE_LOGGING_JOB_TABLE}</to>
+      <from>Create ${KFF_LOGGING_BATCH_TABLE}</from>
+      <to>Check ${KFF_LOGGING_TRNSF_TABLE}</to>
       <from_nr>0</from_nr>
       <to_nr>0</to_nr>
       <enabled>Y</enabled>
@@ -1105,8 +819,8 @@ ${MAIL_SENDER_NAME}&lt;br&gt;
       <unconditional>N</unconditional>
     </hop>
     <hop>
-      <from>Create ${KJUBE_LOGGING_REJECT_TABLE}</from>
-      <to>Check ${KJUBE_LOGGING_JOB_TABLE}</to>
+      <from>Check ${KFF_LOGGING_BATCH_TABLE}</from>
+      <to>Check ${KFF_LOGGING_TRNSF_TABLE}</to>
       <from_nr>0</from_nr>
       <to_nr>0</to_nr>
       <enabled>Y</enabled>
@@ -1114,8 +828,8 @@ ${MAIL_SENDER_NAME}&lt;br&gt;
       <unconditional>N</unconditional>
     </hop>
     <hop>
-      <from>Check ${KJUBE_LOGGING_JOB_TABLE}</from>
-      <to>Truncate current log</to>
+      <from>Check ${KFF_LOGGING_JOB_TABLE}</from>
+      <to>Check ${KFF_LOGGING_JOB_TABLE_HIST}</to>
       <from_nr>0</from_nr>
       <to_nr>0</to_nr>
       <enabled>Y</enabled>
@@ -1123,26 +837,8 @@ ${MAIL_SENDER_NAME}&lt;br&gt;
       <unconditional>N</unconditional>
     </hop>
     <hop>
-      <from>Create ${KJUBE_LOGGING_JOB_TABLE}</from>
-      <to>Truncate current log</to>
-      <from_nr>0</from_nr>
-      <to_nr>0</to_nr>
-      <enabled>Y</enabled>
-      <evaluation>Y</evaluation>
-      <unconditional>N</unconditional>
-    </hop>
-    <hop>
-      <from>Create ${KJUBE_LOGGING_BATCH_TABLE}</from>
-      <to>Error 2</to>
-      <from_nr>0</from_nr>
-      <to_nr>0</to_nr>
-      <enabled>Y</enabled>
-      <evaluation>N</evaluation>
-      <unconditional>N</unconditional>
-    </hop>
-    <hop>
-      <from>Error 2</from>
-      <to>Abort job</to>
+      <from>Create ${KFF_LOGGING_JOB_TABLE}</from>
+      <to>Check ${KFF_LOGGING_JOB_TABLE_HIST}</to>
       <from_nr>0</from_nr>
       <to_nr>0</to_nr>
       <enabled>Y</enabled>
@@ -1153,38 +849,16 @@ ${MAIL_SENDER_NAME}&lt;br&gt;
   <notepads>
     <notepad>
       <note>Current log tables</note>
-      <xloc>39</xloc>
-      <yloc>263</yloc>
+      <xloc>43</xloc>
+      <yloc>95</yloc>
       <width>117</width>
       <heigth>31</heigth>
     </notepad>
     <notepad>
       <note>History log tables</note>
-      <xloc>46</xloc>
-      <yloc>611</yloc>
+      <xloc>48</xloc>
+      <yloc>471</yloc>
       <width>114</width>
-      <heigth>31</heigth>
-    </notepad>
-    <notepad>
-      <note>Check if previous 
-batch is concluded</note>
-      <xloc>42</xloc>
-      <yloc>147</yloc>
-      <width>124</width>
-      <heigth>52</heigth>
-    </notepad>
-    <notepad>
-      <note>Ready to go</note>
-      <xloc>50</xloc>
-      <yloc>897</yloc>
-      <width>85</width>
-      <heigth>31</heigth>
-    </notepad>
-    <notepad>
-      <note>Batch log</note>
-      <xloc>44</xloc>
-      <yloc>70</yloc>
-      <width>68</width>
       <heigth>31</heigth>
     </notepad>
   </notepads>

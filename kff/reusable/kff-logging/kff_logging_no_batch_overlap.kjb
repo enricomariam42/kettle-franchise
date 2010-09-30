@@ -1,0 +1,332 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<job>
+  <name>kff_logging_no_batch_overlap</name>
+    <description/>
+    <extended_description/>
+    <job_version/>
+  <directory>&#47;</directory>
+  <created_user>-</created_user>
+  <created_date>2010&#47;09&#47;10 14:54:21.856</created_date>
+  <modified_user>-</modified_user>
+  <modified_date>2010&#47;09&#47;10 14:54:21.856</modified_date>
+    <parameters>
+    </parameters>
+  <connection>
+    <name>DWH_DWH</name>
+    <server>${DWH_DWH_HOSTNAME}</server>
+    <type>MYSQL</type>
+    <access>Native</access>
+    <database>${DWH_DWH_DATABASE}</database>
+    <port>${DWH_DWH_PORT}</port>
+    <username>${DWH_DWH_USERNAME}</username>
+    <password>${DWH_DWH_PASSWORD}</password>
+    <servername/>
+    <data_tablespace/>
+    <index_tablespace/>
+    <attributes>
+      <attribute><code>FORCE_IDENTIFIERS_TO_LOWERCASE</code><attribute>N</attribute></attribute>
+      <attribute><code>FORCE_IDENTIFIERS_TO_UPPERCASE</code><attribute>N</attribute></attribute>
+      <attribute><code>IS_CLUSTERED</code><attribute>N</attribute></attribute>
+      <attribute><code>PORT_NUMBER</code><attribute>${DWH_DWH_PORT}</attribute></attribute>
+      <attribute><code>QUOTE_ALL_FIELDS</code><attribute>N</attribute></attribute>
+      <attribute><code>STREAM_RESULTS</code><attribute>Y</attribute></attribute>
+      <attribute><code>USE_POOLING</code><attribute>N</attribute></attribute>
+    </attributes>
+  </connection>
+  <connection>
+    <name>DWH_LOG</name>
+    <server>${DWH_LOG_HOSTNAME}</server>
+    <type>MYSQL</type>
+    <access>Native</access>
+    <database>${DWH_LOG_DATABASE}</database>
+    <port>${DWH_LOG_PORT}</port>
+    <username>${DWH_LOG_USERNAME}</username>
+    <password>${DWH_LOG_PASSWORD}</password>
+    <servername/>
+    <data_tablespace/>
+    <index_tablespace/>
+    <attributes>
+      <attribute><code>FORCE_IDENTIFIERS_TO_LOWERCASE</code><attribute>N</attribute></attribute>
+      <attribute><code>FORCE_IDENTIFIERS_TO_UPPERCASE</code><attribute>N</attribute></attribute>
+      <attribute><code>IS_CLUSTERED</code><attribute>N</attribute></attribute>
+      <attribute><code>PORT_NUMBER</code><attribute>${DWH_LOG_PORT}</attribute></attribute>
+      <attribute><code>QUOTE_ALL_FIELDS</code><attribute>N</attribute></attribute>
+      <attribute><code>STREAM_RESULTS</code><attribute>Y</attribute></attribute>
+      <attribute><code>USE_POOLING</code><attribute>N</attribute></attribute>
+    </attributes>
+  </connection>
+  <connection>
+    <name>DWH_ODS</name>
+    <server>${DWH_ODS_HOSTNAME}</server>
+    <type>MYSQL</type>
+    <access>Native</access>
+    <database>${DWH_ODS_DATABASE}</database>
+    <port>${DWH_ODS_PORT}</port>
+    <username>${DWH_ODS_USERNAME}</username>
+    <password>${DWH_ODS_PASSWORD}</password>
+    <servername/>
+    <data_tablespace/>
+    <index_tablespace/>
+    <attributes>
+      <attribute><code>FORCE_IDENTIFIERS_TO_LOWERCASE</code><attribute>N</attribute></attribute>
+      <attribute><code>FORCE_IDENTIFIERS_TO_UPPERCASE</code><attribute>N</attribute></attribute>
+      <attribute><code>IS_CLUSTERED</code><attribute>N</attribute></attribute>
+      <attribute><code>PORT_NUMBER</code><attribute>${DWH_ODS_PORT}</attribute></attribute>
+      <attribute><code>QUOTE_ALL_FIELDS</code><attribute>N</attribute></attribute>
+      <attribute><code>STREAM_RESULTS</code><attribute>Y</attribute></attribute>
+      <attribute><code>USE_POOLING</code><attribute>N</attribute></attribute>
+    </attributes>
+  </connection>
+  <connection>
+    <name>DWH_STG</name>
+    <server>${DWH_STG_HOSTNAME}</server>
+    <type>MYSQL</type>
+    <access>Native</access>
+    <database>${DWH_STG_DATABASE}</database>
+    <port>${DWH_STG_PORT}</port>
+    <username>${DWH_STG_USERNAME}</username>
+    <password>${DWH_STG_PASSWORD}</password>
+    <servername/>
+    <data_tablespace/>
+    <index_tablespace/>
+    <attributes>
+      <attribute><code>FORCE_IDENTIFIERS_TO_LOWERCASE</code><attribute>N</attribute></attribute>
+      <attribute><code>FORCE_IDENTIFIERS_TO_UPPERCASE</code><attribute>N</attribute></attribute>
+      <attribute><code>IS_CLUSTERED</code><attribute>N</attribute></attribute>
+      <attribute><code>PORT_NUMBER</code><attribute>${DWH_STG_PORT}</attribute></attribute>
+      <attribute><code>QUOTE_ALL_FIELDS</code><attribute>N</attribute></attribute>
+      <attribute><code>STREAM_RESULTS</code><attribute>Y</attribute></attribute>
+      <attribute><code>USE_POOLING</code><attribute>N</attribute></attribute>
+    </attributes>
+  </connection>
+    <slaveservers>
+         <slaveserver><name>CARTE</name><hostname>${CARTE_HOSTNAME}</hostname><port>${CARTE_PORT}</port><username>${CARTE_USER}</username><password>${CARTE_PWD}</password><proxy_hostname>${CARTE_PROXY_HOST}</proxy_hostname><proxy_port>${CARTE_PROXY_PORT}</proxy_port><non_proxy_hosts>${CARTE_NON_PROXY}</non_proxy_hosts><master>Y</master></slaveserver>
+    </slaveservers>
+  <logconnection/>
+  <logtable/>
+  <size_limit_lines/>
+   <use_batchid>Y</use_batchid>
+   <pass_batchid>N</pass_batchid>
+   <use_logfield>Y</use_logfield>
+   <shared_objects_file/>
+  <entries>
+    <entry>
+      <name>Check ${KFF_LOGGING_BATCH_TABLE}</name>
+      <description>Table exists</description>
+      <type>TABLE_EXISTS</type>
+      <tablename>${KFF_LOGGING_BATCH_TABLE}</tablename>
+      <schemaname>${KFF_LOGGING_SCHEMA}</schemaname>
+      <connection>DWH_LOG</connection>
+      <parallel>N</parallel>
+      <draw>Y</draw>
+      <nr>0</nr>
+      <xloc>290</xloc>
+      <yloc>82</yloc>
+      </entry>
+    <entry>
+      <name>Check last batch in KFF_LOGGING_BATCH_TABLE</name>
+      <description>Evaluate rows number in a table</description>
+      <type>EVAL_TABLE_CONTENT</type>
+      <connection>DWH_LOG</connection>
+      <schemaname/>
+      <tablename/>
+      <success_condition>rows_count_equal</success_condition>
+      <limit>1</limit>
+      <is_custom_sql>Y</is_custom_sql>
+      <is_usevars>Y</is_usevars>
+      <custom_sql>select 
+ jobname
+from 
+ ${KFF_LOGGING_BATCH_TABLE}
+where 
+ id_job = ( select max(id_job) from ${KFF_LOGGING_BATCH_TABLE} ) and
+ status in (&apos;end&apos;,&apos;failed&apos;,&apos;stopped&apos;,&apos;stop&apos;)</custom_sql>
+      <add_rows_result>N</add_rows_result>
+      <clear_result_rows>Y</clear_result_rows>
+      <parallel>N</parallel>
+      <draw>Y</draw>
+      <nr>0</nr>
+      <xloc>292</xloc>
+      <yloc>189</yloc>
+      </entry>
+    <entry>
+      <name>Abort job</name>
+      <description>Abort job</description>
+      <type>ABORT</type>
+      <message>Previous batch not concluded with &apos;end&apos;,&apos;failed&apos;,&apos;stopped&apos; or &apos;stop&apos;</message>
+      <parallel>N</parallel>
+      <draw>Y</draw>
+      <nr>0</nr>
+      <xloc>293</xloc>
+      <yloc>390</yloc>
+      </entry>
+    <entry>
+      <name>Error</name>
+      <description>Mail</description>
+      <type>MAIL</type>
+      <server>${MAIL_SMTP_SERVER}</server>
+      <port>${MAIL_SMTP_PORT}</port>
+      <destination>${MAIL_DESTINATION_ADDRESS}</destination>
+      <destinationCc>${MAIL_DESTINATION_CC}</destinationCc>
+      <destinationBCc>${MAIL_DESTINATION_BCC}</destinationBCc>
+      <replyto>${MAIL_SENDER_ADDRESS}</replyto>
+      <replytoname>${MAIL_SENDER_NAME}</replytoname>
+      <subject>${KFF_BATCH} in ${KFF_APPLICATION} (${KFF_LIFECYCLE}) @ ${KFF_CUSTOMER} - Failure - Previous batch not finished</subject>
+      <include_date>Y</include_date>
+      <contact_person>${MAIL_CONTACT_PERSON}</contact_person>
+      <contact_phone>${MAIL_CONTACT_PHONE}</contact_phone>
+      <comment>&lt;b&gt;Job result&lt;&#47;b&gt;&lt;br&gt;
+The following job failed:&lt;br&gt;
+- Batch: &lt;b&gt;${KFF_BATCH}&lt;&#47;b&gt;&lt;br&gt;
+- Application: ${KFF_APPLICATION}&lt;br&gt;
+- Environment: ${KFF_LIFECYCLE}&lt;br&gt;
+- Customer: ${KFF_CUSTOMER}&lt;br&gt;
+&lt;b&gt;because the previous batch with the same name didn&apos;t conclude with statusses &apos;end&apos;,&apos;failed&apos;,&apos;stopped&apos; or &apos;stop&apos; (yet).&lt;&#47;b&gt;&lt;br&gt;
+&lt;br&gt;
+&lt;b&gt;Tracing info&lt;&#47;b&gt;&lt;br&gt;
+Internal.Job.Filename.Directory: ${Internal.Job.Filename.Directory}&lt;br&gt;
+Internal.Job.Filename.Name: ${Internal.Job.Filename.Name}&lt;br&gt;
+Internal.Job.Name: ${Internal.Job.Name}&lt;br&gt;
+Internal.Kettle.Build.Date: ${Internal.Kettle.Build.Date}&lt;br&gt;
+Internal.Kettle.Build.Version: ${Internal.Kettle.Build.Version}&lt;br&gt;
+Internal.Kettle.Version: ${Internal.Kettle.Version}&lt;br&gt;
+java.class.path: ${java.class.path}&lt;br&gt;
+java.class.version: ${java.class.version}&lt;br&gt;
+java.home: ${java.home}&lt;br&gt;
+&lt;br&gt;
+Regards,&lt;br&gt;
+${MAIL_SENDER_NAME}&lt;br&gt;
+&lt;br&gt;</comment>
+      <include_files>N</include_files>
+      <zip_files>N</zip_files>
+      <zip_name>logging</zip_name>
+      <use_auth>N</use_auth>
+      <use_secure_auth>N</use_secure_auth>
+      <auth_user>${MAIL_SMTP_USER}</auth_user>
+      <auth_password>${MAIL_SMTP_PWD}</auth_password>
+      <only_comment>Y</only_comment>
+      <use_HTML>Y</use_HTML>
+      <use_Priority>Y</use_Priority>
+      <encoding>UTF-8</encoding>
+      <priority>high</priority>
+      <importance>high</importance>
+      <secureconnectiontype>SSL</secureconnectiontype>
+      <replyToAddresses>${MAIL_REPLY_TO}</replyToAddresses>
+      <filetypes>        <filetype>GENERAL</filetype>
+        <filetype>LOG</filetype>
+        <filetype>ERRORLINE</filetype>
+        <filetype>ERROR</filetype>
+        <filetype>WARNING</filetype>
+      </filetypes>      <parallel>N</parallel>
+      <draw>Y</draw>
+      <nr>0</nr>
+      <xloc>294</xloc>
+      <yloc>279</yloc>
+      </entry>
+    <entry>
+      <name>START</name>
+      <description>Special entries</description>
+      <type>SPECIAL</type>
+      <start>Y</start>
+      <dummy>N</dummy>
+      <repeat>N</repeat>
+      <schedulerType>0</schedulerType>
+      <intervalSeconds>0</intervalSeconds>
+      <intervalMinutes>60</intervalMinutes>
+      <hour>12</hour>
+      <minutes>0</minutes>
+      <weekDay>1</weekDay>
+      <DayOfMonth>1</DayOfMonth>
+      <parallel>N</parallel>
+      <draw>Y</draw>
+      <nr>0</nr>
+      <xloc>120</xloc>
+      <yloc>81</yloc>
+      </entry>
+    <entry>
+      <name>OK, create in next job</name>
+      <description>Success</description>
+      <type>SUCCESS</type>
+      <parallel>N</parallel>
+      <draw>Y</draw>
+      <nr>0</nr>
+      <xloc>533</xloc>
+      <yloc>82</yloc>
+      </entry>
+    <entry>
+      <name>&apos;end&apos;,&apos;failed&apos;,&apos;stopped&apos;,&apos;stop&apos;</name>
+      <description>Success</description>
+      <type>SUCCESS</type>
+      <parallel>N</parallel>
+      <draw>Y</draw>
+      <nr>0</nr>
+      <xloc>535</xloc>
+      <yloc>187</yloc>
+      </entry>
+  </entries>
+  <hops>
+    <hop>
+      <from>START</from>
+      <to>Check ${KFF_LOGGING_BATCH_TABLE}</to>
+      <from_nr>0</from_nr>
+      <to_nr>0</to_nr>
+      <enabled>Y</enabled>
+      <evaluation>Y</evaluation>
+      <unconditional>Y</unconditional>
+    </hop>
+    <hop>
+      <from>Check ${KFF_LOGGING_BATCH_TABLE}</from>
+      <to>OK, create in next job</to>
+      <from_nr>0</from_nr>
+      <to_nr>0</to_nr>
+      <enabled>Y</enabled>
+      <evaluation>N</evaluation>
+      <unconditional>N</unconditional>
+    </hop>
+    <hop>
+      <from>Check ${KFF_LOGGING_BATCH_TABLE}</from>
+      <to>Check last batch in KFF_LOGGING_BATCH_TABLE</to>
+      <from_nr>0</from_nr>
+      <to_nr>0</to_nr>
+      <enabled>Y</enabled>
+      <evaluation>Y</evaluation>
+      <unconditional>N</unconditional>
+    </hop>
+    <hop>
+      <from>Check last batch in KFF_LOGGING_BATCH_TABLE</from>
+      <to>&apos;end&apos;,&apos;failed&apos;,&apos;stopped&apos;,&apos;stop&apos;</to>
+      <from_nr>0</from_nr>
+      <to_nr>0</to_nr>
+      <enabled>Y</enabled>
+      <evaluation>Y</evaluation>
+      <unconditional>N</unconditional>
+    </hop>
+    <hop>
+      <from>Check last batch in KFF_LOGGING_BATCH_TABLE</from>
+      <to>Error</to>
+      <from_nr>0</from_nr>
+      <to_nr>0</to_nr>
+      <enabled>Y</enabled>
+      <evaluation>N</evaluation>
+      <unconditional>N</unconditional>
+    </hop>
+    <hop>
+      <from>Error</from>
+      <to>Abort job</to>
+      <from_nr>0</from_nr>
+      <to_nr>0</to_nr>
+      <enabled>Y</enabled>
+      <evaluation>Y</evaluation>
+      <unconditional>N</unconditional>
+    </hop>
+  </hops>
+  <notepads>
+    <notepad>
+      <note>Error mail, optional</note>
+      <xloc>346</xloc>
+      <yloc>274</yloc>
+      <width>119</width>
+      <heigth>31</heigth>
+    </notepad>
+  </notepads>
+</job>

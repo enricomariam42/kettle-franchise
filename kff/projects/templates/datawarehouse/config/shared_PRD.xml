@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sharedobjects>
+  <connection>
+    <name>DWH_STG</name>
+    <server>${DWH_STG_HOSTNAME}</server>
+    <type>MYSQL</type>
+    <access>Native</access>
+    <database>${DWH_STG_DATABASE}</database>
+    <port>${DWH_STG_PORT}</port>
+    <username>${DWH_STG_USERNAME}</username>
+    <password>${DWH_STG_PASSWORD}</password>
+    <servername/>
+    <data_tablespace/>
+    <index_tablespace/>
+    <attributes>
+      <attribute><code>FORCE_IDENTIFIERS_TO_LOWERCASE</code><attribute>N</attribute></attribute>
+      <attribute><code>FORCE_IDENTIFIERS_TO_UPPERCASE</code><attribute>N</attribute></attribute>
+      <attribute><code>IS_CLUSTERED</code><attribute>N</attribute></attribute>
+      <attribute><code>PORT_NUMBER</code><attribute>${DWH_STG_PORT}</attribute></attribute>
+      <attribute><code>QUOTE_ALL_FIELDS</code><attribute>N</attribute></attribute>
+      <attribute><code>STREAM_RESULTS</code><attribute>Y</attribute></attribute>
+      <attribute><code>USE_POOLING</code><attribute>N</attribute></attribute>
+    </attributes>
+  </connection>
+
+  <connection>
+    <name>DWH_LOG</name>
+    <server>${DWH_LOG_HOSTNAME}</server>
+    <type>MYSQL</type>
+    <access>Native</access>
+    <database>${DWH_LOG_DATABASE}</database>
+    <port>${DWH_LOG_PORT}</port>
+    <username>${DWH_LOG_USERNAME}</username>
+    <password>${DWH_LOG_PASSWORD}</password>
+    <servername/>
+    <data_tablespace/>
+    <index_tablespace/>
+    <attributes>
+      <attribute><code>FORCE_IDENTIFIERS_TO_LOWERCASE</code><attribute>N</attribute></attribute>
+      <attribute><code>FORCE_IDENTIFIERS_TO_UPPERCASE</code><attribute>N</attribute></attribute>
+      <attribute><code>IS_CLUSTERED</code><attribute>N</attribute></attribute>
+      <attribute><code>PORT_NUMBER</code><attribute>${DWH_LOG_PORT}</attribute></attribute>
+      <attribute><code>QUOTE_ALL_FIELDS</code><attribute>N</attribute></attribute>
+      <attribute><code>STREAM_RESULTS</code><attribute>Y</attribute></attribute>
+      <attribute><code>USE_POOLING</code><attribute>N</attribute></attribute>
+    </attributes>
+  </connection>
+
+  <connection>
+    <name>DWH_ODS</name>
+    <server>${DWH_ODS_HOSTNAME}</server>
+    <type>MYSQL</type>
+    <access>Native</access>
+    <database>${DWH_ODS_DATABASE}</database>
+    <port>${DWH_ODS_PORT}</port>
+    <username>${DWH_ODS_USERNAME}</username>
+    <password>${DWH_ODS_PASSWORD}</password>
+    <servername/>
+    <data_tablespace/>
+    <index_tablespace/>
+    <attributes>
+      <attribute><code>FORCE_IDENTIFIERS_TO_LOWERCASE</code><attribute>N</attribute></attribute>
+      <attribute><code>FORCE_IDENTIFIERS_TO_UPPERCASE</code><attribute>N</attribute></attribute>
+      <attribute><code>IS_CLUSTERED</code><attribute>N</attribute></attribute>
+      <attribute><code>PORT_NUMBER</code><attribute>${DWH_ODS_PORT}</attribute></attribute>
+      <attribute><code>QUOTE_ALL_FIELDS</code><attribute>N</attribute></attribute>
+      <attribute><code>STREAM_RESULTS</code><attribute>Y</attribute></attribute>
+      <attribute><code>USE_POOLING</code><attribute>N</attribute></attribute>
+    </attributes>
+  </connection>
+
+  <connection>
+    <name>DWH_DWH</name>
+    <server>${DWH_DWH_HOSTNAME}</server>
+    <type>MYSQL</type>
+    <access>Native</access>
+    <database>${DWH_DWH_DATABASE}</database>
+    <port>${DWH_DWH_PORT}</port>
+    <username>${DWH_DWH_USERNAME}</username>
+    <password>${DWH_DWH_PASSWORD}</password>
+    <servername/>
+    <data_tablespace/>
+    <index_tablespace/>
+    <attributes>
+      <attribute><code>FORCE_IDENTIFIERS_TO_LOWERCASE</code><attribute>N</attribute></attribute>
+      <attribute><code>FORCE_IDENTIFIERS_TO_UPPERCASE</code><attribute>N</attribute></attribute>
+      <attribute><code>IS_CLUSTERED</code><attribute>N</attribute></attribute>
+      <attribute><code>PORT_NUMBER</code><attribute>${DWH_DWH_PORT}</attribute></attribute>
+      <attribute><code>QUOTE_ALL_FIELDS</code><attribute>N</attribute></attribute>
+      <attribute><code>STREAM_RESULTS</code><attribute>Y</attribute></attribute>
+      <attribute><code>USE_POOLING</code><attribute>N</attribute></attribute>
+    </attributes>
+  </connection>
+
+<slaveserver>
+ <name>CARTE</name>
+ <hostname>${CARTE_HOSTNAME}</hostname>
+ <port>${CARTE_PORT}</port>
+ <username>${CARTE_USER}</username>
+ <password>${CARTE_PWD}</password>
+ <proxy_hostname>${CARTE_PROXY_HOST}</proxy_hostname>
+ <proxy_port>${CARTE_PROXY_PORT}</proxy_port>
+ <non_proxy_hosts>${CARTE_NON_PROXY}</non_proxy_hosts>
+ <master>Y</master>
+</slaveserver>
+
+</sharedobjects>
