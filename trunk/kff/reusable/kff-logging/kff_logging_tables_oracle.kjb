@@ -15,11 +15,11 @@ This job will assume that names of logging table are set in .properties files.</
     </parameters>
   <connection>
     <name>DWH_DWH</name>
-    <server>${DWH_DWH_HOSTNAME}</server>
-    <type>MYSQL</type>
+    <server/>
+    <type>ORACLE</type>
     <access>Native</access>
     <database>${DWH_DWH_DATABASE}</database>
-    <port>${DWH_DWH_PORT}</port>
+    <port>-1</port>
     <username>${DWH_DWH_USERNAME}</username>
     <password>${DWH_DWH_PASSWORD}</password>
     <servername/>
@@ -29,29 +29,6 @@ This job will assume that names of logging table are set in .properties files.</
       <attribute><code>FORCE_IDENTIFIERS_TO_LOWERCASE</code><attribute>N</attribute></attribute>
       <attribute><code>FORCE_IDENTIFIERS_TO_UPPERCASE</code><attribute>N</attribute></attribute>
       <attribute><code>IS_CLUSTERED</code><attribute>N</attribute></attribute>
-      <attribute><code>PORT_NUMBER</code><attribute>${DWH_DWH_PORT}</attribute></attribute>
-      <attribute><code>QUOTE_ALL_FIELDS</code><attribute>N</attribute></attribute>
-      <attribute><code>STREAM_RESULTS</code><attribute>Y</attribute></attribute>
-      <attribute><code>USE_POOLING</code><attribute>N</attribute></attribute>
-    </attributes>
-  </connection>
-  <connection>
-    <name>DWH_LOG</name>
-    <server>${DWH_LOG_HOSTNAME}</server>
-    <type>MYSQL</type>
-    <access>Native</access>
-    <database>${DWH_LOG_DATABASE}</database>
-    <port>${DWH_LOG_PORT}</port>
-    <username>${DWH_LOG_USERNAME}</username>
-    <password>${DWH_LOG_PASSWORD}</password>
-    <servername/>
-    <data_tablespace/>
-    <index_tablespace/>
-    <attributes>
-      <attribute><code>FORCE_IDENTIFIERS_TO_LOWERCASE</code><attribute>N</attribute></attribute>
-      <attribute><code>FORCE_IDENTIFIERS_TO_UPPERCASE</code><attribute>N</attribute></attribute>
-      <attribute><code>IS_CLUSTERED</code><attribute>N</attribute></attribute>
-      <attribute><code>PORT_NUMBER</code><attribute>${DWH_LOG_PORT}</attribute></attribute>
       <attribute><code>QUOTE_ALL_FIELDS</code><attribute>N</attribute></attribute>
       <attribute><code>STREAM_RESULTS</code><attribute>Y</attribute></attribute>
       <attribute><code>USE_POOLING</code><attribute>N</attribute></attribute>
@@ -59,11 +36,11 @@ This job will assume that names of logging table are set in .properties files.</
   </connection>
   <connection>
     <name>DWH_ODS</name>
-    <server>${DWH_ODS_HOSTNAME}</server>
-    <type>MYSQL</type>
+    <server/>
+    <type>ORACLE</type>
     <access>Native</access>
     <database>${DWH_ODS_DATABASE}</database>
-    <port>${DWH_ODS_PORT}</port>
+    <port>-1</port>
     <username>${DWH_ODS_USERNAME}</username>
     <password>${DWH_ODS_PASSWORD}</password>
     <servername/>
@@ -73,7 +50,6 @@ This job will assume that names of logging table are set in .properties files.</
       <attribute><code>FORCE_IDENTIFIERS_TO_LOWERCASE</code><attribute>N</attribute></attribute>
       <attribute><code>FORCE_IDENTIFIERS_TO_UPPERCASE</code><attribute>N</attribute></attribute>
       <attribute><code>IS_CLUSTERED</code><attribute>N</attribute></attribute>
-      <attribute><code>PORT_NUMBER</code><attribute>${DWH_ODS_PORT}</attribute></attribute>
       <attribute><code>QUOTE_ALL_FIELDS</code><attribute>N</attribute></attribute>
       <attribute><code>STREAM_RESULTS</code><attribute>Y</attribute></attribute>
       <attribute><code>USE_POOLING</code><attribute>N</attribute></attribute>
@@ -81,11 +57,11 @@ This job will assume that names of logging table are set in .properties files.</
   </connection>
   <connection>
     <name>DWH_STG</name>
-    <server>${DWH_STG_HOSTNAME}</server>
-    <type>MYSQL</type>
+    <server/>
+    <type>ORACLE</type>
     <access>Native</access>
     <database>${DWH_STG_DATABASE}</database>
-    <port>${DWH_STG_PORT}</port>
+    <port>-1</port>
     <username>${DWH_STG_USERNAME}</username>
     <password>${DWH_STG_PASSWORD}</password>
     <servername/>
@@ -95,7 +71,27 @@ This job will assume that names of logging table are set in .properties files.</
       <attribute><code>FORCE_IDENTIFIERS_TO_LOWERCASE</code><attribute>N</attribute></attribute>
       <attribute><code>FORCE_IDENTIFIERS_TO_UPPERCASE</code><attribute>N</attribute></attribute>
       <attribute><code>IS_CLUSTERED</code><attribute>N</attribute></attribute>
-      <attribute><code>PORT_NUMBER</code><attribute>${DWH_STG_PORT}</attribute></attribute>
+      <attribute><code>QUOTE_ALL_FIELDS</code><attribute>N</attribute></attribute>
+      <attribute><code>STREAM_RESULTS</code><attribute>Y</attribute></attribute>
+      <attribute><code>USE_POOLING</code><attribute>N</attribute></attribute>
+    </attributes>
+  </connection>
+  <connection>
+    <name>LOGGING</name>
+    <server/>
+    <type>ORACLE</type>
+    <access>Native</access>
+    <database>${LOGGING_DATABASE}</database>
+    <port>-1</port>
+    <username>${LOGGING_USERNAME}</username>
+    <password>${LOGGING_PASSWORD}</password>
+    <servername/>
+    <data_tablespace/>
+    <index_tablespace/>
+    <attributes>
+      <attribute><code>FORCE_IDENTIFIERS_TO_LOWERCASE</code><attribute>N</attribute></attribute>
+      <attribute><code>FORCE_IDENTIFIERS_TO_UPPERCASE</code><attribute>N</attribute></attribute>
+      <attribute><code>IS_CLUSTERED</code><attribute>N</attribute></attribute>
       <attribute><code>QUOTE_ALL_FIELDS</code><attribute>N</attribute></attribute>
       <attribute><code>STREAM_RESULTS</code><attribute>Y</attribute></attribute>
       <attribute><code>USE_POOLING</code><attribute>N</attribute></attribute>
@@ -107,7 +103,7 @@ This job will assume that names of logging table are set in .properties files.</
     <type>AS&#47;400</type>
     <access>Native</access>
     <database>${STEALTHXX_DATABASE}</database>
-    <port>${STEALTHXX_DATABASE}</port>
+    <port>-1</port>
     <username>${STEALTHXX_USERNAME}</username>
     <password>${STEALTHXX_PASSWORD}</password>
     <servername/>
@@ -117,8 +113,8 @@ This job will assume that names of logging table are set in .properties files.</
       <attribute><code>FORCE_IDENTIFIERS_TO_LOWERCASE</code><attribute>N</attribute></attribute>
       <attribute><code>FORCE_IDENTIFIERS_TO_UPPERCASE</code><attribute>N</attribute></attribute>
       <attribute><code>IS_CLUSTERED</code><attribute>N</attribute></attribute>
-      <attribute><code>PORT_NUMBER</code><attribute>${STEALTHXX_DATABASE}</attribute></attribute>
       <attribute><code>QUOTE_ALL_FIELDS</code><attribute>N</attribute></attribute>
+      <attribute><code>SUPPORTS_BOOLEAN_DATA_TYPE</code><attribute>N</attribute></attribute>
       <attribute><code>USE_POOLING</code><attribute>N</attribute></attribute>
     </attributes>
   </connection>
@@ -164,7 +160,7 @@ This job will assume that names of logging table are set in .properties files.</
       <type>TABLE_EXISTS</type>
       <tablename>${KFF_LOGGING_JOB_TABLE}</tablename>
       <schemaname>${KFF_LOGGING_SCHEMA}</schemaname>
-      <connection>DWH_LOG</connection>
+      <connection>LOGGING</connection>
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
@@ -201,7 +197,7 @@ on ${KFF_LOGGING_JOB_TABLE} (JOBNAME)
       <useVariableSubstitution>T</useVariableSubstitution>
       <sqlfromfile>F</sqlfromfile>
       <sqlfilename/>
-      <connection>DWH_LOG</connection>
+      <connection>LOGGING</connection>
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
@@ -214,7 +210,7 @@ on ${KFF_LOGGING_JOB_TABLE} (JOBNAME)
       <type>TABLE_EXISTS</type>
       <tablename>${KFF_LOGGING_TRNSF_TABLE}</tablename>
       <schemaname>${KFF_LOGGING_SCHEMA}</schemaname>
-      <connection>DWH_LOG</connection>
+      <connection>LOGGING</connection>
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
@@ -252,7 +248,7 @@ on ${KFF_LOGGING_TRNSF_TABLE} (TRANSNAME)
       <useVariableSubstitution>T</useVariableSubstitution>
       <sqlfromfile>F</sqlfromfile>
       <sqlfilename/>
-      <connection>DWH_LOG</connection>
+      <connection>LOGGING</connection>
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
@@ -286,7 +282,7 @@ on ${KFF_LOGGING_REJECT_TABLE} (TRANSNAME, JOBNAME)
       <useVariableSubstitution>T</useVariableSubstitution>
       <sqlfromfile>F</sqlfromfile>
       <sqlfilename/>
-      <connection>DWH_LOG</connection>
+      <connection>LOGGING</connection>
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
@@ -299,7 +295,7 @@ on ${KFF_LOGGING_REJECT_TABLE} (TRANSNAME, JOBNAME)
       <type>TABLE_EXISTS</type>
       <tablename>${KFF_LOGGING_REJECT_TABLE}</tablename>
       <schemaname>${KFF_LOGGING_SCHEMA}</schemaname>
-      <connection>DWH_LOG</connection>
+      <connection>LOGGING</connection>
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
@@ -338,7 +334,7 @@ on ${KFF_LOGGING_STEP_TABLE} (STEPNAME)
       <useVariableSubstitution>T</useVariableSubstitution>
       <sqlfromfile>F</sqlfromfile>
       <sqlfilename/>
-      <connection>DWH_LOG</connection>
+      <connection>LOGGING</connection>
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
@@ -351,7 +347,7 @@ on ${KFF_LOGGING_STEP_TABLE} (STEPNAME)
       <type>TABLE_EXISTS</type>
       <tablename>${KFF_LOGGING_STEP_TABLE}</tablename>
       <schemaname>${KFF_LOGGING_SCHEMA}</schemaname>
-      <connection>DWH_LOG</connection>
+      <connection>LOGGING</connection>
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
@@ -364,7 +360,7 @@ on ${KFF_LOGGING_STEP_TABLE} (STEPNAME)
       <type>TABLE_EXISTS</type>
       <tablename>${KFF_LOGGING_BATCH_TABLE}</tablename>
       <schemaname>${KFF_LOGGING_SCHEMA}</schemaname>
-      <connection>DWH_LOG</connection>
+      <connection>LOGGING</connection>
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
@@ -401,7 +397,7 @@ on ${KFF_LOGGING_BATCH_TABLE} (ID_JOB, JOBNAME)
       <useVariableSubstitution>T</useVariableSubstitution>
       <sqlfromfile>F</sqlfromfile>
       <sqlfilename/>
-      <connection>DWH_LOG</connection>
+      <connection>LOGGING</connection>
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
@@ -414,7 +410,7 @@ on ${KFF_LOGGING_BATCH_TABLE} (ID_JOB, JOBNAME)
       <type>TABLE_EXISTS</type>
       <tablename>${KFF_LOGGING_JOB_TABLE_HIST}</tablename>
       <schemaname>${KFF_LOGGING_SCHEMA}</schemaname>
-      <connection>DWH_LOG</connection>
+      <connection>LOGGING</connection>
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
@@ -451,7 +447,7 @@ on ${KFF_LOGGING_JOB_TABLE_HIST} (KJUBE_BATCH_ID, JOBNAME)
       <useVariableSubstitution>T</useVariableSubstitution>
       <sqlfromfile>F</sqlfromfile>
       <sqlfilename/>
-      <connection>DWH_LOG</connection>
+      <connection>LOGGING</connection>
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
@@ -464,7 +460,7 @@ on ${KFF_LOGGING_JOB_TABLE_HIST} (KJUBE_BATCH_ID, JOBNAME)
       <type>TABLE_EXISTS</type>
       <tablename>${KFF_LOGGING_TRNSF_TABLE_HIST}</tablename>
       <schemaname>${KFF_LOGGING_SCHEMA}</schemaname>
-      <connection>DWH_LOG</connection>
+      <connection>LOGGING</connection>
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
@@ -502,12 +498,12 @@ on ${KFF_LOGGING_TRNSF_TABLE_HIST} (KJUBE_BATCH_ID, TRANSNAME)
       <useVariableSubstitution>T</useVariableSubstitution>
       <sqlfromfile>F</sqlfromfile>
       <sqlfilename/>
-      <connection>DWH_LOG</connection>
+      <connection>LOGGING</connection>
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>486</xloc>
-      <yloc>558</yloc>
+      <xloc>487</xloc>
+      <yloc>560</yloc>
       </entry>
     <entry>
       <name>Check ${KFF_LOGGING_STEP_TABLE_HIST}</name>
@@ -515,7 +511,7 @@ on ${KFF_LOGGING_TRNSF_TABLE_HIST} (KJUBE_BATCH_ID, TRANSNAME)
       <type>TABLE_EXISTS</type>
       <tablename>${KFF_LOGGING_STEP_TABLE_HIST}</tablename>
       <schemaname>${KFF_LOGGING_SCHEMA}</schemaname>
-      <connection>DWH_LOG</connection>
+      <connection>LOGGING</connection>
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
@@ -555,12 +551,12 @@ on ${KFF_LOGGING_STEP_TABLE_HIST} (KJUBE_BATCH_ID,STEPNAME)
       <useVariableSubstitution>T</useVariableSubstitution>
       <sqlfromfile>F</sqlfromfile>
       <sqlfilename/>
-      <connection>DWH_LOG</connection>
+      <connection>LOGGING</connection>
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
       <xloc>485</xloc>
-      <yloc>619</yloc>
+      <yloc>620</yloc>
       </entry>
     <entry>
       <name>Check ${KFF_LOGGING_REJECT_TABLE_HIST}</name>
@@ -568,7 +564,7 @@ on ${KFF_LOGGING_STEP_TABLE_HIST} (KJUBE_BATCH_ID,STEPNAME)
       <type>TABLE_EXISTS</type>
       <tablename>${KFF_LOGGING_REJECT_TABLE_HIST}</tablename>
       <schemaname>${KFF_LOGGING_SCHEMA}</schemaname>
-      <connection>DWH_LOG</connection>
+      <connection>LOGGING</connection>
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
@@ -602,7 +598,7 @@ on ${KFF_LOGGING_REJECT_TABLE_HIST} (KJUBE_BATCH_ID, TRANSNAME, JOBNAME)
       <useVariableSubstitution>T</useVariableSubstitution>
       <sqlfromfile>F</sqlfromfile>
       <sqlfilename/>
-      <connection>DWH_LOG</connection>
+      <connection>LOGGING</connection>
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>

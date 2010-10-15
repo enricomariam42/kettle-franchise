@@ -65,13 +65,15 @@ Review
     </clusterschemas>
   <modified_user>-</modified_user>
   <modified_date>2009&#47;12&#47;30 21:51:08.879</modified_date>
+  <created_user/>
+  <created_date>2010&#47;10&#47;12 14:53:23.974</created_date>
   </info>
   <notepads>
   </notepads>
   <connection>
     <name>DWH_DWH</name>
     <server>${DWH_DWH_HOSTNAME}</server>
-    <type>MYSQL</type>
+    <type>ORACLE</type>
     <access>Native</access>
     <database>${DWH_DWH_DATABASE}</database>
     <port>${DWH_DWH_PORT}</port>
@@ -115,7 +117,7 @@ Review
   <connection>
     <name>DWH_ODS</name>
     <server>${DWH_ODS_HOSTNAME}</server>
-    <type>MYSQL</type>
+    <type>ORACLE</type>
     <access>Native</access>
     <database>${DWH_ODS_DATABASE}</database>
     <port>${DWH_ODS_PORT}</port>
@@ -137,7 +139,7 @@ Review
   <connection>
     <name>DWH_STG</name>
     <server>${DWH_STG_HOSTNAME}</server>
-    <type>MYSQL</type>
+    <type>ORACLE</type>
     <access>Native</access>
     <database>${DWH_STG_DATABASE}</database>
     <port>${DWH_STG_PORT}</port>
@@ -157,12 +159,34 @@ Review
     </attributes>
   </connection>
   <connection>
+    <name>LOGGING</name>
+    <server>${LOGGING_HOSTNAME}</server>
+    <type>ORACLE</type>
+    <access>Native</access>
+    <database>${LOGGING_DATABASE}</database>
+    <port>${LOGGING_PORT}</port>
+    <username>${LOGGING_USERNAME}</username>
+    <password>${LOGGING_PASSWORD}</password>
+    <servername/>
+    <data_tablespace/>
+    <index_tablespace/>
+    <attributes>
+      <attribute><code>FORCE_IDENTIFIERS_TO_LOWERCASE</code><attribute>N</attribute></attribute>
+      <attribute><code>FORCE_IDENTIFIERS_TO_UPPERCASE</code><attribute>N</attribute></attribute>
+      <attribute><code>IS_CLUSTERED</code><attribute>N</attribute></attribute>
+      <attribute><code>PORT_NUMBER</code><attribute>${LOGGING_PORT}</attribute></attribute>
+      <attribute><code>QUOTE_ALL_FIELDS</code><attribute>N</attribute></attribute>
+      <attribute><code>STREAM_RESULTS</code><attribute>Y</attribute></attribute>
+      <attribute><code>USE_POOLING</code><attribute>N</attribute></attribute>
+    </attributes>
+  </connection>
+  <connection>
     <name>STEALTHXX</name>
     <server>${STEALTHXX_HOSTNAME}</server>
     <type>AS&#47;400</type>
     <access>Native</access>
     <database>${STEALTHXX_DATABASE}</database>
-    <port>${STEALTH02_PORT}</port>
+    <port>${STEALTHXX_DATABASE}</port>
     <username>${STEALTHXX_USERNAME}</username>
     <password>${STEALTHXX_PASSWORD}</password>
     <servername/>
@@ -172,7 +196,7 @@ Review
       <attribute><code>FORCE_IDENTIFIERS_TO_LOWERCASE</code><attribute>N</attribute></attribute>
       <attribute><code>FORCE_IDENTIFIERS_TO_UPPERCASE</code><attribute>N</attribute></attribute>
       <attribute><code>IS_CLUSTERED</code><attribute>N</attribute></attribute>
-      <attribute><code>PORT_NUMBER</code><attribute>${STEALTH02_PORT}</attribute></attribute>
+      <attribute><code>PORT_NUMBER</code><attribute>${STEALTHXX_DATABASE}</attribute></attribute>
       <attribute><code>QUOTE_ALL_FIELDS</code><attribute>N</attribute></attribute>
       <attribute><code>SUPPORTS_BOOLEAN_DATA_TYPE</code><attribute>N</attribute></attribute>
       <attribute><code>USE_POOLING</code><attribute>N</attribute></attribute>
@@ -317,7 +341,7 @@ KFF_BATCH_ID=0}</jsScript_script>
            <method>none</method>
            <schema_name/>
            </partitioning>
-    <connection>DWH_LOG</connection>
+    <connection>LOGGING</connection>
     <sql>SELECT 
  max(id_job) + 1 as KFF_BATCH_ID
 from

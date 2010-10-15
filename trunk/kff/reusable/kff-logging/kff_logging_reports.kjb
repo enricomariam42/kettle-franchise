@@ -15,7 +15,7 @@
   <connection>
     <name>DWH_DWH</name>
     <server>${DWH_DWH_HOSTNAME}</server>
-    <type>MYSQL</type>
+    <type>ORACLE</type>
     <access>Native</access>
     <database>${DWH_DWH_DATABASE}</database>
     <port>${DWH_DWH_PORT}</port>
@@ -35,31 +35,9 @@
     </attributes>
   </connection>
   <connection>
-    <name>DWH_LOG</name>
-    <server>${DWH_LOG_HOSTNAME}</server>
-    <type>MYSQL</type>
-    <access>Native</access>
-    <database>${DWH_LOG_DATABASE}</database>
-    <port>${DWH_LOG_PORT}</port>
-    <username>${DWH_LOG_USERNAME}</username>
-    <password>${DWH_LOG_PASSWORD}</password>
-    <servername/>
-    <data_tablespace/>
-    <index_tablespace/>
-    <attributes>
-      <attribute><code>FORCE_IDENTIFIERS_TO_LOWERCASE</code><attribute>N</attribute></attribute>
-      <attribute><code>FORCE_IDENTIFIERS_TO_UPPERCASE</code><attribute>N</attribute></attribute>
-      <attribute><code>IS_CLUSTERED</code><attribute>N</attribute></attribute>
-      <attribute><code>PORT_NUMBER</code><attribute>${DWH_LOG_PORT}</attribute></attribute>
-      <attribute><code>QUOTE_ALL_FIELDS</code><attribute>N</attribute></attribute>
-      <attribute><code>STREAM_RESULTS</code><attribute>Y</attribute></attribute>
-      <attribute><code>USE_POOLING</code><attribute>N</attribute></attribute>
-    </attributes>
-  </connection>
-  <connection>
     <name>DWH_ODS</name>
     <server>${DWH_ODS_HOSTNAME}</server>
-    <type>MYSQL</type>
+    <type>ORACLE</type>
     <access>Native</access>
     <database>${DWH_ODS_DATABASE}</database>
     <port>${DWH_ODS_PORT}</port>
@@ -81,7 +59,7 @@
   <connection>
     <name>DWH_STG</name>
     <server>${DWH_STG_HOSTNAME}</server>
-    <type>MYSQL</type>
+    <type>ORACLE</type>
     <access>Native</access>
     <database>${DWH_STG_DATABASE}</database>
     <port>${DWH_STG_PORT}</port>
@@ -101,12 +79,34 @@
     </attributes>
   </connection>
   <connection>
+    <name>LOGGING</name>
+    <server>${LOGGING_HOSTNAME}</server>
+    <type>ORACLE</type>
+    <access>Native</access>
+    <database>${LOGGING_DATABASE}</database>
+    <port>${LOGGING_PORT}</port>
+    <username>${LOGGING_USERNAME}</username>
+    <password>${LOGGING_PASSWORD}</password>
+    <servername/>
+    <data_tablespace/>
+    <index_tablespace/>
+    <attributes>
+      <attribute><code>FORCE_IDENTIFIERS_TO_LOWERCASE</code><attribute>N</attribute></attribute>
+      <attribute><code>FORCE_IDENTIFIERS_TO_UPPERCASE</code><attribute>N</attribute></attribute>
+      <attribute><code>IS_CLUSTERED</code><attribute>N</attribute></attribute>
+      <attribute><code>PORT_NUMBER</code><attribute>${LOGGING_PORT}</attribute></attribute>
+      <attribute><code>QUOTE_ALL_FIELDS</code><attribute>N</attribute></attribute>
+      <attribute><code>STREAM_RESULTS</code><attribute>Y</attribute></attribute>
+      <attribute><code>USE_POOLING</code><attribute>N</attribute></attribute>
+    </attributes>
+  </connection>
+  <connection>
     <name>STEALTHXX</name>
     <server>${STEALTHXX_HOSTNAME}</server>
     <type>AS&#47;400</type>
     <access>Native</access>
     <database>${STEALTHXX_DATABASE}</database>
-    <port>${STEALTH02_PORT}</port>
+    <port>-1</port>
     <username>${STEALTHXX_USERNAME}</username>
     <password>${STEALTHXX_PASSWORD}</password>
     <servername/>
@@ -116,7 +116,6 @@
       <attribute><code>FORCE_IDENTIFIERS_TO_LOWERCASE</code><attribute>N</attribute></attribute>
       <attribute><code>FORCE_IDENTIFIERS_TO_UPPERCASE</code><attribute>N</attribute></attribute>
       <attribute><code>IS_CLUSTERED</code><attribute>N</attribute></attribute>
-      <attribute><code>PORT_NUMBER</code><attribute>${STEALTH02_PORT}</attribute></attribute>
       <attribute><code>QUOTE_ALL_FIELDS</code><attribute>N</attribute></attribute>
       <attribute><code>SUPPORTS_BOOLEAN_DATA_TYPE</code><attribute>N</attribute></attribute>
       <attribute><code>USE_POOLING</code><attribute>N</attribute></attribute>
@@ -152,8 +151,8 @@
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>116</xloc>
-      <yloc>42</yloc>
+      <xloc>52</xloc>
+      <yloc>29</yloc>
       </entry>
     <entry>
       <name>kff_logging_reports_jobtrf_details</name>
@@ -181,8 +180,8 @@
       </parameters>      <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>261</xloc>
-      <yloc>141</yloc>
+      <xloc>355</xloc>
+      <yloc>215</yloc>
       </entry>
     <entry>
       <name>kff_logging_reports_rejects</name>
@@ -210,8 +209,8 @@
       </parameters>      <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>259</xloc>
-      <yloc>334</yloc>
+      <xloc>356</xloc>
+      <yloc>411</yloc>
       </entry>
     <entry>
       <name>kff_logging_reports_error_details</name>
@@ -239,8 +238,8 @@
       </parameters>      <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>261</xloc>
-      <yloc>235</yloc>
+      <xloc>355</xloc>
+      <yloc>309</yloc>
       </entry>
     <entry>
       <name>kff_logging_reports_batch_result</name>
@@ -268,8 +267,8 @@
       </parameters>      <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>261</xloc>
-      <yloc>42</yloc>
+      <xloc>355</xloc>
+      <yloc>116</yloc>
       </entry>
     <entry>
       <name>Mail log file to administrator</name>
@@ -282,7 +281,7 @@
       <destinationBCc>${MAIL_DESTINATION_BCC}</destinationBCc>
       <replyto>${MAIL_SENDER_ADDRESS}</replyto>
       <replytoname>${MAIL_SENDER_NAME}</replytoname>
-      <subject>${KFF_BATCH}&#47;${KFF_APPLICATION}(${KFF_LIFECYCLE})@${KFF_CUSTOMER}-Result: Errors()&#47;Rejects()</subject>
+      <subject>${KFF_BATCH}&#47;${KFF_APPLICATION}(${KFF_LIFECYCLE})@${KFF_CUSTOMER} ${KFF_BATCH_RESULT}=Errors(${KFF_BATCH_NBR_ERRORS})&#47;Rejects(${KFF_BATCH_NBR_REJECTS})</subject>
       <include_date>Y</include_date>
       <contact_person>${MAIL_CONTACT_PERSON}</contact_person>
       <contact_phone>${MAIL_CONTACT_PHONE}</contact_phone>
@@ -319,23 +318,57 @@ ${MAIL_SENDER_NAME}&lt;br&gt;</comment>
       </filetypes>      <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>461</xloc>
-      <yloc>333</yloc>
+      <xloc>68</xloc>
+      <yloc>414</yloc>
+      </entry>
+    <entry>
+      <name>Delete filenames from result 1</name>
+      <description>Delete filenames from result</description>
+      <type>DELETE_RESULT_FILENAMES</type>
+      <foldername/>
+      <specify_wildcard>N</specify_wildcard>
+      <wildcard/>
+      <wildcardexclude/>
+      <parallel>N</parallel>
+      <draw>Y</draw>
+      <nr>0</nr>
+      <xloc>173</xloc>
+      <yloc>29</yloc>
+      </entry>
+    <entry>
+      <name>kff_logging_batch_exit_status</name>
+      <description>Transformation</description>
+      <type>TRANS</type>
+      <filename>${Internal.Job.Filename.Directory}&#47;kff_logging_batch_exit_status.ktr</filename>
+      <transname/>
+      <arg_from_previous>N</arg_from_previous>
+      <params_from_previous>N</params_from_previous>
+      <exec_per_row>N</exec_per_row>
+      <clear_rows>N</clear_rows>
+      <clear_files>N</clear_files>
+      <set_logfile>N</set_logfile>
+      <logfile/>
+      <logext/>
+      <add_date>N</add_date>
+      <add_time>N</add_time>
+      <loglevel>Nothing</loglevel>
+      <cluster>N</cluster>
+      <slave_server_name/>
+      <set_append_logfile>N</set_append_logfile>
+      <wait_until_finished>Y</wait_until_finished>
+      <follow_abort_remote>N</follow_abort_remote>
+      <parameters>        <pass_all_parameters>Y</pass_all_parameters>
+      </parameters>      <parallel>N</parallel>
+      <draw>Y</draw>
+      <nr>0</nr>
+      <xloc>351</xloc>
+      <yloc>28</yloc>
       </entry>
   </entries>
   <hops>
     <hop>
       <from>kff_logging_reports_jobtrf_details</from>
       <to>kff_logging_reports_error_details</to>
-      <from_nr>0</from_nr>
-      <to_nr>0</to_nr>
-      <enabled>Y</enabled>
-      <evaluation>Y</evaluation>
-      <unconditional>Y</unconditional>
-    </hop>
-    <hop>
-      <from>START</from>
-      <to>kff_logging_reports_batch_result</to>
       <from_nr>0</from_nr>
       <to_nr>0</to_nr>
       <enabled>Y</enabled>
@@ -363,6 +396,33 @@ ${MAIL_SENDER_NAME}&lt;br&gt;</comment>
     <hop>
       <from>kff_logging_reports_rejects</from>
       <to>Mail log file to administrator</to>
+      <from_nr>0</from_nr>
+      <to_nr>0</to_nr>
+      <enabled>Y</enabled>
+      <evaluation>Y</evaluation>
+      <unconditional>Y</unconditional>
+    </hop>
+    <hop>
+      <from>START</from>
+      <to>Delete filenames from result 1</to>
+      <from_nr>0</from_nr>
+      <to_nr>0</to_nr>
+      <enabled>Y</enabled>
+      <evaluation>Y</evaluation>
+      <unconditional>Y</unconditional>
+    </hop>
+    <hop>
+      <from>Delete filenames from result 1</from>
+      <to>kff_logging_batch_exit_status</to>
+      <from_nr>0</from_nr>
+      <to_nr>0</to_nr>
+      <enabled>Y</enabled>
+      <evaluation>Y</evaluation>
+      <unconditional>Y</unconditional>
+    </hop>
+    <hop>
+      <from>kff_logging_batch_exit_status</from>
+      <to>kff_logging_reports_batch_result</to>
       <from_nr>0</from_nr>
       <to_nr>0</to_nr>
       <enabled>Y</enabled>

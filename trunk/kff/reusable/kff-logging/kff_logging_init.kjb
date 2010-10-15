@@ -15,7 +15,7 @@
   <connection>
     <name>DWH_DWH</name>
     <server>${DWH_DWH_HOSTNAME}</server>
-    <type>MYSQL</type>
+    <type>ORACLE</type>
     <access>Native</access>
     <database>${DWH_DWH_DATABASE}</database>
     <port>${DWH_DWH_PORT}</port>
@@ -60,7 +60,7 @@
   <connection>
     <name>DWH_ODS</name>
     <server>${DWH_ODS_HOSTNAME}</server>
-    <type>MYSQL</type>
+    <type>ORACLE</type>
     <access>Native</access>
     <database>${DWH_ODS_DATABASE}</database>
     <port>${DWH_ODS_PORT}</port>
@@ -82,7 +82,7 @@
   <connection>
     <name>DWH_STG</name>
     <server>${DWH_STG_HOSTNAME}</server>
-    <type>MYSQL</type>
+    <type>ORACLE</type>
     <access>Native</access>
     <database>${DWH_STG_DATABASE}</database>
     <port>${DWH_STG_PORT}</port>
@@ -98,6 +98,50 @@
       <attribute><code>PORT_NUMBER</code><attribute>${DWH_STG_PORT}</attribute></attribute>
       <attribute><code>QUOTE_ALL_FIELDS</code><attribute>N</attribute></attribute>
       <attribute><code>STREAM_RESULTS</code><attribute>Y</attribute></attribute>
+      <attribute><code>USE_POOLING</code><attribute>N</attribute></attribute>
+    </attributes>
+  </connection>
+  <connection>
+    <name>LOGGING</name>
+    <server>${LOGGING_HOSTNAME}</server>
+    <type>ORACLE</type>
+    <access>Native</access>
+    <database>${LOGGING_DATABASE}</database>
+    <port>${LOGGING_PORT}</port>
+    <username>${LOGGING_USERNAME}</username>
+    <password>${LOGGING_PASSWORD}</password>
+    <servername/>
+    <data_tablespace/>
+    <index_tablespace/>
+    <attributes>
+      <attribute><code>FORCE_IDENTIFIERS_TO_LOWERCASE</code><attribute>N</attribute></attribute>
+      <attribute><code>FORCE_IDENTIFIERS_TO_UPPERCASE</code><attribute>N</attribute></attribute>
+      <attribute><code>IS_CLUSTERED</code><attribute>N</attribute></attribute>
+      <attribute><code>PORT_NUMBER</code><attribute>${LOGGING_PORT}</attribute></attribute>
+      <attribute><code>QUOTE_ALL_FIELDS</code><attribute>N</attribute></attribute>
+      <attribute><code>STREAM_RESULTS</code><attribute>Y</attribute></attribute>
+      <attribute><code>USE_POOLING</code><attribute>N</attribute></attribute>
+    </attributes>
+  </connection>
+  <connection>
+    <name>STEALTHXX</name>
+    <server>${STEALTHXX_HOSTNAME}</server>
+    <type>AS&#47;400</type>
+    <access>Native</access>
+    <database>${STEALTHXX_DATABASE}</database>
+    <port>-1</port>
+    <username>${STEALTHXX_USERNAME}</username>
+    <password>${STEALTHXX_PASSWORD}</password>
+    <servername/>
+    <data_tablespace/>
+    <index_tablespace/>
+    <attributes>
+      <attribute><code>FORCE_IDENTIFIERS_TO_LOWERCASE</code><attribute>N</attribute></attribute>
+      <attribute><code>FORCE_IDENTIFIERS_TO_UPPERCASE</code><attribute>N</attribute></attribute>
+      <attribute><code>IS_CLUSTERED</code><attribute>N</attribute></attribute>
+      <attribute><code>PORT_NUMBER</code><attribute>-1</attribute></attribute>
+      <attribute><code>QUOTE_ALL_FIELDS</code><attribute>N</attribute></attribute>
+      <attribute><code>SUPPORTS_BOOLEAN_DATA_TYPE</code><attribute>N</attribute></attribute>
       <attribute><code>USE_POOLING</code><attribute>N</attribute></attribute>
     </attributes>
   </connection>
@@ -129,8 +173,8 @@
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>47</xloc>
-      <yloc>20</yloc>
+      <xloc>36</xloc>
+      <yloc>26</yloc>
       </entry>
     <entry>
       <name>DWH_LOG database = MySQL</name>
@@ -149,8 +193,8 @@
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>330</xloc>
-      <yloc>106</yloc>
+      <xloc>317</xloc>
+      <yloc>195</yloc>
       </entry>
     <entry>
       <name>DWH_LOG database = Oracle</name>
@@ -169,8 +213,8 @@
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>329</xloc>
-      <yloc>175</yloc>
+      <xloc>316</xloc>
+      <yloc>264</yloc>
       </entry>
     <entry>
       <name>Abort kff_logging_tables</name>
@@ -180,8 +224,8 @@
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>328</xloc>
-      <yloc>388</yloc>
+      <xloc>125</xloc>
+      <yloc>266</yloc>
       </entry>
     <entry>
       <name>kff_logging_tables_mysql</name>
@@ -206,8 +250,8 @@
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>513</xloc>
-      <yloc>105</yloc>
+      <xloc>500</xloc>
+      <yloc>194</yloc>
       </entry>
     <entry>
       <name>kff_logging_tables_oracle</name>
@@ -232,8 +276,8 @@
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>513</xloc>
-      <yloc>174</yloc>
+      <xloc>501</xloc>
+      <yloc>263</yloc>
       </entry>
     <entry>
       <name>kff_logging_inject</name>
@@ -258,8 +302,8 @@
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>723</xloc>
-      <yloc>105</yloc>
+      <xloc>311</xloc>
+      <yloc>25</yloc>
       </entry>
     <entry>
       <name>set_batch_id</name>
@@ -287,14 +331,14 @@
       </parameters>      <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>723</xloc>
-      <yloc>255</yloc>
+      <xloc>313</xloc>
+      <yloc>454</yloc>
       </entry>
     <entry>
       <name>Truncate current log</name>
       <description>Truncate tables</description>
       <type>TRUNCATE_TABLES</type>
-      <connection>DWH_LOG</connection>
+      <connection>LOGGING</connection>
       <arg_from_previous>N</arg_from_previous>
       <fields>
         <field>
@@ -317,8 +361,8 @@
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>724</xloc>
-      <yloc>372</yloc>
+      <xloc>313</xloc>
+      <yloc>547</yloc>
       </entry>
     <entry>
       <name>kff_logging_no_batch_overlap</name>
@@ -343,8 +387,28 @@
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>132</xloc>
-      <yloc>106</yloc>
+      <xloc>315</xloc>
+      <yloc>107</yloc>
+      </entry>
+    <entry>
+      <name>DUMMY 1</name>
+      <description>Special entries</description>
+      <type>SPECIAL</type>
+      <start>N</start>
+      <dummy>Y</dummy>
+      <repeat>N</repeat>
+      <schedulerType>0</schedulerType>
+      <intervalSeconds>0</intervalSeconds>
+      <intervalMinutes>60</intervalMinutes>
+      <hour>12</hour>
+      <minutes>0</minutes>
+      <weekDay>1</weekDay>
+      <DayOfMonth>1</DayOfMonth>
+      <parallel>N</parallel>
+      <draw>Y</draw>
+      <nr>0</nr>
+      <xloc>315</xloc>
+      <yloc>366</yloc>
       </entry>
   </entries>
   <hops>
@@ -385,33 +449,6 @@
       <unconditional>N</unconditional>
     </hop>
     <hop>
-      <from>kff_logging_tables_mysql</from>
-      <to>kff_logging_inject</to>
-      <from_nr>0</from_nr>
-      <to_nr>0</to_nr>
-      <enabled>Y</enabled>
-      <evaluation>Y</evaluation>
-      <unconditional>N</unconditional>
-    </hop>
-    <hop>
-      <from>kff_logging_tables_oracle</from>
-      <to>kff_logging_inject</to>
-      <from_nr>0</from_nr>
-      <to_nr>0</to_nr>
-      <enabled>Y</enabled>
-      <evaluation>Y</evaluation>
-      <unconditional>N</unconditional>
-    </hop>
-    <hop>
-      <from>kff_logging_inject</from>
-      <to>set_batch_id</to>
-      <from_nr>0</from_nr>
-      <to_nr>0</to_nr>
-      <enabled>Y</enabled>
-      <evaluation>Y</evaluation>
-      <unconditional>Y</unconditional>
-    </hop>
-    <hop>
       <from>set_batch_id</from>
       <to>Truncate current log</to>
       <from_nr>0</from_nr>
@@ -419,15 +456,6 @@
       <enabled>Y</enabled>
       <evaluation>Y</evaluation>
       <unconditional>N</unconditional>
-    </hop>
-    <hop>
-      <from>START</from>
-      <to>kff_logging_no_batch_overlap</to>
-      <from_nr>0</from_nr>
-      <to_nr>0</to_nr>
-      <enabled>Y</enabled>
-      <evaluation>Y</evaluation>
-      <unconditional>Y</unconditional>
     </hop>
     <hop>
       <from>kff_logging_no_batch_overlap</from>
@@ -438,30 +466,65 @@
       <evaluation>Y</evaluation>
       <unconditional>N</unconditional>
     </hop>
+    <hop>
+      <from>START</from>
+      <to>kff_logging_inject</to>
+      <from_nr>0</from_nr>
+      <to_nr>0</to_nr>
+      <enabled>Y</enabled>
+      <evaluation>Y</evaluation>
+      <unconditional>Y</unconditional>
+    </hop>
+    <hop>
+      <from>kff_logging_inject</from>
+      <to>kff_logging_no_batch_overlap</to>
+      <from_nr>0</from_nr>
+      <to_nr>0</to_nr>
+      <enabled>Y</enabled>
+      <evaluation>Y</evaluation>
+      <unconditional>N</unconditional>
+    </hop>
+    <hop>
+      <from>kff_logging_tables_mysql</from>
+      <to>DUMMY 1</to>
+      <from_nr>0</from_nr>
+      <to_nr>0</to_nr>
+      <enabled>Y</enabled>
+      <evaluation>Y</evaluation>
+      <unconditional>N</unconditional>
+    </hop>
+    <hop>
+      <from>kff_logging_tables_oracle</from>
+      <to>DUMMY 1</to>
+      <from_nr>0</from_nr>
+      <to_nr>0</to_nr>
+      <enabled>Y</enabled>
+      <evaluation>Y</evaluation>
+      <unconditional>N</unconditional>
+    </hop>
+    <hop>
+      <from>DUMMY 1</from>
+      <to>set_batch_id</to>
+      <from_nr>0</from_nr>
+      <to_nr>0</to_nr>
+      <enabled>Y</enabled>
+      <evaluation>Y</evaluation>
+      <unconditional>Y</unconditional>
+    </hop>
   </hops>
   <notepads>
     <notepad>
-      <note>Need to fix Oracle database!
-
-You can easily add your own database type.
-Just use one of the above as a template.</note>
-      <xloc>323</xloc>
-      <yloc>251</yloc>
-      <width>270</width>
-      <heigth>94</heigth>
-    </notepad>
-    <notepad>
       <note>Create logging tables 
 if they don&apos;t exist on this connection</note>
-      <xloc>326</xloc>
-      <yloc>21</yloc>
+      <xloc>24</xloc>
+      <yloc>175</yloc>
       <width>219</width>
       <heigth>52</heigth>
     </notepad>
     <notepad>
       <note>Set logging tables for all jobs&#47;trnsf</note>
-      <xloc>721</xloc>
-      <yloc>47</yloc>
+      <xloc>407</xloc>
+      <yloc>26</yloc>
       <width>208</width>
       <heigth>31</heigth>
     </notepad>
