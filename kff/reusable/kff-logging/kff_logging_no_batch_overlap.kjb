@@ -14,7 +14,7 @@
   <connection>
     <name>DWH_DWH</name>
     <server>${DWH_DWH_HOSTNAME}</server>
-    <type>MYSQL</type>
+    <type>ORACLE</type>
     <access>Native</access>
     <database>${DWH_DWH_DATABASE}</database>
     <port>${DWH_DWH_PORT}</port>
@@ -34,31 +34,9 @@
     </attributes>
   </connection>
   <connection>
-    <name>DWH_LOG</name>
-    <server>${DWH_LOG_HOSTNAME}</server>
-    <type>MYSQL</type>
-    <access>Native</access>
-    <database>${DWH_LOG_DATABASE}</database>
-    <port>${DWH_LOG_PORT}</port>
-    <username>${DWH_LOG_USERNAME}</username>
-    <password>${DWH_LOG_PASSWORD}</password>
-    <servername/>
-    <data_tablespace/>
-    <index_tablespace/>
-    <attributes>
-      <attribute><code>FORCE_IDENTIFIERS_TO_LOWERCASE</code><attribute>N</attribute></attribute>
-      <attribute><code>FORCE_IDENTIFIERS_TO_UPPERCASE</code><attribute>N</attribute></attribute>
-      <attribute><code>IS_CLUSTERED</code><attribute>N</attribute></attribute>
-      <attribute><code>PORT_NUMBER</code><attribute>${DWH_LOG_PORT}</attribute></attribute>
-      <attribute><code>QUOTE_ALL_FIELDS</code><attribute>N</attribute></attribute>
-      <attribute><code>STREAM_RESULTS</code><attribute>Y</attribute></attribute>
-      <attribute><code>USE_POOLING</code><attribute>N</attribute></attribute>
-    </attributes>
-  </connection>
-  <connection>
     <name>DWH_ODS</name>
     <server>${DWH_ODS_HOSTNAME}</server>
-    <type>MYSQL</type>
+    <type>ORACLE</type>
     <access>Native</access>
     <database>${DWH_ODS_DATABASE}</database>
     <port>${DWH_ODS_PORT}</port>
@@ -80,7 +58,7 @@
   <connection>
     <name>DWH_STG</name>
     <server>${DWH_STG_HOSTNAME}</server>
-    <type>MYSQL</type>
+    <type>ORACLE</type>
     <access>Native</access>
     <database>${DWH_STG_DATABASE}</database>
     <port>${DWH_STG_PORT}</port>
@@ -96,6 +74,50 @@
       <attribute><code>PORT_NUMBER</code><attribute>${DWH_STG_PORT}</attribute></attribute>
       <attribute><code>QUOTE_ALL_FIELDS</code><attribute>N</attribute></attribute>
       <attribute><code>STREAM_RESULTS</code><attribute>Y</attribute></attribute>
+      <attribute><code>USE_POOLING</code><attribute>N</attribute></attribute>
+    </attributes>
+  </connection>
+  <connection>
+    <name>LOGGING</name>
+    <server>${LOGGING_HOSTNAME}</server>
+    <type>ORACLE</type>
+    <access>Native</access>
+    <database>${LOGGING_DATABASE}</database>
+    <port>${LOGGING_PORT}</port>
+    <username>${LOGGING_USERNAME}</username>
+    <password>${LOGGING_PASSWORD}</password>
+    <servername/>
+    <data_tablespace/>
+    <index_tablespace/>
+    <attributes>
+      <attribute><code>FORCE_IDENTIFIERS_TO_LOWERCASE</code><attribute>N</attribute></attribute>
+      <attribute><code>FORCE_IDENTIFIERS_TO_UPPERCASE</code><attribute>N</attribute></attribute>
+      <attribute><code>IS_CLUSTERED</code><attribute>N</attribute></attribute>
+      <attribute><code>PORT_NUMBER</code><attribute>${LOGGING_PORT}</attribute></attribute>
+      <attribute><code>QUOTE_ALL_FIELDS</code><attribute>N</attribute></attribute>
+      <attribute><code>STREAM_RESULTS</code><attribute>Y</attribute></attribute>
+      <attribute><code>USE_POOLING</code><attribute>N</attribute></attribute>
+    </attributes>
+  </connection>
+  <connection>
+    <name>STEALTHXX</name>
+    <server>${STEALTHXX_HOSTNAME}</server>
+    <type>AS&#47;400</type>
+    <access>Native</access>
+    <database>${STEALTHXX_DATABASE}</database>
+    <port>-1</port>
+    <username>${STEALTHXX_USERNAME}</username>
+    <password>${STEALTHXX_PASSWORD}</password>
+    <servername/>
+    <data_tablespace/>
+    <index_tablespace/>
+    <attributes>
+      <attribute><code>FORCE_IDENTIFIERS_TO_LOWERCASE</code><attribute>N</attribute></attribute>
+      <attribute><code>FORCE_IDENTIFIERS_TO_UPPERCASE</code><attribute>N</attribute></attribute>
+      <attribute><code>IS_CLUSTERED</code><attribute>N</attribute></attribute>
+      <attribute><code>PORT_NUMBER</code><attribute>-1</attribute></attribute>
+      <attribute><code>QUOTE_ALL_FIELDS</code><attribute>N</attribute></attribute>
+      <attribute><code>SUPPORTS_BOOLEAN_DATA_TYPE</code><attribute>N</attribute></attribute>
       <attribute><code>USE_POOLING</code><attribute>N</attribute></attribute>
     </attributes>
   </connection>
@@ -116,18 +138,18 @@
       <type>TABLE_EXISTS</type>
       <tablename>${KFF_LOGGING_BATCH_TABLE}</tablename>
       <schemaname>${KFF_LOGGING_SCHEMA}</schemaname>
-      <connection>DWH_LOG</connection>
+      <connection>LOGGING</connection>
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>290</xloc>
-      <yloc>82</yloc>
+      <xloc>231</xloc>
+      <yloc>38</yloc>
       </entry>
     <entry>
       <name>Check last batch in KFF_LOGGING_BATCH_TABLE</name>
       <description>Evaluate rows number in a table</description>
       <type>EVAL_TABLE_CONTENT</type>
-      <connection>DWH_LOG</connection>
+      <connection>LOGGING</connection>
       <schemaname/>
       <tablename/>
       <success_condition>rows_count_equal</success_condition>
@@ -146,8 +168,8 @@ where
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>292</xloc>
-      <yloc>189</yloc>
+      <xloc>230</xloc>
+      <yloc>318</yloc>
       </entry>
     <entry>
       <name>Abort job</name>
@@ -157,8 +179,8 @@ where
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>293</xloc>
-      <yloc>390</yloc>
+      <xloc>234</xloc>
+      <yloc>572</yloc>
       </entry>
     <entry>
       <name>Error</name>
@@ -171,7 +193,7 @@ where
       <destinationBCc>${MAIL_DESTINATION_BCC}</destinationBCc>
       <replyto>${MAIL_SENDER_ADDRESS}</replyto>
       <replytoname>${MAIL_SENDER_NAME}</replytoname>
-      <subject>${KFF_BATCH} in ${KFF_APPLICATION} (${KFF_LIFECYCLE}) @ ${KFF_CUSTOMER} - Failure - Previous batch not finished</subject>
+      <subject>${KFF_BATCH}&#47;${KFF_APPLICATION}(${KFF_LIFECYCLE})@${KFF_CUSTOMER} Abort: Previous batch not finished</subject>
       <include_date>Y</include_date>
       <contact_person>${MAIL_CONTACT_PERSON}</contact_person>
       <contact_phone>${MAIL_CONTACT_PHONE}</contact_phone>
@@ -220,8 +242,8 @@ ${MAIL_SENDER_NAME}&lt;br&gt;
       </filetypes>      <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>294</xloc>
-      <yloc>279</yloc>
+      <xloc>233</xloc>
+      <yloc>462</yloc>
       </entry>
     <entry>
       <name>START</name>
@@ -240,8 +262,8 @@ ${MAIL_SENDER_NAME}&lt;br&gt;
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>120</xloc>
-      <yloc>81</yloc>
+      <xloc>61</xloc>
+      <yloc>37</yloc>
       </entry>
     <entry>
       <name>OK, create in next job</name>
@@ -250,8 +272,8 @@ ${MAIL_SENDER_NAME}&lt;br&gt;
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>533</xloc>
-      <yloc>82</yloc>
+      <xloc>532</xloc>
+      <yloc>38</yloc>
       </entry>
     <entry>
       <name>&apos;end&apos;,&apos;failed&apos;,&apos;stopped&apos;,&apos;stop&apos;</name>
@@ -260,8 +282,41 @@ ${MAIL_SENDER_NAME}&lt;br&gt;
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>535</xloc>
-      <yloc>187</yloc>
+      <xloc>532</xloc>
+      <yloc>318</yloc>
+      </entry>
+    <entry>
+      <name>Check if previous batch logging exists in KFF_LOGGING_BATCH_TABLE</name>
+      <description>Evaluate rows number in a table</description>
+      <type>EVAL_TABLE_CONTENT</type>
+      <connection>LOGGING</connection>
+      <schemaname/>
+      <tablename/>
+      <success_condition>rows_count_greater</success_condition>
+      <limit>0</limit>
+      <is_custom_sql>Y</is_custom_sql>
+      <is_usevars>Y</is_usevars>
+      <custom_sql>select 
+ jobname
+from 
+ ${KFF_LOGGING_BATCH_TABLE}</custom_sql>
+      <add_rows_result>N</add_rows_result>
+      <clear_result_rows>Y</clear_result_rows>
+      <parallel>N</parallel>
+      <draw>Y</draw>
+      <nr>0</nr>
+      <xloc>231</xloc>
+      <yloc>180</yloc>
+      </entry>
+    <entry>
+      <name>no previous logging</name>
+      <description>Success</description>
+      <type>SUCCESS</type>
+      <parallel>N</parallel>
+      <draw>Y</draw>
+      <nr>0</nr>
+      <xloc>530</xloc>
+      <yloc>179</yloc>
       </entry>
   </entries>
   <hops>
@@ -284,8 +339,8 @@ ${MAIL_SENDER_NAME}&lt;br&gt;
       <unconditional>N</unconditional>
     </hop>
     <hop>
-      <from>Check ${KFF_LOGGING_BATCH_TABLE}</from>
-      <to>Check last batch in KFF_LOGGING_BATCH_TABLE</to>
+      <from>Error</from>
+      <to>Abort job</to>
       <from_nr>0</from_nr>
       <to_nr>0</to_nr>
       <enabled>Y</enabled>
@@ -293,8 +348,26 @@ ${MAIL_SENDER_NAME}&lt;br&gt;
       <unconditional>N</unconditional>
     </hop>
     <hop>
-      <from>Check last batch in KFF_LOGGING_BATCH_TABLE</from>
-      <to>&apos;end&apos;,&apos;failed&apos;,&apos;stopped&apos;,&apos;stop&apos;</to>
+      <from>Check if previous batch logging exists in KFF_LOGGING_BATCH_TABLE</from>
+      <to>no previous logging</to>
+      <from_nr>0</from_nr>
+      <to_nr>0</to_nr>
+      <enabled>Y</enabled>
+      <evaluation>N</evaluation>
+      <unconditional>N</unconditional>
+    </hop>
+    <hop>
+      <from>Check ${KFF_LOGGING_BATCH_TABLE}</from>
+      <to>Check if previous batch logging exists in KFF_LOGGING_BATCH_TABLE</to>
+      <from_nr>0</from_nr>
+      <to_nr>0</to_nr>
+      <enabled>Y</enabled>
+      <evaluation>Y</evaluation>
+      <unconditional>N</unconditional>
+    </hop>
+    <hop>
+      <from>Check if previous batch logging exists in KFF_LOGGING_BATCH_TABLE</from>
+      <to>Check last batch in KFF_LOGGING_BATCH_TABLE</to>
       <from_nr>0</from_nr>
       <to_nr>0</to_nr>
       <enabled>Y</enabled>
@@ -311,8 +384,8 @@ ${MAIL_SENDER_NAME}&lt;br&gt;
       <unconditional>N</unconditional>
     </hop>
     <hop>
-      <from>Error</from>
-      <to>Abort job</to>
+      <from>Check last batch in KFF_LOGGING_BATCH_TABLE</from>
+      <to>&apos;end&apos;,&apos;failed&apos;,&apos;stopped&apos;,&apos;stop&apos;</to>
       <from_nr>0</from_nr>
       <to_nr>0</to_nr>
       <enabled>Y</enabled>
@@ -323,9 +396,44 @@ ${MAIL_SENDER_NAME}&lt;br&gt;
   <notepads>
     <notepad>
       <note>Error mail, optional</note>
-      <xloc>346</xloc>
-      <yloc>274</yloc>
+      <xloc>287</xloc>
+      <yloc>461</yloc>
       <width>119</width>
+      <heigth>31</heigth>
+    </notepad>
+    <notepad>
+      <note>table exists</note>
+      <xloc>212</xloc>
+      <yloc>107</yloc>
+      <width>74</width>
+      <heigth>31</heigth>
+    </notepad>
+    <notepad>
+      <note>table doesn&apos;t exist</note>
+      <xloc>378</xloc>
+      <yloc>21</yloc>
+      <width>113</width>
+      <heigth>31</heigth>
+    </notepad>
+    <notepad>
+      <note>logging record exist</note>
+      <xloc>198</xloc>
+      <yloc>244</yloc>
+      <width>123</width>
+      <heigth>31</heigth>
+    </notepad>
+    <notepad>
+      <note>no previous logging </note>
+      <xloc>379</xloc>
+      <yloc>160</yloc>
+      <width>130</width>
+      <heigth>31</heigth>
+    </notepad>
+    <notepad>
+      <note>last batch not finished</note>
+      <xloc>185</xloc>
+      <yloc>390</yloc>
+      <width>137</width>
       <heigth>31</heigth>
     </notepad>
   </notepads>
