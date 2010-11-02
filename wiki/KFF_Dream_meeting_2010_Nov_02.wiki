@@ -20,7 +20,7 @@ _*Discussed topics*_:
  * Batch processing is stopped: clean up of logging tables, restartability, Andre can perhaps present the solution already built perhaps in a next meeting
    Matt will do some brainstorming around dependencies
 
- * Quick-start guides: Ricardo felt a bit lost during the first tries with KFF.  
+ * Quick-start guides: Juan felt a bit lost during the first tries with KFF.  
 
  * How it should work: drop the code in a folder and it should work.
  * A few topics for the mailing lists:
