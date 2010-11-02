@@ -1,7 +1,7 @@
 #labels minutesofmeeting
 =A dream meeting to see what we want in KFF v1.0=
 
-_*Attending*_: Jan Aertsen, Harris Ward, Juan Jose Ortilles, Ricardo Pires, Matt Casters
+_*Attending*_: Jan Aertsen, Harris Ward, Juan Jose Ortilles, Ricardo Pires, André Simões, Matt Casters
 
 _*Main topic*_: have a dream meeting to see what we want in KFF v1.0
 
